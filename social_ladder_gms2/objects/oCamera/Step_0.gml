@@ -7,11 +7,12 @@ var view_h_half = view_h * 0.5;
 //update destination
 if (instance_exists(follow))
 {
-	xTo = follow.x
-	yTo = follow.y
+	var x_buffer = (cam_shift * follow.image_xscale);
+	xTo = follow.x + x_buffer;
+	yTo = follow.y;
 	
 	// if I whant the camera to be fix
-	if (follow).object_index == oAnt
+	if (follow).object_index == noone
 	{
 		x = xTo;
 		y = yTo;
@@ -19,8 +20,8 @@ if (instance_exists(follow))
 }
 
 //update object position
-x += (xTo -x ) / 10;
-y += (yTo - y) / 10;
+x += (xTo - x ) / 7;
+y += (yTo - y) / 7;
 
 
 //Keep camera centre inside room

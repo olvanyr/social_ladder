@@ -29,7 +29,7 @@ switch state
 			if !input.right && !input.left || input.right && input.left 
 			{
 				sprite_index = sPlayer_idle;
-				image_speed = 0.3;
+				image_speed = 0.2;
 				walk_speed = 0;
 			}else
 			{

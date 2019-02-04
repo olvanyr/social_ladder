@@ -10,6 +10,7 @@ view_h_half =0;
 
 xTo = xstart;
 yTo = ystart;
+cam_shift = 20;
 
 //Set up Screenshake
 shake_length = 0;
