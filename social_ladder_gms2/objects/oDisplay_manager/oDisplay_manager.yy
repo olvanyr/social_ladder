@@ -1,34 +1,34 @@
 {
-    "id": "dd142309-d74a-4a7e-b9d9-7463b833f317",
+    "id": "966d3f7c-bf84-45e7-983f-d58044cee367",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oCamera",
+    "name": "oDisplay_manager",
     "eventList": [
         {
-            "id": "b02f5cc6-836c-4446-9215-d1e904c6f36a",
+            "id": "b4e83a56-fd25-4e24-bdb9-1e2000114631",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "dd142309-d74a-4a7e-b9d9-7463b833f317"
+            "m_owner": "966d3f7c-bf84-45e7-983f-d58044cee367"
         },
         {
-            "id": "8a1bc074-45d6-47c9-a250-7c9f092b5c49",
+            "id": "16274825-ad78-4051-9906-110d968da3bd",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "dd142309-d74a-4a7e-b9d9-7463b833f317"
+            "m_owner": "966d3f7c-bf84-45e7-983f-d58044cee367"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": false,
+    "persistent": true,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
