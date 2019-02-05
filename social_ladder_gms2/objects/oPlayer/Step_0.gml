@@ -1,11 +1,14 @@
 
+
+if vsp != 0 grounded = false;
+			
+//Hit ground sound
+if !grounded alarm[0] = 3;
+			
 switch state
 {
 	#region Move State
 		case "move":
-		
-			
-		
 			// Acceleration
 			walk_speed += acceleration;
 			if walk_speed > max_walk_speed walk_speed = max_walk_speed;
@@ -98,9 +101,6 @@ switch state
 			{
 				vsp = cut_jump_speed;
 			}
-
-			//Hit ground sound
-			if !grounded alarm[0] = 3;
 			
 			//roll
 			if input.roll
@@ -108,11 +108,16 @@ switch state
 				state = "roll";
 			}
 			//attack
+			attack_down_cooldown --;
+			attack_down_cooldown = max(attack_down_cooldown,0);
 			if input.attack
 			{
-				if input.down && grounded == false
+				if input.down 
 				{
-					state ="attack_down";
+					if grounded == false && attack_down_cooldown <= 0
+					{
+						state ="attack_down";
+					}
 				}else state = "attack_one";
 			}
 			
@@ -199,9 +204,11 @@ switch state
 	#endregion
 	#region Attack down
 		case "attack_down":
-			set_state_sprite(sPlayer_dawn_hit,1,0);
+			set_state_sprite(sPlayer_dawn_hit,0.6,0);
+			vsp = vsp*0.6;
+			attack_down_cooldown = 20;
 			
-			if animation_hit_frame(2)
+			if animation_hit_frame(1)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);

@@ -25,6 +25,11 @@ if instance_exists(oPlayer)
 		{
 			instance_create_layer(other.x, other.y - 12, "Effects", oHit_effect);
 		}
+		
+		if creator.state = "move"
+		{
+			creator.vsp = -5;
+		}
 	}
 	
 	if other.object_index == oPlayer

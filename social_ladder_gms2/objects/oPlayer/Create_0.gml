@@ -9,9 +9,9 @@ max_walk_speed = 2;
 
 acceleration = 0.3;
 
-gravity_speed = 0.4;
-jump_speed = -8;
-cut_jump_speed = 0.5;
+gravity_speed = 0.2;
+jump_speed = -6;
+cut_jump_speed = 0.2;
 
 jump_timer = 0;
 jump_counter = 0;
@@ -27,6 +27,7 @@ mask_height = sprite_get_height(sPlayer_mask);
 buffer = 6;
 
 knockbackable = true;
+attack_down_cooldown = 0;
 
 
 // Depedencies
