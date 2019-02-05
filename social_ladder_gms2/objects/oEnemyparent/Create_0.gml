@@ -1,0 +1,8 @@
+event_inherited();
+
+attack_range = 0;
+knockback = true;
+
+gravity_speed = 0.4;
+vsp = 0;
+vsp_fraction = 0;

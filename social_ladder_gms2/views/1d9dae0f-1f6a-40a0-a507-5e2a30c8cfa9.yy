@@ -1,0 +1,15 @@
+{
+    "id": "1d9dae0f-1f6a-40a0-a507-5e2a30c8cfa9",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "1d9dae0f-1f6a-40a0-a507-5e2a30c8cfa9",
+    "children": [
+        "021e25af-fd11-494c-9792-ddd498f4e5a9",
+        "8fcf4cee-13d5-4f1b-9720-881be749683c",
+        "e0823bf7-9b68-4807-b71a-385a2823b5f0"
+    ],
+    "filterType": "GMScript",
+    "folderName": "State",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}

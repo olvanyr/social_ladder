@@ -110,7 +110,10 @@ switch state
 			//attack
 			if input.attack
 			{
-				state = "attack_one";
+				if input.down && grounded == false
+				{
+					state ="attack_down";
+				}else state = "attack_one";
 			}
 			
 		break;
@@ -143,7 +146,7 @@ switch state
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				//create hitbox latter
+				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 5, image_xscale);
 			}
 			if animation_end()
 			{
@@ -164,7 +167,7 @@ switch state
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				//create hitbox latter
+				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 6, image_xscale);
 			}
 			if animation_end()
 			{
@@ -186,13 +189,35 @@ switch state
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				//create hitbox latter
+				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 8, image_xscale);
 			}
 			if animation_end()
 			{
 				state = "move";
 			}			
 		break;
+	#endregion
+	#region Attack down
+		case "attack_down":
+			set_state_sprite(sPlayer_dawn_hit,1,0);
+			
+			if animation_hit_frame(2)
+			{
+				audio_play_sound(aMiss,3,0);
+				gamepad_set_vibration(0, 1, 1);
+				alarm[1] = 3;
+				create_hitbox(x, y, self, sPlayer_dawn_hit_mask, 3, 2, 5, image_xscale);
+			}
+			if animation_end()
+			{
+				state = "move";
+			}
+		break;
+	#endregion
+	#region Knockback
+		case "knockback":
+		knockback_state(sPlayer_knockback, "move");
+	break;
 	#endregion
 	
 }
@@ -209,8 +234,6 @@ vsp += vsp_fraction;
 vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_fraction;
 
-
-show_debug_message(vsp);
 move_and_collide(0,vsp);
 
 

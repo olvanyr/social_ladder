@@ -26,6 +26,8 @@ half_mask_width = sprite_get_width(sPlayer_mask)/2;
 mask_height = sprite_get_height(sPlayer_mask);
 buffer = 6;
 
+knockbackable = true;
+
 
 // Depedencies
 input = instance_create_layer(0,0,"Instances",oInput)
