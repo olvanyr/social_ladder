@@ -29,7 +29,7 @@ switch state
 			if !input.right && !input.left || input.right && input.left 
 			{
 				sprite_index = sPlayer_idle;
-				image_speed = 0.3;
+				image_speed = 0.2;
 				walk_speed = 0;
 			}else
 			{
@@ -199,6 +199,9 @@ switch state
 
 
 //Aplly gravity
+
+vsp += gravity_speed;
+
 //Re apply fractions
 vsp += vsp_fraction;
 
@@ -206,7 +209,8 @@ vsp += vsp_fraction;
 vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_fraction;
 
-vsp += gravity_speed;
+
+show_debug_message(vsp);
 move_and_collide(0,vsp);
 
 

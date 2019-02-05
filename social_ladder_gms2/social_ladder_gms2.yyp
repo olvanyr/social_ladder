@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "677112d3-ae30-429f-84aa-3e1d49793246",
+            "Value": {
+                "id": "b609621f-ae7d-4255-b103-1bf5b08d5487",
+                "resourcePath": "scripts\\screenshake\\screenshake.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "67743f43-6620-4cef-8eff-09b387aa8f3b",
             "Value": {
                 "id": "f0a36dee-d5ed-42bb-a14e-efd955e18b8a",
@@ -300,6 +308,22 @@
                 "id": "c7f70ddc-a883-4c0c-81ab-1f79ee3fe643",
                 "resourcePath": "sprites\\sPlatform\\sPlatform.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d56bf66-3e65-4f01-b977-de308fd1ce5b",
+            "Value": {
+                "id": "25c7082e-c0fc-45bc-8360-900b1ab746b4",
+                "resourcePath": "rooms\\rDisplay_init\\rDisplay_init.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "966d3f7c-bf84-45e7-983f-d58044cee367",
+            "Value": {
+                "id": "93fdbd30-73fb-4a3c-a7e9-6ce5ee49f514",
+                "resourcePath": "objects\\oDisplay_manager\\oDisplay_manager.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -447,6 +471,14 @@
             }
         },
         {
+            "Key": "dd142309-d74a-4a7e-b9d9-7463b833f317",
+            "Value": {
+                "id": "52e57eb6-14f6-4f04-9166-5799531d1804",
+                "resourcePath": "objects\\oCamera\\oCamera.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "de5ca58c-524f-4683-bbb7-f32fba8c86cc",
             "Value": {
                 "id": "08e9958f-c8da-4bf2-af85-c9851c7f91b0",
@@ -517,6 +549,14 @@
                 "resourcePath": "sprites\\sPlayer_cast\\sPlayer_cast.yy",
                 "resourceType": "GMSprite"
             }
+        },
+        {
+            "Key": "fe6d9cd6-3047-4dd8-a562-eea370021bf9",
+            "Value": {
+                "id": "fe54df3a-eef6-48a5-bc80-d32d7da872db",
+                "resourcePath": "views\\fe6d9cd6-3047-4dd8-a562-eea370021bf9.yy",
+                "resourceType": "GMFolder"
+            }
         }
     ],
     "script_order": [
@@ -525,7 +565,8 @@
         "20ea4152-ac7d-4ee5-a5ca-aa2700e148cb",
         "b24bc3e1-6613-4abb-a3fa-d284cf6228f5",
         "c7061b4c-6871-49cf-af97-dd4cffa91e41",
-        "72216dc3-2cc8-4305-94cf-2405dcbb9572"
+        "72216dc3-2cc8-4305-94cf-2405dcbb9572",
+        "677112d3-ae30-429f-84aa-3e1d49793246"
     ],
     "tutorial": ""
 }

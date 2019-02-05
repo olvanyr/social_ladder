@@ -29,3 +29,8 @@ buffer = 6;
 
 // Depedencies
 input = instance_create_layer(0,0,"Instances",oInput)
+
+with instance_create_layer(x,y,"Instances", oCamera)
+{
+	follow = other;
+}
