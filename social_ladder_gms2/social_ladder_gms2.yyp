@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "3f1e5b47-a6b9-4644-8f96-e82449c00e8a",
+            "Value": {
+                "id": "8194ee26-dee8-4d49-83a6-cbf9ac27d2ad",
+                "resourcePath": "scripts\\manage_timer\\manage_timer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3f27a615-126b-4623-a841-a13b19ae47e3",
             "Value": {
                 "id": "8b456669-2b74-43c3-91fa-4684c9d154de",
@@ -736,10 +744,11 @@
         "72216dc3-2cc8-4305-94cf-2405dcbb9572",
         "677112d3-ae30-429f-84aa-3e1d49793246",
         "b79ae310-2064-4845-aa11-2c0f635cb9b8",
+        "6c624892-b504-41db-bd30-cf04c0320d49",
         "021e25af-fd11-494c-9792-ddd498f4e5a9",
         "8fcf4cee-13d5-4f1b-9720-881be749683c",
         "e0823bf7-9b68-4807-b71a-385a2823b5f0",
-        "6c624892-b504-41db-bd30-cf04c0320d49"
+        "3f1e5b47-a6b9-4644-8f96-e82449c00e8a"
     ],
     "tutorial": ""
 }

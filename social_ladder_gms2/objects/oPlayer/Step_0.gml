@@ -11,6 +11,14 @@ switch state
 		case "move":
 			// Acceleration
 			walk_speed += acceleration;
+
+			//Re apply fractions
+			walk_speed += walk_speed_fraction;
+
+			//Store and Remove fractions
+			walk_speed_fraction = walk_speed - (floor(abs(walk_speed)) * sign(walk_speed));
+			walk_speed -= walk_speed_fraction;
+
 			if walk_speed > max_walk_speed walk_speed = max_walk_speed;
 			
 			//Move
@@ -49,8 +57,7 @@ switch state
 						
 			//Jump
 			
-			jump_timer --;
-			if jump_timer < -1 jump_timer = -1;
+			jump_timer = manage_timer(jump_timer);
 			
 			if grounded
 			{
@@ -60,28 +67,33 @@ switch state
 			
 			
 			//On air animation + wall jump
-			var side_wall = place_meeting(x + (image_xscale * half_mask_width), y - mask_height, oWall);
+			var side_wall = place_meeting(x + (image_xscale * half_mask_width), y - mask_height, oWall) || place_meeting(x + (image_xscale * half_mask_width), y, oWall);
 			
 			if !grounded
 			{
 				if vsp > 0
 				{
-					if side_wall 
-					{
-						sprite_index = sPlayer_wall_slide;
-						image_speed = 0.2;
-						vsp -= gravity_speed/3;
-						jump_timer = 4;
-					}else
-					{
-						sprite_index = sPlayer_fall;
-						image_speed = 0.2;
-					}
+					sprite_index = sPlayer_fall;
+					image_speed = 0.2;
 				}else
 				{
 					sprite_index = sPlayer_jump;
 					image_speed = 0.2;
 					if animation_end() image_speed = 0;
+				}
+				
+				if side_wall 
+				{
+					var gravity_slow = gravity_speed/3;
+					
+					sprite_index = sPlayer_wall_slide;
+					image_speed = 0.2;
+					if vsp > 0
+					{
+						vsp -= gravity_slow;
+					}
+					
+					jump_timer = 4;
 				}
 			}
 			
@@ -92,10 +104,28 @@ switch state
 				if jump_timer >=0 || jump_counter = 1
 				{
 					vsp = jump_speed;
-					grounded = false;
 					jump_counter++;
+
+					if !grounded && side_wall
+					{
+						
+						wall_jump_timer = 15;
+						jump_direction = -image_xscale;
+					}
+					
+					grounded = false;
 				}
 			}
+			
+			
+			wall_jump_timer = manage_timer(wall_jump_timer);
+			if wall_jump_timer >=0
+			{
+				move_and_collide(wall_jump_speed * jump_direction,0);
+			}
+			
+			
+			
 			//Cut jump
 			if input.jump_released && vsp <= 0 && vsp <= cut_jump_speed
 			{
@@ -108,8 +138,7 @@ switch state
 				state = "roll";
 			}
 			//attack
-			attack_down_cooldown --;
-			attack_down_cooldown = max(attack_down_cooldown,0);
+			attack_down_cooldown = manage_timer(attack_down_cooldown);
 			if input.attack
 			{
 				if input.down 
@@ -231,7 +260,6 @@ switch state
 
 
 //Aplly gravity
-
 vsp += gravity_speed;
 
 //Re apply fractions
