@@ -3,22 +3,15 @@ switch (state)
 		#region idle
 		case "idle":
 			set_state_sprite(sRunner_idle,0.2,0);
-			
-			if(instance_exists(oPlayer))
-			{
-				if !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0)
-				{
-					if(distance_to_object(oPlayer) < fov)  state = "chase";
-				}
-			}
+			chase_idle_triger();
 		break;
 	#endregion
 	#region Chase
 		case "chase":
 			set_state_sprite(sRunner_walk,0.2,0);
-			
 			chase_state();
-			timer = 6;
+			chase_idle_triger();
+
 		break;
 	#endregion
 	#region Attack
@@ -27,7 +20,7 @@ switch (state)
 			
 			if oPlayer.state != "roll"
 			{
-				knockback_speed = 4;
+				knockback_speed = sign(x - oPlayer.x) * 5;
 				state = "knockback";
 			}else state = "chase";
 				

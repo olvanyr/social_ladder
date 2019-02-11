@@ -1,5 +1,6 @@
 /// @arg knockback_sprite
 /// @arg next_state
+/// @arg knockback_speed
 
 var _nockback_spirte = argument0;
 var _next_state = argument1;
