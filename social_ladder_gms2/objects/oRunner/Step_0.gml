@@ -35,9 +35,15 @@ switch (state)
 	#endregion
 	#region Knockback
 		case "knockback":
-			knockback_state(sRunner_knockback, "chase");
+			knockback_state(sRunner_knockback, "stunt");
+			alarm[1] = 20;
 		break;
 
+	#endregion
+	#region Stunt
+		case "stunt":
+			set_state_sprite(sRunner_knockback,0,1);
+		break;
 	#endregion
 	#region Death
 		case "death":

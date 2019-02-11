@@ -101,9 +101,12 @@ switch state
 			
 			if input.jump
 			{
-				if jump_timer >=0 || jump_counter = 1
+				if jump_timer >=0 || jump_counter == 1
 				{
 					vsp = jump_speed;
+					var modified_jump_speed = jump_speed * 0.75;
+					if jump_counter == 1 vsp = modified_jump_speed;
+					
 					jump_counter++;
 
 					if !grounded && side_wall
@@ -173,7 +176,7 @@ switch state
 	#endregion
 	#region Attack one
 		case "attack_one":
-			set_state_sprite(sPlayer_attack1,0.6,0);
+			set_state_sprite(sPlayer_attack1,attack_animation_speed,0);
 			
 			if animation_hit_frame(3)
 			{
@@ -194,14 +197,14 @@ switch state
 	#endregion
 	#region Attack two
 		case "attack_two":
-			set_state_sprite(sPlayer_attack2,0.6,0);
+			set_state_sprite(sPlayer_attack2,attack_animation_speed,0);
 			
 			if animation_hit_frame(4)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 6, image_xscale);
+				create_hitbox(x, y, self, sPlayer_attack2_mask, 3, 2, 6, image_xscale);
 			}
 			if animation_end()
 			{
@@ -216,14 +219,14 @@ switch state
 	#endregion
 	#region Attack tree
 		case "attack_tree":
-			set_state_sprite(sPlayer_attack3,0.6,0);
+			set_state_sprite(sPlayer_attack3,attack_animation_speed,0);
 			
-			if animation_hit_frame(4)
+			if animation_hit_frame(2)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 8, image_xscale);
+				create_hitbox(x, y, self, sPlayer_attack3_mask, 3, 2, 8, image_xscale);
 			}
 			if animation_end()
 			{

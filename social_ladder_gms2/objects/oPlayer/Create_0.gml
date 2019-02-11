@@ -38,6 +38,7 @@ mask_height = sprite_get_height(sPlayer_mask);
 //Attack related variable
 knockbackable = true;
 attack_down_cooldown = 0;
+attack_animation_speed = 0.6;
 
 
 // Depedencies
