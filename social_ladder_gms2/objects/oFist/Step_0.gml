@@ -1,21 +1,23 @@
+if vsp != 0 grounded = false;
+
 switch (state)
 {
-		#region idle
+	#region idle
 		case "idle":
-			set_state_sprite(sFist_idle,0.2,0);
+			set_state_sprite(sFist_idle,0.6,0);
 			chase_idle_triger();
 		break;
 	#endregion
 	#region Chase
 		case "chase":
-			set_state_sprite(sFist_walk,0.2,0);
+			set_state_sprite(sFist_walk,0.6,0);
 			chase_idle_triger();
-			chase_state();
+			chase_state_fist();
 		break;
 	#endregion
 	#region Attack
 		case "attack":
-			set_state_sprite(sFist_attack,0.6,0);
+			set_state_sprite(sFist_attack,0.4,0);
 			
 			if animation_hit_frame(3)
 			{
@@ -41,6 +43,25 @@ switch (state)
 			set_state_sprite(sFist_knockback,0,1);
 		break;
 	#endregion
+	#region Roll
+		case "roll":
+			set_state_sprite(sFist_slide,0.3,0);
+			
+			if image_xscale == 1
+			{
+				move_and_collide(slide_speed,0);
+			}
+			if image_xscale == -1
+			{
+				move_and_collide(-slide_speed,0);
+			}
+			
+			if animation_end()
+			{
+				state = "chase";
+			}
+		break;
+	#endregion
 	#region Death
 		case "death":
 			death_state(sFist_die);
@@ -48,7 +69,16 @@ switch (state)
 	#endregion
 }
 
-
+if state == "chase" 
+{
+	if instance_exists(oPlayer)
+	{
+		if oPlayer.grounded && oPlayer.y + 5 < y && grounded
+		{
+			vsp = -7;
+		}
+	}
+}
 //Aplly gravity
 
 vsp += gravity_speed;
