@@ -7,7 +7,6 @@ if other.state != "roll" && other.state != "death"
 {
 	other.hp -= damage;
 	//audio_play_sound();
-	
 	if other.knockbackable == true
 	{
 		other.state = "knockback";
@@ -38,6 +37,8 @@ if instance_exists(oPlayer)
 		if other.state != "roll"
 		{
 			screenshake(4,8);
+			gamepad_set_vibration(0, 1, 1);
+			other.alarm[1] = 6;
 			if other.hp <= 0
 			{
 				show_debug_message("player dead");

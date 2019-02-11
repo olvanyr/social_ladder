@@ -2,46 +2,48 @@ switch (state)
 {
 		#region idle
 		case "idle":
-			set_state_sprite(sRunner_idle,0.2,0);
+			set_state_sprite(sFist_idle,0.2,0);
 			chase_idle_triger();
 		break;
 	#endregion
 	#region Chase
 		case "chase":
-			set_state_sprite(sRunner_walk,0.2,0);
+			set_state_sprite(sFist_walk,0.2,0);
 			chase_idle_triger();
 			chase_state();
-			
-
 		break;
 	#endregion
 	#region Attack
 		case "attack":
-			create_hitbox(x, y, self, sRunner_mask, 3, 2, 1, image_xscale);
+			set_state_sprite(sFist_attack,0.6,0);
 			
-			if oPlayer.state != "roll"
+			if animation_hit_frame(3)
 			{
-				knockback_speed = sign(x - oPlayer.x) * 5;
-				state = "knockback";
-			}else state = "chase";
-				
+				//audio_play_sound(aMiss,3,0);
+				create_hitbox(x, y, self, sFist_attack1_mask, 3, 2, 5, image_xscale);
+			}
+		
+			if animation_end()
+			{
+				state = "chase";
+			}	
 		break;
 	#endregion
 	#region Knockback
 		case "knockback":
-			knockback_state(sRunner_knockback, "stunt");
-			alarm[1] = 20;
+			knockback_state(sFist_knockback, "stunt");
+			alarm[1] = 10;
 		break;
 
 	#endregion
 	#region Stunt
 		case "stunt":
-			set_state_sprite(sRunner_knockback,0,1);
+			set_state_sprite(sFist_knockback,0,1);
 		break;
 	#endregion
 	#region Death
 		case "death":
-			death_state(sRunner_die);
+			death_state(sFist_die);
 		break;
 	#endregion
 }
