@@ -1,4 +1,4 @@
-draw_self();
+event_inherited();
 
 if state == "death" exit;
 if alarm[0] > 0
