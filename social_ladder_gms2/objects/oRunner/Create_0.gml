@@ -7,7 +7,7 @@ state = "idle";
 fov = 100;
 chase_speed = 1;
 
-attack_range = 5;
+attack_range = -5;
 
 knockback = 4;
 knockbackable = true;

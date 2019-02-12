@@ -3,10 +3,11 @@ if creator == noone || creator == other || ds_list_find_index(hit_objects, other
 	exit;
 }
 
-other.flash = 1;
+
 
 if other.state != "roll" && other.state != "death"
 {
+	other.flash = 1;
 	other.hp -= damage;
 	//audio_play_sound();
 	if other.knockbackable == true
