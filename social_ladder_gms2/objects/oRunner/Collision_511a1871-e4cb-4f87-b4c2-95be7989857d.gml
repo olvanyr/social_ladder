@@ -1,3 +1,6 @@
+
+if state == "death" exit;
+
 create_hitbox(x, y, self, sRunner_mask, 3, 2, 1, image_xscale);
 			
 if oPlayer.state != "roll"

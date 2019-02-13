@@ -17,8 +17,7 @@ switch (state)
 	#endregion
 	#region Attack
 		case "attack":
-			
-				
+			state = "chase";
 		break;
 	#endregion
 	#region Knockback
@@ -40,16 +39,5 @@ switch (state)
 	#endregion
 }
 
-
-//Aplly gravity
-
-vsp += gravity_speed;
-
-//Re apply fractions
-vsp += vsp_fraction;
-
-//Store and Remove fractions
-vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
-vsp -= vsp_fraction;
-
-move_and_collide(0,vsp);
+//endle gravity 
+event_inherited();
