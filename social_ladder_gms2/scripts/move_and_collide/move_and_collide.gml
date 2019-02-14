@@ -34,6 +34,3 @@ if place_meeting(x, y + _yspeed, oWall)
 }
 
 
-
-if vsp != 0 grounded = false;
-

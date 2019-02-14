@@ -1,13 +1,24 @@
 
+
+if vsp != 0 grounded = false;
+			
+//Hit ground sound
+if !grounded alarm[0] = 3;
+			
 switch state
 {
 	#region Move State
 		case "move":
-		
-			
-		
 			// Acceleration
 			walk_speed += acceleration;
+
+			//Re apply fractions
+			walk_speed += walk_speed_fraction;
+
+			//Store and Remove fractions
+			walk_speed_fraction = walk_speed - (floor(abs(walk_speed)) * sign(walk_speed));
+			walk_speed -= walk_speed_fraction;
+
 			if walk_speed > max_walk_speed walk_speed = max_walk_speed;
 			
 			//Move
@@ -46,8 +57,7 @@ switch state
 						
 			//Jump
 			
-			jump_timer --;
-			if jump_timer < -1 jump_timer = -1;
+			jump_timer = manage_timer(jump_timer);
 			
 			if grounded
 			{
@@ -57,28 +67,33 @@ switch state
 			
 			
 			//On air animation + wall jump
-			var side_wall = place_meeting(x + (image_xscale * half_mask_width), y - mask_height, oWall);
+			var side_wall = place_meeting(x + (image_xscale * half_mask_width), y - mask_height, oWall) || place_meeting(x + (image_xscale * half_mask_width), y, oWall);
 			
 			if !grounded
 			{
 				if vsp > 0
 				{
-					if side_wall 
-					{
-						sprite_index = sPlayer_wall_slide;
-						image_speed = 0.2;
-						vsp -= gravity_speed/3;
-						jump_timer = 4;
-					}else
-					{
-						sprite_index = sPlayer_fall;
-						image_speed = 0.2;
-					}
+					sprite_index = sPlayer_fall;
+					image_speed = 0.2;
 				}else
 				{
 					sprite_index = sPlayer_jump;
 					image_speed = 0.2;
 					if animation_end() image_speed = 0;
+				}
+				
+				if side_wall 
+				{
+					var gravity_slow = gravity_speed/3;
+					
+					sprite_index = sPlayer_wall_slide;
+					image_speed = 0.2;
+					if vsp > 0
+					{
+						vsp -= gravity_slow;
+					}
+					
+					jump_timer = 4;
 				}
 			}
 			
@@ -86,21 +101,39 @@ switch state
 			
 			if input.jump
 			{
-				if jump_timer >=0 || jump_counter = 1
+				if jump_timer >=0 || jump_counter == 1
 				{
 					vsp = jump_speed;
-					grounded = false;
+					var modified_jump_speed = jump_speed * 0.75;
+					if jump_counter == 1 vsp = modified_jump_speed;
+					
 					jump_counter++;
+
+					if !grounded && side_wall
+					{
+						
+						wall_jump_timer = 15;
+						jump_direction = -image_xscale;
+					}
+					
+					grounded = false;
 				}
 			}
+			
+			
+			wall_jump_timer = manage_timer(wall_jump_timer);
+			if wall_jump_timer >=0
+			{
+				move_and_collide(wall_jump_speed * jump_direction,0);
+			}
+			
+			
+			
 			//Cut jump
 			if input.jump_released && vsp <= 0 && vsp <= cut_jump_speed
 			{
 				vsp = cut_jump_speed;
 			}
-
-			//Hit ground sound
-			if !grounded alarm[0] = 3;
 			
 			//roll
 			if input.roll
@@ -108,9 +141,16 @@ switch state
 				state = "roll";
 			}
 			//attack
+			attack_down_cooldown = manage_timer(attack_down_cooldown);
 			if input.attack
 			{
-				state = "attack_one";
+				if input.down 
+				{
+					if grounded == false && attack_down_cooldown <= 0
+					{
+						state ="attack_down";
+					}
+				}else state = "attack_one";
 			}
 			
 		break;
@@ -136,14 +176,14 @@ switch state
 	#endregion
 	#region Attack one
 		case "attack_one":
-			set_state_sprite(sPlayer_attack1,0.6,0);
+			set_state_sprite(sPlayer_attack1,attack_animation_speed,0);
 			
 			if animation_hit_frame(3)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				//create hitbox latter
+				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 5, image_xscale);
 			}
 			if animation_end()
 			{
@@ -157,14 +197,14 @@ switch state
 	#endregion
 	#region Attack two
 		case "attack_two":
-			set_state_sprite(sPlayer_attack2,0.6,0);
+			set_state_sprite(sPlayer_attack2,attack_animation_speed,0);
 			
 			if animation_hit_frame(4)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				//create hitbox latter
+				create_hitbox(x, y, self, sPlayer_attack2_mask, 3, 2, 6, image_xscale);
 			}
 			if animation_end()
 			{
@@ -179,14 +219,14 @@ switch state
 	#endregion
 	#region Attack tree
 		case "attack_tree":
-			set_state_sprite(sPlayer_attack3,0.6,0);
+			set_state_sprite(sPlayer_attack3,attack_animation_speed,0);
 			
-			if animation_hit_frame(4)
+			if animation_hit_frame(2)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				//create hitbox latter
+				create_hitbox(x, y, self, sPlayer_attack3_mask, 3, 2, 8, image_xscale);
 			}
 			if animation_end()
 			{
@@ -194,12 +234,35 @@ switch state
 			}			
 		break;
 	#endregion
+	#region Attack down
+		case "attack_down":
+			set_state_sprite(sPlayer_dawn_hit,0.6,0);
+			vsp = vsp*0.6;
+			attack_down_cooldown = 20;
+			
+			if animation_hit_frame(1)
+			{
+				audio_play_sound(aMiss,3,0);
+				gamepad_set_vibration(0, 1, 1);
+				alarm[1] = 3;
+				create_hitbox(x, y, self, sPlayer_dawn_hit_mask, 3, 2, 5, image_xscale);
+			}
+			if animation_end()
+			{
+				state = "move";
+			}
+		break;
+	#endregion
+	#region Knockback
+		case "knockback":
+		knockback_state(sPlayer_knockback, "move");
+	break;
+	#endregion
 	
 }
 
 
 //Aplly gravity
-
 vsp += gravity_speed;
 
 //Re apply fractions
@@ -209,8 +272,6 @@ vsp += vsp_fraction;
 vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_fraction;
 
-
-show_debug_message(vsp);
 move_and_collide(0,vsp);
 
 
