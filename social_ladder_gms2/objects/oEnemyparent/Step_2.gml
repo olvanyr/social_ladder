@@ -3,6 +3,7 @@ if hp <= 0 && state != "death"
 {
 	state = "death";
 	if other.hp > 0 other.hp = 0;
+	save_enemies();
 } 
 
 //sav location here
