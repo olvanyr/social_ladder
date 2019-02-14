@@ -258,6 +258,11 @@ switch state
 		knockback_state(sPlayer_knockback, "move");
 	break;
 	#endregion
+	#region wait
+		case "wait":
+		set_state_sprite(sPlayer_idle,0.2,0);
+	break;
+	#endregion
 	
 }
 
