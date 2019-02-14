@@ -40,6 +40,24 @@ knockbackable = true;
 attack_down_cooldown = 0;
 attack_animation_speed = 0.6;
 
+//HUD 
+x_buffer = 10;
+y_buffer = 10;
+
+x_health_buffer = x_buffer + (3*3); 
+y_health_buffer = y_buffer + (2*3); 
+health_bar_width = 94*3;
+max_health_bar_width = health_bar_width;
+health_bar_height = 4*3;
+
+x_healthpack_buffer = x_health_buffer + max_health_bar_width + (12*3);
+inter_healthpack_buffer = 7*3;
+healthpack_width = 5*3;
+
+//health pack
+healthpack = 4;
+max_healthpack = healthpack;
+
 
 // Depedencies
 input = instance_create_layer(0,0,"Instances",oInput)
@@ -50,4 +68,9 @@ if !instance_exists(oCamera)
 	{
 		follow = other;
 	}
+}
+
+if !instance_exists(oHUD)
+{
+	instance_create_layer(x,y,"Instances", oHUD)
 }
