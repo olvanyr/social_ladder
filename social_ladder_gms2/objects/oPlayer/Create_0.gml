@@ -44,7 +44,10 @@ attack_animation_speed = 0.6;
 // Depedencies
 input = instance_create_layer(0,0,"Instances",oInput)
 
-with instance_create_layer(x,y,"Instances", oCamera)
+if !instance_exists(oCamera)
 {
-	follow = other;
+	with instance_create_layer(x,y,"Instances", oCamera)
+	{
+		follow = other;
+	}
 }
