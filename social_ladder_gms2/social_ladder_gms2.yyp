@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "253820ac-7bb1-4892-9671-45a5cf746c2a",
+            "Value": {
+                "id": "4872c480-a354-44f0-9d53-f663106ea22f",
+                "resourcePath": "sprites\\sHUD\\sHUD.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "256049d1-efb3-45e4-aa59-dffb1d77203b",
             "Value": {
                 "id": "b6b25bf0-038b-4bfe-a2ef-83117fc16b08",
@@ -300,6 +308,14 @@
                 "id": "15544c51-0c75-4493-a510-e18591dc5240",
                 "resourcePath": "sprites\\sFist_attack\\sFist_attack.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "564b6e3f-2461-482b-824a-907a0ef0fa97",
+            "Value": {
+                "id": "6dc36d15-24e5-4258-a215-926c5f7bef1e",
+                "resourcePath": "objects\\oHUD\\oHUD.yy",
+                "resourceType": "GMObject"
             }
         },
         {

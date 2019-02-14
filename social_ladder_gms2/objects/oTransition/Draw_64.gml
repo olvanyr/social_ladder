@@ -1,7 +1,7 @@
 if instance_exists(oPlayer)
 {
 	draw_set_alpha(timer);
-	draw_rectangle_color(0,0,100000,10000,c,c,c,c,false);
+	draw_rectangle_color(0,0,window_get_width(),window_get_height(),c,c,c,c,false);
 
 	timer += 0.05;
 	

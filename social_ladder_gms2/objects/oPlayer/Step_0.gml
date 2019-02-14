@@ -135,6 +135,16 @@ switch state
 				vsp = cut_jump_speed;
 			}
 			
+			//Use health pack
+
+			healthpack = min(healthpack,3);
+
+			if input.action1 && healthpack > 0 && hp != max_hp
+			{
+				hp = max_hp;
+				healthpack -= 1;
+			}
+			
 			//roll
 			if input.roll
 			{
@@ -255,16 +265,18 @@ switch state
 	#endregion
 	#region Knockback
 		case "knockback":
-		knockback_state(sPlayer_knockback, "move");
-	break;
+			knockback_state(sPlayer_knockback, "move");
+		break;
 	#endregion
 	#region wait
 		case "wait":
-		set_state_sprite(sPlayer_idle,0.2,0);
-	break;
+			set_state_sprite(sPlayer_idle,0.2,0);
+		break;
 	#endregion
-	
 }
+
+
+
 
 
 //Aplly gravity
@@ -278,5 +290,10 @@ vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_fraction;
 
 move_and_collide(0,vsp);
+
+
+//set new hp 
+
+health_bar_width = max_health_bar_width * ((hp/max_hp));
 
 

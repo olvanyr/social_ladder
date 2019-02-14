@@ -9,6 +9,7 @@ if other.state != "roll" && other.state != "death"
 {
 	other.flash = 1;
 	other.hp -= damage;
+	other.hp = max(other.hp,0);
 	//audio_play_sound();
 	if other.knockbackable == true
 	{
