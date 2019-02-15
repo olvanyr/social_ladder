@@ -18,7 +18,6 @@ if (file_exists("saveenemies.sav"))
 					state = _map[? "state"];
 					x = _map[? "x"];
 					y = _map[? "y"];
-					image_index = image_number -1;
 				}
 			}
 		}
