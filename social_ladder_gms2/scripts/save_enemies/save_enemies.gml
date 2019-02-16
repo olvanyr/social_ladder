@@ -4,6 +4,10 @@
 
 var _root_list = ds_list_create();
 
+// check if the file is alredy filled
+// just copy past the old ds_map into the new one, i don't realy know if it is possible
+
+
 
 // for every instance, create a map
 
