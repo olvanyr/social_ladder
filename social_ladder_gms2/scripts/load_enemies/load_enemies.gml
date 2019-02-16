@@ -1,4 +1,3 @@
-
 if (file_exists("saveenemies.sav"))
 {
 	var _wrapper = load_JSON_from_file("saveenemies.sav");
