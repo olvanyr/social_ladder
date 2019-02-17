@@ -16,7 +16,7 @@ switch state
 			walk_speed += walk_speed_fraction;
 
 			//Store and Remove fractions
-			walk_speed_fraction = walk_speed - (floor(abs(walk_speed)) * sign(walk_speed));
+			walk_speed_fraction = frac(walk_speed);
 			walk_speed -= walk_speed_fraction;
 
 			if walk_speed > max_walk_speed walk_speed = max_walk_speed;
@@ -286,7 +286,7 @@ vsp += gravity_speed;
 vsp += vsp_fraction;
 
 //Store and Remove fractions
-vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
+vsp_fraction = frac(vsp);
 vsp -= vsp_fraction;
 
 move_and_collide(0,vsp);
