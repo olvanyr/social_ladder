@@ -9,7 +9,7 @@ if (instance_exists(follow))
 {
 	var x_buffer = (cam_shift * follow.image_xscale);
 	xTo = follow.x + x_buffer;
-	yTo = follow.y;
+	yTo = follow.y - y_buffer;
 	
 	// if I whant the camera to be fix
 	if (follow).object_index == noone

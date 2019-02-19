@@ -4,6 +4,7 @@ if vsp != 0 grounded = false;
 			
 //Hit ground sound
 if !grounded alarm[0] = 3;
+
 			
 switch state
 {
@@ -162,7 +163,7 @@ switch state
 					}
 				}else state = "attack_one";
 			}
-			
+	
 		break;
 	#endregion
 	#region Roll

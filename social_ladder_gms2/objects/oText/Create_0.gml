@@ -1,0 +1,11 @@
+spd = 4;
+letters = 0;
+text = "";
+length = string_length(text);
+text_current = ""
+w = 0;
+h = 0;
+border = 10;
+radius = 0;
+xpos = 0;
+ypos = 0;
