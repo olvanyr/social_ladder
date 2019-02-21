@@ -1,6 +1,9 @@
-if (file_exists("saveenemies.sav"))
+var _file_name = room_get_name(room) + string(".sav");
+
+
+if (file_exists(_file_name))
 {
-	var _wrapper = load_JSON_from_file("saveenemies.sav");
+	var _wrapper = load_JSON_from_file(_file_name);
 	var _list = _wrapper[? "root"]; // the ? is an accesseur and is a quickest way to acces into a ds map instade of using ds_map_find_value();
 	
 	for (var i = 0; i < ds_list_size(_list); i++)

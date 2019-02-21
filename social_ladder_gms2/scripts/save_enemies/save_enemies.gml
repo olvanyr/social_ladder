@@ -1,8 +1,9 @@
 /// @desc save the game
 
 // creat a root list in witch we will store all the ds_map
+var _file_name = room_get_name(room) + string(".sav");
 
-var _root_list = ds_list_create();
+var _root_list  = ds_list_create();
 
 // check if the file is alredy filled
 // just copy past the old ds_map into the new one, i don't realy know if it is possible
@@ -41,7 +42,7 @@ ds_map_add_list(_wrapper, "root", _root_list);
 
 var _string = json_encode(_wrapper);
 
-save_string_to_file("saveenemies.sav", _string);
+save_string_to_file(_file_name, _string);
 
 // Destroy the data by destroying the wrapper, we destroy every list and map
 

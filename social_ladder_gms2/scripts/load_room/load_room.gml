@@ -9,10 +9,10 @@ if (file_exists("saveroom.sav"))
 		var _map = _list[| i]; // we can write ds_list_find_value(_list,i);		 
 		var j = i + 1000;
 				
-		room_list[i,0] = _map[? i];
-		room_list[i,1] = _map[? j];
+		oMap.room_list[i,0] = _map[? i];
+		oMap.room_list[i,1] = _map[? j];
 	}
 	ds_map_destroy(_wrapper);
+	show_debug_message("room load");
 }
 
-show_debug_message("room load");

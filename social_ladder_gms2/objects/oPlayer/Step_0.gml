@@ -1,4 +1,24 @@
-
+#region Depedencies
+	if !instance_exists(oLoad)
+	{
+		instance_create_layer(0,0,"Instances",oLoad)
+	}
+	if !instance_exists(oInput)
+	{
+		input = instance_create_layer(0,0,"Instances",oInput)
+	}
+	if !instance_exists(oCamera)
+	{
+		with instance_create_layer(x,y,"Instances", oCamera)
+		{
+			follow = other;
+		}
+	}
+	if !instance_exists(oHUD)
+	{
+		instance_create_layer(x,y,"Instances", oHUD)
+	}
+#endregion
 
 if vsp != 0 grounded = false;
 			

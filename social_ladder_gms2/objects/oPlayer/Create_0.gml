@@ -64,18 +64,3 @@ max_healthpack = healthpack;
 //......
 
 
-// Depedencies
-input = instance_create_layer(0,0,"Instances",oInput)
-
-if !instance_exists(oCamera)
-{
-	with instance_create_layer(x,y,"Instances", oCamera)
-	{
-		follow = other;
-	}
-}
-
-if !instance_exists(oHUD)
-{
-	instance_create_layer(x,y,"Instances", oHUD)
-}
