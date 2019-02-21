@@ -20,6 +20,14 @@ with(oEnemyParent) // beacause we do this with the enemy parents, it will happen
 	var _id = id; ; //beacause we are in a "with" function this will get the index of the object that the fonction is curently looking at
 	ds_map_add(_map,"id", _id);
 	ds_map_add(_map,"y", y);
+	
+	//
+	//
+	//what if i replace _map by room ????
+	//
+	///
+	//
+	
 	ds_map_add(_map,"x", x);
 	ds_map_add(_map,"state", state);
 }

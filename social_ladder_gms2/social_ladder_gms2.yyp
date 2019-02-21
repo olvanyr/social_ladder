@@ -746,7 +746,7 @@
             "Key": "a31980ce-88d0-4826-acb9-bbecb2a9d278",
             "Value": {
                 "id": "b05f0b34-d6b4-45dc-832e-8b3fdcd77123",
-                "resourcePath": "scripts\\save_room\\save_room.yy",
+                "resourcePath": "scripts\\save_roo\\save_roo.yy",
                 "resourceType": "GMScript"
             }
         },
