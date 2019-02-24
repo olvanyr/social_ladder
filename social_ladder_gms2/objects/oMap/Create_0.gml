@@ -1,9 +1,7 @@
-room_list[room_last,0] = false;
+
+// init the2D array
+room_list[room_last,0] = 0;
 for (var i = 0; i < room_last + 1; i++)
 {
-	
-	room_list[i,1] = false;
+	room_list[i,1] = 0;
 }
-
-room_list[room,0] = true;
-save_room();

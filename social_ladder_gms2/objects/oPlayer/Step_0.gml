@@ -1,5 +1,5 @@
 #region Depedencies
-	if !instance_exists(oLoad)
+	if !instance_exists(oLoad) && instance_exists(oMap)
 	{
 		instance_create_layer(0,0,"Instances",oLoad)
 	}

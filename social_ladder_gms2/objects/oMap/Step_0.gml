@@ -13,15 +13,12 @@ if room_list[room,0] = true
 	// add the room to the map
 	if death_count == 0
 	{
-		load_room();
-		save_room();
+		save_map();
 		room_list[room,1] = true;
 		// change the color of the sprite on the map
 	}
 }else 
 {
 	room_list[room,0] = true;
-	load_room();
-	save_room();
-	
+	save_map();
 }

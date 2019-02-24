@@ -1,8 +1,8 @@
 {
-    "id": "752a89f3-f8b5-4ad1-9196-bb89e4bc99f9",
+    "id": "a31980ce-88d0-4826-acb9-bbecb2a9d278",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "load_room",
+    "name": "save_map",
     "IsCompatibility": false,
     "IsDnD": false
 }

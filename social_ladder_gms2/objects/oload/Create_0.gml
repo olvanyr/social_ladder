@@ -1,2 +1,2 @@
 load_enemies();
-load_room();
+load_map();

@@ -554,7 +554,7 @@
             "Key": "752a89f3-f8b5-4ad1-9196-bb89e4bc99f9",
             "Value": {
                 "id": "719e98be-c426-4b1b-8150-3e0bd5b36216",
-                "resourcePath": "scripts\\load_room\\load_room.yy",
+                "resourcePath": "scripts\\load_map\\load_map.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -754,7 +754,7 @@
             "Key": "a31980ce-88d0-4826-acb9-bbecb2a9d278",
             "Value": {
                 "id": "b05f0b34-d6b4-45dc-832e-8b3fdcd77123",
-                "resourcePath": "scripts\\save_room\\save_room.yy",
+                "resourcePath": "scripts\\save_map\\save_map.yy",
                 "resourceType": "GMScript"
             }
         },
