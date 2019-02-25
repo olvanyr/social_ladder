@@ -160,7 +160,7 @@ switch state
 
 			healthpack = min(healthpack,3);
 
-			if input.action1 && healthpack > 0 && hp != max_hp
+			if input.use_healthpack && healthpack > 0 && hp != max_hp
 			{
 				hp = max_hp;
 				healthpack -= 1;

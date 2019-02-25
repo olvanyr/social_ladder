@@ -1,4 +1,4 @@
-if keyboard_check_pressed(ord("N"))
+if oInput.use
 {
 	oPlayer.state = "wait";
 	with instance_create_layer(0,0,"Effects", oTransition)
