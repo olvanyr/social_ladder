@@ -12,3 +12,11 @@ vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_fraction;
 
 move_and_collide(0,vsp);
+
+//store the variable
+
+i
+
+
+
+global.ennemies_array[self,save.x] = x;

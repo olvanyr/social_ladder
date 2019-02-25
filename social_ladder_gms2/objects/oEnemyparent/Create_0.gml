@@ -11,11 +11,19 @@ grounded = false;
 vsp = 0;
 vsp_fraction = 0;
 
-enum sav_variable
-{
-   x,
-   y,
-   state
-}
+state = "idle";
 
-global.ennemies_array[self,sav_variable.x] = x;
+
+//set ennemy state
+
+if global.ennemies_array[self,save.state] != noone
+{
+	if global.ennemies_array[self,save.state] == "death"
+	{
+		state = "death";
+		x = global.ennemies_array[self,save.x];
+		y = global.ennemies_array[self,save.y];
+		
+	}
+	
+}
