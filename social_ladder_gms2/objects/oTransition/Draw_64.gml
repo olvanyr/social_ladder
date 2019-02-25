@@ -13,6 +13,7 @@ if instance_exists(oPlayer)
 		oPlayer.state = "move";
 		oCamera.x = x_next;
 		oCamera.y = y_next;
+		oPlayer.hp = hp;
 	}
 	draw_set_alpha(1);
 	

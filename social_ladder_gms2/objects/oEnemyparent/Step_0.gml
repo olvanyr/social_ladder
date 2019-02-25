@@ -15,8 +15,7 @@ move_and_collide(0,vsp);
 
 //store the variable
 
-i
+global.enemies[ident,save.state] = state;
+global.enemies[ident,save.x] = x;
+global.enemies[ident,save.y] = y;
 
-
-
-global.ennemies_array[self,save.x] = x;

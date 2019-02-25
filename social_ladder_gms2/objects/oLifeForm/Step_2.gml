@@ -1,4 +1,5 @@
-if hp <= 0
+/// @description State = death if life = 0
+if hp <= 0 && state != "death"
 {
-	instance_destroy();
-}
+	state = "death";
+} 

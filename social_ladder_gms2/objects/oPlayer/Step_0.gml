@@ -294,6 +294,24 @@ switch state
 			set_state_sprite(sPlayer_idle,0.2,0);
 		break;
 	#endregion
+	#region death
+		case "death":
+			death_state(sPlayer_die);
+			//audio_play_sound(aMiss,3,0);
+			gamepad_set_vibration(0, 1, 1);
+			alarm[1] = 6;
+			if animation_end()
+			{
+				with instance_create_layer(0,0,"Effects", oTransition)
+				{
+					next_room = global.start_room;
+					x_next = global.start_x;
+					y_next = global.start_y;
+					hp = oPlayer.max_hp;
+				}
+			}
+		break;
+	#endregion
 }
 
 

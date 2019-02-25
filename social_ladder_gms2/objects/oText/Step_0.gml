@@ -9,9 +9,11 @@ w = string_width(text_current);
 
 // Destroy when done
 
-if(letters >= length) && !point_in_circle(oPlayer.x,oPlayer.y,oSign.x,oSign.y, radius + 30)
+if instance_exists(oPlayer)
 {
-	show_debug_message("destroy");
-	instance_destroy();
-	with(oCamera) follow = oPlayer;
+	if(letters >= length) && !point_in_circle(oPlayer.x,oPlayer.y,oSign.x,oSign.y, radius + 30)
+	{
+		instance_destroy();
+		with(oCamera) follow = oPlayer;
+	}
 }

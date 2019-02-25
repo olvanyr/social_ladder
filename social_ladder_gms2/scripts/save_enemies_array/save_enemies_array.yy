@@ -1,8 +1,8 @@
 {
-    "id": "48aa8b29-aa8f-449e-82e9-3dcc5a972e66",
+    "id": "8500daf8-2f61-4fdd-b1ae-53fe305dc84a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "save_test",
+    "name": "save_enemies_array",
     "IsCompatibility": false,
     "IsDnD": false
 }

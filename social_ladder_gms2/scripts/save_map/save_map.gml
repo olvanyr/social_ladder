@@ -1,5 +1,5 @@
 /// @desc save the room the player have been in
-
+/*
 // creat a root list in witch we will store all the ds_map
 var _root_list = ds_list_create();
 

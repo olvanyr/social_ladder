@@ -4,7 +4,7 @@ switch (state)
 {
 	#region idle
 		case "idle":
-			set_state_sprite(sFist_idle,0.6,0);
+			set_state_sprite(sFist_idle,0.2,0);
 			chase_idle_triger();
 		break;
 	#endregion
