@@ -42,6 +42,14 @@ switch state
 
 			if walk_speed > max_walk_speed walk_speed = max_walk_speed;
 			
+			
+			wall_jump_timer = manage_timer(wall_jump_timer);
+			
+			if wall_jump_timer >=0
+			{
+				move_and_collide(wall_jump_speed * jump_direction,0);
+			}else
+			{
 			//Move
 			if input.right
 			{
@@ -73,7 +81,7 @@ switch state
 					}
 				}
 			}
-			
+			}
 			
 						
 			//Jump
@@ -105,7 +113,8 @@ switch state
 				
 				if side_wall 
 				{
-					var gravity_slow = gravity_speed/3;
+					//maybe I have to change gravity_slow back to gravity_speed/2
+					var gravity_slow = gravity_speed * 0.8;
 					
 					sprite_index = sPlayer_wall_slide;
 					image_speed = 0.2;
@@ -125,6 +134,7 @@ switch state
 				if jump_timer >=0 || jump_counter == 1
 				{
 					vsp = jump_speed;
+					//the second jump is lower than the first
 					var modified_jump_speed = jump_speed * 0.75;
 					if jump_counter == 1 vsp = modified_jump_speed;
 					
@@ -142,11 +152,7 @@ switch state
 			}
 			
 			
-			wall_jump_timer = manage_timer(wall_jump_timer);
-			if wall_jump_timer >=0
-			{
-				move_and_collide(wall_jump_speed * jump_direction,0);
-			}
+			
 			
 			
 			

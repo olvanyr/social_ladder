@@ -24,7 +24,7 @@ jump_timer = 0;
 jump_counter = 0;
 
 //wall jump related variable
-wall_jump_speed = 3;
+wall_jump_speed = 1.5;
 wall_jump_timer = false;
 jump_direction = 0;
 slide_speed = 2.5;
