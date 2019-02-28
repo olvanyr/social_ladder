@@ -226,7 +226,7 @@ switch state
 			{
 				state = "move";
 			}
-			if input.attack && animation_hit_frame_range(3,5)
+			if input.attack && animation_hit_frame_range(3,6)
 			{
 				state = "attack_two";
 			}
@@ -236,7 +236,7 @@ switch state
 		case "attack_two":
 			set_state_sprite(sPlayer_attack2,attack_animation_speed,0);
 			
-			if animation_hit_frame(4)
+			if animation_hit_frame(3)
 			{
 				audio_play_sound(aMiss,3,0);
 				gamepad_set_vibration(0, 1, 1);
@@ -247,7 +247,7 @@ switch state
 			{
 				state = "move";
 			}
-			if input.attack && animation_hit_frame_range(4,6)
+			if input.attack && animation_hit_frame_range(3,6)
 			{
 				state = "attack_tree";
 			}
