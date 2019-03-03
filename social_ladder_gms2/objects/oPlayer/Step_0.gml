@@ -1,8 +1,4 @@
 #region Depedencies
-	if !instance_exists(oLoad) && instance_exists(oMap)
-	{
-		instance_create_layer(0,0,"Instances",oLoad)
-	}
 	if !instance_exists(oInput)
 	{
 		input = instance_create_layer(0,0,"Instances",oInput)
@@ -18,6 +14,7 @@
 	{
 		instance_create_layer(x,y,"Instances", oHUD)
 	}
+	
 #endregion
 
 if vsp != 0 grounded = false;

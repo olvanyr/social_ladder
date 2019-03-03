@@ -1,3 +1,4 @@
+
 switch (state)
 {
 		#region idle

@@ -15,18 +15,35 @@ state = "idle";
 
 
 // I have to do that beacause id start at 100000 and the array can only store value under 32000 or something like that
-ident = id - 99900;
+ident = id;
 
 //set ennemy state
-global.enemies[ident,save.state] = state;
-global.enemies[ident,save.x] = x;
-global.enemies[ident,save.y] = y;
 
-if global.enemies[ident,save.state] == "death"
+/// @description load data
+
+
+var array;
+
+if is_array(global.enemies[?ident])
 {
-	state = "death";
-	x = global.enemies[ident,save.x];
-	y = global.enemies[ident,save.y];
+	
+	array = global.enemies[?ident];
+
+	if array[save.state] == "death"
+	{
+	
+		x = array[save.x];
+		y = array[save.y];
+		state = array[save.state];
+	}
 }
+
+array[save.state] = state;
+array[save.x] = x;
+array[save.y] = y;
+
+//array[save.room] = room_id;
+
+global.enemies[?ident] = array;
 
 

@@ -7,9 +7,18 @@ enum save
 {
 	x,
 	y,
-	state
+	state,
+	room
+}
+
+enum save_room
+{
+	seen,
+	
 }
 
 global.start_room = room0;
 global.start_x = 256;
 global.start_y = 185;
+
+

@@ -1,6 +1,6 @@
 ///@desc return a json string of all the instances
 
-/*var list = ds_list_create();
+var list = ds_list_create();
 with(all) //trought all the object if the object is inside the map, then save the data that are inside the global.save_map
 {
 	if ds_map_exists(global.save_map_,object_index) // if the object is inside the map, "if it has data to be saved"
@@ -18,7 +18,5 @@ ds_map_add_list(m, "instances", list); //ds map work a litle bit differently, we
 var json = json_encode(m);
 
 ds_map_destroy(m);
-*/
 
-var json = json_encode(global.enemies);
 return json;
