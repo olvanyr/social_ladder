@@ -22,5 +22,6 @@ for(var i = 0; i < ds_list_size(list); i++)
 
 ds_map_destroy(m);
 */
-
+ds_map_destroy(global.enemies);
+global.enemies = ds_map_create();
 global.enemies = json_decode(json);
