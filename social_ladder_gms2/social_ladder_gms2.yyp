@@ -495,6 +495,14 @@
             }
         },
         {
+            "Key": "633ee878-0cbb-4ee6-af46-ad0ec028a785",
+            "Value": {
+                "id": "b5be5b79-b31d-4759-a637-cf2988c073ae",
+                "resourcePath": "scripts\\set_enemies_array\\set_enemies_array.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "63bf3707-6ce2-4d54-8c64-05e6dd50a04d",
             "Value": {
                 "id": "0ba2de32-4f4f-465f-8070-8dd07ed67b80",
@@ -1285,12 +1293,13 @@
         "2a2ae53b-5696-449b-9203-d9f16f369302",
         "fae910b1-abd7-47e1-9d7a-2eebc54c4a09",
         "39952e9b-3490-48df-82c5-efe2b3bf23ab",
-        "c2f1732e-b9ca-4b63-be01-5694ac538f27",
         "8abab413-9f98-4690-a273-d0de9310c6af",
-        "b19a1fab-ba69-488c-ac12-55b49158df19",
+        "62231cfb-b72b-437d-a4f2-363919b79831",
         "7d817ed1-4733-43e5-a2df-ad1583fae33e",
+        "c2f1732e-b9ca-4b63-be01-5694ac538f27",
+        "b19a1fab-ba69-488c-ac12-55b49158df19",
         "82486ed5-8b98-4b6f-8c27-2b0f5487f9bd",
-        "62231cfb-b72b-437d-a4f2-363919b79831"
+        "633ee878-0cbb-4ee6-af46-ad0ec028a785"
     ],
     "tutorial": ""
 }

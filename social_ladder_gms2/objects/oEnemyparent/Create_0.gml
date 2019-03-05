@@ -14,12 +14,10 @@ vsp_fraction = 0;
 state = "idle";
 
 
-// I have to do that beacause id start at 100000 and the array can only store value under 32000 or something like that
+// save and load 
 ident = id;
 
-//set ennemy state
-
-/// @description load data
+once = true; //use to make the sav script happen only once when the enemy is dead
 
 
 var array;
@@ -36,14 +34,13 @@ if is_array(global.enemies[?ident])
 		y = array[save.y];
 		state = array[save.state];
 	}
+} else 
+{
+	//set ennemy state
+	set_enemies_array();
 }
 
-array[save.state] = state;
-array[save.x] = x;
-array[save.y] = y;
 
-//array[save.room] = room_id;
 
-global.enemies[?ident] = array;
 
 
