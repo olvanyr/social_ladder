@@ -20,6 +20,7 @@ ident = id;
 once = true; //use to make the sav script happen only once when the enemy is dead
 
 
+
 var array;
 
 if is_array(global.enemies[?ident])

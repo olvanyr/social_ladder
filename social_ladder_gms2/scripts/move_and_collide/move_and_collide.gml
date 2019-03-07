@@ -2,6 +2,10 @@
 /// @arg xSpeed
 /// @arg ySpeed
 
+if self == oPlayer
+{
+	mask_index = sPlayer_mask;
+}
 var _xspeed = argument0;
 var _yspeed = argument1;
 
@@ -31,6 +35,11 @@ if place_meeting(x, y + _yspeed, oWall)
 	}
 	vsp = 0;
 	
+}
+
+if self == oPlayer
+{
+	mask_index = sPlayer_hit_mask;
 }
 
 

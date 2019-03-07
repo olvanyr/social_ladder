@@ -19,6 +19,7 @@ var json = json_encode(m);
 
 ds_map_destroy(m);
 */
-
 var json = json_encode(global.enemies);
 return json;
+
+

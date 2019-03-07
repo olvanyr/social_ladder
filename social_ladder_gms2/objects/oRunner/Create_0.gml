@@ -9,3 +9,5 @@ attack_range = -5;
 
 knockback = 4;
 knockbackable = true;
+
+mask = sRunner_mask;

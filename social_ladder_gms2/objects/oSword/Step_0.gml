@@ -46,20 +46,7 @@ switch (state)
 	#region Roll
 		case "roll":
 			set_state_sprite(sSword_slide,0.3,0);
-			
-			if image_xscale == 1
-			{
-				move_and_collide(slide_speed,0);
-			}
-			if image_xscale == -1
-			{
-				move_and_collide(-slide_speed,0);
-			}
-			
-			if animation_end()
-			{
-				state = "chase";
-			}
+			roll_state("chase");
 		break;
 	#endregion
 	#region Death

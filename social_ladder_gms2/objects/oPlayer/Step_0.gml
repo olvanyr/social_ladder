@@ -192,20 +192,7 @@ switch state
 	#region Roll
 		case "roll":
 			set_state_sprite(sPlayer_slide_stand,0.3,0);
-			
-			if image_xscale == 1
-			{
-				move_and_collide(slide_speed,0);
-			}
-			if image_xscale == -1
-			{
-				move_and_collide(-slide_speed,0);
-			}
-			
-			if animation_end()
-			{
-				state = "move";
-			}
+			roll_state("move");
 		break;
 	#endregion
 	#region Attack one

@@ -11,4 +11,6 @@ knockback = 4;
 knockbackable = true;
 
 
-slide_speed = 3;
+slide_speed = 2.5;
+
+mask = sFist_mask;
