@@ -16,6 +16,11 @@ vsp = 0;
 vsp_fraction = 0;
 grounded = false;
 
+//roll related variable
+roll_cooldown = 0;
+
+//cast related variable
+cast_cooldown = 0;
 
 //jump related variable
 jump_speed = -6;

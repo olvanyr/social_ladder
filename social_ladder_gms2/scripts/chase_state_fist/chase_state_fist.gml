@@ -12,7 +12,7 @@ if distance_to_player <= attack_range
 {
 	state = "attack";
 }
-if distance_to_player <= attack_range + 5 && irandom(4) == 1
+if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
 {
 	state = "roll";
 }

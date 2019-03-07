@@ -41,7 +41,14 @@ if is_array(global.enemies[?ident])
 	set_enemies_array();
 }
 
-
-
+/*
+var str = "";
+var array = variable_instance_get_names(id);
+show_debug_message("Variables for " + object_get_name(object_index) + string(id));
+for (var i = 0; i < array_length_1d(array); i++;)
+    {
+    str = array[i] + ":" + string(variable_instance_get(id, array[i]));
+    show_debug_message(str);
+    }
 
 

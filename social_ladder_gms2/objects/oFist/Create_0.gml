@@ -14,3 +14,5 @@ knockbackable = true;
 slide_speed = 2.5;
 
 mask = sFist_mask;
+
+roll_cooldown = 30;

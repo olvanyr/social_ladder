@@ -1,5 +1,5 @@
 
-
+roll_cooldown = manage_timer(roll_cooldown);
 switch (state)
 {
 	#region idle
@@ -45,7 +45,8 @@ switch (state)
 	#endregion
 	#region Roll
 		case "roll":
-			set_state_sprite(sFist_slide,0.3,0);
+		roll_cooldown = 30;
+			set_state_sprite(sFist_slide,0.2,0);
 			roll_state("chase");
 		break;
 	#endregion

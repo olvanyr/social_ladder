@@ -22,6 +22,13 @@ if vsp != 0 grounded = false;
 //Hit ground sound
 if !grounded alarm[0] = 3;
 
+
+//timer
+jump_timer = manage_timer(jump_timer);
+roll_cooldown = manage_timer(roll_cooldown);
+cast_cooldown = manage_timer(cast_cooldown);
+attack_down_cooldown = manage_timer(attack_down_cooldown);
+
 			
 switch state
 {
@@ -81,10 +88,7 @@ switch state
 			}
 			
 						
-			//Jump
-			
-			jump_timer = manage_timer(jump_timer);
-			
+			//Jump			
 			if grounded
 			{
 				jump_timer = 4;
@@ -170,12 +174,13 @@ switch state
 			}
 			
 			//roll
-			if input.roll
+			
+			
+			if input.roll && roll_cooldown <= 0
 			{
 				state = "roll";
 			}
 			//attack
-			attack_down_cooldown = manage_timer(attack_down_cooldown);
 			if input.attack
 			{
 				if input.down 
@@ -186,11 +191,18 @@ switch state
 					}
 				}else state = "attack_one";
 			}
+			
+			//cast	
+			if input.cast && cast_cooldown <= 0
+			{
+				state = "cast";
+			}
 	
 		break;
 	#endregion
 	#region Roll
 		case "roll":
+			roll_cooldown = 30;
 			set_state_sprite(sPlayer_slide_stand,0.3,0);
 			roll_state("move");
 		break;
@@ -279,6 +291,26 @@ switch state
 			knockback_state(sPlayer_knockback, "move");
 		break;
 	#endregion
+	#region cast
+		case "cast":
+			cast_cooldown = 120;
+			set_state_sprite(sPlayer_cast,0.6,0);
+			
+			if animation_hit_frame(3)
+			{
+				with(instance_create_layer(x + (10*image_xscale), y - 17, "Effects", oCast))
+				{
+					creator = other;
+					spd = 3.5;
+					image_xscale = other.image_xscale;
+				}
+			}
+			if animation_end()
+			{
+				state = "move";
+			}
+		break;
+	#endregion
 	#region wait
 		case "wait":
 			set_state_sprite(sPlayer_idle,0.2,0);
@@ -303,10 +335,6 @@ switch state
 		break;
 	#endregion
 }
-
-
-
-
 
 //Aplly gravity
 vsp += gravity_speed;

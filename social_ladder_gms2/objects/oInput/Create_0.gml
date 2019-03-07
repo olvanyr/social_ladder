@@ -8,4 +8,5 @@ jump = keyboard_check_pressed(vk_up);
 jump_released = keyboard_check_released(vk_up);
 use = keyboard_check_pressed(ord("N"));
 use_healthpack = keyboard_check_pressed(ord("L"));
+cast = keyboard_check_pressed(ord("I"));
 

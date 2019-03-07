@@ -2,12 +2,10 @@ if creator == noone || creator == other || ds_list_find_index(hit_objects, other
 {
 	exit;
 }
-
-if creator == oEnemyParent && other == oEnemyParent
+if object_get_name(creator) == oEnemyParent && object_get_name(other) == oEnemyParent
 {
 	exit;
 }
-
 
 
 if other.state != "roll" && other.state != "death"
@@ -34,7 +32,7 @@ if instance_exists(oPlayer)
 			instance_create_layer(other.x, other.y - 12, "Effects", oHit_effect);
 		}
 		
-		if creator.state = "move"
+		if creator.state == "move"
 		{
 			creator.vsp = -5;
 		}

@@ -16,6 +16,19 @@ var _lifespan = argument5;
 var _damage = argument6;
 var _xscale = argument7;
 
+with instance_create_layer(_x, _y, "Instances", oHitbox)
+{
+	sprite_index = _sprite;
+	creator = _creator;
+	knockback = _knockback;
+	alarm[0] = _lifespan;
+	damage = _damage;
+	image_xscale = _xscale;
+}
+
+
+
+/*
 var _hitbox = instance_create_layer(_x, _y, "Instances", oHitbox);
 _hitbox.sprite_index = _sprite;
 _hitbox.creator = _creator;
@@ -23,3 +36,4 @@ _hitbox.knockback = _knockback;
 _hitbox.alarm[0] = _lifespan;
 _hitbox.damage = _damage;
 _hitbox.image_xscale = _xscale;
+

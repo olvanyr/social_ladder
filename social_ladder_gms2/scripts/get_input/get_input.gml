@@ -8,6 +8,7 @@ jump = keyboard_check_pressed(vk_up);
 jump_released = keyboard_check_released(vk_up);
 use = keyboard_check_pressed(ord("N"));
 use_healthpack = keyboard_check_pressed(ord("L"));
+cast = keyboard_check_pressed(ord("I"));
 
 //gamepad
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
@@ -32,7 +33,9 @@ if (abs(gamepad_axis_value(0,gp_axislh)) > 0.1)
 
 if gamepad_button_check_pressed(0,gp_face1) jump = 1;
 if gamepad_button_check_pressed(0,gp_face2) roll = 1;
-if gamepad_button_check_pressed(0,gp_face3) attack =1;
-if gamepad_button_check_pressed(0,gp_shoulderrb) use_lifepack =1;
-if gamepad_button_check_pressed(0,gp_shoulderlb) use =1;
+if gamepad_button_check_pressed(0,gp_face3) attack = 1;
+if gamepad_button_check_pressed(0,gp_shoulderrb) use_lifepack = 1;
+if gamepad_button_check_pressed(0,gp_shoulderlb) use = 1;
+if gamepad_button_check_pressed(0,gp_face1) jump_released = 1;
+if gamepad_button_check_pressed(0,gp_face4) cast = 1;
 
