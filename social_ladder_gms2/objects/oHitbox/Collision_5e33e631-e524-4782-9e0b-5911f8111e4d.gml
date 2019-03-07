@@ -32,9 +32,9 @@ if instance_exists(oPlayer)
 			instance_create_layer(other.x, other.y - 12, "Effects", oHit_effect);
 		}
 		
-		if creator.state == "move"
+		if creator.state == "attack_down"
 		{
-			creator.vsp = -5;
+			oPlayer.vsp = -15;
 		}
 	}
 	

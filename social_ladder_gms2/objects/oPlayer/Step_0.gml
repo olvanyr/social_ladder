@@ -17,6 +17,24 @@
 	
 #endregion
 
+//Aplly gravity
+vsp += gravity_speed;
+
+//Re apply fractions
+vsp += vsp_fraction;
+
+//Store and Remove fractions
+vsp_fraction = frac(vsp);
+vsp -= vsp_fraction;
+
+move_and_collide(0,vsp);
+
+
+//set new hp 
+
+health_bar_width = max_health_bar_width * ((hp/max_hp));
+
+
 if vsp != 0 grounded = false;
 			
 //Hit ground sound
@@ -27,7 +45,7 @@ if !grounded alarm[0] = 3;
 jump_timer = manage_timer(jump_timer);
 roll_cooldown = manage_timer(roll_cooldown);
 cast_cooldown = manage_timer(cast_cooldown);
-attack_down_cooldown = manage_timer(attack_down_cooldown);
+
 
 			
 switch state
@@ -181,6 +199,7 @@ switch state
 				state = "roll";
 			}
 			//attack
+			attack_down_cooldown = manage_timer(attack_down_cooldown);
 			if input.attack
 			{
 				if input.down 
@@ -336,21 +355,6 @@ switch state
 	#endregion
 }
 
-//Aplly gravity
-vsp += gravity_speed;
 
-//Re apply fractions
-vsp += vsp_fraction;
-
-//Store and Remove fractions
-vsp_fraction = frac(vsp);
-vsp -= vsp_fraction;
-
-move_and_collide(0,vsp);
-
-
-//set new hp 
-
-health_bar_width = max_health_bar_width * ((hp/max_hp));
 
 
