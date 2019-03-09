@@ -9,6 +9,8 @@ xTo = xstart;
 yTo = ystart;
 cam_shift = 20;
 
+smooth_value = 10;
+
 y_buffer = sprite_get_height(sPlayer_mask);
 
 //Set up Screenshake

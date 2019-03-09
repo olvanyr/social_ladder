@@ -20,8 +20,8 @@ if (instance_exists(follow))
 }
 
 //update object position
-x += (xTo - x ) / 7;
-y += (yTo - y) / 7;
+x += (xTo - x ) / smooth_value;
+y += (yTo - y) / smooth_value;
 
 
 //Keep camera centre inside room

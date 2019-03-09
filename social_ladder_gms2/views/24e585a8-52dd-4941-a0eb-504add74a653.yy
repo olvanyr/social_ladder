@@ -8,7 +8,7 @@
         "86ba8cdf-91ae-4a26-8a4a-1da29b0f02fa"
     ],
     "filterType": "GMObject",
-    "folderName": "sav tutorial",
+    "folderName": "sav temporary object",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

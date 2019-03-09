@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "09a11c58-9ecf-4f8d-8a5b-7bfee6c01603",
+            "Value": {
+                "id": "7a431644-5cf9-40ff-af22-f7857c80dd09",
+                "resourcePath": "sprites\\sRoll_cooldawn\\sRoll_cooldawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0a4d70d8-0417-46f9-aeb3-9e6ee6672008",
             "Value": {
                 "id": "11200f8d-586b-4c25-848f-c1842f66fa64",

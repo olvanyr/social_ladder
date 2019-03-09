@@ -355,6 +355,3 @@ switch state
 	#endregion
 }
 
-
-show_debug_message(experience);
-

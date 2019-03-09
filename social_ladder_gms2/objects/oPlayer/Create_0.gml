@@ -19,6 +19,8 @@ grounded = false;
 //roll related variable
 roll_cooldown = 0;
 roll_cooldown_max = 30;
+
+
 //cast related variable
 cast_cooldown = 0;
 
