@@ -13,6 +13,15 @@ switch (state)
 			set_state_sprite(sFist_walk,0.6,0);
 			chase_idle_triger();
 			chase_state_fist();
+			//jump on top of one block
+			
+			if instance_exists(oPlayer)
+			{
+				if oPlayer.grounded && oPlayer.y + 5 < y && grounded
+				{
+					vsp = -7;
+				}
+			}
 		break;
 	#endregion
 	#region Attack
@@ -60,17 +69,6 @@ switch (state)
 			dead_state(sFist_die);
 		break;
 	#endregion
-}
-
-if state == "chase" 
-{
-	if instance_exists(oPlayer)
-	{
-		if oPlayer.grounded && oPlayer.y + 5 < y && grounded
-		{
-			vsp = -7;
-		}
-	}
 }
 
 //endle gravity 

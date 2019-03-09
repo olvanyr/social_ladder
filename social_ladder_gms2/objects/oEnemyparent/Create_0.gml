@@ -9,10 +9,13 @@ knockback = true;
 knockback_speed = 0;
 
 //move related variable
+chase_speed = 1;
 gravity_speed = 0.4;
 grounded = false;
 vsp = 0;
 vsp_fraction = 0;
+
+jump_cliff = false;
 
 //myasm related variable
 experience = 1;

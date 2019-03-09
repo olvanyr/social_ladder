@@ -16,6 +16,16 @@ if place_meeting(x + _xspeed, y, oWall)
 		x += sign(_xspeed);
 	}
 	_xspeed = 0;
+}else if object_get_parent(object_index) == oEnemyParent
+{
+	if place_meeting(x + _xspeed, y, oEnemy_wall)
+	{
+		while !place_meeting(x + sign(_xspeed), y, oEnemy_wall)
+		{
+			x += sign(_xspeed);
+		}
+		_xspeed = 0;
+	}
 }
 
 x += _xspeed;
@@ -41,5 +51,3 @@ if self == oPlayer
 {
 	mask_index = sPlayer_hit_mask;
 }
-
-

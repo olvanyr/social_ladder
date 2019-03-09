@@ -109,7 +109,7 @@ switch state
 			//Jump			
 			if grounded
 			{
-				jump_timer = 4;
+				jump_timer = jump_timer_max;
 				jump_counter = 0;
 			}
 			
@@ -142,7 +142,7 @@ switch state
 						vsp -= gravity_slow;
 					}
 					
-					jump_timer = 4;
+					jump_timer = jump_timer_max;
 				}
 			}
 			
@@ -162,7 +162,7 @@ switch state
 					if !grounded && side_wall
 					{
 						
-						wall_jump_timer = 15;
+						wall_jump_timer = wall_jump_timer_max;
 						jump_direction = -image_xscale;
 					}
 					
@@ -221,7 +221,7 @@ switch state
 	#endregion
 	#region Roll
 		case "roll":
-			roll_cooldown = 30;
+			roll_cooldown = roll_cooldown_max;
 			set_state_sprite(sPlayer_slide_stand,0.3,0);
 			roll_state("move");
 		break;
@@ -290,7 +290,7 @@ switch state
 		case "attack_down":
 			set_state_sprite(sPlayer_dawn_hit,0.6,0);
 			vsp = vsp*0.6;
-			attack_down_cooldown = 20;
+			attack_down_cooldown = attack_down_cooldown_max;
 			
 			if animation_hit_frame(1)
 			{

@@ -18,7 +18,7 @@ grounded = false;
 
 //roll related variable
 roll_cooldown = 0;
-
+roll_cooldown_max = 30;
 //cast related variable
 cast_cooldown = 0;
 
@@ -26,11 +26,13 @@ cast_cooldown = 0;
 jump_speed = -6;
 cut_jump_speed = 0.2;
 jump_timer = 0;
+jump_timer_max = 4;
 jump_counter = 0;
 
 //wall jump related variable
 wall_jump_speed = 1.5;
-wall_jump_timer = false;
+wall_jump_timer = 0;
+wall_jump_timer_max = 15;
 jump_direction = 0;
 slide_speed = 2.5;
 
@@ -42,6 +44,7 @@ mask_height = sprite_get_height(sPlayer_mask);
 
 //Attack related variable
 attack_down_cooldown = 0;
+attack_down_cooldown_max = 13;
 attack_animation_speed = 0.6;
 
 //HUD 

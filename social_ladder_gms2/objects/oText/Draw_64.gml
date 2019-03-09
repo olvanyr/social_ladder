@@ -10,8 +10,8 @@ display_set_gui_size(view_w * 2,view_h * 2);
 var halfw = w *0.5;
 
 //draw the box
-draw_set_alpha(0.5);
-nine_slice_box(s9slice,xpos-halfw-border + text_w, ypos-h-(border*2), xpos+halfw+border + text_w, ypos);
+draw_set_alpha(1);
+nine_slice_box(sBox1,xpos-halfw-border + text_w, ypos-h-(border*2), xpos+halfw+border + text_w, ypos);
 
 draw_set_alpha(1);
 
