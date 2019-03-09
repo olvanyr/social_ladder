@@ -38,6 +38,11 @@ switch (state)
 			death_state(sRunner_die);
 		break;
 	#endregion
+	#region Dead
+		case "dead":
+			dead_state(sRunner_die);
+		break;
+	#endregion
 }
 
 //endle gravity 

@@ -1,6 +1,6 @@
 event_inherited();
 
-if state == "death" exit;
+if state == "death" || state == "dead" exit;
 if alarm[0] > 0
 {
 	var height = sprite_height;

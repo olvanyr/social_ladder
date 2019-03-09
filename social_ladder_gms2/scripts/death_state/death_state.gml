@@ -12,3 +12,11 @@ move_and_collide(knockback_speed,0);
 
 var _knockback_friction = 0.4;
 knockback_speed = approach(knockback_speed, 0, _knockback_friction);
+
+if object_index != oPlayer
+{
+	if animation_end()
+	{
+		state = "dead";
+	}
+}

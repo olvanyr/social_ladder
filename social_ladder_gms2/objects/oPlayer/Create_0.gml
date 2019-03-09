@@ -62,10 +62,16 @@ healthpack_width = 5*3;
 healthpack = 3;
 max_healthpack = healthpack;
 
+
+//experience related variable
+experience = 0;
+
 // Save var
 //key1
 //wall_jump
 //double_jump
 //......
+
+
 
 

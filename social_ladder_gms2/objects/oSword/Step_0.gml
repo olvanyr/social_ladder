@@ -55,6 +55,11 @@ switch (state)
 			death_state(sSword_die);
 		break;
 	#endregion
+	#region Dead
+		case "dead":
+			dead_state(sSword_die);
+		break;
+	#endregion
 }
 
 if state == "chase" 

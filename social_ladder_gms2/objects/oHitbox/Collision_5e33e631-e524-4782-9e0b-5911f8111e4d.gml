@@ -1,14 +1,14 @@
-if creator == noone || creator == other || ds_list_find_index(hit_objects, other) != -1 || other.state == "death" || other.state == "roll"
+if creator == noone || creator == other || ds_list_find_index(hit_objects, other) != -1 || other.state == "death" || other.state == "roll" || other.state == "dead"
 {
 	exit;
 }
-if object_get_name(creator) == oEnemyParent && object_get_name(other) == oEnemyParent
+if object_get_parent(creator.object_index) == oEnemyParent && object_get_parent(other.object_index) == oEnemyParent
 {
 	exit;
 }
 
 
-if other.state != "roll" && other.state != "death"
+if other.state != "roll" && (other.state != "death" || other.state == "dead")
 {
 	other.flash = 1;
 	other.hp -= damage;
@@ -47,10 +47,6 @@ if instance_exists(oPlayer)
 				screenshake(4,8);
 				gamepad_set_vibration(0, 1, 1);
 				other.alarm[1] = 6;
-				if other.hp <= 0
-				{
-					show_debug_message("player dead");
-				}
 			}
 		}else
 		{

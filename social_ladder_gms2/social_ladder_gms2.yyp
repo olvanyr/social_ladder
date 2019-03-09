@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "030fc76d-08de-466c-9719-50a29c5fe86e",
+            "Value": {
+                "id": "dd355264-a46c-4496-bf78-f140e738db1e",
+                "resourcePath": "objects\\oExperience\\oExperience.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "041714d5-2a4b-40fc-b8d6-eee81e27baf1",
             "Value": {
                 "id": "f76e327c-c47c-4b3c-b5b0-9b3558d95109",
@@ -1239,6 +1247,22 @@
             }
         },
         {
+            "Key": "e769f2c6-5e8a-43d4-abfc-229532e4c4cb",
+            "Value": {
+                "id": "31d1134a-66c8-41d3-9dad-8c0cd04814b9",
+                "resourcePath": "scripts\\dead_state\\dead_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ec122d0b-c885-467e-beae-68ee6b5b79c3",
+            "Value": {
+                "id": "5f4ece74-70d4-4ecf-b65a-83a30df4393e",
+                "resourcePath": "sounds\\aExpr\\aExpr.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "ef5c0a98-0384-46b3-adf4-7475e8330a45",
             "Value": {
                 "id": "5bc41bfe-a558-4a4f-9c58-f92300134dd1",
@@ -1276,6 +1300,14 @@
                 "id": "212e8ef8-250d-4505-b150-ce77b07d652f",
                 "resourcePath": "views\\f507e627-1d11-4036-8e40-1730fa418c8b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f75b6782-3d27-42e4-b550-b64f4ffc06f0",
+            "Value": {
+                "id": "8a73c232-5890-4a02-a1d5-7ea0495ddb48",
+                "resourcePath": "sprites\\sExprerience\\sExprerience.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1331,6 +1363,7 @@
         "1d7eefa4-dc2c-4570-a23c-0d73337ae2aa",
         "8fcf4cee-13d5-4f1b-9720-881be749683c",
         "e0823bf7-9b68-4807-b71a-385a2823b5f0",
+        "e769f2c6-5e8a-43d4-abfc-229532e4c4cb",
         "b36cd493-9cea-478c-87a2-22ea5588ebef",
         "3f27a615-126b-4623-a841-a13b19ae47e3",
         "b24bc3e1-6613-4abb-a3fa-d284cf6228f5",

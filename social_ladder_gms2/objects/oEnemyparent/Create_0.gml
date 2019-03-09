@@ -1,18 +1,24 @@
-
-
 event_inherited();
 
+
+//attack related variable
 attack_range = 0;
+
+//knockback related variable
 knockback = true;
 knockback_speed = 0;
 
+//move related variable
 gravity_speed = 0.4;
 grounded = false;
 vsp = 0;
 vsp_fraction = 0;
 
-state = "idle";
+//myasm related variable
+experience = 1;
 
+// state related variable
+state = "idle";
 
 // save and load 
 ident = id;
@@ -28,7 +34,7 @@ if is_array(global.enemies[?ident])
 	
 	array = global.enemies[?ident];
 
-	if array[save.state] == "death"
+	if array[save.state] == "dead"
 	{
 	
 		x = array[save.x];
@@ -40,15 +46,3 @@ if is_array(global.enemies[?ident])
 	//set ennemy state
 	set_enemies_array();
 }
-
-/*
-var str = "";
-var array = variable_instance_get_names(id);
-show_debug_message("Variables for " + object_get_name(object_index) + string(id));
-for (var i = 0; i < array_length_1d(array); i++;)
-    {
-    str = array[i] + ":" + string(variable_instance_get(id, array[i]));
-    show_debug_message(str);
-    }
-
-

@@ -1,5 +1,5 @@
 
-if state == "death" || state == "roll" exit;
+if state == "death" || state == "roll" || state == "dead" exit;
 
 create_hitbox(x, y, self, mask, 3, 2, 2, image_xscale);
 			
