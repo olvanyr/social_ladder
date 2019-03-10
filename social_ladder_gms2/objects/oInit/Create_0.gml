@@ -20,5 +20,6 @@ enum save_room
 global.start_room = room0;
 global.start_x = 256;
 global.start_y = 185;
+global.key[0] = "key_door1";
 
 
