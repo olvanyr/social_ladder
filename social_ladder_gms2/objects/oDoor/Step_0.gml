@@ -14,22 +14,3 @@ if door_status == "closed"
 	}
 	
 }
-
-if instance_exists(oPlayer)
-{
-	if collision_rectangle(x - 30,y - 30,x,y,oPlayer,false,false)
-	{
-		if oInput.use
-		{
-			for (var i = 0; i < array_length_1d(global.key); i++)
-			{
-				
-				var own_key = global.key[i];
-				if own_key == key
-				{
-					door_status = "open";
-				}
-			}
-		}
-	}
-}

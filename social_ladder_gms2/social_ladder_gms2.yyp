@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "310707a1-8a58-4832-85de-a5bdcd119667",
+            "Value": {
+                "id": "82a3856c-6161-4b2a-8d66-64fffdfac9ad",
+                "resourcePath": "views\\310707a1-8a58-4832-85de-a5bdcd119667.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3233edad-1488-4ef4-97ce-3fd824886d60",
             "Value": {
                 "id": "0705dc3c-2267-46c5-85a0-b5111c631009",
@@ -435,14 +443,6 @@
             "Value": {
                 "id": "ee0aa64b-dbf9-46b9-b65d-686046c0a390",
                 "resourcePath": "objects\\oPlatform\\oPlatform.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "496c524e-8425-48aa-a4da-6bf3dc04a3fe",
-            "Value": {
-                "id": "94e59dd0-cd25-4071-b65a-135a6999ff45",
-                "resourcePath": "objects\\oPlatform1\\oPlatform1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -868,6 +868,14 @@
                 "id": "d797f239-78cc-4b4c-8a51-b9253b1a710c",
                 "resourcePath": "sprites\\sPlayer_pickup\\sPlayer_pickup.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "897700cf-f45e-4443-a1e4-f4c5e13dc86b",
+            "Value": {
+                "id": "3da5a757-8008-4420-b925-93071db5924c",
+                "resourcePath": "objects\\oSavegame\\oSavegame.yy",
+                "resourceType": "GMObject"
             }
         },
         {

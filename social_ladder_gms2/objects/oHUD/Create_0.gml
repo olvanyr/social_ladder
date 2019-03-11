@@ -20,3 +20,6 @@ hp_height = 4;
 x_pack = hp_x + max_hp_width + (12);
 inter_pack = 7;
 pack_width = 5;
+
+//temporary fullscreen togle
+toggle = false;

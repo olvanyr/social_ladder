@@ -339,10 +339,10 @@ switch state
 		case "death":
 			death_state(sPlayer_die);
 			//audio_play_sound(aMiss,3,0);
-			gamepad_set_vibration(0, 1, 1);
-			alarm[1] = 6;
+			gamepad_set_vibration(0, 0.5, 0.5);
 			if animation_end()
 			{
+				gamepad_set_vibration(0, 0, 0);
 				with instance_create_layer(0,0,"Effects", oTransition)
 				{
 					next_room = global.start_room;

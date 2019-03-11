@@ -1,5 +1,5 @@
 
-if other.state != "death"
+if other.state != "death" || other.state != "dead"
 {
 	create_hitbox(x, y, creator, sPlayer_projectile, 3, 2, 5, image_xscale);
 	set_state_sprite(sPlayer_projectile_hitspark,1,0);

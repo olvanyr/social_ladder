@@ -4,3 +4,5 @@ sprite_index = noone;
 animation_frame =0;
 
 door_status = "closed";
+
+image_counter = 0;
