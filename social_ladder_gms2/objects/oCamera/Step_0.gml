@@ -3,7 +3,20 @@
 var view_w_half = view_w * 0.5;
 var view_h_half = view_h * 0.5;
 
-
+if instance_exists(oInput)
+{
+	y_buffer = normal_y_buffer;
+	if oInput.up 
+	{
+		y_buffer += 30
+	}	
+	if oInput.down 
+	{
+		y_buffer -= 30
+	}
+	
+	if !oInput.up && !oInput.down y_buffer = normal_y_buffer;
+}
 //update destination
 if (instance_exists(follow))
 {

@@ -2,6 +2,7 @@
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
 down = keyboard_check(vk_down);
+up = keyboard_check(vk_up);
 roll = keyboard_check_pressed(vk_space);
 attack = keyboard_check_pressed(ord("V"));
 jump = keyboard_check_pressed(vk_up);
@@ -15,7 +16,11 @@ if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
 {
 	if (max(gamepad_axis_value(0,gp_axislv),0) > 0.7) down = 1;
 		
-	else right = max(gamepad_axis_value(0, gp_axislv),0);
+	else down = max(gamepad_axis_value(0, gp_axislv),0);
+	
+	if (abs(min(gamepad_axis_value(0,gp_axislv),0)) > 0.7)	up = 1;
+		
+	else up = abs(min(gamepad_axis_value(0,gp_axislv),0));
 }
 
 if (abs(gamepad_axis_value(0,gp_axislh)) > 0.1)
