@@ -1,5 +1,6 @@
 
 roll_cooldown = manage_timer(roll_cooldown);
+
 switch (state)
 {
 	#region idle
@@ -11,6 +12,7 @@ switch (state)
 	#region Chase
 		case "chase":
 			set_state_sprite(sFist_walk,0.6,0);
+			
 			chase_idle_triger();
 			chase_state_fist();
 			//jump on top of one block

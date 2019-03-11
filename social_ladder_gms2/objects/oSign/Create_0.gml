@@ -1,3 +1,3 @@
-text = "Hello World, I'm a sign post \n éèàµë \n al fga	ljh gaf ljhgaf ";
+text = "Hey, c'est la version de test\n joue a la manette se sera bien mieu\n le but est surtout de tester les mouveme\n et les combat !";
 
 radius = 32;

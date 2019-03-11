@@ -1,5 +1,6 @@
 if !instance_exists(oPlayer) exit;
 
+
 //avoid some xierd cliping when the player is perfectly above the mob
 image_xscale = sign(oPlayer.x - x);
 if abs(oPlayer.x - x) < 2 image_xscale = 0
@@ -12,6 +13,7 @@ if distance_to_player <= attack_range
 {
 	state = "attack";
 }
+
 if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
 {
 	state = "roll";

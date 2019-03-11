@@ -10,3 +10,5 @@ if roll_cooldown > 0 && state != "roll"
 {
 	draw_sprite(sRoll_cooldawn,sub_image,x,y);
 }
+
+draw_rectangle(x,y,x + (image_xscale * half_mask_width), y-20,false);
