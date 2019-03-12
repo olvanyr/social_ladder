@@ -17,6 +17,7 @@
 	
 #endregion
 
+
 //Aplly gravity
 vsp += gravity_speed;
 
@@ -45,6 +46,7 @@ if !grounded alarm[0] = 3;
 jump_timer = manage_timer(jump_timer);
 roll_cooldown = manage_timer(roll_cooldown);
 cast_cooldown = manage_timer(cast_cooldown);
+invincibility = manage_timer(invincibility);
 
 
 			

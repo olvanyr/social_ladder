@@ -19,7 +19,7 @@ switch (state)
 			
 			if instance_exists(oPlayer)
 			{
-				if oPlayer.grounded && oPlayer.y + 5 < y && grounded
+				if oPlayer.grounded && grounded && oPlayer.y + 5 < y 
 				{
 					vsp = -7;
 				}

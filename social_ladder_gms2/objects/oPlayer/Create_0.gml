@@ -49,6 +49,8 @@ attack_down_cooldown = 0;
 attack_down_cooldown_max = 13;
 attack_animation_speed = 0.6;
 
+invincibility = -1;
+
 //HUD 
 x_buffer = 10;
 y_buffer = 10;

@@ -8,23 +8,27 @@ if object_get_parent(creator.object_index) == oEnemyParent && object_get_parent(
 }
 
 
-if other.state != "roll" && (other.state != "death" || other.state == "dead")
-{
-	other.flash = 1;
-	other.hp -= damage;
-	other.hp = max(other.hp,0);
-	//audio_play_sound();
-	if knockback != 0
-	{
-		other.state = "knockback";
-	}
-}
-
-
-
-
 if instance_exists(oPlayer)
 {
+	if other.state != "roll" && (other.state != "death" || other.state == "dead")
+	{
+		if other.object_index == oPlayer
+		{
+			if other.invincibility > 0
+			{
+				exit;
+			}
+		}
+		other.flash = 1;
+		other.hp -= damage;
+		other.hp = max(other.hp,0);
+		//audio_play_sound();
+		if knockback != 0
+		{
+			other.state = "knockback";
+		}
+	}
+
 	if creator.object_index == oPlayer
 	{
 		repeat (10)
@@ -47,6 +51,7 @@ if instance_exists(oPlayer)
 				screenshake(4,8);
 				gamepad_set_vibration(0, 1, 1);
 				other.alarm[1] = 6;
+				other.invincibility = 6;
 			}
 		}else
 		{

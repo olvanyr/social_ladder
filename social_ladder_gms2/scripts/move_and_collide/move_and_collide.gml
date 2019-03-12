@@ -6,8 +6,11 @@ if self == oPlayer
 {
 	mask_index = sPlayer_mask;
 }
+
+
 var _xspeed = argument0;
 var _yspeed = argument1;
+
 
 if place_meeting(x + _xspeed, y, oWall)
 {
