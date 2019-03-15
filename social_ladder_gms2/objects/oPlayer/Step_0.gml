@@ -17,23 +17,7 @@
 	
 #endregion
 
-if y < ystart - 6
-{
-	y = ystart - 6;
-}
-ystart = y;
 
-//Aplly gravity
-vsp += gravity_speed;
-
-//Re apply fractions
-vsp += vsp_fraction;
-
-//Store and Remove fractions
-vsp_fraction = frac(vsp);
-vsp -= vsp_fraction;
-
-move_and_collide(0,vsp);
 
 
 //set new hp 
@@ -354,6 +338,7 @@ switch state
 			if animation_end()
 			{
 				gamepad_set_vibration(0, 0, 0);
+				
 				with instance_create_layer(0,0,"Effects", oTransition)
 				{
 					next_room = global.start_room;
@@ -368,3 +353,26 @@ switch state
 
 
 hit = false;
+
+if y < ystart - 6 && state != "death"
+{
+	y = ystart - 6;
+}
+
+if state == "death"
+{
+	ystart = global.start_y;
+}else ystart = y;
+
+
+//Aplly gravity
+vsp += gravity_speed;
+
+//Re apply fractions
+vsp += vsp_fraction;
+
+//Store and Remove fractions
+vsp_fraction = frac(vsp);
+vsp -= vsp_fraction;
+
+move_and_collide(0,vsp);

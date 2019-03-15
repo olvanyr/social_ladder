@@ -14,12 +14,11 @@ enum save
 enum save_room
 {
 	seen,
-	
 }
 
 global.start_room = room0;
-global.start_x = 256;
-global.start_y = 185;
+global.start_x = 224;
+global.start_y = 255;
 global.key[0] = "key_door1";
 
 

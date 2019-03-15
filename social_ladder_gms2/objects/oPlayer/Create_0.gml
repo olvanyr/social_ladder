@@ -36,7 +36,7 @@ wall_jump_speed = 1.5;
 wall_jump_timer = 0;
 wall_jump_timer_max = 15;
 jump_direction = 0;
-slide_speed = 2.5;
+roll_speed = 2.5;
 
 
 //Collision mask related variable

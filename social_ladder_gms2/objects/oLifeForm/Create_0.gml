@@ -1,4 +1,4 @@
-hp = 25;
+hp = 1;
 max_hp = hp;
 knockback_direction = 0;
 vsp = 0;
