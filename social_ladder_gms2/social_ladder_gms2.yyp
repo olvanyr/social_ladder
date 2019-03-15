@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "1915dec4-2469-477b-b544-482e2a40d1f5",
+            "Value": {
+                "id": "eb9cb706-2a3e-4fd2-9670-3a35fd9a295f",
+                "resourcePath": "sprites\\sDown\\sDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1a4786d2-f020-4257-96f0-bca142e53c7f",
             "Value": {
                 "id": "de29224f-0b4c-4b2d-8cf1-6cc4af9f3cd8",
@@ -532,6 +540,14 @@
                 "id": "99fed0e0-15d0-4103-866b-4fadbfdd9eac",
                 "resourcePath": "sprites\\sFist_die\\sFist_die.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5b2717ef-4fe3-473d-91bd-8a6bd4988caf",
+            "Value": {
+                "id": "e8b5a4a4-9366-4f14-8ca3-0b907db18973",
+                "resourcePath": "scripts\\button_animation\\button_animation.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1457,6 +1473,7 @@
         "b24bc3e1-6613-4abb-a3fa-d284cf6228f5",
         "c7061b4c-6871-49cf-af97-dd4cffa91e41",
         "72216dc3-2cc8-4305-94cf-2405dcbb9572",
+        "5b2717ef-4fe3-473d-91bd-8a6bd4988caf",
         "7a37a0bb-05c3-4ad2-9ef0-47f5425626d7",
         "98ef40b7-df93-4520-be36-a6412a7af57d",
         "71ded892-311a-4481-86d3-fbe6e6d48840",

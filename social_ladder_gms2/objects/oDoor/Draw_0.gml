@@ -18,15 +18,7 @@ if instance_exists(oPlayer)
 				}
 			}
 		}
-		var _image_number = sprite_get_number(sUse);
-		image_counter += 0.03;
-		var sub_image = image_counter;
-		if sub_image == _image_number 
-		{
-			_image_number = 0;
-		}
-		
-		draw_sprite(sUse,image_counter,x - (dir * 25),y);
+		button_animation(sUse,-(dir * 25));
 	}
 	
 }
