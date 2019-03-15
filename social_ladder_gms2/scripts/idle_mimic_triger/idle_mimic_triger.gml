@@ -4,17 +4,13 @@ if(instance_exists(oPlayer))
 	{
 		if(distance_to_object(oPlayer) < fov) 
 		{
-			if (oPlayer.grounded)
-			{
-				state = "chase";
-			}
 		}
 		else 
 		{
-			state = "idle";
+			state = "hide";
 		}
 	}else 
 	{
-		state = "idle";
+		state = "hide";
 	}
 }

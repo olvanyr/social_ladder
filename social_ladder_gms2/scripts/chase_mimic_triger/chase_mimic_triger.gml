@@ -6,15 +6,8 @@ if(instance_exists(oPlayer))
 		{
 			if (oPlayer.grounded)
 			{
-				state = "chase";
+				state = "show";
 			}
 		}
-		else 
-		{
-			state = "idle";
-		}
-	}else 
-	{
-		state = "idle";
 	}
 }
