@@ -6,16 +6,16 @@ var view_h_half = view_h * 0.5;
 if instance_exists(oInput)
 {
 	y_buffer = normal_y_buffer;
-	if oInput.up 
+	if oInput.up_cam 
 	{
 		y_buffer += 30
 	}	
-	if oInput.down 
+	if oInput.down_cam 
 	{
 		y_buffer -= 30
 	}
 	
-	if !oInput.up && !oInput.down y_buffer = normal_y_buffer;
+	if !oInput.up_cam && !oInput.down_cam y_buffer = normal_y_buffer;
 }
 //update destination
 if (instance_exists(follow))

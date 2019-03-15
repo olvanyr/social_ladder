@@ -1,6 +1,8 @@
 //keyboard
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
+up_cam = 0;
+down_cam = 0;
 down = keyboard_check(vk_down);
 up = keyboard_check(vk_up);
 roll = keyboard_check_pressed(vk_space);
@@ -22,6 +24,19 @@ if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
 		
 	else up = abs(min(gamepad_axis_value(0,gp_axislv),0));
 }
+
+if (abs(gamepad_axis_value(0,gp_axisrv)) > 0.5)
+{
+	if (max(gamepad_axis_value(0,gp_axisrv),0) > 0.7) down_cam = 1;
+		
+	else down_cam = max(gamepad_axis_value(0, gp_axisrv),0);
+	
+	if (abs(min(gamepad_axis_value(0,gp_axisrv),0)) > 0.7)	up_cam = 1;
+		
+	else up_cam = abs(min(gamepad_axis_value(0,gp_axisrv),0));
+}
+
+
 
 if (abs(gamepad_axis_value(0,gp_axislh)) > 0.1)
 {

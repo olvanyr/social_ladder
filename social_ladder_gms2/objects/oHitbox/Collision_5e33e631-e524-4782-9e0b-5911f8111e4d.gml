@@ -36,10 +36,7 @@ if instance_exists(oPlayer)
 			instance_create_layer(other.x, other.y - 12, "Effects", oHit_effect);
 		}
 		
-		if creator.state == "attack_down"
-		{
-			oPlayer.vsp = -15;
-		}
+		creator.hit = true;
 	}
 	
 	if other.state != "roll"

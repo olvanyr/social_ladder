@@ -17,6 +17,11 @@
 	
 #endregion
 
+if y < ystart - 6
+{
+	y = ystart - 6;
+}
+ystart = y;
 
 //Aplly gravity
 vsp += gravity_speed;
@@ -301,6 +306,10 @@ switch state
 				alarm[1] = 3;
 				create_hitbox(x, y, self, sPlayer_dawn_hit_mask, 3, 2, 5, image_xscale);
 			}
+			if hit == true
+			{
+				vsp -= 23;
+			}
 			if animation_end()
 			{
 				state = "move";
@@ -357,3 +366,5 @@ switch state
 	#endregion
 }
 
+
+hit = false;
