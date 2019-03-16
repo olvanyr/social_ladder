@@ -137,8 +137,6 @@ switch state
 				}
 			}
 			
-			
-			
 			if input.jump
 			{
 				if jump_timer >=0 || jump_counter == 1
@@ -280,7 +278,10 @@ switch state
 	#region Attack down
 		case "attack_down":
 			set_state_sprite(sPlayer_dawn_hit,0.6,0);
-			vsp = vsp*0.6;
+			if vsp > 0
+			{
+				vsp = vsp*0.6;
+			}
 			attack_down_cooldown = attack_down_cooldown_max;
 			
 			if animation_hit_frame(1)
@@ -292,7 +293,7 @@ switch state
 			}
 			if hit == true
 			{
-				vsp -= 23;
+				vsp = -5;
 			}
 			if animation_end()
 			{
@@ -354,6 +355,8 @@ switch state
 
 hit = false;
 
+// To be sure that you can not be set into orbit
+/*
 if y < ystart - 6 && state != "death"
 {
 	y = ystart - 6;
@@ -363,10 +366,12 @@ if state == "death"
 {
 	ystart = global.start_y;
 }else ystart = y;
+*/
 
 
 //Aplly gravity
 vsp += gravity_speed;
+
 
 //Re apply fractions
 vsp += vsp_fraction;
@@ -375,4 +380,7 @@ vsp += vsp_fraction;
 vsp_fraction = frac(vsp);
 vsp -= vsp_fraction;
 
+
 move_and_collide(0,vsp);
+
+show_debug_message(vsp);
