@@ -14,6 +14,7 @@ acceleration = 0.3;
 gravity_speed = 0.2;
 vsp = 0;
 vsp_fraction = 0;
+hsp_fraction = 0;
 grounded = false;
 
 //roll related variable

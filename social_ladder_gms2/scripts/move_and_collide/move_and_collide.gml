@@ -8,9 +8,10 @@ if self == oPlayer
 }
 
 
+
+
 var _xspeed = argument0;
 var _yspeed = argument1;
-
 
 if place_meeting(x + _xspeed, y, oWall)
 {
@@ -19,6 +20,7 @@ if place_meeting(x + _xspeed, y, oWall)
 		x += sign(_xspeed);
 	}
 	_xspeed = 0;
+
 }else if object_get_parent(object_index) == oEnemyParent
 {
 	if place_meeting(x + _xspeed, y, oEnemy_wall)
@@ -32,7 +34,6 @@ if place_meeting(x + _xspeed, y, oWall)
 }
 
 x += _xspeed;
-
 
 if !place_meeting(x, y + _yspeed, oWall)
 {

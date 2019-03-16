@@ -106,7 +106,7 @@ switch state
 			
 			
 			//On air animation + wall jump
-			var side_wall = place_meeting(x + (image_xscale * half_mask_width), y, oWall)
+			var side_wall = place_meeting(x + (image_xscale), y, oWall)
 			
 			if !grounded
 			{
