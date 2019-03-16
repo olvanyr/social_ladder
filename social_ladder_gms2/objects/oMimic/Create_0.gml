@@ -1,5 +1,4 @@
 event_inherited();
-state = "idle";
 
 hp = 10;
 max_hp = hp;
