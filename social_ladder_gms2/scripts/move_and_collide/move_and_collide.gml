@@ -15,9 +15,9 @@ var _yspeed = argument1;
 
 if place_meeting(x + _xspeed, y, oWall)
 {
-	while !place_meeting(x + sign(_xspeed), y, oWall)
+	while !place_meeting(x + (sign(_xspeed)/100), y, oWall)
 	{
-		x += sign(_xspeed);
+		x += (sign(_xspeed)/100);
 	}
 	_xspeed = 0;
 

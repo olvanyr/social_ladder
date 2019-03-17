@@ -6,7 +6,7 @@ fov = 100;
 chase_speed = 1;
 walk_animation_speed = 0.2;
 
-attack_range = 20;
+attack_range = -5;
 
 knockback = 4;
 stunt_time = 20;

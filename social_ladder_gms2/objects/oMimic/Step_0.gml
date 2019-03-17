@@ -61,20 +61,3 @@ switch (state)
 
 //endle gravity 
 event_inherited();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-event_inherited();
-

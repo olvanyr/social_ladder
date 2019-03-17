@@ -355,8 +355,9 @@ switch state
 
 hit = false;
 
-// To be sure that you can not be set into orbit
 /*
+// To be sure that you can not be set into orbit
+
 if y < ystart - 6 && state != "death"
 {
 	y = ystart - 6;
@@ -382,5 +383,3 @@ vsp -= vsp_fraction;
 
 
 move_and_collide(0,vsp);
-
-show_debug_message(vsp);
