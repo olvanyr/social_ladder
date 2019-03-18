@@ -32,16 +32,16 @@ ds_menu_main = create_menu_page(
 );
 
 ds_menu_settings = create_menu_page(
-	["FULLSCREEN",	menu_element.toggle,		global.fullscreen,		["ON", "OFF"]], 
+	["FULLSCREEN",	menu_element.toggle,		change_window_mode,		global.fullscreen,		["ON", "OFF"]],  
 	["CONTROLS",	menu_element.page_transfer,	menu_page.controls], 
-	["AUDIO",		menu_element.page_transfer,	menu_page.settings],
+	["AUDIO",		menu_element.page_transfer,	menu_page.audio],
 	["BACK",		menu_element.page_transfer,	menu_page.main]
 );
 
 ds_menu_audio = create_menu_page(
-	["MASTER",		menu_element.slider,			change_volume,			"mastervolume",				global.mastervolume,		[0,1]],
-	["SOUNDS",		menu_element.slider,			change_volume,			"soundsvolume",				global.soundsvolume,		[0,1]],
-	["MUSIC",		menu_element.slider,			change_volume,			"musicvolume",				global.musicvolume,			[0,1]],
+	["MASTER",		menu_element.slider,		change_volume,			"mastervolume",				global.mastervolume,		[0,1]],
+	["SOUNDS",		menu_element.slider,		change_volume,			"soundsvolume",				global.soundsvolume,		[0,1]],
+	["MUSIC",		menu_element.slider,		change_volume,			"musicvolume",				global.musicvolume,			[0,1]],
 	["BACK",		menu_element.page_transfer,	menu_page.settings],
 );
 
@@ -51,7 +51,7 @@ ds_menu_controls = create_menu_page(
 );
 
 page = 0;
-menu_pages = [ds_menu_main, ds_settings, ds_menu_audio, ds_menu_controls];
+menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls];
 
 var i = 0, array_len = array_length_1d(menu_pages);
 
@@ -60,3 +60,5 @@ repeat(array_len)
 	menu_option[i] = 0;
 	i++;
 }
+
+inputting = false;

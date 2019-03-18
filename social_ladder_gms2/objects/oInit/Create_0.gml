@@ -16,6 +16,15 @@ enum save_room
 	seen,
 }
 
+#region // Menu manager
+
+global.fullscreen = true;
+global.mastervolume = 1;
+global.soundsvolume = 1;
+global.musicvolume = 1;
+
+#endregion
+
 global.start_room = room0;
 global.start_x = 224;
 global.start_y = 255;

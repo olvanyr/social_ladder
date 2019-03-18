@@ -2,7 +2,7 @@
 	if !instance_exists(oInput)
 	{
 		input = instance_create_layer(0,0,"Instances",oInput)
-	}
+	}else input = oInput;
 	if !instance_exists(oCamera)
 	{
 		with instance_create_layer(x,y,"Instances", oCamera)
