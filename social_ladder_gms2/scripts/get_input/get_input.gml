@@ -91,11 +91,14 @@ if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
 
 if (abs(gamepad_axis_value(0,gp_axislh)) > 0.1)
 {
-	if (abs(min(gamepad_axis_value(0,gp_axislh),0)) > 0.7)	left = 1;
-		
-	else left = abs(min(gamepad_axis_value(0,gp_axislh),0));
-	
-	if (max(gamepad_axis_value(0,gp_axislh),0) > 0.7) right = 1;
-		
-	else right = max(gamepad_axis_value(0, gp_axislh),0);
-}
+	if (abs(min(gamepad_axis_value(0,gp_axislh),0)) > 0.7) && !toggle2
+	{
+		menu_left = 1;
+		toggle2 = true;
+	}
+	if (max(gamepad_axis_value(0,gp_axislh),0) > 0.7)&& !toggle2
+	{
+		menu_right = 1;
+		toggle2 = true;
+	}
+}else toggle2 = false;

@@ -9,7 +9,7 @@ repeat(argument_count)
 	i++;
 }
 
-var ds_grid_id = ds_grid_create(5, argument_count); // 5 is the maximum variable every part of the menu actualy have
+var ds_grid_id = ds_grid_create(6, argument_count); // 5 is the maximum variable every part of the menu actualy have
 i = 0; 
 
 repeat(argument_count)

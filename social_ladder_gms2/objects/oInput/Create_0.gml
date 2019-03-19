@@ -25,3 +25,4 @@ menu_up = keyboard_check(vk_up);
 
 
 toggle = false;
+toggle2 = false;

@@ -3,7 +3,6 @@ if !instance_exists(oInput)
 	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
 
-
 /*
 //Pause
 if(!global.pause) exit;
@@ -11,15 +10,6 @@ if(!global.pause) exit;
 instance_deactivate_all(true);
 audio_pause_all();
 
-//Take Input in the menu
-input_up_p		= keyboard_check_pressed(global.key_up)		|| keyboard_check_pressed(global.default_key_up)	|| gamepad_button_check_pressed(0,gp_padu);
-input_down_p	= keyboard_check_pressed(global.key_down)	|| keyboard_check_pressed(global.default_key_down)	|| gamepad_button_check_pressed(0,gp_padd);
-input_right_p	= keyboard_check_pressed(global.key_right)	|| keyboard_check_pressed(global.default_key_right) || gamepad_button_check_pressed(0,gp_padr);
-input_left_p	= keyboard_check_pressed(global.key_left)	|| keyboard_check_pressed(global.default_key_left)	|| gamepad_button_check_pressed(0,gp_padl);
-input_enter_p	= keyboard_check_pressed(global.key_enter)	|| keyboard_check_pressed(global.default_key_enter) || gamepad_button_check_pressed(0,gp_face1);
-
-input_right_p_direct	= keyboard_check_direct(global.key_right)	|| keyboard_check_direct(global.default_key_right)  || gamepad_button_check_pressed(0,gp_padr);
-input_left_p_direct	    = keyboard_check_direct(global.key_left)	|| keyboard_check_direct(global.default_key_left)	|| gamepad_button_check_pressed(0,gp_padl);
 */
 
 //check if gamepad or keyboard are pressed
@@ -31,15 +21,6 @@ if(input.roll)
 		else page = menu_page.settings;
 	}
 }
-
-/*
-if(keyboard_check_pressed(vk_anykey)) any_pressed = 0;
-
-for ( var i = gp_face1; i < gp_axisrv; i++ ) {
-    if ( gamepad_button_check( 0, i ) ) any_pressed = 1;
-}
-*/
-
 
 
 //Set every menu fonctionality depending of the page
@@ -60,11 +41,11 @@ if(inputting){
 		case menu_element.slider:
 			var hinput = input.menu_right - input.menu_left;
 			if(hinput != 0){
-				
-				
+
 				ds_[# 4, menu_option[page]] += hinput * 0.05;
 				ds_[# 4, menu_option[page]] = clamp(ds_[# 4, menu_option[page]], 0, 1);
 				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
+				change_volume(); //dynamicaly change the solume
 				
 				
 			}
@@ -109,17 +90,16 @@ if(input.enter){
 		case menu_element.script_runner: script_execute(ds_[# 2, menu_option[page]]); break;
 		case menu_element.page_transfer: page = ds_[# 2, menu_option[page]]; break;
 		case menu_element.shift: 
-		case menu_element.slider: 
+		case menu_element.slider:
 		case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
 		case menu_element.input:
 			inputting = !inputting;
-			alarm[0] = 1;
+			// alarm[0] = 1; I can use this to save the settings later
 			break;
 	}
 	
 	//audio
 }
-
 
 /*
 #region //loadgame

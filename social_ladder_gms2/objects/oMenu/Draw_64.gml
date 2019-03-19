@@ -5,6 +5,12 @@ display_set_gui_size(global.view_width, global.view_height);
 
 var gwidth = global.view_width, gheight = global.view_height;
 
+
+var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_); // I actualy just need the current grid that y draw
+var y_buffer = 32, x_buffer = 16; //how far away the element are from each other or from the divide line
+var start_y = (gheight/2) - ((((ds_height-1)/2)*y_buffer)), start_x = gwidth/2; // where I start to draw the text, so it is half the amout of space that I need from the center
+var ltx = start_x - x_buffer, lty, c, xo; //left text exposition ltx
+
 //Draw Background
 
 //draw_sprite_ext(sBackround,0,0,0,global.view_width/sprite_get_width(sBackgroundMenu),global.view_height/sprite_get_height(sBackgroundMenu),0,c_white,1);
@@ -14,22 +20,19 @@ var gwidth = global.view_width, gheight = global.view_height;
 var c = c_black;
 draw_rectangle_color(0,0,gwidth, gheight, c,c,c,c, false);
 
-
 //Draw elements on Left Side
 draw_set_font(fMenu);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_right);
 
-var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
-var y_buffer = 32, x_buffer = 16; 
-var start_y = (gheight/2) - ((((ds_height-1)/2)*y_buffer)), start_x = gwidth/2;
-var ltx = start_x - x_buffer, lty, c, xo;
-var yy = 0; repeat(ds_height){
+var yy = 0; repeat(ds_height)
+{
 	lty = start_y + (yy*y_buffer);
 	c = c_white;
 	xo = 0;
 	
-	if(yy == menu_option[page]) {
+	if(yy == menu_option[page]) 
+	{
 		c = c_orange;	
 		xo = -x_buffer/2;
 	}
@@ -38,7 +41,8 @@ var yy = 0; repeat(ds_height){
 }
 
 //Draw Dividing Line
-draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c_white,c_white,c_white,c_white,false);
+c = c_white;
+draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
 
 //Draw Options on Right Side
 draw_set_halign(fa_left);
@@ -53,7 +57,7 @@ yy = 0; repeat(ds_height){
 			var current_val_words = ds_[# 4, yy];
 			var left_shift = "<< ";
 			var right_shift = " >>";
-			var c = c_white;
+			c = c_white;
 			
 			if(current_val == 0) left_shift = "";
 			if(current_val == array_length_1d(ds_[# 4, yy])-1) right_shift = "";
