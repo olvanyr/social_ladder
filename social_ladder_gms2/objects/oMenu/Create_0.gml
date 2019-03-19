@@ -1,5 +1,3 @@
-
-
 // set Enum for the menu
 
 enum menu_page
@@ -24,12 +22,23 @@ enum menu_element
 }
 
 //creat the "pages" of the menu and store them into ds_grid
+
+if file_exists("save.json")
+{
 ds_menu_main = create_menu_page(
-	["NEW GAME",	menu_element.script_runner,	start_game], 
 	["CONTINUE",	menu_element.script_runner,	load_game], 
+	["NEW GAME",	menu_element.script_runner,	start_game], 
 	["SETTINGS",	menu_element.page_transfer,	menu_page.settings],
 	["EXIT",		menu_element.script_runner,	exit_game]
 );
+}else
+{
+ds_menu_main = create_menu_page(
+	["NEW GAME",	menu_element.script_runner,	start_game], 
+	["SETTINGS",	menu_element.page_transfer,	menu_page.settings],
+	["EXIT",		menu_element.script_runner,	exit_game]
+);
+}
 
 ds_menu_settings = create_menu_page(
 	["FULLSCREEN",	menu_element.toggle,		change_window_mode,		global.fullscreen,		["ON", "OFF"]],  

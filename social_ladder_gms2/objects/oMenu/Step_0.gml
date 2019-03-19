@@ -22,7 +22,6 @@ input_right_p_direct	= keyboard_check_direct(global.key_right)	|| keyboard_check
 input_left_p_direct	    = keyboard_check_direct(global.key_left)	|| keyboard_check_direct(global.default_key_left)	|| gamepad_button_check_pressed(0,gp_padl);
 */
 
-show_debug_message(global.mastervolume);
 //check if gamepad or keyboard are pressed
 if(input.roll)
 {
@@ -109,8 +108,8 @@ if(input.enter){
 	switch(ds_[# 1, menu_option[page]]){
 		case menu_element.script_runner: script_execute(ds_[# 2, menu_option[page]]); break;
 		case menu_element.page_transfer: page = ds_[# 2, menu_option[page]]; break;
-		case menu_element.shift:
-		case menu_element.slider:
+		case menu_element.shift: 
+		case menu_element.slider: 
 		case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
 		case menu_element.input:
 			inputting = !inputting;
