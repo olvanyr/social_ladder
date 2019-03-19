@@ -53,14 +53,17 @@ ds_menu_audio = create_menu_page(
 	["MUSIC",		menu_element.slider,		change_volume,			"musicvolume",				global.musicvolume,			[0,1]],
 	["BACK",		menu_element.page_transfer,	menu_page.settings],
 );
-
 ds_menu_controls = create_menu_page(
-	["",			menu_element.image,			sGamepad],
+	["BACK",		menu_element.page_transfer,	menu_page.settings],
+);
+//I don't know why, but if I don't have a final page It dosen't work (either the last page dose not open or the clean up event crash)
+ds_menu_end = create_menu_page(
 	["BACK",		menu_element.page_transfer,	menu_page.settings],
 );
 
+
 page = 0;
-menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls];
+menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_end];
 
 var i = 0, array_len = array_length_1d(menu_pages);
 
