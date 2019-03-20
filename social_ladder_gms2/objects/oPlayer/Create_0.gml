@@ -27,7 +27,7 @@ cast_cooldown = 0;
 
 //jump related variable
 jump_speed = -6;
-cut_jump_speed = 0.2;
+cut_jump_speed = -0.2;
 jump_timer = 0;
 jump_timer_max = 4;
 jump_counter = 0;

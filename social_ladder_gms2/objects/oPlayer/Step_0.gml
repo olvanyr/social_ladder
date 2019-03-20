@@ -112,13 +112,12 @@ switch state
 			{
 				if vsp > 0
 				{
-					sprite_index = sPlayer_fall;
-					image_speed = 0.2;
-				}else
+					set_state_sprite(sPlayer_fall,0.2,0);
+				}
+				if vsp <= 0
 				{
-					sprite_index = sPlayer_jump;
-					image_speed = 0.2;
-					if animation_end() image_speed = 0;
+					set_state_sprite(sPlayer_jump,0.8,2);
+					//if animation_end() image_speed = 0;
 				}
 				
 				if side_wall 
