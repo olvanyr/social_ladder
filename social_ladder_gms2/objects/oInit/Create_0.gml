@@ -30,7 +30,7 @@ global.start_x = 224;
 global.start_y = 255;
 global.key[0] = "key_door1";
 
-
+//load audio group
 if !audio_group_is_loaded(audiogroup_sound)
 {
 	audio_group_load(audiogroup_sound);

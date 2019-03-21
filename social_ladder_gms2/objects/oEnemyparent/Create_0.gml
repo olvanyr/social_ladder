@@ -23,29 +23,19 @@ experience = 1;
 // state related variable
 state = "idle";
 
-// save and load 
-ident = id;
+// save and load
 
 once = true; //use to make the sav script happen only once when the enemy is dead
 
 
+save_x = string(id) + string(save.x);
+save_y = string(id) + string(save.y);
+save_state = string(id) + string(save.state);
 
-var array;
 
-if is_array(global.enemies[?ident])
+if global.enemies[?save_state] == "dead"
 {
-	
-	array = global.enemies[?ident];
-
-	if array[save.state] == "dead"
-	{
-	
-		x = array[save.x];
-		y = array[save.y];
-		state = array[save.state];
-	}
-} else 
-{
-	//set ennemy state
-	set_enemies_array();
-}
+	state = global.enemies[?save_state];
+	x = global.enemies[?save_x];
+	y = global.enemies[?save_y];
+}else set_enemies_map();

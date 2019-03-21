@@ -6,4 +6,4 @@ array[save.y] = y;
 
 //array[save.room] = room_id;
 
-global.enemies[?ident] = array;
+global.enemies[?self] = array;

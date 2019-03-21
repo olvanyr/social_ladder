@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "1afe1773-532c-407a-9315-94c637a5b266",
+            "Value": {
+                "id": "b0963604-ad44-4dc4-81fa-f7eb5e6414ff",
+                "resourcePath": "views\\1afe1773-532c-407a-9315-94c637a5b266.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1b34cd19-87d5-4626-8248-fafe3ca9b4cb",
             "Value": {
                 "id": "a7221cfa-0f80-4f21-800f-1c31461b4e76",
@@ -660,6 +668,14 @@
                 "id": "33d10bbf-2cd1-4450-907a-d4959083a68c",
                 "resourcePath": "views\\5b7b1d63-2b20-4a9a-8b32-e34aa3b4176b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "60ff6371-716d-47e7-a538-ca87a789319e",
+            "Value": {
+                "id": "deeaec1e-e58c-4996-815a-98f0e1b5921d",
+                "resourcePath": "scripts\\load\\load.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1623,6 +1639,14 @@
             }
         },
         {
+            "Key": "ec21ae0a-b197-4a1b-8bf9-bc836a12b08f",
+            "Value": {
+                "id": "51c31037-9c36-4bb0-be91-7a483213c8d9",
+                "resourcePath": "scripts\\set_enemies_map\\set_enemies_map.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ef5c0a98-0384-46b3-adf4-7475e8330a45",
             "Value": {
                 "id": "5bc41bfe-a558-4a4f-9c58-f92300134dd1",
@@ -1774,7 +1798,9 @@
         "c2f1732e-b9ca-4b63-be01-5694ac538f27",
         "b19a1fab-ba69-488c-ac12-55b49158df19",
         "82486ed5-8b98-4b6f-8c27-2b0f5487f9bd",
-        "633ee878-0cbb-4ee6-af46-ad0ec028a785"
+        "633ee878-0cbb-4ee6-af46-ad0ec028a785",
+        "ec21ae0a-b197-4a1b-8bf9-bc836a12b08f",
+        "60ff6371-716d-47e7-a538-ca87a789319e"
     ],
     "tutorial": ""
 }

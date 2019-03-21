@@ -21,12 +21,17 @@ ds_map_destroy(m);
 */
 
 
-var array = global.enemies[? ident];
+var json = json_encode(global.enemies);
+return json;
+
+
+/*
+var array = global.enemies[? self];
 var list  = ds_list_create();
 ds_list_insert(list, save.state, array[save.state]);
 ds_list_insert(list, save.x, array[save.x]);
 ds_list_insert(list, save.y, array[save.y]);
-ds_map_add_list(global.enemies, ident, list);
+ds_map_add_list(global.enemies, self, list);
 
 var json = json_encode(global.enemies);
 ds_list_destroy(list);
