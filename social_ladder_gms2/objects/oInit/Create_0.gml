@@ -22,6 +22,7 @@ global.fullscreen = true;
 global.mastervolume = 1;
 global.soundsvolume = 1;
 global.musicvolume = 1;
+global.slot = 1;
 
 #endregion
 
@@ -42,4 +43,10 @@ if !audio_group_is_loaded(audiogroup_music)
 
 
 //save var
-global.enemies = ds_map_create();
+global.save = ds_map_create();
+
+// other var to save
+global.experience = 0;
+global.play_time = 0;
+global.date = 0;
+

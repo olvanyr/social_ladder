@@ -44,6 +44,13 @@ var yy = 0; repeat(ds_height)
 c = c_white;
 draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
 
+
+// draw image on the control page
+if page == menu_page.controls
+{
+	draw_sprite(sGamepad,-1,global.view_width - sprite_get_width(sGamepad) - 64,global.view_height - sprite_get_height(sGamepad) - 64);
+}
+
 //Draw Options on Right Side
 draw_set_halign(fa_left);
 var rtx = start_x + x_buffer, rty;
@@ -94,22 +101,18 @@ yy = 0; repeat(ds_height){
 
 		break;
 		
-		case menu_element.input:
-			var current_val = ds_[# 3, yy];
-			switch(current_val){
-				case vk_up:		current_val = "UP KEY"; break;
-				case vk_left:	current_val = "LEFT KEY"; break;
-				case vk_right:	current_val = "RIGHT KEY"; break;
-				case vk_down:	current_val = "DOWN KEY"; break;
-				case vk_space:	current_val = "SPACE"; break;
-				case vk_escape:	current_val = "ESCAPE"; break;
-				case vk_enter:	current_val = "ENTER"; break;
-				default:		current_val = chr(current_val); 
-			}
+		case menu_element.slots:
+			
 			c = c_white;
-			if(inputting and yy == menu_option[page]){ c = c_yellow; }
-			draw_text_color(rtx, rty, current_val, c,c,c,c, 1);
-			//draw_sprite(sGamepad,-1,global.view_width - sprite_get_width(sGamepad) - 64,global.view_height - sprite_get_height(sGamepad) - 64);
+			var len = 64;
+			if yy == menu_option[page] 
+			{
+				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
+				ds_map_clear(global.save);
+				load_map();
+				if global.date != 0 draw_text_color(rtx, rty, "last time played " + string(global.date), c,c,c,c, 1);
+				
+			}
 
 		break;
 	}

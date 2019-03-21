@@ -1,8 +1,8 @@
 {
-    "id": "62231cfb-b72b-437d-a4f2-363919b79831",
+    "id": "335a6545-a5cf-464c-a6a0-39273096d04f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "save_global",
+    "name": "save_map",
     "IsCompatibility": false,
     "IsDnD": false
 }

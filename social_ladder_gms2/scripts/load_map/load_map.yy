@@ -1,8 +1,8 @@
 {
-    "id": "7a37a0bb-05c3-4ad2-9ef0-47f5425626d7",
+    "id": "60ff6371-716d-47e7-a538-ca87a789319e",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "save_enemies",
+    "name": "load_map",
     "IsCompatibility": false,
     "IsDnD": false
 }

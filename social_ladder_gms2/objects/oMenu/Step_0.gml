@@ -17,8 +17,10 @@ if(input.roll)
 {
 	if(!inputting)
 	{
-		if(page = menu_page.settings) page = menu_page.main;
-		else page = menu_page.settings;
+		if(page = menu_page.settings) || page = menu_page.slots
+		{
+			page = menu_page.main;
+		}else page = menu_page.settings;
 	}
 }
 
@@ -61,16 +63,11 @@ if(inputting){
 			}
 		break;
 		
-		case menu_element.input:
-		if(any_pressed == 0)
-		{
-			var kk = keyboard_lastkey;
-			if(kk != vk_enter){
-				if(kk != ds_[# 3, menu_option[page]]) //audio
-				ds_[# 3, menu_option[page]] = kk;
-				variable_global_set(ds_[# 2, menu_option[page]], kk);
-			}
-		}
+		case menu_element.slots:
+			
+			variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
+			script_execute(ds_[# 2, menu_option[page]]);
+			
 		
 		break;
 	}
@@ -93,6 +90,7 @@ if(input.enter){
 		case menu_element.slider:
 		case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
 		case menu_element.input:
+		case menu_element.slots:
 			inputting = !inputting;
 			// alarm[0] = 1; I can use this to save the settings later
 			break;

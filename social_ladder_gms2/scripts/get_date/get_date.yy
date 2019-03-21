@@ -1,8 +1,8 @@
 {
-    "id": "2a2ae53b-5696-449b-9203-d9f16f369302",
+    "id": "3eb4570f-e897-4863-9872-d77701a1b1f4",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "load_JSON_from_file",
+    "name": "get_date",
     "IsCompatibility": false,
     "IsDnD": false
 }

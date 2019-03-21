@@ -33,9 +33,9 @@ save_y = string(id) + string(save.y);
 save_state = string(id) + string(save.state);
 
 
-if global.enemies[?save_state] == "dead"
+if global.save[?save_state] == "dead"
 {
-	state = global.enemies[?save_state];
-	x = global.enemies[?save_x];
-	y = global.enemies[?save_y];
+	state = global.save[?save_state];
+	x = global.save[?save_x];
+	y = global.save[?save_y];
 }else set_enemies_map();

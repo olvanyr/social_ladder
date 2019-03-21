@@ -1,8 +1,8 @@
 {
-    "id": "c2f1732e-b9ca-4b63-be01-5694ac538f27",
+    "id": "01ac6600-c7cd-426f-ba09-5fa4c1fd23d6",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "save_meta",
+    "name": "select_slot",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -6,7 +6,10 @@ var json = argument0;
 var decode = json_decode(json);
 
 
-ds_map_destroy(global.enemies);
-global.enemies = ds_map_create();
-global.enemies = decode;
+ds_map_destroy(global.save);
+global.save = ds_map_create();
+global.save = decode;
+
+global.experience = global.save[? "experience"];
+global.date = global.save[? "date"];
 
