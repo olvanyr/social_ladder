@@ -1,4 +1,4 @@
-/// @description load data
+///@desc load data
 
 if file_exists("save.json")
 {

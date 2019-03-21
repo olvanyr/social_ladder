@@ -7,6 +7,7 @@ enum menu_page
 	audio,
 	graphics,
 	controls,
+	slots,
 	height //so I now how many number of ellement I have
 }
 
