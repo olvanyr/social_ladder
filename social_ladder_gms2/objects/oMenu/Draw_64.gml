@@ -15,12 +15,11 @@ var ltx = start_x - x_buffer, lty, c, xo; //left text exposition ltx
 
 //draw_sprite_ext(sBackround,0,0,0,global.view_width/sprite_get_width(sBackgroundMenu),global.view_height/sprite_get_height(sBackgroundMenu),0,c_white,1);
 
-
 //Draw Pause Menu "Back"
-var c = c_black;
+var c = c_gray;
 draw_rectangle_color(0,0,gwidth, gheight, c,c,c,c, false);
 
-//Draw elements on Left Side
+#region Draw elements on Left Side
 draw_set_font(fMenu);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_right);
@@ -33,25 +32,40 @@ var yy = 0; repeat(ds_height)
 	
 	if(yy == menu_option[page]) 
 	{
-		c = c_orange;	
+		c = make_color_rgb(158,11,15);	
 		xo = -x_buffer/2;
 	}
 	draw_text_color(ltx + xo, lty, ds_[# 0, yy], c,c,c,c, 1);
 	yy++;
 }
+#endregion
 
-//Draw Dividing Line
-c = c_white;
-draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
+#region draw other element
+if page != menu_page.start
+{
+	draw_sprite(sMenu_button,0,gwidth,gheight);
 
+	//Draw Dividing Line
+	c = c_white;
+	draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
+}
 
 // draw image on the control page
 if page == menu_page.controls
 {
-	draw_sprite(sGamepad,-1,global.view_width - sprite_get_width(sGamepad) - 64,global.view_height - sprite_get_height(sGamepad) - 64);
+	draw_sprite(sGamepad,-1,gwidth - sprite_get_width(sGamepad) - 64,gheight - sprite_get_height(sGamepad) - 64);
 }
 
-//Draw Options on Right Side
+//draw the presse start things
+if page == menu_page.start
+{
+	draw_sprite(sMenu_start,-1,gwidth/2,gheight/2);
+}
+#endregion
+
+
+
+#region Draw Options on Right Side
 draw_set_halign(fa_left);
 var rtx = start_x + x_buffer, rty;
 
@@ -91,7 +105,7 @@ yy = 0; repeat(ds_height){
 			c = c_white;
 			var current_val = ds_[# 3, yy];
 			var c1, c2;
-			if(inputting and yy == menu_option[page]){ c = c_yellow; }
+			if(inputting and yy == menu_option[page]){ c = c_aqua; }
 			
 			if(current_val == 0){ c1 = c; c2 = c_dkgray; }
 			else				{ c1 = c_dkgray; c2 = c; }
@@ -119,3 +133,4 @@ yy = 0; repeat(ds_height){
 	
 	yy++;
 }
+#endregion

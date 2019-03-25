@@ -2,6 +2,7 @@
 
 enum menu_page
 {
+	start,
 	main,
 	settings,
 	audio,
@@ -24,9 +25,13 @@ enum menu_element
 }
 
 //creat the "pages" of the menu and store them into ds_grid
+ds_menu_start = create_menu_page(
+["",		menu_element.page_transfer,	menu_page.main], 
+);
+
 
 ds_menu_main = create_menu_page(
-	["PLAY",	menu_element.page_transfer,	menu_page.slots], 
+	["PLAY",		menu_element.page_transfer,	menu_page.slots], 
 	["SETTINGS",	menu_element.page_transfer,	menu_page.settings],
 	["EXIT",		menu_element.script_runner,	exit_game]
 );
@@ -60,7 +65,7 @@ ds_menu_end = create_menu_page(
 
 
 page = 0;
-menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_end,ds_menu_slots];
+menu_pages = [ds_menu_start, ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_end,ds_menu_slots];
 
 var i = 0, array_len = array_length_1d(menu_pages);
 

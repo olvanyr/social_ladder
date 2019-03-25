@@ -1,7 +1,16 @@
+var any_pressed = 0;
+
 if !instance_exists(oInput)
 {
 	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
+
+//check if anything is pressed, so I can make a nice <presse start> screen
+for ( var i = gp_face1; i < gp_axisrv; i++ ) {
+    if ( gamepad_button_check( 0, i ) ) any_pressed = 1;
+}
+if keyboard_check(vk_anykey) any_pressed = 1;
+
 
 /*
 //Pause
@@ -25,79 +34,91 @@ if(input.roll)
 }
 
 
-//Set every menu fonctionality depending of the page
-var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
+if page != menu_page.start
+{
+	//Set every menu fonctionality depending of the page
+	var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
 
-if(inputting){
+	if(inputting){
 	
-	switch(ds_[# 1, menu_option[page]]){
-		case menu_element.shift:
-			var hinput = input.menu_right - input.menu_left;
-			if(hinput != 0){
-				//audio
-				ds_[# 3, menu_option[page]] += hinput;
-				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
-			}
-		break;
+		switch(ds_[# 1, menu_option[page]]){
+			case menu_element.shift:
+				var hinput = input.menu_right - input.menu_left;
+				if(hinput != 0){
+					//audio
+					ds_[# 3, menu_option[page]] += hinput;
+					ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
+				}
+			break;
 		
-		case menu_element.slider:
-			var hinput = input.menu_right - input.menu_left;
-			if(hinput != 0){
+			case menu_element.slider:
+				var hinput = input.menu_right - input.menu_left;
+				if(hinput != 0){
 
-				ds_[# 4, menu_option[page]] += hinput * 0.05;
-				ds_[# 4, menu_option[page]] = clamp(ds_[# 4, menu_option[page]], 0, 1);
+					ds_[# 4, menu_option[page]] += hinput * 0.05;
+					ds_[# 4, menu_option[page]] = clamp(ds_[# 4, menu_option[page]], 0, 1);
+					variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
+					change_volume(); //dynamicaly change the solume
+				
+				
+				}
+			
+			break;
+		
+			case menu_element.toggle:
+			var hinput = input.menu_right - input.menu_left;
+				if(hinput != 0){
+					//audio
+					ds_[# 3, menu_option[page]] += hinput;
+					ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, 1);
+				}
+			break;
+		
+			case menu_element.slots:
+			
 				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
-				change_volume(); //dynamicaly change the solume
-				
-				
-			}
+				script_execute(ds_[# 2, menu_option[page]]);
 			
-		break;
-		
-		case menu_element.toggle:
-		var hinput = input.menu_right - input.menu_left;
-			if(hinput != 0){
-				//audio
-				ds_[# 3, menu_option[page]] += hinput;
-				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, 1);
-			}
-		break;
-		
-		case menu_element.slots:
-			
-			variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
-			script_execute(ds_[# 2, menu_option[page]]);
 			
 		
-		break;
-	}
+			break;
+		}
 	
-} else {
-	var ochange = input.menu_down - input.menu_up;
-	if(ochange != 0){
-		menu_option[page] += ochange;
-		if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
-		if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
+	} else {
+		var ochange = input.menu_down - input.menu_up;
+		if(ochange != 0){
+			menu_option[page] += ochange;
+			if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
+			if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
+			//audio
+		}
+	}
+
+	if(input.enter){
+		switch(ds_[# 1, menu_option[page]]){
+			case menu_element.script_runner: script_execute(ds_[# 2, menu_option[page]]); break;
+			case menu_element.page_transfer: page = ds_[# 2, menu_option[page]]; break;
+			case menu_element.shift: 
+			case menu_element.slider:
+			case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
+			case menu_element.input:
+			case menu_element.slots:
+				inputting = !inputting;
+				// alarm[0] = 1; I can use this to save the settings later
+				break;
+		}
+	
 		//audio
 	}
+}else
+{
+	// unique page transfert for the first page
+	if page == menu_page.start
+	{
+		if any_pressed page = menu_page.main;
+	}
 }
 
-if(input.enter){
-	switch(ds_[# 1, menu_option[page]]){
-		case menu_element.script_runner: script_execute(ds_[# 2, menu_option[page]]); break;
-		case menu_element.page_transfer: page = ds_[# 2, menu_option[page]]; break;
-		case menu_element.shift: 
-		case menu_element.slider:
-		case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
-		case menu_element.input:
-		case menu_element.slots:
-			inputting = !inputting;
-			// alarm[0] = 1; I can use this to save the settings later
-			break;
-	}
-	
-	//audio
-}
 
 /*
 #region //loadgame
