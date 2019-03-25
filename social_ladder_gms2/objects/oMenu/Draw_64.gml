@@ -40,13 +40,18 @@ var yy = 0; repeat(ds_height)
 }
 #endregion
 #region draw other element
-if page != menu_page.start
+if page != menu_page.start && page != menu_page.slots
 {
 	draw_sprite(sMenu_button,0,gwidth,gheight);
 
 	//Draw Dividing Line
 	c = c_white;
 	draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
+}
+
+if page == menu_page.slots
+{
+	draw_sprite(sMenu_button_erase,0,gwidth,gheight);
 }
 
 // draw image on the control page
@@ -126,23 +131,23 @@ yy = 0; repeat(ds_height){
 				ds_map_clear(global.save);
 				load_map();
 				if global.date != 0 draw_text_color(rtx, rty, "last time played " + string(global.date), c,c,c,c, 1);
-				
-				if input.erase
+				switch (global.slot)
+				{
+					case 1: 
+						var slot = "save1.json";
+					break;
+					case 2: 
+						var slot = "save2.json";
+					break;
+					case 3: 
+						var slot = "save3.json";
+					break;
+				}
+						
+				if input.erase && file_exists(slot)
 				{
 					if toggle == true
 					{
-						switch (global.slot)
-						{
-							case 1: 
-								var slot = "save1.json";
-							break;
-							case 2: 
-								var slot = "save2.json";
-							break;
-							case 3: 
-								var slot = "save3.json";
-							break;
-						}
 						file_delete(slot);
 						alarm[0] = 2
 					}

@@ -1479,6 +1479,14 @@
             }
         },
         {
+            "Key": "db551a14-c91e-45ba-93ef-115a198227d6",
+            "Value": {
+                "id": "e65909f2-18fe-4257-8d9c-14f14d54c97f",
+                "resourcePath": "sprites\\sMenu_button_erase\\sMenu_button_erase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dbd8dc20-8f76-4361-a4c5-756a4c7e1620",
             "Value": {
                 "id": "af7fe232-0cd2-46bf-824c-5902ccc55ba0",
