@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "21837038-409b-482c-ae08-e29c2b00b9bb",
+            "Value": {
+                "id": "d67f3307-4c16-464b-a99e-3eb0d5dd5505",
+                "resourcePath": "sprites\\sGamepad\\sGamepad.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "22679488-9a4d-404a-8f2b-a3a206455a78",
             "Value": {
                 "id": "55fa38d7-4e80-42bd-8d69-15d2fbae29da",
@@ -604,14 +612,6 @@
                 "id": "b9806fb6-7f22-4cb7-9198-11d953b9cfda",
                 "resourcePath": "views\\5358e5c5-c526-4e2f-b8c5-645fae52f50f.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "55140aa0-f7d9-42d8-978e-20161b4a6415",
-            "Value": {
-                "id": "4207ae0b-3f6d-4664-b20e-3135d905218b",
-                "resourcePath": "sprites\\sGamepad\\sGamepad.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

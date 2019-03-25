@@ -7,7 +7,7 @@ var gwidth = global.view_width, gheight = global.view_height;
 
 
 var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_); // I actualy just need the current grid that y draw
-var y_buffer = 32, x_buffer = 16; //how far away the element are from each other or from the divide line
+var y_buffer = 50, x_buffer = 16; //how far away the element are from each other or from the divide line
 var start_y = (gheight/2) - ((((ds_height-1)/2)*y_buffer)), start_x = gwidth/2; // where I start to draw the text, so it is half the amout of space that I need from the center
 var ltx = start_x - x_buffer, lty, c, xo; //left text exposition ltx
 
@@ -42,7 +42,7 @@ var yy = 0; repeat(ds_height)
 #region draw other element
 if page != menu_page.start && page != menu_page.slots
 {
-	draw_sprite(sMenu_button,0,gwidth,gheight);
+	draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
 
 	//Draw Dividing Line
 	c = c_white;
@@ -51,24 +51,24 @@ if page != menu_page.start && page != menu_page.slots
 
 if page == menu_page.slots
 {
-	draw_sprite(sMenu_button_erase,0,gwidth,gheight);
+	draw_sprite_ext(sMenu_button_erase,0,gwidth,gheight,2,2,0,c_white,1);
 }
 
 // draw image on the control page
 if page == menu_page.controls
 {
-	draw_sprite(sGamepad,-1,gwidth - sprite_get_width(sGamepad) - 64,gheight - sprite_get_height(sGamepad) - 64);
+	draw_sprite_ext(sGamepad,-1,gwidth/2,gheight/2,2,2,0,c_white,1);
 }
 
 //draw the presse start things
 if page == menu_page.start
 {
-	draw_sprite(sMenu_start,-1,gwidth/2,gheight/2);
+	draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2,2,2,0,c_white,1);
 }
 
 if toggle == true
 {
-	draw_sprite(sErase,0,gwidth/2,gheight/2);
+	draw_sprite_ext(sErase,0,gwidth/2,gheight/2,2,2,0,c_white,1);
 }
 #endregion
 #region Draw Options on Right Side
