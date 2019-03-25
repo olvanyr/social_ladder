@@ -1,3 +1,5 @@
+toggle = false; // use to make the erase save funtion
+
 // set Enum for the menu
 
 enum menu_page

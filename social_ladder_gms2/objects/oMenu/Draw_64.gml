@@ -39,7 +39,6 @@ var yy = 0; repeat(ds_height)
 	yy++;
 }
 #endregion
-
 #region draw other element
 if page != menu_page.start
 {
@@ -61,10 +60,12 @@ if page == menu_page.start
 {
 	draw_sprite(sMenu_start,-1,gwidth/2,gheight/2);
 }
+
+if toggle == true
+{
+	draw_sprite(sErase,0,gwidth/2,gheight/2);
+}
 #endregion
-
-
-
 #region Draw Options on Right Side
 draw_set_halign(fa_left);
 var rtx = start_x + x_buffer, rty;
@@ -126,8 +127,29 @@ yy = 0; repeat(ds_height){
 				load_map();
 				if global.date != 0 draw_text_color(rtx, rty, "last time played " + string(global.date), c,c,c,c, 1);
 				
+				if input.erase
+				{
+					if toggle == true
+					{
+						switch (global.slot)
+						{
+							case 1: 
+								var slot = "save1.json";
+							break;
+							case 2: 
+								var slot = "save2.json";
+							break;
+							case 3: 
+								var slot = "save3.json";
+							break;
+						}
+						file_delete(slot);
+						alarm[0] = 2
+					}
+					toggle = true;
+				}
 			}
-
+			
 		break;
 	}
 	

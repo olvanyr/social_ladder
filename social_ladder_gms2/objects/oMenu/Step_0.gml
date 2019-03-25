@@ -5,11 +5,6 @@ if !instance_exists(oInput)
 	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
 
-//check if anything is pressed, so I can make a nice <presse start> screen
-for ( var i = gp_face1; i < gp_axisrv; i++ ) {
-    if ( gamepad_button_check( 0, i ) ) any_pressed = 1;
-}
-if keyboard_check(vk_anykey) any_pressed = 1;
 
 
 /*
@@ -18,13 +13,13 @@ if(!global.pause) exit;
 
 instance_deactivate_all(true);
 audio_pause_all();
-
 */
 
 //check if gamepad or keyboard are pressed
-if(input.roll)
+
+if(input.back) && toggle = false
 {
-	if(!inputting)
+	if(!inputting) && page != menu_page.main
 	{
 		if(page = menu_page.settings) || page = menu_page.slots
 		{
@@ -32,15 +27,16 @@ if(input.roll)
 		}else page = menu_page.settings;
 	}
 }
+if input.back toggle = false;
 
 
-if page != menu_page.start
-{
+
 	//Set every menu fonctionality depending of the page
 	var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
+	
 
 	if(inputting){
-	
+		
 		switch(ds_[# 1, menu_option[page]]){
 			case menu_element.shift:
 				var hinput = input.menu_right - input.menu_left;
@@ -78,19 +74,22 @@ if page != menu_page.start
 			
 				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
 				script_execute(ds_[# 2, menu_option[page]]);
-			
-			
-		
+				
 			break;
 		}
 	
-	} else {
-		var ochange = input.menu_down - input.menu_up;
-		if(ochange != 0){
-			menu_option[page] += ochange;
-			if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
-			if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
+	} else 
+	{
+		if toggle == false
+		{
+			var ochange = input.menu_down - input.menu_up;
+			if(ochange != 0)
+			{
+				menu_option[page] += ochange;
+				if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
+				if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
 			//audio
+			}
 		}
 	}
 
@@ -110,14 +109,6 @@ if page != menu_page.start
 	
 		//audio
 	}
-}else
-{
-	// unique page transfert for the first page
-	if page == menu_page.start
-	{
-		if any_pressed page = menu_page.main;
-	}
-}
 
 
 /*

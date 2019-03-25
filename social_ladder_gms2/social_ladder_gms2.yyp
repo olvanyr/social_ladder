@@ -1351,6 +1351,14 @@
             }
         },
         {
+            "Key": "c2c511a3-1ed0-4a45-a9d2-0d40a0de0f97",
+            "Value": {
+                "id": "1f00fc5c-7fea-4fe5-b668-dbbce7f122ba",
+                "resourcePath": "sprites\\sErase\\sErase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c55fe176-0805-4848-a201-cc6823519a38",
             "Value": {
                 "id": "7461d714-ba56-4494-8455-5b17b9aefab2",
