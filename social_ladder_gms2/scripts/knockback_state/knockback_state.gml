@@ -8,7 +8,11 @@ var _knockback_friction = 0.4;
 
 set_state_sprite(_nockback_spirte, 0,0);
 image_xscale = -sign(knockback_speed);
-move_and_collide(knockback_speed,0);
+
+if !place_meeting(x + sign(knockback_speed),y,oWall)
+{
+	move_and_collide(knockback_speed,0);
+}
 knockback_speed = approach(knockback_speed, 0, _knockback_friction);
 if knockback_speed == 0 
 {
