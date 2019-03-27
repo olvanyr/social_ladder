@@ -1,4 +1,3 @@
-var any_pressed = 0;
 
 if !instance_exists(oInput)
 {
@@ -15,8 +14,7 @@ instance_deactivate_all(true);
 audio_pause_all();
 */
 
-//check if gamepad or keyboard are pressed
-
+//make a simple way to go back
 if(input.back) && toggle = false
 {
 	if(!inputting) && page != menu_page.main
@@ -31,84 +29,84 @@ if input.back toggle = false;
 
 
 
-	//Set every menu fonctionality depending of the page
-	var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
+//Set every menu fonctionality depending of the page
+var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
 	
 
-	if(inputting){
+if(inputting){
 		
-		switch(ds_[# 1, menu_option[page]]){
-			case menu_element.shift:
-				var hinput = input.menu_right - input.menu_left;
-				if(hinput != 0){
-					//audio
-					ds_[# 3, menu_option[page]] += hinput;
-					ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
-				}
-			break;
-		
-			case menu_element.slider:
-				var hinput = input.menu_right - input.menu_left;
-				if(hinput != 0){
-
-					ds_[# 4, menu_option[page]] += hinput * 0.05;
-					ds_[# 4, menu_option[page]] = clamp(ds_[# 4, menu_option[page]], 0, 1);
-					variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
-					change_volume(); //dynamicaly change the solume
-				
-				
-				}
-			
-			break;
-		
-			case menu_element.toggle:
+	switch(ds_[# 1, menu_option[page]]){
+		case menu_element.shift:
 			var hinput = input.menu_right - input.menu_left;
-				if(hinput != 0){
-					//audio
-					ds_[# 3, menu_option[page]] += hinput;
-					ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, 1);
-				}
-			break;
-		
-			case menu_element.slots:
-			
-				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
-				script_execute(ds_[# 2, menu_option[page]]);
-				
-			break;
-		}
-	
-	} else 
-	{
-		if toggle == false
-		{
-			var ochange = input.menu_down - input.menu_up;
-			if(ochange != 0)
-			{
-				menu_option[page] += ochange;
-				if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
-				if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
-			//audio
+			if(hinput != 0){
+				//audio
+				ds_[# 3, menu_option[page]] += hinput;
+				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
 			}
-		}
-	}
+		break;
+		
+		case menu_element.slider:
+			var hinput = input.menu_right - input.menu_left;
+			if(hinput != 0){
 
-	if(input.enter){
-		switch(ds_[# 1, menu_option[page]]){
-			case menu_element.script_runner: script_execute(ds_[# 2, menu_option[page]]); break;
-			case menu_element.page_transfer: page = ds_[# 2, menu_option[page]]; break;
-			case menu_element.shift: 
-			case menu_element.slider:
-			case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
-			case menu_element.input:
-			case menu_element.slots:
-				inputting = !inputting;
-				// alarm[0] = 1; I can use this to save the settings later
-				break;
-		}
-	
-		//audio
+				ds_[# 4, menu_option[page]] += hinput * 0.05;
+				ds_[# 4, menu_option[page]] = clamp(ds_[# 4, menu_option[page]], 0, 1);
+				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
+				change_volume(); //dynamicaly change the solume
+				
+				
+			}
+			
+		break;
+		
+		case menu_element.toggle:
+		var hinput = input.menu_right - input.menu_left;
+			if(hinput != 0){
+				//audio
+				ds_[# 3, menu_option[page]] += hinput;
+				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, 1);
+			}
+		break;
+		
+		case menu_element.slots:
+			
+			variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
+			script_execute(ds_[# 2, menu_option[page]]);
+				
+		break;
 	}
+	
+} else 
+{
+	if toggle == false
+	{
+		var ochange = input.menu_down - input.menu_up;
+		if(ochange != 0)
+		{
+			menu_option[page] += ochange;
+			if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
+			if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
+		//audio
+		}
+	}
+}
+
+if(input.enter){
+	switch(ds_[# 1, menu_option[page]]){
+		case menu_element.script_runner: script_execute(ds_[# 2, menu_option[page]]); break;
+		case menu_element.page_transfer: page = ds_[# 2, menu_option[page]]; break;
+		case menu_element.shift: 
+		case menu_element.slider:
+		case menu_element.toggle: if(inputting){ script_execute(ds_[# 2, menu_option[page]], ds_[# 3, menu_option[page]]); }
+		case menu_element.input:
+		case menu_element.slots:
+			inputting = !inputting;
+			// alarm[0] = 1; I can use this to save the settings later
+			break;
+	}
+	
+	//audio
+}
 
 
 /*
