@@ -12,6 +12,21 @@ if self == oPlayer
 
 var _xspeed = argument0;
 var _yspeed = argument1;
+/*
+if !place_meeting(x + _xspeed, y, oWall)
+{
+	x += _xspeed;
+}
+
+if place_meeting(x + _xspeed, y, oWall)
+{
+	if sign(_xspeed) == 1
+	{
+		var dir = 0;
+	}else dir = 180;
+	move_contact_solid(dir, -1);
+}
+*/
 
 if place_meeting(x + _xspeed, y, oWall)
 {
@@ -34,6 +49,7 @@ if place_meeting(x + _xspeed, y, oWall)
 }
 
 x += _xspeed;
+
 
 if !place_meeting(x, y + _yspeed, oWall)
 {
