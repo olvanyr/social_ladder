@@ -20,3 +20,6 @@ if room_list[room,0] = true
 {
 	room_list[room,0] = true;
 }
+
+global.save[? room] = room;
+

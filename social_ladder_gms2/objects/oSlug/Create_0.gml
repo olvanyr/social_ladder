@@ -27,4 +27,4 @@ attack2_mask  = sSlug_attack2_mask;
 attack2_frame = 3;
 
 rng = 0;
-once = true; //use to make the rng happen only once
+attack_once = true; //use to make the rng happen only once
