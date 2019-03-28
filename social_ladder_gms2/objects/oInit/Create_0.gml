@@ -1,8 +1,6 @@
 /// @description  init the global var of the game
 
-
 // add an enum to save the variable
-
 enum save
 {
 	x,
@@ -14,6 +12,8 @@ enum save
 enum save_room
 {
 	seen,
+	enemy
+	
 }
 
 #region // Menu manager
@@ -40,6 +40,15 @@ if !audio_group_is_loaded(audiogroup_music)
 {
 	audio_group_load(audiogroup_music);
 }
+
+global.enemy_list = 
+[
+	oFist,
+	oSword,
+	oRunner,
+	oMimic,
+	oSlug
+]
 
 
 //save var

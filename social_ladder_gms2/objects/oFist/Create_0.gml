@@ -26,3 +26,6 @@ attack2_frame = 7;
 knockback_sprite = sFist_knockback;
 roll = sFist_slide;
 die = sFist_die;
+
+
+fly = 1;

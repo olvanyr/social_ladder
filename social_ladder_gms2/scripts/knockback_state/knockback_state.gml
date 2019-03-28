@@ -9,12 +9,8 @@ var side_wall = place_meeting(x + (image_xscale), y, oWall)
 
 set_state_sprite(_nockback_spirte, 0,0);
 image_xscale = -sign(knockback_speed);
-<<<<<<< HEAD
-if !side_wall 
-=======
 
 if !place_meeting(x + sign(knockback_speed),y,oWall)
->>>>>>> 4de278f25b98583006ca213b69b8b923331a9931
 {
 	move_and_collide(knockback_speed,0);
 }

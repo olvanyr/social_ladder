@@ -18,3 +18,5 @@ walk = sMimic_walk;
 knockback_sprite = sMimic_knockback;
 die = sMimic_die;
 transformation = sMimic_transformation;
+
+fly = 1;

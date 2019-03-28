@@ -1,7 +1,11 @@
 if !instance_exists(oPlayer) exit;
 
-//avoid some xierd cliping when the player is perfectly above the mob
+
+if fly != 0
+{
 image_xscale = sign(oPlayer.x - x);
+}else image_xscale = -sign(oPlayer.x - x);
+
 if abs(oPlayer.x - x) < 2 image_xscale = 0
 var direction_facing = image_xscale;
 

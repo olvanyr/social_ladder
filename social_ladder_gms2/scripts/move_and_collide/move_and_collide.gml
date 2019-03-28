@@ -7,9 +7,6 @@ if self == oPlayer
 	mask_index = sPlayer_mask;
 }
 
-
-
-
 var _xspeed = argument0;
 var _yspeed = argument1;
 /*
@@ -64,8 +61,9 @@ if place_meeting(x, y + _yspeed, oWall)
 		grounded = true;
 	}
 	vsp = 0;
-	
 }
+
+
 
 if self == oPlayer
 {

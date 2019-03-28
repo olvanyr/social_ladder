@@ -2,7 +2,6 @@
 event_inherited();
 
 //draw roll cooldawn
-
 var roll_image_number = sprite_get_number(sRoll_cooldawn);
 var sub_image = round(roll_cooldown / roll_image_number);
 
