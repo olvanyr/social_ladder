@@ -52,7 +52,7 @@ if !place_meeting(x, y + _yspeed, oWall)
 {
 	y += _yspeed;
 }
-
+	
 if place_meeting(x, y + _yspeed, oWall)
 {
 	if sign(_yspeed) == 1
@@ -62,7 +62,6 @@ if place_meeting(x, y + _yspeed, oWall)
 	}
 	vsp = 0;
 }
-
 
 
 if self == oPlayer
