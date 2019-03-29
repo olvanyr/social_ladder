@@ -4,6 +4,7 @@ event_inherited();
 //Init somme variable
 image_speed = 0.4;
 state = "move";
+last_state = "move";
 
 // walk related variable
 walk_speed = 0;

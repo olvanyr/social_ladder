@@ -28,6 +28,7 @@ if place_meeting(x + _xspeed, y, wall)
 x += _xspeed;
 
 
+
 if !place_meeting(x, y + _yspeed, wall)
 {
 	y += _yspeed;

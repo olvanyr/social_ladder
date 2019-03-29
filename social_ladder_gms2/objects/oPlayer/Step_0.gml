@@ -55,43 +55,44 @@ switch state
 			
 			wall_jump_timer = manage_timer(wall_jump_timer);
 			
-			if wall_jump_timer >=0
+			if wall_jump_timer >= 0
 			{
 				move_and_collide(wall_jump_speed * jump_direction,0);
 			}else
 			{
-			//Move
-			if input.right
-			{
-				move_and_collide(walk_speed,0);
-				image_xscale = 1;
-				sprite_index = sPlayer_walk;
-				image_speed = 0.6;
-			}
-			if input.left
-			{
-				move_and_collide(-walk_speed,0);
-				image_xscale = -1;
-				sprite_index = sPlayer_walk;
-				image_speed = 0.6;
-			}
-
-			if !input.right && !input.left || input.right && input.left 
-			{
-				sprite_index = sPlayer_idle;
-				image_speed = 0.2;
-				walk_speed = 0;
-			}else
-			{
-				if grounded
+				//Move
+				if input.right
 				{
-					if animation_hit_frame(2) || animation_hit_frame(5)
+					move_and_collide(walk_speed,0);
+					image_xscale = 1;
+					sprite_index = sPlayer_walk;
+					image_speed = 0.6;
+				}
+				if input.left
+				{
+					move_and_collide(-walk_speed,0);
+					image_xscale = -1;
+					sprite_index = sPlayer_walk;
+					image_speed = 0.6;
+				}
+
+				if !input.right && !input.left || input.right && input.left 
+				{
+					sprite_index = sPlayer_idle;
+					image_speed = 0.2;
+					walk_speed = 0;
+				}else
+				{
+					if grounded
 					{
-						audio_play_sound(aFootstep,2,0);
+						if animation_hit_frame(2) || animation_hit_frame(5)
+						{
+							audio_play_sound(aFootstep,2,0);
+						}
 					}
 				}
 			}
-			}
+			
 			
 						
 			//Jump			
@@ -299,6 +300,7 @@ switch state
 	#endregion
 	#region Knockback
 		case "knockback":
+			last_state = state;
 			knockback_state(sPlayer_knockback, "move");
 		break;
 	#endregion
