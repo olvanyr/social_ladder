@@ -34,7 +34,18 @@ roll_cooldown = manage_timer(roll_cooldown);
 cast_cooldown = manage_timer(cast_cooldown);
 invincibility = manage_timer(invincibility);
 
-
+//fix the move and knockback against wall bug 
+if place_meeting(x,y,oWall)
+{
+	if !place_meeting(x + 1,y,oWall)
+	{
+		x += 1
+	}
+	if !place_meeting(x - 1,y,oWall)
+	{
+		x -= 1
+	}
+}
 			
 switch state
 {
@@ -300,8 +311,9 @@ switch state
 	#endregion
 	#region Knockback
 		case "knockback":
-			last_state = state;
-			knockback_state(sPlayer_knockback, "move");
+			var side_wall = place_meeting(x + (image_xscale), y, oWall);
+		
+				knockback_state(sPlayer_knockback, "move");
 		break;
 	#endregion
 	#region cast
@@ -352,21 +364,6 @@ switch state
 
 
 hit = false;
-
-/*
-// To be sure that you can not be set into orbit
-
-if y < ystart - 6 && state != "death"
-{
-	y = ystart - 6;
-}
-
-if state == "death"
-{
-	ystart = global.start_y;
-}else ystart = y;
-*/
-
 
 //Aplly gravity
 vsp += gravity_speed;
