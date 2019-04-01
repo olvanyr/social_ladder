@@ -1,3 +1,15 @@
+if !instance_exists(oInput)
+	{
+		input = instance_create_layer(0,0,"Instances",oInput)
+}else input = oInput;
+
+show_debug_message(input.start);
+
+if input.start
+{
+	pause = !pause;
+}
+
 var death_count = 0;
 
 with oEnemyParent 
@@ -12,25 +24,14 @@ with oEnemyParent
 
 global.save[? room_get_name(room)] = death_count;
 
+instance_activate_layer("Player");
+instance_activate_layer("Enemies");
+instance_activate_layer("Effects");
 
-for ( var i = 0; i < room_last + 1; i++)
-{
-	var room_id = room_get_name(i);
-	if ds_map_exists(global.save,room_id)
-	{
-		if global.save[? room_id] == 0
-		{
-			var sprite = string("sMap_") + string(room_id);
-		}else
-		{
-			var sprite = string("sMap_red_") + string(room_id);
-		}
-		sprite = asset_get_index(sprite);
-		
-		var array_length = array_length_1d(room_array);
-		room_array[array_length] = sprite; 
-	}
-}
+if pause exit;
 
+instance_deactivate_layer("Player");
+instance_deactivate_layer("Enemies");
+instance_deactivate_layer("Effects");
 
-
+if input.back pause = !pause;

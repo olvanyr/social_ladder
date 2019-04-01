@@ -1,1 +1,3 @@
-room_array[0] = 0;
+pause = true;
+
+page = 0;

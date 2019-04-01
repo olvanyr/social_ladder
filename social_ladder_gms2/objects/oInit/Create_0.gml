@@ -25,7 +25,7 @@ global.musicvolume = 1;
 
 global.slot = 1;
 
-
+global.not_pause = [oInput,oCamera];
 #endregion
 
 global.start_room = room0;
@@ -60,4 +60,5 @@ global.save = ds_map_create();
 global.experience = 0;
 global.play_time = 0;
 global.date = 0;
+
 

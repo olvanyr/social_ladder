@@ -23,6 +23,7 @@ menu_left = keyboard_check(vk_left);
 menu_down = keyboard_check(vk_down);
 menu_up = keyboard_check(vk_up);
 erase = keyboard_check(ord("V"));
+start = keyboard_check(ord("P"));
 
 
 toggle = false;

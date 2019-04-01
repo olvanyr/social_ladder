@@ -4,30 +4,22 @@ if !instance_exists(oInput)
 	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
 
-
-
-/*
-//Pause
-if(!global.pause) exit;
-
-instance_deactivate_all(true);
-audio_pause_all();
-*/
-
 //make a simple way to go back
 if(input.back) && toggle = false
 {
 	//audio 
-	audio_play_sound(inputting_sound,5,false);
 	
-	if(!inputting) && page != menu_page.main
+	
+	if(!inputting) && page != menu_page.main && page != menu_page.start
 	{
+		audio_play_sound(inputting_sound,5,false);
 		if(page = menu_page.settings) || page = menu_page.slots
 		{
 			page = menu_page.main;
 		}else page = menu_page.settings;
 	}
 }
+
 if input.back toggle = false;
 
 
@@ -43,7 +35,6 @@ if(inputting){
 			var hinput = input.menu_right - input.menu_left;
 			if(hinput != 0){
 				//audio
-				audio_play_sound(inputting_sound,5,false);
 				
 				ds_[# 3, menu_option[page]] += hinput;
 				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
@@ -68,7 +59,6 @@ if(inputting){
 		var hinput = input.menu_right - input.menu_left;
 			if(hinput != 0){
 				//audio
-				audio_play_sound(inputting_sound,5,false);
 				
 				ds_[# 3, menu_option[page]] += hinput;
 				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, 1);
@@ -80,7 +70,6 @@ if(inputting){
 			variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
 			script_execute(ds_[# 2, menu_option[page]]);
 			//audio
-			audio_play_sound(inputting_sound,5,false);
 				
 		break;
 	}
@@ -114,9 +103,9 @@ if(input.enter){
 			alarm[1] = 1; // use to save the settings after they are edited
 			break;
 	}
-	
 	//audio
 	audio_play_sound(inputting_sound,5,false);
+	
 }
 
 

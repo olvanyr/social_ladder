@@ -26,6 +26,7 @@ menu_down = keyboard_check_pressed(vk_down);
 menu_up = keyboard_check_pressed(vk_up);
 erase = keyboard_check_pressed(ord("V"));
 back = keyboard_check_pressed(vk_escape);
+start = keyboard_check(ord("P"));
 
 //gamepad
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
@@ -78,6 +79,8 @@ if gamepad_button_check_pressed(0,gp_padl) menu_left = 1;
 if gamepad_button_check_pressed(0,gp_padr) menu_right = 1;
 if gamepad_button_check_pressed(0,gp_padu) menu_up = 1;
 if gamepad_button_check_pressed(0,gp_padd) menu_down = 1;
+if gamepad_button_check_pressed(0,gp_start) start = 1;
+
 
 
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
