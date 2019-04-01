@@ -17,6 +17,9 @@ audio_pause_all();
 //make a simple way to go back
 if(input.back) && toggle = false
 {
+	//audio 
+	audio_play_sound(inputting_sound,5,false);
+	
 	if(!inputting) && page != menu_page.main
 	{
 		if(page = menu_page.settings) || page = menu_page.slots
@@ -40,6 +43,8 @@ if(inputting){
 			var hinput = input.menu_right - input.menu_left;
 			if(hinput != 0){
 				//audio
+				audio_play_sound(inputting_sound,5,false);
+				
 				ds_[# 3, menu_option[page]] += hinput;
 				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
 			}
@@ -63,6 +68,8 @@ if(inputting){
 		var hinput = input.menu_right - input.menu_left;
 			if(hinput != 0){
 				//audio
+				audio_play_sound(inputting_sound,5,false);
+				
 				ds_[# 3, menu_option[page]] += hinput;
 				ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, 1);
 			}
@@ -72,6 +79,8 @@ if(inputting){
 			
 			variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
 			script_execute(ds_[# 2, menu_option[page]]);
+			//audio
+			audio_play_sound(inputting_sound,5,false);
 				
 		break;
 	}
@@ -87,6 +96,7 @@ if(inputting){
 			if(menu_option[page] > ds_height-1) { menu_option[page] = 0; }
 			if(menu_option[page] < 0) { menu_option[page] = ds_height-1; }
 		//audio
+		audio_play_sound(down_up_sound,5,false);
 		}
 	}
 }
@@ -101,93 +111,22 @@ if(input.enter){
 		case menu_element.input:
 		case menu_element.slots:
 			inputting = !inputting;
-			// alarm[0] = 1; I can use this to save the settings later
+			alarm[1] = 1; // use to save the settings after they are edited
 			break;
 	}
 	
 	//audio
+	audio_play_sound(inputting_sound,5,false);
 }
 
 
-/*
-#region //loadgame
 
-if(global.loadgame)
+#region save setting
+
+if(save_setting)
 {
-	if (file_exists("savegame.sav"))
-	{
-		var _wrapper = LoadJSONFromFile("savegame.sav");
-		var _list = _wrapper[? "ROOT"]; //= var _list = ds_map_find_value(_wrapper,"ROOT");
-		for (var i=0; i < ds_list_size(_list); i++)
-		{
-			var _map = _list[| i];
-		
-				global.current_room = _map[? "room"];
-				global.kill = _map[? "kill"];
-				global.k1 = _map[? "k1"];
-				global.k2 = _map[? "k2"];
-				global.k3 = _map[? "k3"];
-				global.current_p2 = _map[? "current_p2"];
-		}
-		ds_map_destroy(_wrapper);
-		show_debug_message("Game loaded");
-	}
-	
-	global.loadgame = false;
-	room_goto(global.current_room);
-	
-	global.pause = false;
-}
+	save_settings();
+	save_setting = false;
 
-
-#endregion
-#region //save setting
-
-if(global.savesetting)
-{
-
-	// Create a root list
-
-	var _root_list = ds_list_create(); //just creat a pointer
-
-	// For every instance, create a map
-
-	var _map = ds_map_create(); //just creat a pointer
-	ds_list_add(_root_list,_map); //add pointer to a pointer
-	ds_list_mark_as_map(_root_list,ds_list_size(_root_list)-1); // actuali add the data
-
-			ds_map_add(_map, "fullscreen"	, window_get_fullscreen());
-			ds_map_add(_map, "UP"			, global.key_up);
-			ds_map_add(_map, "LEFT"			, global.key_left);
-			ds_map_add(_map, "RIGHT"		, global.key_right);
-			ds_map_add(_map, "DOWN"			, global.key_down);
-			ds_map_add(_map, "ACTION/ENTER"	, global.key_enter);
-			ds_map_add(_map, "JUMP"			, global.key_jump);
-			ds_map_add(_map, "ZOOM"			, global.key_zoom);
-			ds_map_add(_map, "PAUSE"		, global.key_pause);
-			ds_map_add(_map, "MASTERVOLUME"	, global.mastervolume);
-			ds_map_add(_map, "SOUNDSVOLUME"	, global.soundsvolume);
-			ds_map_add(_map, "MUSICVOLUME"	, global.musicvolume);
-			ds_map_add(_map, "RESOLUTION"	, global.resolution);
-
-
-	// Wrap the root list up in a map ! beacause gms2 "dosen't like" starting with enything othe rthan a ds_map
-
-	var _wrapper = ds_map_create();
-	ds_map_add_list(_wrapper, "ROOT", _root_list);
-
-	// Save all of this to a string
-
-	var _string = json_encode(_wrapper);
-
-	SaveStringToFile("savesetting.sav", _string);
-
-	// Destroy the data
-
-	ds_map_destroy(_wrapper);
-	
-	global.savesetting = false;
-
-	show_debug_message("Setting Save");
 }
 #endregion

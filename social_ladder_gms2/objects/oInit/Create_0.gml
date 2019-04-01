@@ -22,7 +22,9 @@ global.fullscreen = true;
 global.mastervolume = 1;
 global.soundsvolume = 1;
 global.musicvolume = 1;
+
 global.slot = 1;
+
 
 #endregion
 

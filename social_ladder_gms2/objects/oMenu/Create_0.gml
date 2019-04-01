@@ -1,5 +1,14 @@
 toggle = false; // use to make the erase save funtion
 
+save_setting = false;
+
+// some constante
+down_up_sound = aDown_up_menu;
+inputting_sound = aInputting_menu;
+
+
+load_settings();
+
 // set Enum for the menu
 
 enum menu_page
@@ -78,3 +87,6 @@ repeat(array_len)
 }
 
 inputting = false;
+
+
+

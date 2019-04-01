@@ -27,7 +27,7 @@ draw_set_halign(fa_right);
 var yy = 0; repeat(ds_height)
 {
 	lty = start_y + (yy*y_buffer);
-	c = c_white;
+	c = c_black;
 	xo = 0;
 	
 	if(yy == menu_option[page]) 
@@ -45,7 +45,7 @@ if page != menu_page.start && page != menu_page.slots
 	draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
 
 	//Draw Dividing Line
-	c = c_white;
+	c = c_black;
 	draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
 }
 
@@ -84,7 +84,7 @@ yy = 0; repeat(ds_height){
 			var current_val_words = ds_[# 4, yy];
 			var left_shift = "<< ";
 			var right_shift = " >>";
-			c = c_white;
+			c = c_black;
 			
 			if(current_val == 0) left_shift = "";
 			if(current_val == array_length_1d(ds_[# 4, yy])-1) right_shift = "";
@@ -95,7 +95,7 @@ yy = 0; repeat(ds_height){
 		break;
 		
 		case menu_element.slider:
-			c = c_white;
+			c = c_black;
 			var len = 64;
 			var current_val =(ds_[# 4, yy]);
 			draw_line_width(rtx, rty, rtx + len, rty, 2);
@@ -108,7 +108,7 @@ yy = 0; repeat(ds_height){
 		break;
 		
 		case menu_element.toggle:
-			c = c_white;
+			c = c_black;
 			var current_val = ds_[# 3, yy];
 			var c1, c2;
 			if(inputting and yy == menu_option[page]){ c = c_aqua; }
@@ -123,7 +123,7 @@ yy = 0; repeat(ds_height){
 		
 		case menu_element.slots:
 			
-			c = c_white;
+			c = c_black;
 			var len = 64;
 			if yy == menu_option[page] 
 			{
