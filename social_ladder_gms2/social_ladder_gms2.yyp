@@ -1079,6 +1079,14 @@
             }
         },
         {
+            "Key": "85ba3a10-04ac-4810-aa6e-e04c62b97d86",
+            "Value": {
+                "id": "d554846f-0c52-429c-80b8-0b1ff385cde7",
+                "resourcePath": "objects\\oFlying\\oFlying.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8881ea88-3eff-4c22-813d-f0b60ac14aab",
             "Value": {
                 "id": "d797f239-78cc-4b4c-8a51-b9253b1a710c",
@@ -1499,6 +1507,14 @@
             "Value": {
                 "id": "1f00fc5c-7fea-4fe5-b668-dbbce7f122ba",
                 "resourcePath": "sprites\\sErase\\sErase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c320dac2-70b7-415a-9c8f-aa846fda6d3f",
+            "Value": {
+                "id": "167c226d-663e-4df2-a9de-5a5ce55b3b0e",
+                "resourcePath": "sprites\\sDust1\\sDust1.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -7,7 +7,7 @@ view_h = global.ideal_height / 4;
 
 xTo = xstart;
 yTo = ystart;
-cam_shift = 20;
+cam_shift = 40;
 
 smooth_value = 10;
 
