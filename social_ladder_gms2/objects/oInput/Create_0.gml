@@ -22,6 +22,10 @@ menu_right = keyboard_check(vk_right);
 menu_left = keyboard_check(vk_left);
 menu_down = keyboard_check(vk_down);
 menu_up = keyboard_check(vk_up);
+erase = keyboard_check(ord("V"));
+start = keyboard_check(ord("P"));
+next_tab = keyboard_check(ord("E"));
+previous_tab = keyboard_check(ord("A"));
 
 
 toggle = false;

@@ -62,6 +62,11 @@ switch (state)
 			set_state_sprite(knockback_sprite,0,1);
 		break;
 	#endregion
+		#region wait
+		case "wait":
+			alarm[1] = 30;
+		break;
+	#endregion
 	#region Roll
 		case "roll":
 		roll_cooldown = 30;

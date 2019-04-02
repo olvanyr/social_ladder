@@ -1,4 +1,4 @@
-/// @ desc LoadJSONFromFile
+/// @ desc load_JSON_from_file
 /// @arg filename
 
 var _filename = argument0;

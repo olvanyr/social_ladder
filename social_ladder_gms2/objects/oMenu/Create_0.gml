@@ -1,12 +1,24 @@
+toggle = false; // use to make the erase save funtion
+
+save_setting = false;
+
+// some constante
+down_up_sound = aDown_up_menu;
+inputting_sound = aInputting_menu;
+
+
+load_settings();
+
 // set Enum for the menu
 
 enum menu_page
 {
+	start,
 	main,
 	settings,
 	audio,
-	graphics,
 	controls,
+	slots,
 	height //so I now how many number of ellement I have
 }
 
@@ -18,27 +30,21 @@ enum menu_element
 	shift,
 	toggle,
 	image,
+	slots,
 	input
 }
 
 //creat the "pages" of the menu and store them into ds_grid
+ds_menu_start = create_menu_page(
+["",		menu_element.page_transfer,	menu_page.main], 
+);
 
-if file_exists("save.json")
-{
+
 ds_menu_main = create_menu_page(
-	["CONTINUE",	menu_element.script_runner,	load_game], 
-	["NEW GAME",	menu_element.script_runner,	start_game], 
+	["PLAY",		menu_element.page_transfer,	menu_page.slots], 
 	["SETTINGS",	menu_element.page_transfer,	menu_page.settings],
 	["EXIT",		menu_element.script_runner,	exit_game]
 );
-}else
-{
-ds_menu_main = create_menu_page(
-	["NEW GAME",	menu_element.script_runner,	start_game], 
-	["SETTINGS",	menu_element.page_transfer,	menu_page.settings],
-	["EXIT",		menu_element.script_runner,	exit_game]
-);
-}
 
 ds_menu_settings = create_menu_page(
 	["FULLSCREEN",	menu_element.toggle,		change_window_mode,		global.fullscreen,		["ON", "OFF"]],  
@@ -56,14 +62,17 @@ ds_menu_audio = create_menu_page(
 ds_menu_controls = create_menu_page(
 	["BACK",		menu_element.page_transfer,	menu_page.settings],
 );
-//I don't know why, but if I don't have a final page It dosen't work (either the last page dose not open or the clean up event crash)
-ds_menu_end = create_menu_page(
-	["BACK",		menu_element.page_transfer,	menu_page.settings],
+ds_menu_slots = create_menu_page(
+	["SAVE I",		menu_element.slots,			select_slot,	"slot",	1], 
+	["SAVE II",		menu_element.slots,			select_slot,	"slot",	2], 
+	["SAVE III",	menu_element.slots,			select_slot,	"slot",	3],
+	["BACK",		menu_element.page_transfer,	menu_page.main]
 );
 
 
+
 page = 0;
-menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_end];
+menu_pages = [ds_menu_start, ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_slots];
 
 var i = 0, array_len = array_length_1d(menu_pages);
 
@@ -74,3 +83,6 @@ repeat(array_len)
 }
 
 inputting = false;
+
+
+

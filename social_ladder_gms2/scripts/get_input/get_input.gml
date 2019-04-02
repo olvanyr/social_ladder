@@ -24,7 +24,11 @@ menu_right = keyboard_check_pressed(vk_right);
 menu_left = keyboard_check_pressed(vk_left);
 menu_down = keyboard_check_pressed(vk_down);
 menu_up = keyboard_check_pressed(vk_up);
-
+erase = keyboard_check_pressed(ord("V"));
+back = keyboard_check_pressed(vk_escape);
+start = keyboard_check_pressed(ord("P"));
+next_tab = keyboard_check(ord("E"));
+previous_tab = keyboard_check(ord("A"));
 
 //gamepad
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)
@@ -72,6 +76,15 @@ if gamepad_button_check_released(0,gp_face1) jump_released = 1;
 //menu
 if gamepad_button_check_pressed(0,gp_face1) enter = 1;
 if gamepad_button_check_pressed(0,gp_face2) back = 1;
+if gamepad_button_check_pressed(0,gp_face3) erase = 1;
+if gamepad_button_check_pressed(0,gp_padl) menu_left = 1;
+if gamepad_button_check_pressed(0,gp_padr) menu_right = 1;
+if gamepad_button_check_pressed(0,gp_padu) menu_up = 1;
+if gamepad_button_check_pressed(0,gp_padd) menu_down = 1;
+if gamepad_button_check_pressed(0,gp_start) start = 1;
+if gamepad_button_check_pressed(0,gp_shoulderl) next_tab = 1;
+if gamepad_button_check_pressed(0,gp_shoulderr) previous_tab = 1;
+
 
 
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)

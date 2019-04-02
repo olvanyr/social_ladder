@@ -1,4 +1,4 @@
-/// @ desc save_string_to_file Save a string out to a file
+/// @ desc SaveStringToFile Save a string out to a file
 /// @arg filename
 /// @arg string
 

@@ -17,9 +17,6 @@
 	
 #endregion
 
-
-
-
 //set new hp 
 
 health_bar_width = max_health_bar_width * ((hp/max_hp));
@@ -37,7 +34,18 @@ roll_cooldown = manage_timer(roll_cooldown);
 cast_cooldown = manage_timer(cast_cooldown);
 invincibility = manage_timer(invincibility);
 
-
+//fix the move and knockback against wall bug 
+if place_meeting(x,y,oWall)
+{
+	if !place_meeting(x + 1,y,oWall)
+	{
+		x += 1
+	}
+	if !place_meeting(x - 1,y,oWall)
+	{
+		x -= 1
+	}
+}
 			
 switch state
 {
@@ -58,43 +66,44 @@ switch state
 			
 			wall_jump_timer = manage_timer(wall_jump_timer);
 			
-			if wall_jump_timer >=0
+			if wall_jump_timer >= 0
 			{
 				move_and_collide(wall_jump_speed * jump_direction,0);
 			}else
 			{
-			//Move
-			if input.right
-			{
-				move_and_collide(walk_speed,0);
-				image_xscale = 1;
-				sprite_index = sPlayer_walk;
-				image_speed = 0.6;
-			}
-			if input.left
-			{
-				move_and_collide(-walk_speed,0);
-				image_xscale = -1;
-				sprite_index = sPlayer_walk;
-				image_speed = 0.6;
-			}
-
-			if !input.right && !input.left || input.right && input.left 
-			{
-				sprite_index = sPlayer_idle;
-				image_speed = 0.2;
-				walk_speed = 0;
-			}else
-			{
-				if grounded
+				//Move
+				if input.right
 				{
-					if animation_hit_frame(2) || animation_hit_frame(5)
+					move_and_collide(walk_speed,0);
+					image_xscale = 1;
+					sprite_index = sPlayer_walk;
+					image_speed = 0.6;
+				}
+				if input.left
+				{
+					move_and_collide(-walk_speed,0);
+					image_xscale = -1;
+					sprite_index = sPlayer_walk;
+					image_speed = 0.6;
+				}
+
+				if !input.right && !input.left || input.right && input.left 
+				{
+					sprite_index = sPlayer_idle;
+					image_speed = 0.2;
+					walk_speed = 0;
+				}else
+				{
+					if grounded
 					{
-						audio_play_sound(aFootstep,2,0);
+						if animation_hit_frame(2) || animation_hit_frame(5)
+						{
+							audio_play_sound(aFootstep,2,0);
+						}
 					}
 				}
 			}
-			}
+			
 			
 						
 			//Jump			
@@ -302,7 +311,9 @@ switch state
 	#endregion
 	#region Knockback
 		case "knockback":
-			knockback_state(sPlayer_knockback, "move");
+			var side_wall = place_meeting(x + (image_xscale), y, oWall);
+		
+				knockback_state(sPlayer_knockback, "move");
 		break;
 	#endregion
 	#region cast
@@ -353,21 +364,6 @@ switch state
 
 
 hit = false;
-
-/*
-// To be sure that you can not be set into orbit
-
-if y < ystart - 6 && state != "death"
-{
-	y = ystart - 6;
-}
-
-if state == "death"
-{
-	ystart = global.start_y;
-}else ystart = y;
-*/
-
 
 //Aplly gravity
 vsp += gravity_speed;

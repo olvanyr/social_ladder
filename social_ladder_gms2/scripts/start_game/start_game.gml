@@ -1,3 +1,10 @@
 ///@description go to the first room and creat the player
 
-room_goto(room0);
+with instance_create_layer(0,0,"Effects", oTransition)
+{
+	next_room = global.start_room;
+	x_next = global.start_x;
+	y_next = global.start_y;
+}
+
+

@@ -44,23 +44,29 @@ switch (state)
 	#endregion
 	#region Death
 		case "death":
-			var rng = random_range(0,4);
+			
+			if attack_once == true
+			{
+				rng = irandom_range(0,2);
+				attack_once = false;
+			}
 			if rng == 1
 			{
-				death_state(die);
-			}else
-			{
-				set_state_sprite(attack2,0.6,0);
+				set_state_sprite(attack2,0.5,0);
 			
 				if animation_hit_frame(attack2_frame)
 				{
 					//audio_play_sound(aMiss,3,0);
 					create_hitbox(x, y, self, attack2_mask, 3, 2, 5, image_xscale);
 				}
-				if animation_end()
-				{
-					state = "dead";
-				}
+				
+			}else
+			{
+				death_state(die);
+			}
+			if animation_end()
+			{
+				state = "dead";
 			}
 		break;
 	#endregion

@@ -1,5 +1,6 @@
 event_inherited();
 
+
 //Init somme variable
 image_speed = 0.4;
 state = "move";
@@ -15,7 +16,7 @@ gravity_speed = 0.2;
 vsp = 0;
 vsp_fraction = 0;
 hsp_fraction = 0;
-grounded = false;
+grounded = true;
 
 //roll related variable
 roll_cooldown = 0;
@@ -71,11 +72,6 @@ healthpack_width = 5*3;
 //health pack
 healthpack = 3;
 max_healthpack = healthpack;
-
-
-//experience related variable
-experience = 0;
-
 // Save var
 //key1
 //wall_jump

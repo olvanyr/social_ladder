@@ -17,3 +17,5 @@ idle = sRunner_idle;
 walk = sRunner_walk;
 knockback_sprite = sRunner_knockback;
 die = sRunner_die;
+
+fly = irandom(3);
