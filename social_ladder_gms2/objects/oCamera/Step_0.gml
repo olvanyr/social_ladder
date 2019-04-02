@@ -8,11 +8,11 @@ if instance_exists(oInput)
 	y_buffer = normal_y_buffer;
 	if oInput.up_cam 
 	{
-		y_buffer += 30
+		y_buffer += 60
 	}	
 	if oInput.down_cam 
 	{
-		y_buffer -= 30
+		y_buffer -= 60
 	}
 	
 	if !oInput.up_cam && !oInput.down_cam y_buffer = normal_y_buffer;

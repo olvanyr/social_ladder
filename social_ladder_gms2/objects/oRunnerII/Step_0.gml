@@ -9,9 +9,9 @@ if state = "chase"
 		chase_speed = max_chase_speed;
 	}
 	walk_animation_speed += 0.01;
-	if walk_animation_speed > 0.35
+	if walk_animation_speed > 0.55
 	{
-		walk_animation_speed = 0.35;
+		walk_animation_speed = 0.55;
 	}
 }else 
 {

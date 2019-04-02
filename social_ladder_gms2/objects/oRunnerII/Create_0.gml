@@ -8,7 +8,7 @@ max_hp = hp;
 fov = 150;
 chase_speed = 1;
 max_chase_speed = 2.5;
-walk_animation_speed = 0.2;
+walk_animation_speed = 0.4;
 
 attack_range = -5;
 

@@ -16,7 +16,7 @@ gravity_speed = 0.2;
 vsp = 0;
 vsp_fraction = 0;
 hsp_fraction = 0;
-grounded = false;
+grounded = true;
 
 //roll related variable
 roll_cooldown = 0;
