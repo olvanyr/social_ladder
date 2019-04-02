@@ -48,6 +48,7 @@ global.enemy_list =
 	oFist,
 	oSword,
 	oRunner,
+	oRunnerII,
 	oMimic,
 	oSlug
 ]
