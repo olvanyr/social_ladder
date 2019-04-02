@@ -17,7 +17,6 @@ enum menu_page
 	main,
 	settings,
 	audio,
-	graphics,
 	controls,
 	slots,
 	height //so I now how many number of ellement I have
@@ -69,14 +68,11 @@ ds_menu_slots = create_menu_page(
 	["SAVE III",	menu_element.slots,			select_slot,	"slot",	3],
 	["BACK",		menu_element.page_transfer,	menu_page.main]
 );
-//I don't know why, but if I don't have a final page It dosen't work (either the last page dose not open or the clean up event crash)
-ds_menu_end = create_menu_page(
-	["BACK",		menu_element.page_transfer,	menu_page.settings],
-);
+
 
 
 page = 0;
-menu_pages = [ds_menu_start, ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_end,ds_menu_slots];
+menu_pages = [ds_menu_start, ds_menu_main, ds_menu_settings, ds_menu_audio, ds_menu_controls,ds_menu_slots];
 
 var i = 0, array_len = array_length_1d(menu_pages);
 
