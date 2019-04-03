@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 10;
+hp = 15;
 max_hp = hp;
 
 fov = 130;
@@ -20,9 +20,9 @@ walk = sWrath_walk
 attack = sWrath_attack1;
 attack2 = sWrath_attack2;
 attack1_mask = sWrath_attack1_mask;
-attack1_frame = 1;
+attack1_frame = 2;
 attack2_mask = sWrath_attack2_mask;
-attack2_frame = 7;
+attack2_frame = 2;
 knockback_sprite = sWrath_knockback;
 die = sWrath_die;
 

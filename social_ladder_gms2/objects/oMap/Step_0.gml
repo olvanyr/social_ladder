@@ -16,7 +16,6 @@ with all
 		}
 	}
 }
-show_debug_message(death_count);
 if !pause global.save[? room_get_name(room)] = death_count;
 
 
