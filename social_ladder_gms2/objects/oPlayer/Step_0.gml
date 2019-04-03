@@ -14,6 +14,10 @@
 	{
 		instance_create_layer(x,y,"Instances", oHUD)
 	}
+	if !instance_exists(oMap)
+	{
+		instance_create_layer(x,y,"Instances", oMap)
+	}
 	
 #endregion
 

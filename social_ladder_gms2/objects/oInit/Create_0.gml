@@ -50,7 +50,8 @@ global.enemy_list =
 	oRunner,
 	oRunnerII,
 	oMimic,
-	oSlug
+	oSlug,
+	oWrath
 ]
 
 

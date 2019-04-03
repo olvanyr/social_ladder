@@ -1,5 +1,8 @@
 event_inherited();
 
+hp = 35;
+max_hp = hp;
+
 mask = sSword_mask;
 idle = sSword_idle;
 walk = sSword_walk

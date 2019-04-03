@@ -62,7 +62,7 @@ switch (state)
 			set_state_sprite(knockback_sprite,0,1);
 		break;
 	#endregion
-		#region wait
+	#region wait
 		case "wait":
 			alarm[1] = 30;
 		break;

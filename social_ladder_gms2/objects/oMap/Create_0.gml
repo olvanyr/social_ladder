@@ -1,12 +1,9 @@
-
-
 // some constante
 down_up_sound = aDown_up_menu;
 inputting_sound = aInputting_menu;
-pause = true;
+pause = false;
 tab = 0;
 save_setting = false;
-
 
 enum pause_tab
 {

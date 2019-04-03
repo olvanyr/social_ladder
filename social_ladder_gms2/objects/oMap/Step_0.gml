@@ -1,18 +1,25 @@
 if !instance_exists(oInput)
-	{
-		input = instance_create_layer(0,0,"Instances",oInput)
+{
+	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
 
 // saw if there is still alive enemies
 var death_count = 0;
-with oEnemyParent 
+with all
 {
-	if state != "dead"
+	if is_enemy(self.object_index)
 	{
-		death_count += 1;
+		
+		if state != "dead"
+		{
+			death_count ++;
+		}
 	}
 }
-global.save[? room_get_name(room)] = death_count;
+show_debug_message(death_count);
+if !pause global.save[? room_get_name(room)] = death_count;
+
+
 
 
 //make pause
@@ -25,7 +32,7 @@ instance_activate_layer("Player");
 instance_activate_layer("Enemies");
 instance_activate_layer("Effects");
 
-if pause exit;
+if !pause exit;
 
 instance_deactivate_layer("Player");
 instance_deactivate_layer("Enemies");
@@ -45,7 +52,6 @@ if tab < 0
 	tab = pause_tab.height - 1;
 }
 
-show_debug_message(tab);
 //make a simple way to go back
 if(input.back)
 {

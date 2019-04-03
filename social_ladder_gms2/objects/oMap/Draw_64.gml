@@ -1,5 +1,5 @@
 
-if pause exit;
+if !pause exit;
 
 switch tab
 {

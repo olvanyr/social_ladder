@@ -199,6 +199,22 @@
             }
         },
         {
+            "Key": "14703636-3701-4c8a-b650-b53922aacb61",
+            "Value": {
+                "id": "f82062d8-7be5-412f-b7fe-914ac8e720c4",
+                "resourcePath": "sprites\\sWrath_mask\\sWrath_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1511c09b-c513-4e80-a5a6-259eae6691d5",
+            "Value": {
+                "id": "8e433431-f299-4baf-974e-afe4b3108788",
+                "resourcePath": "sprites\\sWrath_walk\\sWrath_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "156c80da-368c-4b9e-8b13-df50422a5693",
             "Value": {
                 "id": "fd1e206c-fdb6-4768-b53c-911f8c1fe3f9",
@@ -228,6 +244,14 @@
                 "id": "0d29bebc-be23-43e0-aa6d-1d177aa2dbd2",
                 "resourcePath": "views\\16b91696-ce8f-4cda-820a-9420ae34857b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "17fc63d8-7145-4c93-8495-37d91cb33533",
+            "Value": {
+                "id": "9548f81f-4434-4708-8a90-710b1970ff89",
+                "resourcePath": "objects\\oWrath\\oWrath.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -415,6 +439,14 @@
             }
         },
         {
+            "Key": "2cc1b27f-2094-4ed0-b3a0-8cbe1ab90185",
+            "Value": {
+                "id": "9546254b-0d5f-4b77-a0dc-615a78dc6297",
+                "resourcePath": "sprites\\sWrath_die\\sWrath_die.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "30d0fb15-9cd6-4ef5-bd83-d8bfab84fefe",
             "Value": {
                 "id": "d5a3a627-d59d-44f4-b712-beaf9e599894",
@@ -483,6 +515,14 @@
             "Value": {
                 "id": "3ff7d385-ec19-47f2-bc56-f41918a2a9ee",
                 "resourcePath": "sprites\\sDust\\sDust.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3bca247b-9a62-4e24-8cc3-35ba1f5d55c5",
+            "Value": {
+                "id": "9f7ae557-0d13-48ff-952c-2485a0e58840",
+                "resourcePath": "sprites\\sWrath_idle\\sWrath_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -588,6 +628,14 @@
                 "id": "46ff3be2-e96f-4be2-b2e4-b0cb25d13baa",
                 "resourcePath": "scripts\\load_game\\load_game.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4740123c-5299-4b50-8eb0-342e321058eb",
+            "Value": {
+                "id": "e632a406-ebc2-4f02-9d97-5091ccd63888",
+                "resourcePath": "sprites\\sWrath_attack1\\sWrath_attack1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -715,6 +763,14 @@
             "Value": {
                 "id": "99fed0e0-15d0-4103-866b-4fadbfdd9eac",
                 "resourcePath": "sprites\\sFist_die\\sFist_die.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5adb8008-d10c-4025-92f4-13699981b774",
+            "Value": {
+                "id": "1a462b6d-1824-4fe9-9715-0632f7ef75f8",
+                "resourcePath": "sprites\\sWrath_knockback\\sWrath_knockback.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1135,6 +1191,14 @@
             }
         },
         {
+            "Key": "8db09c2d-b14a-4b6f-8ba7-31864485bbce",
+            "Value": {
+                "id": "f0ca20e9-573f-41ec-83ea-f51d2a6b40c1",
+                "resourcePath": "sprites\\sWrath_attack2\\sWrath_attack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8fcf4cee-13d5-4f1b-9720-881be749683c",
             "Value": {
                 "id": "65fcf199-3e6b-4184-81e4-f3c72a17e7f6",
@@ -1196,6 +1260,14 @@
                 "id": "7392fa9e-3026-4d4f-a47d-cf8d934405eb",
                 "resourcePath": "scripts\\move_and_collide\\move_and_collide.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "976387bf-942d-4bd4-be11-979fa9e23cde",
+            "Value": {
+                "id": "bec0c96d-95b9-42ca-bbf9-abc975ede8d7",
+                "resourcePath": "sprites\\sWrath_attack2_mask\\sWrath_attack2_mask.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1363,6 +1435,14 @@
             "Value": {
                 "id": "736720e7-c04f-4689-84c1-2afd21df08bb",
                 "resourcePath": "sprites\\sRunner_knockback\\sRunner_knockback.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b234d306-9bda-4986-8302-a9e5da6b6dd8",
+            "Value": {
+                "id": "59c3be9b-a908-4c0c-8833-0a48d0a212c0",
+                "resourcePath": "sprites\\sWrath_attack1_mask\\sWrath_attack1_mask.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1883,6 +1963,14 @@
             "Value": {
                 "id": "394cf539-8a17-40c6-af5b-b31306e49d69",
                 "resourcePath": "views\\fb65d6ee-c818-40bc-b4b9-f9acf5d5d475.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fbb58133-03ce-409f-aaea-1a4290dbb60d",
+            "Value": {
+                "id": "7ba68dc0-5f75-473f-84c7-e97dc91b887b",
+                "resourcePath": "views\\fbb58133-03ce-409f-aaea-1a4290dbb60d.yy",
                 "resourceType": "GMFolder"
             }
         },

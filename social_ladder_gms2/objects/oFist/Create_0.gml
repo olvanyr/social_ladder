@@ -1,5 +1,5 @@
 event_inherited();
-hp = 10;
+hp = 25;
 max_hp = hp;
 
 fov = 100;
