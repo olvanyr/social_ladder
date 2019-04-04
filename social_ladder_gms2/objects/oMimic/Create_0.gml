@@ -19,4 +19,4 @@ knockback_sprite = sMimic_knockback;
 die = sMimic_die;
 transformation = sMimic_transformation;
 
-fly = 1;
+fly = 0;
