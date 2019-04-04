@@ -48,7 +48,7 @@ if instance_exists(oPlayer)
 				screenshake(4,8);
 				gamepad_set_vibration(0, 1, 1);
 				other.alarm[1] = 6;
-				other.invincibility = 6;
+				other.invincibility = 8;
 			}
 		}else
 		{
