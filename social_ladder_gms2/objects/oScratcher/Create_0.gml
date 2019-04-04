@@ -5,7 +5,7 @@ max_hp = hp;
 fov = 160;
 chase_speed = 0.75;
 charge_speed = 2.2;
-walk_animation_speed = 0.3;
+walk_animation_speed = 0.4;
 
 attack_range = 40;
 attack_charge_range = 150;

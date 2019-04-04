@@ -7,6 +7,13 @@ if object_get_parent(creator.object_index) == oEnemyParent && object_get_parent(
 	exit;
 }
 
+if other.object_index == oDistance
+{
+	if other.state == "wait"
+	{
+		exit;
+	}
+}
 
 if instance_exists(oPlayer)
 {
