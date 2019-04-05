@@ -37,11 +37,18 @@ instance_deactivate_layer("Player");
 instance_deactivate_layer("Enemies");
 instance_deactivate_layer("Effects");
 
-if input.back pause = !pause;
+if input.back 
+{
+	if page == menu_pause_page.audio || page == menu_pause_page.controls
+	{
+		page = menu_pause_page.settings;
+	}else pause = !pause;
+}
 
 
 if input.next_tab tab += 1;
 if input.previous_tab tab -= 1;
+
 if tab = pause_tab.height
 {
 	tab = 0;
