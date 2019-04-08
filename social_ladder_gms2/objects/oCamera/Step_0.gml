@@ -16,11 +16,23 @@ if instance_exists(oInput)
 	}
 	
 	if !oInput.up_cam && !oInput.down_cam y_buffer = normal_y_buffer;
+	
+	x_buffer = normal_x_buffer;
+	if oInput.right_cam 
+	{
+		x_buffer += 60
+	}	
+	if oInput.left_cam 
+	{
+		x_buffer -= 60
+	}
+	
+	if !oInput.left_cam && !oInput.right_cam x_buffer = normal_x_buffer;
 }
 //update destination
 if (instance_exists(follow))
 {
-	var x_buffer = (cam_shift * follow.image_xscale);
+	x_buffer += (cam_shift * follow.image_xscale);
 	xTo = follow.x + x_buffer;
 	yTo = follow.y - y_buffer;
 	

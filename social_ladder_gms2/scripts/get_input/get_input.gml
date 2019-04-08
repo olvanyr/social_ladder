@@ -8,6 +8,8 @@ up = keyboard_check(vk_up);
 //cam
 up_cam = 0;
 down_cam = 0;
+right_cam = 0;
+left_cam = 0;
 //action
 roll = keyboard_check_pressed(vk_space);
 attack = keyboard_check_pressed(ord("V"));
@@ -52,6 +54,8 @@ if (abs(gamepad_axis_value(0,gp_axislh)) > 0.1)
 	else right = max(gamepad_axis_value(0, gp_axislh),0);
 }
 
+//cam
+
 if (abs(gamepad_axis_value(0,gp_axisrv)) > 0.5)
 {
 	if (max(gamepad_axis_value(0,gp_axisrv),0) > 0.7) down_cam = 1;
@@ -61,6 +65,16 @@ if (abs(gamepad_axis_value(0,gp_axisrv)) > 0.5)
 	if (abs(min(gamepad_axis_value(0,gp_axisrv),0)) > 0.7)	up_cam = 1;
 		
 	else up_cam = abs(min(gamepad_axis_value(0,gp_axisrv),0));
+}
+if (abs(gamepad_axis_value(0,gp_axisrh)) > 0.1)
+{
+	if (abs(min(gamepad_axis_value(0,gp_axisrh),0)) > 0.7)	left_cam = 1;
+		
+	else left_cam = abs(min(gamepad_axis_value(0,gp_axisrh),0));
+	
+	if (max(gamepad_axis_value(0,gp_axisrh),0) > 0.7) right_cam = 1;
+		
+	else right_cam = max(gamepad_axis_value(0, gp_axisrh),0);
 }
 
 

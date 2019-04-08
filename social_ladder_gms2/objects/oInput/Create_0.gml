@@ -6,6 +6,8 @@ up = keyboard_check(vk_up);
 //cam
 up_cam = 0;
 down_cam = 0;
+right_cam = 0;
+left_cam = 0;
 //action
 roll = keyboard_check_pressed(vk_space);
 attack = keyboard_check_pressed(ord("V"));

@@ -13,6 +13,8 @@ smooth_value = 10;
 
 normal_y_buffer = sprite_get_height(sPlayer_mask) - 20;
 y_buffer = normal_y_buffer;
+normal_x_buffer = 0;
+x_buffer = normal_x_buffer;
 
 //Set up Screenshake
 shake_length = 0;
