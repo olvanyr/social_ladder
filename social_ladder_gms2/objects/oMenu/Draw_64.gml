@@ -15,11 +15,17 @@ var ltx = start_x - x_buffer, lty, c, xo; //left text exposition ltx
 
 //Draw Background
 
+if page = menu_page.start
+{
+	var swidth = sprite_get_width(sMenu_start_background);
+	var sheight = sprite_get_height(sMenu_start_background);
+	draw_sprite_ext(sMenu_start_background,0,gwidth/2 - swidth - 150,gheight/2 - sheight - 180,2.5,2.5,0,c_white,1);
+}
 //draw_sprite_ext(sBackround,0,0,0,global.view_width/sprite_get_width(sBackgroundMenu),global.view_height/sprite_get_height(sBackgroundMenu),0,c_white,1);
 
 //Draw Pause Menu "Back"
 var c = c_gray;
-draw_rectangle_color(0,0,gwidth, gheight, c,c,c,c, false);
+//draw_rectangle_color(0,0,gwidth, gheight, c,c,c,c, false);
 
 #region Draw elements on Left Side
 draw_set_font(fMenu);
@@ -65,7 +71,7 @@ if page == menu_page.controls
 //draw the presse start things
 if page == menu_page.start
 {
-	draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2,2,2,0,c_white,1);
+	draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
 }
 
 if toggle == true

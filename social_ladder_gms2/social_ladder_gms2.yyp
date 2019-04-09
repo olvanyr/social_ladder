@@ -271,14 +271,6 @@
             }
         },
         {
-            "Key": "15e5f771-42e3-4a5d-a970-eae8b440ad25",
-            "Value": {
-                "id": "b9b17c5f-5b71-48d3-ae89-2b3839298b64",
-                "resourcePath": "sprites\\s9slice\\s9slice.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "16b91696-ce8f-4cda-820a-9420ae34857b",
             "Value": {
                 "id": "0d29bebc-be23-43e0-aa6d-1d177aa2dbd2",
@@ -588,6 +580,14 @@
                 "id": "c83a34b7-b208-4384-955d-36f0dd73f64b",
                 "resourcePath": "scripts\\draw_set_text\\draw_set_text.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "39ddbf31-cf8c-47d7-8460-464ec37ce59f",
+            "Value": {
+                "id": "b54b34c7-06fb-49e6-b838-dd5be5dd9c88",
+                "resourcePath": "views\\39ddbf31-cf8c-47d7-8460-464ec37ce59f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1099,6 +1099,14 @@
             "Value": {
                 "id": "9bf8eb8b-5550-402e-8f7b-45c468377711",
                 "resourcePath": "sprites\\sRunner_walk\\sRunner_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "711c2df8-0dbe-4f50-a359-d94add967405",
+            "Value": {
+                "id": "25acf968-ada0-4787-b812-c01276e66de2",
+                "resourcePath": "sprites\\sMenu_start_background\\sMenu_start_background.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2020,6 +2028,14 @@
                 "id": "65bc57a5-5377-4d24-81cd-130e8633b75a",
                 "resourcePath": "sprites\\sPlayer_die\\sPlayer_die.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e40ebcbc-6a98-443a-8b50-ce5d2df8aefa",
+            "Value": {
+                "id": "7ee5e6a6-df62-49fc-98b3-41211affeaad",
+                "resourcePath": "views\\e40ebcbc-6a98-443a-8b50-ce5d2df8aefa.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
