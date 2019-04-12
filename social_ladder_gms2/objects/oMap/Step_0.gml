@@ -27,13 +27,13 @@ if input.start
 	pause = !pause;
 }
 
-instance_activate_layer("Player");
+instance_activate_object(oPlayer);
 instance_activate_layer("Enemies");
 instance_activate_layer("Effects");
 
 if !pause exit;
 
-instance_deactivate_layer("Player");
+instance_deactivate_object(oPlayer);
 instance_deactivate_layer("Enemies");
 instance_deactivate_layer("Effects");
 

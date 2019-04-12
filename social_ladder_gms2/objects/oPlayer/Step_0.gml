@@ -102,7 +102,7 @@ switch state
 					{
 						if animation_hit_frame(2) || animation_hit_frame(5)
 						{
-							audio_play_sound(aFootstep,2,0);
+							audio_play_sound(aFootstep,priority.low,0);
 						}
 					}
 				}
@@ -233,7 +233,7 @@ switch state
 			
 			if animation_hit_frame(3)
 			{
-				audio_play_sound(aMiss,3,0);
+				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
 				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 5, image_xscale);
@@ -254,7 +254,7 @@ switch state
 			
 			if animation_hit_frame(3)
 			{
-				audio_play_sound(aMiss,3,0);
+				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
 				create_hitbox(x, y, self, sPlayer_attack2_mask, 3, 2, 6, image_xscale);
@@ -276,7 +276,7 @@ switch state
 			
 			if animation_hit_frame(2)
 			{
-				audio_play_sound(aMiss,3,0);
+				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
 				create_hitbox(x, y, self, sPlayer_attack3_mask, 3, 2, 8, image_xscale);
@@ -298,7 +298,7 @@ switch state
 			
 			if animation_hit_frame(1)
 			{
-				audio_play_sound(aMiss,3,0);
+				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
 				create_hitbox(x, y, self, sPlayer_dawn_hit_mask, 3, 2, 5, image_xscale);

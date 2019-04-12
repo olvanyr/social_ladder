@@ -6,6 +6,7 @@ if oInput.use
 		next_room = other.next_room;
 		x_next = other.x_next;
 		y_next = other.y_next;
+		global.new_music = other.new_music;
 	}
 }
 

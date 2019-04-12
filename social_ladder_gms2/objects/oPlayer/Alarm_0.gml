@@ -1,5 +1,5 @@
 /// @description Ground hit play sound
-audio_play_sound(aHit,2,0);
+audio_play_sound(aHit,priority.low,0);
 
 repeat(5)
 {

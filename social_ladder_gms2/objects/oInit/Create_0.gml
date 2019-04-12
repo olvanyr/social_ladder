@@ -16,6 +16,15 @@ enum save_room
 	
 }
 
+enum priority
+{
+	very_low,
+	low,
+	normal,
+	high,
+	realy_high
+}
+
 #region // Menu manager
 
 global.fullscreen = true;
@@ -63,4 +72,7 @@ global.experience = 0;
 global.play_time = 0;
 global.date = 0;
 
+//music variable
+global.current_music = 0;
+global.new_music = 0;
 

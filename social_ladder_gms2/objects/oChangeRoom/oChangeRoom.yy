@@ -73,6 +73,20 @@
             "value": "0",
             "varName": "y_next",
             "varType": 0
+        },
+        {
+            "id": "b78ee979-b2ac-4824-884e-ab0ed1c1d6b3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "new_music",
+            "varType": 5
         }
     ],
     "solid": false,

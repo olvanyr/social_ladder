@@ -8,6 +8,7 @@ if instance_exists(oPlayer)
 	if timer >= 1
 	{
 		room_goto(next_room);
+		//audio_master_gain(global.mastervolume);
 		oPlayer.x = x_next;
 		oPlayer.y = y_next;
 		oCamera.x = x_next;
