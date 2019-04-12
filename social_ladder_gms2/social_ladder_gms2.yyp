@@ -978,7 +978,7 @@
             "Key": "63bf3707-6ce2-4d54-8c64-05e6dd50a04d",
             "Value": {
                 "id": "0ba2de32-4f4f-465f-8070-8dd07ed67b80",
-                "resourcePath": "objects\\oChangeRoom\\oChangeRoom.yy",
+                "resourcePath": "objects\\oChange_room\\oChange_room.yy",
                 "resourceType": "GMObject"
             }
         },

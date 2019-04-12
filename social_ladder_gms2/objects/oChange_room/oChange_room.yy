@@ -2,7 +2,7 @@
     "id": "63bf3707-6ce2-4d54-8c64-05e6dd50a04d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oChangeRoom",
+    "name": "oChange_room",
     "eventList": [
         {
             "id": "dbe77468-e4b9-4fc9-9ef0-080e5cf76bfc",
