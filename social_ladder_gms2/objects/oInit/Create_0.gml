@@ -33,8 +33,6 @@ global.soundsvolume = 1;
 global.musicvolume = 1;
 
 global.slot = 1;
-
-global.not_pause = [oInput,oCamera];
 #endregion
 
 global.start_room = room0;
@@ -75,4 +73,11 @@ global.date = 0;
 //music variable
 global.current_music = 0;
 global.new_music = 0;
+
+// spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!
+global.double_jump = true;
+global.wall_jump = true;
+global.cast = true;
+global.key1 = true;
+
 

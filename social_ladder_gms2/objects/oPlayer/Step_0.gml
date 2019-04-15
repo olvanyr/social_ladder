@@ -145,7 +145,7 @@ switch state
 						vsp -= gravity_slow;
 					}
 					
-					jump_timer = jump_timer_max;
+					if global.wall_jump jump_timer = jump_timer_max;
 				}
 			}
 			
@@ -158,9 +158,12 @@ switch state
 					var modified_jump_speed = jump_speed * 0.75;
 					if jump_counter == 1 vsp = modified_jump_speed;
 					
-					jump_counter++;
+					if global.double_jump
+					{
+							jump_counter++;
+					}else jump_counter += 2;
 
-					if !grounded && side_wall
+					if !grounded && side_wall && global.wall_jump
 					{
 						
 						wall_jump_timer = wall_jump_timer_max;
@@ -213,7 +216,7 @@ switch state
 			}
 			
 			//cast	
-			if input.cast && cast_cooldown <= 0
+			if input.cast && cast_cooldown <= 0 && global.cast
 			{
 				state = "cast";
 			}
