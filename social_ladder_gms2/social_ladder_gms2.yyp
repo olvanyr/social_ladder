@@ -191,6 +191,22 @@
             }
         },
         {
+            "Key": "0e2d1a20-b2a0-41b9-be19-7dc1adf4153e",
+            "Value": {
+                "id": "4ac329eb-2c2a-474a-955d-dc17518ad222",
+                "resourcePath": "sprites\\sPlayer_projectile_loop\\sPlayer_projectile_loop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "11cf6a1f-7689-40da-84ad-391c3e72e4ae",
+            "Value": {
+                "id": "b772f820-eb94-4bc3-9df2-45b4833adbbd",
+                "resourcePath": "objects\\oProjectile_hitspark\\oProjectile_hitspark.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "125d2d53-746f-4859-8ed7-57e8c4a1510e",
             "Value": {
                 "id": "40170a36-5191-40e8-a98e-6a847cd59cdb",
@@ -919,6 +935,14 @@
             }
         },
         {
+            "Key": "5ad039bb-07bb-4c45-8011-8e929c18cea7",
+            "Value": {
+                "id": "80354760-c999-4714-b73f-7a23ece58a7a",
+                "resourcePath": "objects\\oDistance2\\oDistance2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5adb8008-d10c-4025-92f4-13699981b774",
             "Value": {
                 "id": "1a462b6d-1824-4fe9-9715-0632f7ef75f8",
@@ -1559,10 +1583,18 @@
             }
         },
         {
+            "Key": "a1d8da3a-95ef-481d-b9ab-09f2a0ea6b03",
+            "Value": {
+                "id": "7be5d4a5-27b9-4634-b24d-e68062e0e373",
+                "resourcePath": "objects\\oProjectile\\oProjectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a5a5ccd8-148b-4c34-a1f5-db50f1b2b5f2",
             "Value": {
                 "id": "55a8a5f9-d978-4821-abd3-d5f0cbf766e1",
-                "resourcePath": "sprites\\sDistance_projectile_hit\\sDistance_projectile_hit.yy",
+                "resourcePath": "sprites\\sDistance_projectile_hitspark\\sDistance_projectile_hitspark.yy",
                 "resourceType": "GMSprite"
             }
         },

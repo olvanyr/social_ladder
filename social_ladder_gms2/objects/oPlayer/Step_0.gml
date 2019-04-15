@@ -360,6 +360,7 @@ switch state
 					x_next = global.start_x;
 					y_next = global.start_y;
 					hp = oPlayer.max_hp;
+					global.new_music = mRoom0;
 				}
 			}
 		break;
