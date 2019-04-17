@@ -1,3 +1,10 @@
+if flash <= 0 
+{
+//draw an outline
+draw_sprite_outline(sprite_index, image_index,x,y,0.5,c_dkgray);
+
+}
+
 // Inherit the parent event
 event_inherited();
 
@@ -9,3 +16,4 @@ if roll_cooldown > 0 && state != "roll"
 {
 	draw_sprite(sRoll_cooldawn,sub_image,x,y);
 }
+

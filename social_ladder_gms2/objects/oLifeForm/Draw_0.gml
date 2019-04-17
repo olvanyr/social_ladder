@@ -1,7 +1,5 @@
-
 draw_self();
-	
-	
+
 if flash > 0
 {
 	
@@ -26,3 +24,5 @@ if flash > 0
 
 	gpu_set_blendmode(bm_normal);
 }
+
+

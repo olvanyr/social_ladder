@@ -43,7 +43,9 @@ var yy = 0; repeat(ds_height)
 		c = make_color_rgb(158,11,15);	
 		xo = -x_buffer/2;
 	}
+	draw_text_color_outline(ltx + xo, lty,0.5, ds_[# 0, yy], c_dkgray, 1);
 	draw_text_color(ltx + xo, lty, ds_[# 0, yy], c,c,c,c, 1);
+	
 	yy++;
 }
 #endregion

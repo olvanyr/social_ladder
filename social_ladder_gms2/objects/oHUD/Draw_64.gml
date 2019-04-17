@@ -3,6 +3,8 @@ var view_w = camera_get_view_width(cam);
 var view_h = camera_get_view_height(cam);
 display_set_gui_size(view_w,view_h);
 
+draw_sprite_outline(sHUD, 0, x_buffer, y_buffer,0.5,c_dkgray);
+
 
 if instance_exists(oPlayer)
 {
