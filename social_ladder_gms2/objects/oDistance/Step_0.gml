@@ -33,28 +33,31 @@ switch (state)
 			if animation_hit_frame(attack1_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				create_hitbox(x, y, self, attack1_mask, 3, 2, 5, image_xscale);
+				create_hitbox(x, y, self, attack1_mask, 3, 3, 5, -image_xscale);
 			}
 			
 			if animation_end()
 			{
-				state = "wait";
+				state = "chase";
 			}	
 		break;
 	#endregion	
 	#region shot
 		case "shot":
-			set_state_sprite(shot,0.4,0);
+			set_state_sprite(shot,0.7,0);
 			
 			if animation_hit_frame(shot_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				show_debug_message("creat projectile")
+				with instance_create_layer(x + (sign(image_xscale)* -9),y - 36,"Effects", oProjectile)
+				{
+					creator = other;
+				}
 			}
 			
 			if animation_end()
 			{
-				state = "wait";
+				state = "chase";
 			}	
 		break;
 	#endregion	
@@ -68,15 +71,6 @@ switch (state)
 	#region Stunt
 		case "stunt":
 			set_state_sprite(knockback_sprite,0,1);
-		break;
-	#endregion
-	#region Show
-		case "show":
-			set_state_sprite(transformation, 0.4,0);
-			if animation_end()
-			{
-				state = "chase";
-			}
 		break;
 	#endregion
 	#region wait

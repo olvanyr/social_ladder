@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "41b13fd7-e331-47f8-89df-2a3eba2e185d",
+            "Value": {
+                "id": "f4daae4b-d338-447c-9512-c79d76783820",
+                "resourcePath": "sprites\\sLegs_attack1_mask\\sLegs_attack1_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "43a6972f-30ee-48d9-a407-bdbdb7a35419",
             "Value": {
                 "id": "256dfd2a-1cbb-4607-a91e-0c6c780ba317",
@@ -863,6 +871,14 @@
             }
         },
         {
+            "Key": "5037586d-c921-412f-af2d-a9bd0b323525",
+            "Value": {
+                "id": "0e208865-bcb8-4fd7-aba8-1ee9f44cae27",
+                "resourcePath": "objects\\oLegs\\oLegs.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "518baed5-fb14-4339-87e9-b9c05c802cd8",
             "Value": {
                 "id": "7191c30c-466a-4616-9996-d198e296c52d",
@@ -911,6 +927,14 @@
             }
         },
         {
+            "Key": "56a8cf8b-ffd2-4e89-8b6a-15222a612ec7",
+            "Value": {
+                "id": "5d319823-cd8d-456e-b4c4-3330efeaf16e",
+                "resourcePath": "sprites\\sLegs_knockback\\sLegs_knockback.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "574896fc-307d-4bd1-8061-dd2535b7a907",
             "Value": {
                 "id": "10f3b97f-4aa1-410a-8617-172d73ccd0af",
@@ -938,7 +962,7 @@
             "Key": "5ad039bb-07bb-4c45-8011-8e929c18cea7",
             "Value": {
                 "id": "80354760-c999-4714-b73f-7a23ece58a7a",
-                "resourcePath": "objects\\oDistance2\\oDistance2.yy",
+                "resourcePath": "objects\\oDistance\\oDistance.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1079,6 +1103,14 @@
             }
         },
         {
+            "Key": "68204874-b2ef-4273-9901-6ed60098a516",
+            "Value": {
+                "id": "0bab357d-031f-45d2-bbfa-987141739cc8",
+                "resourcePath": "sprites\\sLegs_attack2\\sLegs_attack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6948b51b-3109-4508-b919-1fe990d3bf3c",
             "Value": {
                 "id": "dffe1b09-5601-4ff5-a982-5f1a156a952f",
@@ -1124,6 +1156,14 @@
                 "id": "c07766c1-14c4-4da1-b7d4-86b7b8208da6",
                 "resourcePath": "objects\\oText\\oText.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6ebdc124-bce8-49f7-8d10-faeecd0fc735",
+            "Value": {
+                "id": "3cad1920-34b9-46bf-81cf-50b0a5f5b495",
+                "resourcePath": "sprites\\sLegs_walk\\sLegs_walk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1215,6 +1255,14 @@
             }
         },
         {
+            "Key": "76aa2982-0910-45fe-9b31-d9bad3c5ad3c",
+            "Value": {
+                "id": "afdb53a0-6f64-4ef1-a6b5-f01d08cc4b87",
+                "resourcePath": "sprites\\sLegs_idle\\sLegs_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7a09ca95-c4d0-44e3-a7f7-92f369994792",
             "Value": {
                 "id": "ef8f3be7-77bb-4ad4-adda-2d25cd98a3aa",
@@ -1259,6 +1307,14 @@
             "Value": {
                 "id": "834720af-37d6-4ff5-b5ab-0ab1c18204c8",
                 "resourcePath": "sprites\\sFist_slide\\sFist_slide.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7cec747d-f54c-4e43-82ac-7bcc01b2337c",
+            "Value": {
+                "id": "42d893b4-7715-4dd0-9de0-fd4cc90b3cfd",
+                "resourcePath": "sprites\\sLegs_die\\sLegs_die.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1431,6 +1487,14 @@
             }
         },
         {
+            "Key": "90a562a2-4963-4e00-af97-f4c87b7bbfd3",
+            "Value": {
+                "id": "37bad7d1-9dcd-4fb8-92b3-b89b02762311",
+                "resourcePath": "sprites\\sLegs_mask\\sLegs_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "90f25a33-1185-4e7a-8d73-50a20aaf514a",
             "Value": {
                 "id": "a9872466-8110-4c6c-a868-f10ab974eb0d",
@@ -1468,6 +1532,14 @@
                 "id": "93fdbd30-73fb-4a3c-a7e9-6ce5ee49f514",
                 "resourcePath": "objects\\oDisplay_manager\\oDisplay_manager.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "96d83c6f-5932-4f2b-bb00-a80c8a587bb6",
+            "Value": {
+                "id": "98748e36-fbfb-4024-9dfa-9230369ba1ea",
+                "resourcePath": "sprites\\sLegs_attack1\\sLegs_attack1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1596,14 +1668,6 @@
                 "id": "55a8a5f9-d978-4821-abd3-d5f0cbf766e1",
                 "resourcePath": "sprites\\sDistance_projectile_hitspark\\sDistance_projectile_hitspark.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a650922a-d8bb-48af-b7bf-91f98086d1fd",
-            "Value": {
-                "id": "8befe221-115a-47eb-bd00-5a88d62b4c87",
-                "resourcePath": "objects\\oDistance\\oDistance.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1740,6 +1804,14 @@
                 "id": "c4391f82-34af-47c9-bc91-d1bd3ddc85c6",
                 "resourcePath": "scripts\\roll_state\\roll_state.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b41857e0-bfad-4c70-8a13-c2e9495f1f9d",
+            "Value": {
+                "id": "36c859a4-9d07-4b5a-9d68-27882e595a90",
+                "resourcePath": "sprites\\sLegs_attack2_mask\\sLegs_attack2_mask.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1972,6 +2044,14 @@
                 "id": "2d2ce3e7-3291-41c7-9afb-56950e5e392a",
                 "resourcePath": "scripts\\chase_mimic_triger\\chase_mimic_triger.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cbeeb248-b6d9-4681-aed4-b5261d40693e",
+            "Value": {
+                "id": "612e8a51-e460-4603-9079-077c8814e355",
+                "resourcePath": "views\\cbeeb248-b6d9-4681-aed4-b5261d40693e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

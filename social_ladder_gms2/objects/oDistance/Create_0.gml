@@ -6,7 +6,7 @@ fov = 140;
 chase_speed = 0.75;
 walk_animation_speed = 0.4;
 
-attack_range = 45;
+attack_range = 60;
 attack_distance_range = 130;
 
 knockback = 4;
@@ -19,15 +19,12 @@ knockback_sprite = sDistance_knockback;
 die = sDistance_die;
 attack = sDistance_attack1;
 attack1_mask = sDistance_attack1_mask;
-attack1_frame = 7;
+attack1_frame = 4;
 transformation = sDistance_emerging;
 
 shot = sDistance_shot;
-shot_frame = 8;
+shot_frame = 6;
 
 fly = 1;
-
-
-
 
 
