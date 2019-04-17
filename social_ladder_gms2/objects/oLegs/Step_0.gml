@@ -33,7 +33,7 @@ switch (state)
 	#endregion
 	#region Knockback
 		case "knockback":
-			knockback_state(knockback_sprite, "stunt");
+			//knockback_state(knockback_sprite, "stunt");
 			alarm[1] = stunt_time;
 		break;
 

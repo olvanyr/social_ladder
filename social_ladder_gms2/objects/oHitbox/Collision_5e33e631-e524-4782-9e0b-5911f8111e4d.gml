@@ -23,7 +23,7 @@ if instance_exists(oPlayer)
 		other.hp -= damage;
 		other.hp = max(other.hp,0);
 		//audio_play_sound();
-		if knockback != 0
+		if knockback != 0 && other.object_index != oLegs
 		{
 			other.state = "knockback";
 		}

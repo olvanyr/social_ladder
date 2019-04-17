@@ -9,8 +9,8 @@ chase_speed = 1;
 
 attack_range = 50;
 
-knockback = 2;
-stunt_time = 10;
+knockback = 0;
+stunt_time = 1;
 
 
 
