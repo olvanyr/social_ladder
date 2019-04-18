@@ -21,6 +21,7 @@
 	
 #endregion
 
+
 //set new hp 
 
 health_bar_width = max_health_bar_width * ((hp/max_hp));

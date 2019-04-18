@@ -5,6 +5,8 @@ pause = false;
 tab = 0;
 save_setting = false;
 
+is_gamepad_active = gamepad_is_connected(0);
+
 enum pause_tab
 {
 	map,

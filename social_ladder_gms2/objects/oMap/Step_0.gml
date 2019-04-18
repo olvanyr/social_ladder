@@ -18,7 +18,11 @@ with all
 }
 if !pause global.save[? room_get_name(room)] = death_count;
 
-
+if is_gamepad_active != gamepad_is_connected(0) && gamepad_is_connected(0) == false
+{
+	pause = true;
+}
+is_gamepad_active = gamepad_is_connected(0);
 
 
 //make pause
@@ -37,13 +41,15 @@ instance_deactivate_object(oPlayer);
 instance_deactivate_layer("Enemies");
 instance_deactivate_layer("Effects");
 
-if input.back 
+if input.back && (!inputting)
 {
 	if page == menu_pause_page.audio || page == menu_pause_page.controls
 	{
 		page = menu_pause_page.settings;
 	}else pause = !pause;
 }
+
+
 
 
 if input.next_tab tab += 1;
@@ -58,18 +64,6 @@ if tab < 0
 	tab = pause_tab.height - 1;
 }
 
-//make a simple way to go back
-if(input.back)
-{
-	//audio 
-	
-	
-	if(!inputting) && page != menu_pause_page.settings 
-	{
-		audio_play_sound(inputting_sound,5,false);
-		page = menu_pause_page.settings;
-	}
-}
 
 
 
