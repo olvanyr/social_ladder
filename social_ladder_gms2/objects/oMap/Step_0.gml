@@ -26,7 +26,7 @@ is_gamepad_active = gamepad_is_connected(0);
 
 
 //make pause
-if input.start
+if input.start && oPlayer.state != "wait"
 {
 	pause = !pause;
 }

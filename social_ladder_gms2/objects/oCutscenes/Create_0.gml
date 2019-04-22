@@ -4,21 +4,32 @@ if !instance_exists(oCamera)
 {
 	cam = instance_create_layer(x,y,"Instances", oCamera)
 }
-view_height = camera_get_view_height(view_camera[0]);
-view_width = camera_get_view_width(view_camera[0]);
+if !instance_exists(oInput)
+{
+	input = instance_create_layer(x,y,"Instances", oInput)
+}
+view_height = camera_get_view_height(cam);
+view_width = camera_get_view_width(cam);
 
 state = "start";
 
 
 c = c_black;
 alpha = 1;
+fadeout = 0;
 
 
-
+c_text = c_white;
+font =fText;
+ybuffer = 80;
 line = "";
 line_part = "";
 
 letters_count = 0;
+//letter_speed = 0.5;
+letter_speed = 0.5;
+//time_bettween_line = 150;
+time_bettween_line = 20;
 next_line = 0;
 
 hold_key = 0;
