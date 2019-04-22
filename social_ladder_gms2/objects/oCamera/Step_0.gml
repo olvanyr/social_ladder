@@ -3,7 +3,7 @@
 var view_w_half = view_w * 0.5;
 var view_h_half = view_h * 0.5;
 
-if instance_exists(oInput)
+if instance_exists(oInput) && instance_exists(oPlayer)
 {
 	y_buffer = normal_y_buffer;
 	if oInput.up_cam 

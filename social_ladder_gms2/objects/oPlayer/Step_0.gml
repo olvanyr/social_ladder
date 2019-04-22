@@ -357,13 +357,27 @@ switch state
 			{
 				gamepad_set_vibration(0, 0, 0);
 				
-				with instance_create_layer(0,0,"Effects", oTransition)
+				if room = rCutscenes
 				{
-					next_room = global.start_room;
-					x_next = global.start_x;
-					y_next = global.start_y;
-					hp = oPlayer.max_hp;
-					global.new_music = mRoom0;
+					with instance_create_layer(0,0,"Effects", oTransition)
+					{
+						next_room = room;
+						x_next = 250;
+						y_next = 431;
+						hp = oPlayer.max_hp;
+						global.new_music = mRoom0;
+					}
+				
+				}else
+				{
+					with instance_create_layer(0,0,"Effects", oTransition)
+					{
+						next_room = global.start_room;
+						x_next = global.start_x;
+						y_next = global.start_y;
+						hp = oPlayer.max_hp;
+						global.new_music = mRoom0;
+					}
 				}
 			}
 		break;
