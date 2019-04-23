@@ -357,7 +357,7 @@ switch state
 			{
 				gamepad_set_vibration(0, 0, 0);
 				
-				if room = rCutscenes
+				if room = rLab
 				{
 					with instance_create_layer(0,0,"Effects", oTransition)
 					{

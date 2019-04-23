@@ -1215,6 +1215,14 @@
             }
         },
         {
+            "Key": "6e2ba804-e43b-4755-acf2-e66796f19902",
+            "Value": {
+                "id": "58ba94d2-bb0c-424f-920b-5ea32f547ef3",
+                "resourcePath": "fonts\\fDial\\fDial.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "6e98b325-14e4-4f56-8e1f-52337d145f78",
             "Value": {
                 "id": "c07766c1-14c4-4da1-b7d4-86b7b8208da6",

@@ -14,7 +14,6 @@ switch (state)
 		lines[1] = "The outside world is very hostile";
 		lines[2] = "But it is yours now";
 		lines[3] = "you will have to kill\nall of this creature";
-		lines[4] = "bla bla bla";
 		
 		text_cutscenes("free");
 	break;
@@ -49,7 +48,7 @@ switch (state)
 		state = "wait";
 	break;
 	case "wait" :
-		if a == 1 && input.enter
+		if a == 2 && input.enter
 		{
 			global.new_music = mRoom1;
 			room_goto(rLab);

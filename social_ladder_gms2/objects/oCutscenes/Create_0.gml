@@ -22,11 +22,13 @@ toggle = false; //use to make the Skala sprite draw
 a = 0; //use to make the Skala alpha
 
 
-c_text = c_white;
-font =fText;
+c_text = c_black;
+font =fDial;
 ybuffer = 80;
 line = "";
 line_part = "";
+
+text_buffer = 20;
 
 letters_count = 0;
 //letter_speed = 0.5;
@@ -41,6 +43,3 @@ lines[0] = "I here to free you";
 lines[1] = "The outside world is very hostile";
 lines[2] = "But it is yours now";
 lines[3] = "you will have to kill\nall of this creature";
-lines[4] = " ";
-lines[5] = " ";
-lines[6] = " ";
