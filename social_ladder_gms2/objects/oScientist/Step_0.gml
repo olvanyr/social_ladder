@@ -15,4 +15,15 @@ switch (state)
 	case "wait2" :
 		set_state_sprite(sScientist_idle2,0.2,0);
 	break;
+	case "transformation" :
+		set_state_sprite(sScientist_tranformation,0.4,0);
+		if animation_end()
+		{
+			state = "wait3";
+		}
+	break;
+	case "wait3" :
+		set_state_sprite(sSlug_idle,0.2,0);
+		oCutscenes.toggle = true;
+	break;
 }

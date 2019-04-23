@@ -1,5 +1,4 @@
 
-show_debug_message(state);
 switch (state)
 {
 	case "start" :
@@ -15,7 +14,8 @@ switch (state)
 		lines[1] = "The outside world is very hostile";
 		lines[2] = "But it is yours now";
 		lines[3] = "you will have to kill\nall of this creature";
-		lines[4] = "";
+		lines[4] = "bla bla bla";
+		
 		text_cutscenes("free");
 	break;
 	case "free" :
@@ -28,10 +28,6 @@ switch (state)
 			layer_set_visible("Lab_destroy",true);
 			layer_set_visible("Fake",true);
 			oScientist.state = "wait2";
-			/*with instance_create_layer(606,477,"Player",oPlayer)
-			{
-				state = "wait";
-			}*/
 		}
 	break;
 	case "free2" :
@@ -45,10 +41,19 @@ switch (state)
 		lines[0] = "text 2 ligne 1";
 		lines[1] = "text 2 ligne 2";
 		lines[2] = "text 2 ligne 3";
-		lines[3] = "";
-		text_cutscenes("");
+		lines[3] = "ligne 4";
+		text_cutscenes("transformation");
+	break;
+	case "transformation" :
+		oScientist.state = "transformation";
+		state = "wait";
 	break;
 	case "wait" :
+		if a == 1 && input.enter
+		{
+			global.new_music = mRoom1;
+			room_goto(rLab);
+		}
 	break;
 }
 
@@ -56,3 +61,4 @@ if !fadeout
 {
 	alpha = max(alpha - 0.0025, 0);
 }else alpha = min(alpha,1);
+

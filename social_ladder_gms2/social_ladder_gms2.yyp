@@ -954,7 +954,7 @@
             "Key": "55a9aedc-a2c4-44f7-ba99-52cb8c794fa0",
             "Value": {
                 "id": "2bbaceac-b8cc-45fa-af2e-7daf3c6ad1f7",
-                "resourcePath": "rooms\\room01\\room01.yy",
+                "resourcePath": "rooms\\rLab\\rLab.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1906,7 +1906,7 @@
             "Key": "b3551335-ecf1-423e-b888-b25e3074b8f7",
             "Value": {
                 "id": "93338fe0-ad61-4799-b669-c8f2f3cd02a0",
-                "resourcePath": "sprites\\sMap_room01\\sMap_room01.yy",
+                "resourcePath": "sprites\\sMap_rLab\\sMap_rLab.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2210,7 +2210,7 @@
             "Key": "ceb0090a-8b4e-4b03-a636-e99c9abdae01",
             "Value": {
                 "id": "5acf5f7e-e3bb-482e-ab35-255ff1bfe93c",
-                "resourcePath": "sprites\\sMap_red_room01\\sMap_red_room01.yy",
+                "resourcePath": "sprites\\sMap_red_rLab\\sMap_red_rLab.yy",
                 "resourceType": "GMSprite"
             }
         },

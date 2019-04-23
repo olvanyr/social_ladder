@@ -28,3 +28,5 @@ attack2_frame = 3;
 
 rng = 0;
 attack_once = true; //use to make the rng happen only once
+
+fly = 0;

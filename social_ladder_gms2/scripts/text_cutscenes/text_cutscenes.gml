@@ -8,10 +8,6 @@ if letters_count >= string_length(line) + time_bettween_line && next_line < arra
 {
 	letters_count = 0;
 	next_line ++;
-	if next_line == array_length_1d(lines) - 1
-	{
-		hold_key ++;
-	}
 }
 
 if next_line >= array_length_1d(lines) -1

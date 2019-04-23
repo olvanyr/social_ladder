@@ -5,16 +5,6 @@
     "name": "oJukebox",
     "eventList": [
         {
-            "id": "992d089f-95dd-4996-8b8a-0a3f9f923b19",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "314e9562-2898-4492-8c32-42cf82d7e34f"
-        },
-        {
             "id": "788563d6-9d26-47c8-81c5-48e1afc0b9b3",
             "modelName": "GMEvent",
             "mvc": "1.0",

@@ -26,11 +26,13 @@ is_gamepad_active = gamepad_is_connected(0);
 
 
 //make pause
-if input.start && oPlayer.state != "wait"
+if instance_exists(oPlayer)
 {
-	pause = !pause;
+	if input.start && oPlayer.state != "wait"
+	{
+		pause = !pause;
+	}
 }
-
 instance_activate_object(oPlayer);
 instance_activate_layer("Enemies");
 instance_activate_layer("Effects");
