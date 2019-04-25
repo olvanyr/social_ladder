@@ -1,1 +1,1 @@
-oCamera.follow = oPlayer;
+if instance_exists(oPlayer) && instance_exists(oCamera) oCamera.follow = oPlayer;
