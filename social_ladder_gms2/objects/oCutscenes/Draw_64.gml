@@ -3,10 +3,13 @@ draw_set_color(c_text);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_set_font(font);
+
+var half_width = string_width(line)/2;
+var half_height = string_height(line)/2;
 if state = "text1" || state = "text2"
 {
-		nine_slice_box(sBox1,cam.x - text_buffer,cam.y + ybuffer - text_buffer,cam.x + string_width(line) + text_buffer, cam.y + string_height(line)+ ybuffer + text_buffer);
-		draw_text(cam.x,cam.y + ybuffer, line_part);
+		nine_slice_box(sBox1,cam.x - text_buffer - half_width,cam.y - 250 + ybuffer - text_buffer,cam.x + string_width(line)/2 + text_buffer, cam.y - 250 + half_height + ybuffer + text_buffer*2);
+		draw_text(cam.x,cam.y - 250 + ybuffer, line_part);
 }
 
 

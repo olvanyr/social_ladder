@@ -14,6 +14,7 @@ switch (state)
 		lines[1] = "The outside world is very hostile";
 		lines[2] = "But it is yours now";
 		lines[3] = "you will have to kill\nall of this creature";
+		lines[4] = "";
 		
 		text_cutscenes("free");
 	break;
@@ -52,6 +53,7 @@ switch (state)
 		{
 			global.new_music = mRoom1;
 			room_goto(rLab);
+			instance_create_layer(605, 477, "Player", oPlayer);
 		}
 	break;
 }

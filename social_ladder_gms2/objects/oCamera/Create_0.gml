@@ -1,6 +1,6 @@
 //set up camera
 cam = view_camera[0];
-follow = noone;
+follow = oPlayer;
 
 view_w = global.ideal_width / 4;
 view_h = global.ideal_height / 4;
