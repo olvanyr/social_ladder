@@ -22,10 +22,9 @@
 #endregion
 
 //set new hp 
+health_bar_width = max_health_bar_width * (((hp * global.difficulty)/(max_hp * global.difficulty)));
 
-health_bar_width = max_health_bar_width * ((hp/max_hp));
-
-
+//track that the player is not on the groun
 if vsp != 0 grounded = false;
 			
 //Hit ground sound
@@ -50,6 +49,71 @@ if place_meeting(x,y,oWall)
 		x -= 1
 	}
 }
+
+
+//adaptative dificulty
+
+if death_counter > 0
+{
+	if death_memory != death_counter
+	{
+		death_memory = death_counter;
+		death_timer = 0;
+	}
+	
+	death_timer ++;
+	
+}else
+{
+	death_timer = 0;
+}
+
+if death_timer >= (60 * 5 * 60) // secondes * minutes * frames
+{
+	death_counter = 0;
+	death_memory = 0;
+}
+
+switch death_counter
+{
+	case 2 :
+	{
+		global.difficulty = 1.05;
+	}
+	break;
+	case 4 :
+	{
+		global.difficulty = 1.1;
+	}
+	break;
+	case 5 :
+	{
+		global.difficulty = 1.2;
+	}
+	break;
+	case 7 :
+	{
+		global.difficulty = 1.4;
+	}
+	break;
+}
+
+
+//set the damage for each attack
+var damage_1 = 5 * global.difficulty, knockback_1 = 3;
+
+var damage_2 = 6 * global.difficulty, knockback_2 = 3;
+
+var damage_3 = 8 * global.difficulty, knockback_3 = 3;
+
+var damage_down = 5 * global.difficulty, knockback_down = 3;
+
+damage_cast = 5 * global.difficulty;
+knockback_cast = 3;
+
+show_debug_message("difficulty : " + string(global.difficulty));
+show_debug_message("damage :  " + string(damage_1));
+
 			
 switch state
 {
@@ -239,7 +303,7 @@ switch state
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				create_hitbox(x, y, self, sPlayer_attack1_mask, 3, 2, 5, image_xscale);
+				create_hitbox(x, y, self, sPlayer_attack1_mask, knockback_1, 2, damage_1, image_xscale);
 			}
 			if animation_end()
 			{
@@ -260,7 +324,7 @@ switch state
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				create_hitbox(x, y, self, sPlayer_attack2_mask, 3, 2, 6, image_xscale);
+				create_hitbox(x, y, self, sPlayer_attack2_mask,knockback_2, 2, damage_2, image_xscale);
 			}
 			if animation_end()
 			{
@@ -282,7 +346,7 @@ switch state
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				create_hitbox(x, y, self, sPlayer_attack3_mask, 3, 2, 8, image_xscale);
+				create_hitbox(x, y, self, sPlayer_attack3_mask, knockback_3, 2, damage_3, image_xscale);
 			}
 			if animation_end()
 			{
@@ -304,7 +368,7 @@ switch state
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
-				create_hitbox(x, y, self, sPlayer_dawn_hit_mask, 3, 2, 5, image_xscale);
+				create_hitbox(x, y, self, sPlayer_dawn_hit_mask, knockback_down, 2, damage_down, image_xscale);
 			}
 			if hit == true
 			{
@@ -335,6 +399,8 @@ switch state
 					creator = other;
 					spd = 3.5;
 					image_xscale = other.image_xscale;
+					damage = other.damage_cast;
+					knockback = other.knockback_cast;
 				}
 			}
 			if animation_end()

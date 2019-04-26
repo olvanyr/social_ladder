@@ -999,6 +999,14 @@
             }
         },
         {
+            "Key": "58d7be41-d0bd-4f1a-83b9-9398c170ac29",
+            "Value": {
+                "id": "f563c90b-f98b-47e6-a5b4-8c9cfc4a77fa",
+                "resourcePath": "objects\\oSkill_engine\\oSkill_engine.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "59fe8f25-699c-49c8-8287-ee3dbf23cb11",
             "Value": {
                 "id": "96fed0d5-366e-4cd0-92cc-a3d8af6c91ed",

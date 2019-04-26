@@ -81,3 +81,6 @@ global.cast = true;
 global.key1 = true;
 
 
+// addaptative difficulty
+global.difficulty = 1;
+

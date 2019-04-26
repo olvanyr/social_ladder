@@ -72,11 +72,12 @@ healthpack_width = 5*3;
 //health pack
 healthpack = 3;
 max_healthpack = healthpack;
-// Save var
-//key1
-//wall_jump
-//double_jump
-//......
+
+//easy mod
+death_counter = 0; //use to count the number of death until the timer hit something like 10 minutes I think
+death_memory = 0;
+death_timer = 0; //use to saw for how long the player is not dead
+
 
 
 
