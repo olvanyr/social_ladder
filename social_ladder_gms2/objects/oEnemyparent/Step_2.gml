@@ -1,5 +1,14 @@
+if hp <= 0 && game_get_speed(gamespeed_fps) == 60 && state != "dead" && state != "death"
+{
+	game_set_speed(30,gamespeed_fps);
+	alarm[4] = 25; 
+	screenshake(4,15);
+}
+
 // Inherit the parent event
 event_inherited();
+
+
 
 if once = true && state == "dead"
 {

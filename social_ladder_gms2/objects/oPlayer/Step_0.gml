@@ -111,9 +111,6 @@ var damage_down = 5 * global.difficulty, knockback_down = 3;
 damage_cast = 5 * global.difficulty;
 knockback_cast = 3;
 
-show_debug_message("difficulty : " + string(global.difficulty));
-show_debug_message("damage :  " + string(damage_1));
-
 			
 switch state
 {
@@ -166,6 +163,7 @@ switch state
 					{
 						if animation_hit_frame(2) || animation_hit_frame(5)
 						{
+							audio_sound_pitch(aFootstep,choose(0.8,1.0,1.2));
 							audio_play_sound(aFootstep,priority.low,0);
 						}
 					}
@@ -300,6 +298,7 @@ switch state
 			
 			if animation_hit_frame(3)
 			{
+				audio_sound_pitch(aMiss,choose(0.8,1.0,1.2));
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
@@ -321,6 +320,7 @@ switch state
 			
 			if animation_hit_frame(3)
 			{
+				audio_sound_pitch(aMiss,choose(0.8,1.0,1.2));
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
@@ -343,6 +343,7 @@ switch state
 			
 			if animation_hit_frame(2)
 			{
+				audio_sound_pitch(aMiss,choose(0.8,1.0,1.2));
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;
@@ -365,6 +366,7 @@ switch state
 			
 			if animation_hit_frame(1)
 			{
+				audio_sound_pitch(aMiss,choose(0.8,1.0,1.2));
 				audio_play_sound(aMiss,priority.normal,0);
 				gamepad_set_vibration(0, 1, 1);
 				alarm[1] = 3;

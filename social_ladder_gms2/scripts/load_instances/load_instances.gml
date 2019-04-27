@@ -12,4 +12,5 @@ global.save = decode;
 
 global.experience = global.save[? "experience"];
 global.date = global.save[? "date"];
+global.play_time = global.save[? "play_time"];
 

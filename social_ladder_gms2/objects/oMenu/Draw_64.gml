@@ -140,7 +140,7 @@ yy = 0; repeat(ds_height){
 				variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
 				ds_map_clear(global.save);
 				load_map();
-				if global.date != 0 draw_text_color(rtx, rty, "last time played " + string(global.date) + "\n Total timeplayed : " + string(global.play_time), c,c,c,c, 1);
+				if global.date != 0 draw_text_color(rtx, rty, "last time played " + string(global.date) + "\n Total timeplayed : " + string(in_game_time()), c,c,c,c, 1);
 				switch (global.slot)
 				{
 					case 1: 

@@ -33,7 +33,7 @@ if instance_exists(oPlayer)
 	{
 		repeat (10)
 		{
-			instance_create_layer(other.x, other.y - 12, "Effects", oHit_effect);
+			instance_create_layer(other.x, other.y - 16, "Effects", oHit_effect);
 		}
 		
 		creator.hit = true;
@@ -45,7 +45,7 @@ if instance_exists(oPlayer)
 		{
 			// We hit the player
 			{
-				screenshake(4,8);
+				screenshake(8,6);
 				gamepad_set_vibration(0, 1, 1);
 				other.alarm[1] = 6;
 				other.invincibility = 20 * global.difficulty;
@@ -54,7 +54,7 @@ if instance_exists(oPlayer)
 		{
 			//We hit an enemy
 			other.alarm[0] = 60;
-			screenshake(2,4);
+			screenshake(4,6);
 		}
 	}
 }

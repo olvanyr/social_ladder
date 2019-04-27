@@ -16,6 +16,13 @@ with all
 		}
 	}
 }
+
+//in game time 
+global.play_time += (delta_time*0.000001);
+
+show_debug_message(global.play_time);
+
+
 if !pause global.save[? room_get_name(room)] = death_count;
 
 if is_gamepad_active != gamepad_is_connected(0) && gamepad_is_connected(0) == false
@@ -154,4 +161,3 @@ if(save_setting)
 
 }
 #endregion
-
