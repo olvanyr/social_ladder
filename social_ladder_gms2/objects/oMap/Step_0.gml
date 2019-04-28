@@ -20,11 +20,10 @@ with all
 //in game time 
 global.play_time += (delta_time*0.000001);
 
-show_debug_message(global.play_time);
-
-
+//store the number of living eneies when the game is not paus (beacause when the game is paused, the enemies are deactiuvated)
 if !pause global.save[? room_get_name(room)] = death_count;
 
+//check if the gamepad is just unpluged
 if is_gamepad_active != gamepad_is_connected(0) && gamepad_is_connected(0) == false
 {
 	pause = true;
@@ -33,13 +32,12 @@ is_gamepad_active = gamepad_is_connected(0);
 
 
 //make pause
-if instance_exists(oPlayer)
+if input.start && !inputting
 {
-	if input.start && oPlayer.state != "wait"
-	{
-		pause = !pause;
-	}
+	pause = !pause;
 }
+
+show_debug_message(pause);
 instance_activate_object(oPlayer);
 instance_activate_layer("Enemies");
 instance_activate_layer("Effects");

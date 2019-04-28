@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "22191f69-5807-4bae-abb3-c01b7d3526fa",
+            "Value": {
+                "id": "c4832983-550d-4c74-b612-2aefa9b077c1",
+                "resourcePath": "sprites\\Skill_engine\\Skill_engine.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "22679488-9a4d-404a-8f2b-a3a206455a78",
             "Value": {
                 "id": "55fa38d7-4e80-42bd-8d69-15d2fbae29da",

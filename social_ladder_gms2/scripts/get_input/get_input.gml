@@ -29,8 +29,8 @@ menu_up = keyboard_check_pressed(vk_up);
 erase = keyboard_check_pressed(ord("V"));
 back = keyboard_check_pressed(vk_escape);
 start = keyboard_check_pressed(ord("P"));
-next_tab = keyboard_check(ord("E"));
-previous_tab = keyboard_check(ord("A"));
+next_tab = keyboard_check_pressed(ord("E"));
+previous_tab = keyboard_check_pressed(ord("A"));
 
 //gamepad
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)

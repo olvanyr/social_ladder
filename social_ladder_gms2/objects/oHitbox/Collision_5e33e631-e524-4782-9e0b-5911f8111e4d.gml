@@ -2,11 +2,8 @@ if creator == noone || creator == other || ds_list_find_index(hit_objects, other
 {
 	exit;
 }
-if object_get_parent(creator.object_index) == oEnemyParent && object_get_parent(other.object_index) == oEnemyParent
-{
-	exit;
-}
 
+if is_enemy(creator.object_index) && is_enemy(other.object_index) exit;
 
 if instance_exists(oPlayer)
 {

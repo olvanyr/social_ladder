@@ -58,15 +58,19 @@ global.enemy_list =
 	oRunnerII,
 	oMimic,
 	oSlug,
-	oWrath
+	oWrath,
+	oLegs,
+	oFlying,
+	oScratcher,
+	oDistance,
+	oSpider
 ]
 
 
 //save var
 global.save = ds_map_create();
 
-// other var to save
-global.experience = 0;
+// Time var
 global.play_time = 0;
 global.date = 0;
 
@@ -74,11 +78,14 @@ global.date = 0;
 global.current_music = 0;
 global.new_music = 0;
 
-// spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!
-global.double_jump = true;
-global.wall_jump = true;
-global.cast = true;
-global.key1 = true;
+//experience var 
+	global.experience = 0;
+
+	// spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!
+	global.double_jump = true;
+	global.wall_jump = true;
+	global.cast = true;
+	global.key1 = true;
 
 
 // addaptative difficulty
