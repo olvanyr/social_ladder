@@ -82,9 +82,9 @@ global.new_music = 0;
 	global.experience = 0;
 
 	// spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!
-	global.double_jump = true;
-	global.wall_jump = true;
-	global.cast = true;
+	global.wall_jump = false;
+	global.double_jump = false;
+	global.cast = false;
 	global.key1 = true;
 
 

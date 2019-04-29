@@ -423,6 +423,14 @@
             }
         },
         {
+            "Key": "1e5583f7-4124-43e6-adf8-98a27c59e8a3",
+            "Value": {
+                "id": "c9d775e1-ee5a-45a0-8606-b343deab1f3a",
+                "resourcePath": "sprites\\sAblility_double_jump\\sAblility_double_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1e781746-4264-492d-ad93-364f48f87d05",
             "Value": {
                 "id": "0563a62d-c32f-4acb-a834-eeea6400ec44",
@@ -727,6 +735,14 @@
             }
         },
         {
+            "Key": "3c2adbf4-cc31-4658-a239-b30a2e58c8c4",
+            "Value": {
+                "id": "54e23c4a-d482-41fa-bf1f-97a363bf88c7",
+                "resourcePath": "views\\3c2adbf4-cc31-4658-a239-b30a2e58c8c4.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3c38f039-2d4a-46ba-a351-bed7b36c34a3",
             "Value": {
                 "id": "f78d9276-b3c1-4004-b375-6ff7f145e67a",
@@ -983,6 +999,14 @@
             }
         },
         {
+            "Key": "56211719-18d2-48fb-aaf2-8125b9a108db",
+            "Value": {
+                "id": "d3b7fd83-5bc9-44c4-b7c1-3b25aac77f6c",
+                "resourcePath": "scripts\\show_ability\\show_ability.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "564b6e3f-2461-482b-824a-907a0ef0fa97",
             "Value": {
                 "id": "6dc36d15-24e5-4258-a215-926c5f7bef1e",
@@ -1058,7 +1082,7 @@
             "Key": "5b2717ef-4fe3-473d-91bd-8a6bd4988caf",
             "Value": {
                 "id": "e8b5a4a4-9366-4f14-8ca3-0b907db18973",
-                "resourcePath": "scripts\\button_animation\\button_animation.yy",
+                "resourcePath": "scripts\\sprite_animation\\sprite_animation.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1684,6 +1708,14 @@
                 "id": "93fdbd30-73fb-4a3c-a7e9-6ce5ee49f514",
                 "resourcePath": "objects\\oDisplay_manager\\oDisplay_manager.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "96be5571-22cf-4810-a9a0-16686bd062c3",
+            "Value": {
+                "id": "983a9a03-08de-4f73-8499-4c232066f6f1",
+                "resourcePath": "sprites\\sSkill_engine_pulssing\\sSkill_engine_pulssing.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2744,7 +2776,8 @@
         "c0c49559-04ab-482c-bb77-290acd39a0b4",
         "3686e456-ee60-49fd-a80c-dd8cb91fea23",
         "cfde271a-121f-46aa-8b29-ddfcad4c3879",
-        "dddc8fc0-6b01-4e8c-9e06-2d2900fa14ca"
+        "dddc8fc0-6b01-4e8c-9e06-2d2900fa14ca",
+        "56211719-18d2-48fb-aaf2-8125b9a108db"
     ],
     "tutorial": ""
 }

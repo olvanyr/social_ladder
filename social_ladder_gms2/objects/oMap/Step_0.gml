@@ -37,7 +37,6 @@ if input.start && !inputting
 	pause = !pause;
 }
 
-show_debug_message(pause);
 instance_activate_object(oPlayer);
 instance_activate_layer("Enemies");
 instance_activate_layer("Effects");

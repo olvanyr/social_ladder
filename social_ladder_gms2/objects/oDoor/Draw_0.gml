@@ -18,7 +18,7 @@ if instance_exists(oPlayer)
 				}
 			}
 		}
-		button_animation(sUse,-(dir * 25));
+		sprite_animation(sUse,-(dir * 25),0.05,x,y);
 	}
 	
 }

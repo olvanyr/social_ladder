@@ -45,7 +45,7 @@ switch tab
 
 		//Draw Pause Menu "Back"
 		var c = c_gray;
-		draw_rectangle_color(-1,-1,gwidth, gheight, c,c,c,c, false);
+		draw_rectangle_color(-10,-10,gwidth, gheight, c,c,c,c, false);
 
 		#region Draw elements on Left Side
 		draw_set_font(fMenu);

@@ -12,5 +12,5 @@ timer = manage_timer(timer);
 
 if timer <= 0
 {
-	button_animation(sDown,0);
+	sprite_animation(sDown,0,0.05,x,y);
 }

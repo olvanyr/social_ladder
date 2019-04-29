@@ -1,8 +1,8 @@
 {
-    "id": "5b2717ef-4fe3-473d-91bd-8a6bd4988caf",
+    "id": "56211719-18d2-48fb-aaf2-8125b9a108db",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "button_animation",
+    "name": "show_ability",
     "IsCompatibility": false,
     "IsDnD": false
 }
