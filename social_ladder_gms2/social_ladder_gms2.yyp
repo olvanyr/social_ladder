@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "0b18af0d-bbf4-4982-94e2-f509fb4ba224",
+            "Value": {
+                "id": "6affaa47-450b-40cd-9d0d-3b58fbb6d128",
+                "resourcePath": "sprites\\sAbility_wall_jump\\sAbility_wall_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0b6cd15a-c7bb-4f5d-8215-08d3568ac59e",
             "Value": {
                 "id": "8e15b604-fad6-4247-b30f-6503f4ae4da2",
@@ -426,7 +434,7 @@
             "Key": "1e5583f7-4124-43e6-adf8-98a27c59e8a3",
             "Value": {
                 "id": "c9d775e1-ee5a-45a0-8606-b343deab1f3a",
-                "resourcePath": "sprites\\sAblility_double_jump\\sAblility_double_jump.yy",
+                "resourcePath": "sprites\\sAbility_double_jump\\sAbility_double_jump.yy",
                 "resourceType": "GMSprite"
             }
         },

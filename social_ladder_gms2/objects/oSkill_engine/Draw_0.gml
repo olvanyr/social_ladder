@@ -16,4 +16,3 @@ if new_ability
 		}
 	}
 }
-

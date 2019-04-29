@@ -2,7 +2,7 @@
     "id": "1e5583f7-4124-43e6-adf8-98a27c59e8a3",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sAblility_double_jump",
+    "name": "sAbility_double_jump",
     "For3D": false,
     "HTile": false,
     "VTile": false,
