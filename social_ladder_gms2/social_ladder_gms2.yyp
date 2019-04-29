@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "0dcf40de-5f2c-47ab-a912-f2be227702f3",
+            "Value": {
+                "id": "de60776a-00d5-4237-a1fa-508e2a7eee98",
+                "resourcePath": "sprites\\sMiasma_tree\\sMiasma_tree.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0e0ee0a6-f5a9-45c0-a510-601c4af413e7",
             "Value": {
                 "id": "9cb01d04-7076-445e-b3e5-8692d8b51251",

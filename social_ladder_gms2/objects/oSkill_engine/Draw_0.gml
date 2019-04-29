@@ -16,3 +16,5 @@ if new_ability
 		}
 	}
 }
+
+draw_sprite(sMiasma_tree,image,x,y);
