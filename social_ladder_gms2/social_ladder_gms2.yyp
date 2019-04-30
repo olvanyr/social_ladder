@@ -623,6 +623,14 @@
             }
         },
         {
+            "Key": "3310c2b0-7eba-4dc3-a4b4-3e32468762f1",
+            "Value": {
+                "id": "9117e338-f57a-4e33-8589-1189ab738a75",
+                "resourcePath": "sounds\\m_Enter___\\m_Enter___.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "335a6545-a5cf-464c-a6a0-39273096d04f",
             "Value": {
                 "id": "03866b07-9d5d-4952-a291-e5777c7c7cff",

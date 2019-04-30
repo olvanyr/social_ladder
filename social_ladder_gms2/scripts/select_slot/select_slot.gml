@@ -10,5 +10,5 @@ if ds_map_exists(global.save, "room") && global.save[? "room"] != rLab
 }else 
 {
 	room_goto(rCutscenes);
-	global.current_music = mRoom0;
+	global.current_music = m_Enter___;
 }
