@@ -3,15 +3,13 @@ switch (state)
 	#region idle
 		case "idle":
 			set_state_sprite(idle,0.2,0);
-			chase_idle_triger();
+			state_idle();
 		break;
 	#endregion
 	#region Chase
 		case "chase":
 			set_state_sprite(walk,0.6,0);
-			
-			chase_idle_triger();
-			chase_state();
+			state_chase();
 		break;
 	#endregion
 	#region Attack

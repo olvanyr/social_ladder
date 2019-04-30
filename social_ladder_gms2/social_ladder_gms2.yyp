@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "01e44f73-821e-4ead-9136-3fc9f3807f58",
+            "Value": {
+                "id": "7d9629ba-149a-4f52-9807-2047df023864",
+                "resourcePath": "sprites\\sMaggie_mask\\sMaggie_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "021e25af-fd11-494c-9792-ddd498f4e5a9",
             "Value": {
                 "id": "356f7d04-5c81-48b7-91ad-84fd03419b9d",
@@ -551,6 +559,14 @@
             }
         },
         {
+            "Key": "27dd94db-4e63-4d70-8155-c22de3fc9921",
+            "Value": {
+                "id": "33a07d39-7632-4535-bbbd-5b96875d822f",
+                "resourcePath": "sprites\\sMaggie_idle\\sMaggie_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "28348140-5f1e-4f2b-945d-16554c08d0b8",
             "Value": {
                 "id": "337bbb87-45ae-4806-80da-c97d274d7c47",
@@ -932,6 +948,14 @@
                 "id": "51789d8a-81d1-4730-8a51-8c60b4e1baeb",
                 "resourcePath": "scripts\\idle_mimic_triger\\idle_mimic_triger.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4bea05a2-2785-4b73-bafa-25ee9297b93d",
+            "Value": {
+                "id": "00b20f91-9588-49bc-b015-619286dfdfe9",
+                "resourcePath": "views\\4bea05a2-2785-4b73-bafa-25ee9297b93d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1767,6 +1791,14 @@
             }
         },
         {
+            "Key": "978416af-7dde-4a48-8199-2a3519e92b6e",
+            "Value": {
+                "id": "89f0640c-c9dd-4179-8933-936b76f6b8ed",
+                "resourcePath": "scripts\\state_idle\\state_idle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9859ffd5-8063-439a-845a-9fdf45ecdc8a",
             "Value": {
                 "id": "233bd1b0-c5c4-4d10-b621-13469c7e0cf4",
@@ -2119,6 +2151,14 @@
             }
         },
         {
+            "Key": "b99ea076-46bf-412f-a999-90cec1005b43",
+            "Value": {
+                "id": "e9439a39-4e1a-4082-af03-fc6f16c49bbf",
+                "resourcePath": "views\\b99ea076-46bf-412f-a999-90cec1005b43.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "b9ba5b10-3b6d-4340-a0ec-f820c5998749",
             "Value": {
                 "id": "cbc63f66-0937-4f0a-a200-907b8cd0a3bc",
@@ -2155,6 +2195,14 @@
             "Value": {
                 "id": "40763c60-ab98-4350-96b2-f06ef35a8a08",
                 "resourcePath": "sprites\\sRunnerII_walk\\sRunnerII_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bfbd2046-92c2-4ae0-82d0-3d54098c0fed",
+            "Value": {
+                "id": "ee8f3722-3571-4fee-ad06-ef996d9ab513",
+                "resourcePath": "sprites\\sMaggie_walk\\sMaggie_walk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2335,6 +2383,14 @@
             }
         },
         {
+            "Key": "ce0cf434-936a-4c2e-9a91-62a7d7cc13c9",
+            "Value": {
+                "id": "337f2c28-b07d-4d21-820c-f891d5f96592",
+                "resourcePath": "sprites\\sMaggie_die\\sMaggie_die.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ceb0090a-8b4e-4b03-a636-e99c9abdae01",
             "Value": {
                 "id": "5acf5f7e-e3bb-482e-ab35-255ff1bfe93c",
@@ -2511,6 +2567,14 @@
             }
         },
         {
+            "Key": "e3eab94d-d8e4-4f46-baac-33bf99287c18",
+            "Value": {
+                "id": "a5cc320e-ad09-4744-b786-f5e13676c792",
+                "resourcePath": "scripts\\state_chase\\state_chase.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e3fb2c16-53cc-4281-9671-1278da00bed5",
             "Value": {
                 "id": "65bc57a5-5377-4d24-81cd-130e8633b75a",
@@ -2567,6 +2631,14 @@
             }
         },
         {
+            "Key": "eb9a6be2-2068-49d8-bd54-f355aa30a7c8",
+            "Value": {
+                "id": "1b7076c1-eafe-4446-b651-9abb4bc48bfa",
+                "resourcePath": "sprites\\sMaggie_attack\\sMaggie_attack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ec122d0b-c885-467e-beae-68ee6b5b79c3",
             "Value": {
                 "id": "5f4ece74-70d4-4ecf-b65a-83a30df4393e",
@@ -2587,6 +2659,14 @@
             "Value": {
                 "id": "97436ef6-e1ff-4022-8ef8-57a6d1eb8e10",
                 "resourcePath": "views\\ee1e5f8a-fae9-4f3d-bdb2-4407ed41bc5e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ee3511da-9e63-4ca9-9685-206d5c4606f6",
+            "Value": {
+                "id": "21cc35d6-f492-42f4-a00a-212e0bb79c37",
+                "resourcePath": "views\\ee3511da-9e63-4ca9-9685-206d5c4606f6.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -2663,6 +2743,14 @@
             }
         },
         {
+            "Key": "f7596949-63bb-4170-9a6c-318a7e482b57",
+            "Value": {
+                "id": "120e85e0-f95c-4dc3-aaf0-c80c787ba2b3",
+                "resourcePath": "objects\\oEnemyParent1\\oEnemyParent1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f75b6782-3d27-42e4-b550-b64f4ffc06f0",
             "Value": {
                 "id": "8a73c232-5890-4a02-a1d5-7ea0495ddb48",
@@ -2676,6 +2764,14 @@
                 "id": "2cb7ac89-32d4-4e0d-8dae-149bff7a21e1",
                 "resourcePath": "views\\f85d23fc-0b53-4166-b415-5a20970f1de5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fac26345-338b-4fe3-aa81-60bdca2da42b",
+            "Value": {
+                "id": "2cd790f2-2f2e-48e6-a9ef-9fec56abc37d",
+                "resourcePath": "objects\\oMaggie\\oMaggie.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2760,16 +2856,16 @@
         "677112d3-ae30-429f-84aa-3e1d49793246",
         "6e234d30-908d-4829-b333-90dc3d65ca6f",
         "4d3fd3ad-816f-4ca8-be63-8ac748f41068",
+        "ca44d2d8-4645-4114-873e-93a6d1b47d9e",
         "021e25af-fd11-494c-9792-ddd498f4e5a9",
         "1d7eefa4-dc2c-4570-a23c-0d73337ae2aa",
         "148ba67c-fc1f-4a8d-a7fc-69463925dc2d",
         "12822e17-b20e-44f6-84e6-efecd589672e",
-        "8fcf4cee-13d5-4f1b-9720-881be749683c",
+        "4be99f26-4b90-4f47-a8b8-01ebabbdb393",
+        "b36cd493-9cea-478c-87a2-22ea5588ebef",
         "e0823bf7-9b68-4807-b71a-385a2823b5f0",
         "e769f2c6-5e8a-43d4-abfc-229532e4c4cb",
-        "b36cd493-9cea-478c-87a2-22ea5588ebef",
-        "ca44d2d8-4645-4114-873e-93a6d1b47d9e",
-        "4be99f26-4b90-4f47-a8b8-01ebabbdb393",
+        "8fcf4cee-13d5-4f1b-9720-881be749683c",
         "da58cac0-0975-425b-81b9-f6bb384c829a",
         "43a6972f-30ee-48d9-a407-bdbdb7a35419",
         "f0c581a7-f91e-4924-9186-226688e209c1",
@@ -2801,7 +2897,9 @@
         "3686e456-ee60-49fd-a80c-dd8cb91fea23",
         "cfde271a-121f-46aa-8b29-ddfcad4c3879",
         "dddc8fc0-6b01-4e8c-9e06-2d2900fa14ca",
-        "56211719-18d2-48fb-aaf2-8125b9a108db"
+        "56211719-18d2-48fb-aaf2-8125b9a108db",
+        "978416af-7dde-4a48-8199-2a3519e92b6e",
+        "e3eab94d-d8e4-4f46-baac-33bf99287c18"
     ],
     "tutorial": ""
 }

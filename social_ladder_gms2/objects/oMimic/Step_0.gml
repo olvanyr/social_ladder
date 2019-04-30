@@ -3,14 +3,13 @@ switch (state)
 	#region idle
 		case "idle":
 			set_state_sprite(idle,0,0);
-			chase_mimic_triger();
+			state_idle();
 		break;
 	#endregion
 	#region Chase
 		case "chase":
 			set_state_sprite(walk,walk_animation_speed,0);
-			idle_mimic_triger();
-			chase_state();
+			state_chase();
 		break;
 	#endregion
 	#region Show

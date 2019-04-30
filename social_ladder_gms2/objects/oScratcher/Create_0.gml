@@ -29,7 +29,7 @@ attack2_frame = 6;
 
 attack_charge = sScratcher_attack2;
 attack_charge_mask = sScratcher_attack2_mask;
-fly = 1;
+fly = 0;
 
 
 

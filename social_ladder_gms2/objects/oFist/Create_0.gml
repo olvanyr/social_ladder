@@ -28,4 +28,4 @@ roll = sFist_slide;
 die = sFist_die;
 
 
-fly = 1;
+fly = 0;

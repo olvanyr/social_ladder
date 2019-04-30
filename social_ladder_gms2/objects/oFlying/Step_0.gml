@@ -2,7 +2,7 @@ switch state
 {
 	case "idle" : 
 		set_state_sprite(sFlying_move,0.3,0);
-		chase_idle_triger();
+		state_idle();
 	break;
 	case "chase" : 
 		if !instance_exists(oPlayer) exit;
