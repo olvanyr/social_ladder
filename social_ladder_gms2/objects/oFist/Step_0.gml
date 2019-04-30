@@ -68,7 +68,7 @@ switch (state)
 	#endregion
 	#region Roll
 		case "roll":
-		roll_cooldown = 30;
+			roll_cooldown = 30;
 			set_state_sprite(roll,0.2,0);
 			roll_state("chase");
 		break;

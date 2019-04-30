@@ -10,18 +10,6 @@ switch (state)
 		case "chase":
 			set_state_sprite(walk,walk_animation_speed,0);
 			state_chase();
-			
-			if !grounded
-			{
-				if vsp <= 0 
-				{
-					set_state_sprite(sScratcher_up,0,0);
-				}
-				if vsp >= 0 
-				{
-					set_state_sprite(sScratcher_up,0,1);
-				}
-			}
 		break;
 	#endregion
 	#region Attack
@@ -69,18 +57,6 @@ switch (state)
 	#region Stunt
 		case "stunt":
 			set_state_sprite(knockback_sprite,0,1);
-		break;
-	#endregion
-	#region wait
-		case "wait":
-		set_state_sprite(sDistance_hiden,0,0);
-		if instance_exists(oPlayer)
-		{
-			if distance_to_object(oPlayer) >= fov
-			{
-				state = "show";
-			}
-		}
 		break;
 	#endregion
 	#region Death

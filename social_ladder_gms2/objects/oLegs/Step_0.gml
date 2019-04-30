@@ -29,13 +29,6 @@ switch (state)
 			}	
 		break;
 	#endregion
-	#region Knockback
-		case "knockback":
-			//knockback_state(knockback_sprite, "stunt");
-			alarm[1] = stunt_time;
-		break;
-
-	#endregion
 	#region Stunt
 		case "stunt":
 			set_state_sprite(knockback_sprite,0,1);

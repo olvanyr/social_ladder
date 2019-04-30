@@ -1,4 +1,5 @@
 /// @arg next state
+roll_cooldown = 30;
 
 var next_state = argument0;
 
