@@ -17,7 +17,7 @@ switch (state)
 			set_state_sprite(walk,walk_anim_spd,0);
 			state_chase();
 			
-			if self.object_index == oFist || self.object_index == oScratcher
+			if self.object_index == oFist || self.object_index == oSword || self.object_index == oScratcher
 			{
 				//jump on top of one block
 				if instance_exists(oPlayer)
@@ -32,21 +32,22 @@ switch (state)
 	#endregion
 	#region Attack
 		case "attack":
-			if self.object_index == oRunner || self.object_index == oMimic
+			if self.object_index == oRunner || self.object_index == oRunnerII || self.object_index == oMimic
 			{
 				state = "chase";
 			}
 			
 			if self.object_index == oFist || self.object_index == oSword || self.object_index == oScratcher || self.object_index == oSlug || self.object_index == oDistance || self.object_index == oLegs
 			{
+				// a normal firstt attack
 				set_state_sprite(attack1,attack1_anim_spd,0);
-			
 				if animation_hit_frame(attack1_frame)
 				{
 					//audio_play_sound(aMiss,3,0);
 					create_hitbox(x, y, self, attack1_mask, 3, 2, attack1_damage, image_xscale);
 				}
-			
+				
+				// a second attack within the first animation 
 				if self.object_index == oFist || self.object_index == oScratcher
 				{
 					if animation_hit_frame(attack2_frame)
@@ -55,6 +56,7 @@ switch (state)
 						create_hitbox(x, y, self, attack2_mask, 3, 2, attack2_damage, image_xscale);
 					}
 				}
+				
 				if animation_end()
 				{
 					if self.object_index == oSlug
@@ -143,7 +145,7 @@ switch (state)
 			dead_state(die);
 		break;
 	#endregion
-	
+	//mimic
 	#region Show
 		case "show":
 			set_state_sprite(transformation, 0.4,0);
@@ -162,14 +164,14 @@ switch (state)
 			}
 		break;
 	#endregion
-	
+	//fist and sword
 	#region Roll
 		case "roll":
 			set_state_sprite(roll,0.2,0);
 			roll_state("chase");
 		break;
 	#endregion
-	
+	//scratcher
 	#region Charge
 		case "charge":
 			set_state_sprite(charge,0.45,0);
@@ -187,7 +189,7 @@ switch (state)
 			}	
 		break;
 	#endregion
-	
+	//distance
 	#region shot
 		case "shot":
 			set_state_sprite(shot,shot_anim_spd,0);

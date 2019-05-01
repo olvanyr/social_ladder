@@ -1,5 +1,36 @@
 event_inherited();
 
+//view trigger
+fov = "field of view";
+
+attack_range = "distance where self start attacking";
+
+attack_distance_range = "distance witch self shot";
+
+//health
+hp = "amount of health";
+max_hp = hp;
+
+//colision variables
+gravity_speed = 0.4;
+vsp = 0;
+vsp_fraction = 0;
+grounded = false;
+
+//XP
+experience = 1;
+
+//dose you fly away ? 
+fly = "irandom(3) if 1 yes, other no";
+
+//mask
+mask = "sprite to use as mask";
+
+
+#region state
+
+state = "idle";
+
 // idle
 idle = "idle_sprite";
 idle_spd = "idle animation speed";
@@ -7,10 +38,13 @@ idle_spd = "idle animation speed";
 // walk
 walk = "walk sprite";
 walk_anim_spd = "walk animation speed";
+chase_speed = "walk speed";
 
 // knockback & stun
 knockback_sprite = "knockback sprite";
-stun_time = "time the enemy stay stun"
+stun_time = "time the enemy stay stun";
+knockback = 4;
+knockback_speed = 0;
 
 // die
 die =  "death sprite";
@@ -52,43 +86,13 @@ shot = "sprite of shot";
 shot_anim_spd = "speed of the animation";
 shot_frame = "frame where to spawn the hitbox";
 
-
-
-
-
-
-
-//attack related variable
-attack_range = 0;
-
-//knockback related variable
-knockback = true;
-knockback_speed = 0;
-
-//move related variable
-chase_speed = 1;
-gravity_speed = 0.4;
-grounded = false;
-vsp = 0;
-vsp_fraction = 0;
-
-jump_cliff = false;
-
-//myasm related variable
-experience = 1;
-
-// state related variable
-state = "idle";
-
-// save and load
-
+#endregion
+#region save and load
 once = true; //use to make the sav script happen only once when the enemy is dead
-
 
 save_x = string(id) + string(save.x);
 save_y = string(id) + string(save.y);
 save_state = string(id) + string(save.state);
-
 
 if global.save[?save_state] == "dead"
 {
@@ -96,3 +100,4 @@ if global.save[?save_state] == "dead"
 	x = global.save[?save_x];
 	y = global.save[?save_y];
 }else set_enemies_map();
+#endregion

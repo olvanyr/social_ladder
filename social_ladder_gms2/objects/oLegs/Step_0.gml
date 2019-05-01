@@ -9,6 +9,7 @@ switch (state)
 	#region Chase
 		case "chase":
 			set_state_sprite(walk,0.6,0);
+			
 			state_chase();
 		break;
 	#endregion
@@ -28,6 +29,13 @@ switch (state)
 				state = "chase";
 			}	
 		break;
+	#endregion
+	#region Knockback
+		case "knockback":
+			//knockback_state(knockback_sprite, "stunt");
+			alarm[1] = stunt_time;
+		break;
+
 	#endregion
 	#region Stunt
 		case "stunt":
