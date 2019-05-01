@@ -62,7 +62,7 @@ switch (state)
 					if self.object_index == oSlug
 					{
 						state = "stun";
-						alarm[1] = stunt_time;
+						alarm[1] = stun_time;
 					}else state = "chase";
 				}	
 			}
@@ -141,8 +141,7 @@ switch (state)
 				{
 					state = "dead";
 				}
-			}
-			dead_state(die);
+			}else dead_state(die);
 		break;
 	#endregion
 	//mimic

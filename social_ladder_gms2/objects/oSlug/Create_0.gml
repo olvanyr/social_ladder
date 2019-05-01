@@ -1,32 +1,101 @@
 event_inherited();
+
+//view trigger
+fov = 100;
+attack_range = 30;
+attack_distance_range = "distance witch self shot";
+
+//health
 hp = 10;
 max_hp = hp;
 
-fov = 100;
-chase_speed = 1.5;
-walk_animation_speed = 0.3;
+//colision variables
+gravity_speed = 0.4;
+vsp = 0;
+vsp_fraction = 0;
+grounded = false;
 
-attack_range = 30;
+//XP
+experience = 1;
 
-knockback = 4;
-stunt_time = 20;
+//dose you fly away ? 
+fly = 0;
 
-
+//mask
 mask = sSlug_mask;
+
+
+#region state
+
+state = "idle";
+
+// idle
 idle = sSlug_idle;
+idle_spd = 0.1;
+
+// walk
 walk = sSlug_walk;
+walk_anim_spd = 0.3;
+chase_speed = 1.5;
+
+// knockback & stun
 knockback_sprite = sSlug_knockback;
+stun_time = 20;
+knockback = 4;
+knockback_speed = 0;
+
+// die
 die = sSlug_die;
 
-attack = sSlug_attack1;
-attack1_mask  = sSlug_attack1_mask;
+// Mimic variable
+transformation = "transformation sprite";
+
+// attack variable for Fist
+attack1 = sSlug_attack1;
+attack1_anim_spd = 0.6;
 attack1_frame = 6;
+attack1_mask  = sSlug_attack1_mask;
+attack1_damage = 5;
 
-attack2 = sSlug_attack2;
-attack2_mask  = sSlug_attack2_mask;
+attack2 = sSlug_attack2; // not needed if the first animation had two attack
+attack2_anim_spd = 0.5; // not needed if the first animation had two attack
 attack2_frame = 3;
+attack2_mask  = sSlug_attack2_mask;
+attack2_damage = 5;
 
-rng = 0;
+// roll
+
+roll = "roll sprite";
+roll_cooldown = "cooldawn of the roll";
+roll_speed = "speed of the roll";
+
+// last attack of the slug
 attack_once = true; //use to make the rng happen only once
+rng = irandom(3);
 
-fly = 0;
+// charge for the scratcher
+charge = "sprite of the charge";
+charge_damage = "damage of the attack";
+charge_mask = "mask of the attack";
+charge_speed = "move speed of the charge";
+
+// shot for distance
+shot = "sprite of shot";
+shot_anim_spd = "speed of the animation";
+shot_frame = "frame where to spawn the hitbox";
+
+#endregion
+#region save and load
+once = true; //use to make the sav script happen only once when the enemy is dead
+
+save_x = string(id) + string(save.x);
+save_y = string(id) + string(save.y);
+save_state = string(id) + string(save.state);
+
+if global.save[?save_state] == "dead"
+{
+	state = global.save[?save_state];
+	x = global.save[?save_x];
+	y = global.save[?save_y];
+}else set_enemies_map();
+#endregion
