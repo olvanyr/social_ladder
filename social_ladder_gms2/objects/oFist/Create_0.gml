@@ -44,6 +44,8 @@ stun_time = 20;
 knockback = 4;
 knockback_speed = 0;
 
+contact_damage = 2;
+
 // die
 die = sFist_die;
 

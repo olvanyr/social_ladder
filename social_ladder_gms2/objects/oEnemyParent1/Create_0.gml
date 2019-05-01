@@ -44,6 +44,8 @@ stun_time = "time the enemy stay stun";
 knockback = 4;
 knockback_speed = 0;
 
+contact_damage = "damage deal at contact";
+
 // die
 die =  "death sprite";
 

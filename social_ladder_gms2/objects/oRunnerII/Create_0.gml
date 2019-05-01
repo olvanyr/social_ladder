@@ -13,7 +13,10 @@ walk_animation_speed = 0.4;
 attack_range = -5;
 
 knockback = 4;
-stunt_time = 15;
+stun_time = 15;
+
+contact_damage = 3;
+
 
 
 mask = sRunner_mask;
