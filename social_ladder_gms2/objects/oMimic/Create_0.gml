@@ -8,7 +8,7 @@ attack_range = -5;
 attack_distance_range = "distance witch self shot";
 
 //health
-hp = 17;
+hp = 13;
 max_hp = hp;
 
 //colision variables

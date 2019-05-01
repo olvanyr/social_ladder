@@ -2,9 +2,7 @@ event_inherited();
 
 //view trigger
 fov = "field of view";
-
 attack_range = "distance where self start attacking";
-
 attack_distance_range = "distance witch self shot";
 
 //health
@@ -59,8 +57,8 @@ attack1_frame = "frame where to spawn the hitbox";
 attack1_mask = "mask of the attack";
 attack1_damage = "damage of the attack";
 
-attack2 = "attack sprite";
-attack2_anim_spd = "animation speed";
+attack2 = "attack sprite"; // not needed if the first animation had two attack
+attack2_anim_spd = "animation speed"; // not needed if the first animation had two attack
 attack2_frame = "frame where to spawn the hitbox";
 attack2_mask = "mask of the attack";
 attack2_damage = "damage of the attack";
