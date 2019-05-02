@@ -17,3 +17,5 @@ if roll_cooldown > 0 && state != "roll"
 	draw_sprite(sRoll_cooldawn,sub_image,x,y);
 }
 
+var c = c_red;
+draw_rectangle_color(x + (image_xscale * 30), y - (10),x + (image_xscale * 30)+1, y - (10)+1,c,c,c,c,false);

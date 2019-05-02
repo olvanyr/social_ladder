@@ -293,6 +293,13 @@ switch state
 	#endregion
 	#region Attack one
 		case "attack_one":
+		
+			// if the player dosen't have an enemy in front but have one behind, flip the character
+			if !place_meeting(x + (image_xscale * 30), y - (10), oEnemyParent1) && place_meeting(x + (-image_xscale * 25), y - (10), oEnemyParent1)
+			{
+				image_xscale = -image_xscale;
+			}
+			
 			set_state_sprite(sPlayer_attack1,attack_animation_speed,0);
 			
 			if animation_hit_frame(3)
@@ -415,7 +422,7 @@ switch state
 			set_state_sprite(sPlayer_idle,0.2,0);
 		break;
 	#endregion
-	#region wait
+	#region heal
 		case "heal":
 			set_state_sprite(sPlayer_pickup,0.4,0);
 			if animation_hit_frame(3)
