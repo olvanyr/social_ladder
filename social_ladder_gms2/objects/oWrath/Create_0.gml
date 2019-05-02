@@ -62,7 +62,7 @@ attack1_damage = 8;
 attack2 = sWrath_attack2;// not needed if the first animation had two attack
 attack2_anim_spd = 0.4; // not needed if the first animation had two attack
 attack2_frame = 2;
-attack1_mask = sWrath_attack2_mask;
+attack2_mask = sWrath_attack2_mask;
 attack2_damage = 12;
 
 // roll

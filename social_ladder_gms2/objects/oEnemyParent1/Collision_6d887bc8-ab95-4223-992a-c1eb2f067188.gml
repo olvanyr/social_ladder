@@ -3,9 +3,9 @@ if state == "death" || state == "roll" || state == "dead" exit;
 
 if self.object_index == oScratcher
 {
-	if state == "attack_charge"
+	if state == "charge"
 	{
-		create_hitbox(x, y, self, mask, 3, 2, 10, image_xscale);
+		create_hitbox(x, y, self, mask, knockback_charge, 2, charge_damage, image_xscale);
 	}else create_hitbox(x, y, self, mask, 3, 2, contact_damage, image_xscale);
 }else create_hitbox(x, y, self, mask, 3, 2, contact_damage, image_xscale);
 

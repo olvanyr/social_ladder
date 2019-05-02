@@ -173,13 +173,13 @@ switch (state)
 	//scratcher
 	#region Charge
 		case "charge":
-			set_state_sprite(charge,0.45,0);
+			set_state_sprite(charge,charge_anim_spd,0);
 			
 			move_and_collide(charge_speed * image_xscale,0);
 			if animation_hit_frame(7)
 			{
 				//audio_play_sound(aMiss,3,0);
-				create_hitbox(x, y, self, charge_mask, 3, 2, charge_damage, image_xscale);
+				create_hitbox(x, y, self, charge_mask, knockback_charge, 2, charge_damage, image_xscale);
 			}
 			
 			if animation_hit_frame(7)

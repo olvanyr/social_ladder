@@ -78,7 +78,10 @@ rng = "make the last attack randomly happened";
 // charge for the scratcher
 charge = "sprite of the charge";
 charge_damage = "damage of the attack";
+attack_charge_range = "fov for the charge attack";
+knockback_charge = "knockback dealed";
 charge_mask = "mask of the attack";
+charge_anim_spd = "spee dof the charge animation";
 charge_speed = "move speed of the charge";
 
 // shot for distance
