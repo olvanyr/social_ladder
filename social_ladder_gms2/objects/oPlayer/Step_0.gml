@@ -253,8 +253,7 @@ switch state
 
 			if input.use_healthpack && healthpack > 0 && hp != max_hp
 			{
-				hp = max_hp;
-				healthpack -= 1;
+				state = "heal";
 			}
 			
 			//roll
@@ -414,6 +413,20 @@ switch state
 	#region wait
 		case "wait":
 			set_state_sprite(sPlayer_idle,0.2,0);
+		break;
+	#endregion
+	#region wait
+		case "heal":
+			set_state_sprite(sPlayer_pickup,0.4,0);
+			if animation_hit_frame(3)
+			{
+				hp = max_hp;
+				healthpack -= 1;
+			}
+			if animation_end()
+			{
+				state = "move";
+			}
 		break;
 	#endregion
 	#region death
