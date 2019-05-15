@@ -1,4 +1,4 @@
-image = draw_sprite(sPlatform, 0, x,y);
+draw_sprite(sPlatform, 0, x,y);
 
 if instance_exists(oPlayer)
 {

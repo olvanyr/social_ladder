@@ -116,8 +116,13 @@ switch (state)
 	#endregion
 	#region Dead
 		case "dead":
-			if self.object_index == oSlug
+			/*if self.object_index == oSlug
 			{
+				if animation_end()
+				{
+					state = "dead";
+				}
+				
 				if attack_once == true
 				{
 					rng = irandom_range(0,2);
@@ -137,11 +142,8 @@ switch (state)
 				{
 					death_state(die);
 				}
-				if animation_end()
-				{
-					state = "dead";
-				}
-			}else dead_state(die);
+				
+			}else*/ dead_state(die);
 		break;
 	#endregion
 	//mimic

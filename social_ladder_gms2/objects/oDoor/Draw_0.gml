@@ -1,4 +1,4 @@
-image = draw_sprite(door_sprite, animation_frame, x,y);
+draw_sprite(door_sprite, animation_frame, x,y);
 
 if instance_exists(oPlayer)
 {
