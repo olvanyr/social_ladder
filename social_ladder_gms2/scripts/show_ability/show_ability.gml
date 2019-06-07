@@ -4,7 +4,7 @@
 var c = c_black;
 var half_width = display_get_gui_width()/2;
 var half_height = display_get_gui_height()/2;
-show_debug_message(half_height);
+
 alpha += 0.01;
 draw_set_alpha(alpha);
 draw_rectangle_color(-10,-10,5000,5000,c,c,c,c,false);

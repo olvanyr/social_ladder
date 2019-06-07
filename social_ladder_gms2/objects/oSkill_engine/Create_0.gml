@@ -17,3 +17,8 @@ alpha = 0;
 
 // use to set the image of the miasma tree
 image = 0;
+
+// xp needed for trhe skill*
+xp_wall_jump = 2;
+xp_double_jump = 4;
+xp_cast = 6;

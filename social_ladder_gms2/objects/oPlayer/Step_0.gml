@@ -21,6 +21,8 @@
 	
 #endregion
 
+
+show_debug_message("experience : " + string(global.experience));
 //set new hp 
 health_bar_width = max_health_bar_width * (((hp * global.difficulty)/(max_hp * global.difficulty)));
 
