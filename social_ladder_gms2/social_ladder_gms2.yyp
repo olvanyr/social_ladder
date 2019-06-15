@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "587f4639-d23d-45ff-bec2-e54c7bd75596",
+            "Value": {
+                "id": "5d6ac006-7144-4854-a7d5-9cfe57eaa68e",
+                "resourcePath": "sprites\\sLava\\sLava.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "58d7be41-d0bd-4f1a-83b9-9398c170ac29",
             "Value": {
                 "id": "f563c90b-f98b-47e6-a5b4-8c9cfc4a77fa",
@@ -1452,6 +1460,14 @@
                 "id": "cd649511-76fd-4c2c-bc6c-65b458342420",
                 "resourcePath": "views\\7d76d8b0-3289-4ec0-a987-281d63b5fe67.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7e4ac852-3d82-46f6-8d9f-eb097c77c84e",
+            "Value": {
+                "id": "c35ed3a8-4bd6-464e-88f9-2da3c1643408",
+                "resourcePath": "objects\\oLava\\oLava.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2124,6 +2140,14 @@
                 "id": "08a0b498-26c4-42fb-b011-aafb39a3a175",
                 "resourcePath": "sprites\\sMimic_die\\sMimic_die.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "be506f36-e84b-4012-a941-4e3a02187802",
+            "Value": {
+                "id": "82bd8594-17c4-4a05-abed-d444df7ff47b",
+                "resourcePath": "rooms\\rMaggie\\rMaggie.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
