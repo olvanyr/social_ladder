@@ -3,9 +3,9 @@ event_inherited();
 
 
 // chase
-chassing_time = "time during witch the boss chase the player";
-casting_time = "time during witch the boss chase the player";
-timer = "for how long does the boss chase the player";
+chassing_time = 100;
+casting_time = 100;
+timer = 0;
 
 //view trigger
 					//fov = "field of view";
@@ -29,7 +29,7 @@ experience = 1;
 fly = "irandom(3) if 1 yes, other no";
 
 //mask
-mask = "sprite to use as mask";
+mask = sMaggie_mask;
 
 
 #region state
@@ -38,62 +38,27 @@ state = "idle";
 
 // idle
 idle = sMaggie_idle;
-idle_spd = 2;
+idle_spd = 1;
 
 // walk
 walk = sMaggie_walk;
-walk_anim_spd = 6;
-chase_speed = 2;
+walk_anim_spd = 3;
+chase_speed = 1;
 
 // knockback & stun
-knockback_sprite = "knockback sprite";
-stun_time = "time the enemy stay stun";
+knockback_sprite = sMaggie_idle;
+stun_time = 0;
 knockback = 4;
 knockback_speed = 0;
 
-contact_damage = "damage deal at contact";
+contact_damage = 4;
 
 // die
-die =  "death sprite";
-
-// Mimic variable
-transformation = "transformation sprite";
-
-// attack variable for Fist
-attack1 = "attack sprite";
-attack1_anim_spd = "animation speed";
-attack1_frame = "frame where to spawn the hitbox";
-attack1_mask = "mask of the attack";
-attack1_damage = "damage of the attack";
-
-attack2 = "attack sprite"; // not needed if the first animation had two attack
-attack2_anim_spd = "animation speed"; // not needed if the first animation had two attack
-attack2_frame = "frame where to spawn the hitbox";
-attack2_mask = "mask of the attack";
-attack2_damage = "damage of the attack";
-
-// roll
-
-roll = "roll sprite";
-roll_cooldown = "cooldawn of the roll";
-roll_speed = "speed of the roll";
-
-// last attack of the slug
-attack_once = "get if the last attack has alredy happened";
-rng = "make the last attack randomly happened";
-
-// charge for the scratcher
-charge = "sprite of the charge";
-charge_damage = "damage of the attack";
-attack_charge_range = "fov for the charge attack";
-knockback_charge = "knockback dealed";
-charge_mask = "mask of the attack";
-charge_anim_spd = "spee dof the charge animation";
-charge_speed = "move speed of the charge";
+die =  sMaggie_die;
 
 // shot for distance
-shot = "sprite of shot";
-shot_anim_spd = "speed of the animation";
+shot = sMaggie_attack;
+shot_anim_spd = 1;
 shot_frame = "frame where to spawn the hitbox";
 
 #endregion

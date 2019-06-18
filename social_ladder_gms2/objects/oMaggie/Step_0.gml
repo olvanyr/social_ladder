@@ -1,10 +1,18 @@
+show_debug_message(state);
+
 switch (state)
 {
 	#region idle
 		case "idle":
 			set_state_sprite(idle,idle_spd,0);
-			state = choose("chase");
-			timer = 0;			
+			state = choose("chase","cast");
+			timer = 0;
+			image_xscale = sign(oPlayer.x - x);
+			if hp <= (max_hp/4)*3
+			{
+				hp = (max_hp/4)*3;
+				state = "speak1";
+			}
 		break;
 	#endregion
 	#region Chase
@@ -12,12 +20,22 @@ switch (state)
 		
 			set_state_sprite(walk,walk_anim_spd,0);
 			
-			if timer >= chassing_time
+			if timer <= chassing_time
 			{
+				/*
 				image_xscale = sign(oPlayer.x - x);
 				
 				if abs(oPlayer.x - x) < 2 image_xscale = 0
 				if (image_xscale == 0) image_xscale = 1;
+				var direction_facing = image_xscale;
+				move_and_collide(direction_facing * chase_speed, 0);
+				*/
+				if place_meeting(x + image_xscale,y,oEnemy_wall)
+				{
+					image_xscale = !image_xscale;
+				}
+				var direction_facing = image_xscale;
+				move_and_collide(direction_facing * chase_speed,0);
 			}else state = "idle";
 			
 		break;
@@ -26,10 +44,15 @@ switch (state)
 		case "cast":
 			set_state_sprite(shot,shot_anim_spd,0);
 		
-			if timer >= casting_time
+			if timer <= casting_time
 			{
 				//creat projectile
-			}
+			}else state = "idle";
+		break;
+	#endregion
+	#region speak
+		case "speak1":
+			set_state_sprite(idle,idle_spd,0);
 		break;
 	#endregion
 	#region Death

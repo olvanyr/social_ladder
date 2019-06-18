@@ -21,6 +21,7 @@ switch tab
 		
 					sprite = asset_get_index(sprite);
 					draw_sprite(sprite,0,0,0); 
+					show_debug_message(string(sprite));
 				}
 			}
 		#endregion
