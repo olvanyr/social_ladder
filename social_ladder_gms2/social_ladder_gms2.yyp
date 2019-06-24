@@ -1103,6 +1103,14 @@
             }
         },
         {
+            "Key": "60ed9c2c-adbe-4780-b9fe-9d84272b8758",
+            "Value": {
+                "id": "cb8a09d4-7696-433a-95f7-fe993fe92307",
+                "resourcePath": "sprites\\sBox_maggie\\sBox_maggie.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "60ff6371-716d-47e7-a538-ca87a789319e",
             "Value": {
                 "id": "deeaec1e-e58c-4996-815a-98f0e1b5921d",
@@ -1855,6 +1863,14 @@
             }
         },
         {
+            "Key": "a2474da4-37b7-4203-96d1-2987e3cdce70",
+            "Value": {
+                "id": "f586cfae-49ff-4e97-b0b8-47b174888e30",
+                "resourcePath": "objects\\oMaggie_projectile\\oMaggie_projectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a5a5ccd8-148b-4c34-a1f5-db50f1b2b5f2",
             "Value": {
                 "id": "55a8a5f9-d978-4821-abd3-d5f0cbf766e1",
@@ -1924,6 +1940,14 @@
                 "id": "d505f0ba-f1e8-4436-b616-46ca60e367dc",
                 "resourcePath": "sprites\\sSlug_knockback\\sSlug_knockback.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ade93a6f-3b2d-4b6a-aedd-3b3ca4d8860b",
+            "Value": {
+                "id": "b59c1d71-53cf-4625-8655-c65c56c41f28",
+                "resourcePath": "fonts\\fMaggie\\fMaggie.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -2268,6 +2292,14 @@
                 "id": "5084d1ef-fabf-430b-b244-218a65598eea",
                 "resourcePath": "objects\\oSword\\oSword.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c68ea606-e5b6-45a5-9529-9bff4d44ed66",
+            "Value": {
+                "id": "14fdb797-be64-433e-ae4e-4005fe170c43",
+                "resourcePath": "scripts\\text_boss\\text_boss.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2868,7 +2900,8 @@
         "3686e456-ee60-49fd-a80c-dd8cb91fea23",
         "cfde271a-121f-46aa-8b29-ddfcad4c3879",
         "dddc8fc0-6b01-4e8c-9e06-2d2900fa14ca",
-        "56211719-18d2-48fb-aaf2-8125b9a108db"
+        "56211719-18d2-48fb-aaf2-8125b9a108db",
+        "c68ea606-e5b6-45a5-9529-9bff4d44ed66"
     ],
     "tutorial": ""
 }

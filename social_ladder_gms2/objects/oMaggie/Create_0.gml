@@ -1,6 +1,10 @@
 event_inherited();
 
-
+//dependencises
+if instance_exists(oCamera)
+{
+	cam = oCamera;
+}
 
 // chase
 chassing_time = 100;
@@ -38,11 +42,11 @@ state = "idle";
 
 // idle
 idle = sMaggie_idle;
-idle_spd = 1;
+idle_spd = 0.1;
 
 // walk
 walk = sMaggie_walk;
-walk_anim_spd = 3;
+walk_anim_spd = 0.8;
 chase_speed = 1;
 
 // knockback & stun
@@ -58,9 +62,34 @@ die =  sMaggie_die;
 
 // shot for distance
 shot = sMaggie_attack;
-shot_anim_spd = 1;
+shot_anim_spd = 0.5;
 shot_frame = "frame where to spawn the hitbox";
 
+#endregion
+#region text
+
+ybuffer = 10;
+line = "";
+line_part = "";
+
+c_text = c_black;
+font = fMaggie;
+
+text_buffer = 20;
+
+letters_count = 0;
+letter_speed = 0.5;
+time_bettween_line = 150;
+next_line = 0;
+
+timer = 0;
+
+once1 = true;
+
+lines[0] = "I here to free you";
+lines[1] = "The outside world is very hostile";
+lines[2] = "But it is yours now";
+lines[3] = "you will have to kill\nall of this creature";
 #endregion
 #region save and load
 once = true; //use to make the sav script happen only once when the enemy is dead
