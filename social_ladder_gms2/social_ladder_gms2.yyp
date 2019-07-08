@@ -2279,6 +2279,14 @@
             }
         },
         {
+            "Key": "c5804dd9-bee4-43c1-bdf5-f6b31934fe84",
+            "Value": {
+                "id": "4a88d890-d35d-4f96-b4f6-c28f5158f726",
+                "resourcePath": "rooms\\rSword\\rSword.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "c5d0618a-47fd-44f2-b1c3-6a86df255c65",
             "Value": {
                 "id": "a945a0e1-9d17-48ad-8d92-0b196f697e03",

@@ -6,7 +6,7 @@ if instance_exists(oPlayer)
 	var dir = oPlayer.image_xscale;
 	if collision_rectangle(x - (dir * 30),y - 30,x,y,oPlayer,false,false) && door_status == "closed" 
 	{
-		if boss == noone
+		if boss == noone || !instance_exists(boss)
 		{
 			if oInput.use
 			{

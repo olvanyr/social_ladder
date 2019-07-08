@@ -1,8 +1,41 @@
-if self.object_index == oFist
+if self.object_index == oFist || self.object_index == oSword
 {
 	roll_cooldown = manage_timer(roll_cooldown);
 }
 
+
+show_debug_message(distance_to_object(oPlayer));
+
+if place_meeting(x,y,oWall)
+{
+	if !place_meeting(x + 1,y,oWall)
+	{
+		x += 1
+	}
+	if !place_meeting(x - 1,y,oWall)
+	{
+		x -= 1
+	}
+}
+if place_meeting(x,y,oWall)
+{
+	if !place_meeting(x,y - 1,oWall)
+	{
+		y -= 1
+	}
+}
+
+if self.object_index == oFist || self.object_index == oSword || self.object_index == oScratcher
+			{
+				//jump on top of one block
+				if instance_exists(oPlayer)
+				{
+					if distance_to_object(oPlayer) < 50 && grounded && oPlayer.grounded && oPlayer.y + 5 < y
+					{
+						vsp = -7;
+					}
+				}
+			}
 
 switch (state)
 {
@@ -16,18 +49,6 @@ switch (state)
 		case "chase":
 			set_state_sprite(walk,walk_anim_spd,0);
 			state_chase();
-			
-			if self.object_index == oFist || self.object_index == oSword || self.object_index == oScratcher
-			{
-				//jump on top of one block
-				if instance_exists(oPlayer)
-				{
-					if oPlayer.grounded && grounded && oPlayer.y + 5 < y && oPlayer.y + 50 > y 
-					{
-						vsp = -7;
-					}
-				}
-			}
 		break;
 	#endregion
 	#region Attack

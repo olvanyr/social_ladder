@@ -1,1 +1,0 @@
-instance_create_layer(x,y - 50,"Effects",oMaggie_projectile);

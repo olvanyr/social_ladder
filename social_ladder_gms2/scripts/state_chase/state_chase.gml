@@ -1,7 +1,7 @@
 if(instance_exists(oPlayer))
 {
 	//dose the player is out of view or behind a wall ?
-	if collision_line(x + 20,y,oPlayer.x + 20,oPlayer.y,oWall,0,0) || (distance_to_object(oPlayer) > fov)
+	if collision_line(x ,y,oPlayer.x,oPlayer.y,oWall,0,0) || (distance_to_object(oPlayer) > fov)
 	{
 		if self.object_index == oMimic
 		{
@@ -51,14 +51,6 @@ if(instance_exists(oPlayer))
 			state = "shot";
 		}
 	}
-	// if you have the ability to roll, sometime instead or attacking your roll
-	if self.object_index == oSword || self.object_index == oFist
-	{
-		if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
-		{
-			state = "roll";
-		}
-	}
 	
 	// if the player is to far away to attack him, move forward
 	if distance_to_player > attack_range
@@ -66,6 +58,13 @@ if(instance_exists(oPlayer))
 		move_and_collide(direction_facing * chase_speed, 0);
 	}
 	
-	
+	// if you have the ability to roll, sometime instead or attacking your roll
+	if self.object_index == oSword || self.object_index == oFist
+	{
+		if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
+		{
+			state = "roll";
+		}
+	}	
 }
 
