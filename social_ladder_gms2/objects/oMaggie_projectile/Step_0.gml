@@ -15,5 +15,35 @@ vsp -= vsp_fraction;
 if !grounded
 {
 	move_and_collide(hsp,vsp);
-}else instance_destroy();
+}else 
+{
+	set_state_sprite(sPlayer_projectile_hitspark,1,0);
+	spd = 0;
+	instance_change(oHitspark,true)
+}
 
+
+if place_meeting(x + 1, y, oWall)
+{
+	set_state_sprite(sPlayer_projectile_hitspark,1,0);
+	spd = 0;
+	instance_change(oHitspark,true)
+}
+if place_meeting(x - 1, y, oWall)
+{
+	set_state_sprite(sPlayer_projectile_hitspark,1,0);
+	spd = 0;
+	instance_change(oHitspark,true)
+}
+if place_meeting(x, y + 1, oWall)
+{
+	set_state_sprite(sPlayer_projectile_hitspark,1,0);
+	spd = 0;
+	instance_change(oHitspark,true)
+}
+if place_meeting(x, y - 1, oWall)
+{
+	set_state_sprite(sPlayer_projectile_hitspark,1,0);
+	spd = 0;
+	instance_change(oHitspark,true)
+}

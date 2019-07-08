@@ -615,6 +615,14 @@
             }
         },
         {
+            "Key": "3370d510-8e8f-48d3-8a32-ab25b8a14f7f",
+            "Value": {
+                "id": "73730500-ed28-49e7-b210-7318f5ceeb2a",
+                "resourcePath": "sprites\\sMaggie_projectile_mask\\sMaggie_projectile_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3371e72c-9982-4879-b43d-0fd2da640cf4",
             "Value": {
                 "id": "30b3c162-567a-4349-ae43-1475e62c7cb7",

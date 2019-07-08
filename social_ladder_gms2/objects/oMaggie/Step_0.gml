@@ -36,14 +36,6 @@ switch (state)
 			
 			if timer <= chassing_time
 			{
-				/*
-				image_xscale = sign(oPlayer.x - x);
-				
-				if abs(oPlayer.x - x) < 2 image_xscale = 0
-				if (image_xscale == 0) image_xscale = 1;
-				var direction_facing = image_xscale;
-				move_and_collide(direction_facing * chase_speed, 0);
-				*/
 				if place_meeting(x + image_xscale,y,oEnemy_wall)
 				{
 					image_xscale = -image_xscale;
@@ -60,7 +52,14 @@ switch (state)
 		
 			if timer <= casting_time
 			{
-				//creat projectile
+				if timer mod 10 == 0
+				{
+					with instance_create_layer(x,y - 50,"Effects",oMaggie_projectile)
+					{
+						creator = other;
+					}
+					
+				}
 			}else state = "idle";
 		break;
 	#endregion
@@ -73,6 +72,10 @@ switch (state)
 	#region Death
 		case "death":
 			death_state(die);
+			if instance_exists(oDoor)
+			{
+				oDoor.door_status = "open"
+			}
 		break;
 	#endregion
 	#region Dead
