@@ -5,12 +5,17 @@ switch (state)
 	#region idle
 		case "idle":
 			set_state_sprite(idle,idle_spd,0);
-			state = choose("chase","cast");
-			timer = 0;
+			if !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0)
+			{
+				if(distance_to_object(oPlayer) < fov) 
+				{
+					state = choose("chase","cast");
+					timer = 0;
+				}
+			}
 			image_xscale = sign(oPlayer.x - x);
 			
-			//if hp <= (max_hp/4)*3 && once1
-			if hp <= max_hp - 1 && once1
+			if hp <= (max_hp/4)*3 && once1
 			{
 				
 				once1 = false;
@@ -18,6 +23,25 @@ switch (state)
 				hp = (max_hp/4)*3;
 				
 				state = "speak";
+				
+				if instance_exists(oPlayer)
+				{
+					oPlayer.state = "wait";
+				}				
+				lines[0] = "text 1 ligne 1";
+				lines[1] = "text 1 ligne 2";
+				lines[2] = "text 1 ligne 3";
+			}
+			
+			if hp <= (max_hp/4)*1 && once2
+			{
+				
+				once2 = false;
+				
+				hp = (max_hp/4)*1;
+				
+				state = "speak";
+				
 				if instance_exists(oPlayer)
 				{
 					oPlayer.state = "wait";

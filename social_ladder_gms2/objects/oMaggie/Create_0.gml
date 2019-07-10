@@ -11,14 +11,15 @@ chassing_time = 100;
 casting_time = 100;
 timer = 0;
 
+fov = 160;
+
 //view trigger
 					//fov = "field of view";
 attack_range = "distance where self start attacking";
 attack_distance_range = "distance witch self shot";
 
 //health
-//hp = 80;
-hp = 10;
+hp = 80;
 max_hp = hp;
 
 //colision variables
@@ -86,6 +87,7 @@ next_line = 0;
 timer = 0;
 
 once1 = true;
+once2 = true;
 
 lines[0] = "I here to free you";
 lines[1] = "The outside world is very hostile";

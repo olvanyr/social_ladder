@@ -25,17 +25,7 @@ if place_meeting(x,y,oWall)
 	}
 }
 
-if self.object_index == oFist || self.object_index == oSword || self.object_index == oScratcher
-			{
-				//jump on top of one block
-				if instance_exists(oPlayer)
-				{
-					if distance_to_object(oPlayer) < 50 && grounded && oPlayer.grounded && oPlayer.y + 5 < y
-					{
-						vsp = -7;
-					}
-				}
-			}
+
 
 switch (state)
 {
@@ -47,6 +37,18 @@ switch (state)
 	#endregion
 	#region Chase
 		case "chase":
+			if self.object_index == oFist || self.object_index == oSword || self.object_index == oScratcher
+			{
+				//jump on top of one block
+				if instance_exists(oPlayer)
+				{
+					if distance_to_object(oPlayer) < 50 && grounded && oPlayer.grounded && oPlayer.y + 5 < y
+					{
+						vsp = -7;
+					}
+				}
+			}
+
 			set_state_sprite(walk,walk_anim_spd,0);
 			state_chase();
 		break;
