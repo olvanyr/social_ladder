@@ -28,7 +28,24 @@ if place_meeting(x + _xspeed, y, wall)
 x += _xspeed;
 
 
+if place_meeting(x, y + _yspeed, wall)
+{
+	while !place_meeting(x, y + sign(_yspeed), wall)
+	{
+		y += sign(_yspeed);
+	}
+	
+	if sign(_yspeed) == 1
+	{
+		grounded = true;
+	}
+	_yspeed = 0;
+	vsp = 0;
+}
+y += _yspeed;
 
+
+/*  old way, don't remember why I have done it this way
 if !place_meeting(x, y + _yspeed, wall)
 {
 	y += _yspeed;
@@ -43,7 +60,7 @@ if place_meeting(x, y + _yspeed, wall)
 	}
 	vsp = 0;
 }
-
+*/
 
 if self == oPlayer
 {
