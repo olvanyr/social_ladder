@@ -48,6 +48,9 @@ if (instance_exists(follow))
 x += (xTo - x ) / smooth_value;
 y += (yTo - y) / smooth_value;
 
+x = clamp(x,follow.x - 100 , follow.x + 100);
+y = clamp(y,follow.y - 80 , follow.y + 80);
+
 
 //Keep camera centre inside room
 x = clamp(x, view_w_half + buff, room_width - view_w_half - buff);
