@@ -14,15 +14,18 @@ move_and_collide(hsp,vsp);
 
 pathfinding_timer ++;
 
-if timer >= 10
+if instance_exists(oPlayer)
 {
-	timer = 0;
-	     if path_exists(path_building) {
-         path_delete (path_building);
-     }
-     path_point = 0 ;
-     action = 0 ;
-     jump_action = 0 ;
+	if pathfinding_timer >= 10 && oPlayer.grounded
+	{
+		pathfinding_timer = 0;
+		     if path_exists(path_building) {
+	         path_delete (path_building);
+	     }
+	     path_point = 0 ;
+	     action = 0 ;
+	     jump_action = 0 ;
 
-    fill_the_grid(floor(x/oGrid.cell_width), floor(y/oGrid.cell_height), floor(oPlayer.x/oGrid.cell_width), floor(oPlayer.y/oGrid.cell_height));
+	    fill_the_grid(floor(x/oGrid.cell_width), floor(y/oGrid.cell_height), floor(oPlayer.x/oGrid.cell_width), floor(oPlayer.y/oGrid.cell_height));
+	}
 }

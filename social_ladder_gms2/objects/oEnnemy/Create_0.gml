@@ -1,4 +1,4 @@
-timer = 0;
+pathfinding_timer = 0;
 
 // initialise te black color for debuging 
 draw_set_color(c_black);
@@ -12,8 +12,8 @@ path_building = noone;
 hsp = 0;
 vsp = 0;
 
-move_spd = 3;
-jump_spd = -15;
+move_spd = 1.7;
+jump_spd = -10;
 
 gravity_spd = 1;
 
@@ -26,5 +26,7 @@ action = 0;
 path_point = 0;
 jump_action = 0;
 
-
-alarm[0] = 10;
+if !instance_exists(oGrid)
+{
+	instance_create_layer(0,0,"Instances",oGrid);
+}
