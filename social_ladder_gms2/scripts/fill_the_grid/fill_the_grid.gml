@@ -27,7 +27,7 @@ for (var i=1; i<200; i+=1)
 {
     if path_found == 1 {
     ds_list_destroy(point_list); // We don't need the list anymore because we find a path.
-    ///ds_grid_destroy(ds_grid_pathfinding); /// Grid has to be delete. We keep it only for debuger purposes
+    ds_grid_destroy(ds_grid_pathfinding); /// Grid has to be delete. We keep it only for debuger purposes
     return path_found ;
     break ;
     }

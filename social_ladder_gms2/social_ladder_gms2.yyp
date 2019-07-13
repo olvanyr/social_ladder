@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "0a41f0f0-50c7-417e-b8af-897e00bc11d3",
+            "Value": {
+                "id": "dc9aa7ef-7021-49a7-8ce4-1a33f7ea69b4",
+                "resourcePath": "objects\\oSwordII\\oSwordII.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a4d70d8-0417-46f9-aeb3-9e6ee6672008",
             "Value": {
                 "id": "11200f8d-586b-4c25-848f-c1842f66fa64",
