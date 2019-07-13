@@ -19,6 +19,11 @@
 		instance_create_layer(x,y,"Instances", oMap)
 	}
 	
+	if !instance_exists(oZoom)
+	{
+		instance_create_layer(x,y,"Instances", oZoom)
+	}
+	
 #endregion
 
 //set new hp 
