@@ -2591,6 +2591,14 @@
             }
         },
         {
+            "Key": "dc4e06fa-aa5b-481c-a02a-e14bea473cb4",
+            "Value": {
+                "id": "cd377849-9170-4de0-a020-2da82d602781",
+                "resourcePath": "scripts\\state_chase_astar\\state_chase_astar.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dd142309-d74a-4a7e-b9d9-7463b833f317",
             "Value": {
                 "id": "52e57eb6-14f6-4f04-9166-5799531d1804",
@@ -2975,6 +2983,7 @@
         "e0823bf7-9b68-4807-b71a-385a2823b5f0",
         "e769f2c6-5e8a-43d4-abfc-229532e4c4cb",
         "8fcf4cee-13d5-4f1b-9720-881be749683c",
+        "dc4e06fa-aa5b-481c-a02a-e14bea473cb4",
         "da58cac0-0975-425b-81b9-f6bb384c829a",
         "43a6972f-30ee-48d9-a407-bdbdb7a35419",
         "f0c581a7-f91e-4924-9186-226688e209c1",
