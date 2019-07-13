@@ -89,6 +89,10 @@ shot = "sprite of shot";
 shot_anim_spd = "speed of the animation";
 shot_frame = "frame where to spawn the hitbox";
 
+//jump
+jump_up = "sprite use to look like jump up";
+jump_down = "sprite use to look like jump down";
+
 #endregion
 #region pathfinding
 

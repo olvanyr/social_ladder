@@ -81,6 +81,11 @@ shot = "sprite of shot";
 shot_anim_spd = "speed of the animation";
 shot_frame = "frame where to spawn the hitbox";
 
+//jump
+jump_up = sSword_jump;
+jump_down = "sprite use to look like jump down";
+
+
 #endregion
 #region save and load
 once = true; //use to make the sav script happen only once when the enemy is dead

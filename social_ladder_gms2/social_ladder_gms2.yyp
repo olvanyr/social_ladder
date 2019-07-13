@@ -1679,6 +1679,14 @@
             }
         },
         {
+            "Key": "88a9ca30-db11-4f2f-bb2c-555f0a9d70a3",
+            "Value": {
+                "id": "d8a8674d-2f0a-4096-bcda-506cd5cc35e8",
+                "resourcePath": "sprites\\sSword_jump\\sSword_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8a27ff7a-5d70-439b-bef6-b3fe51dbe4ed",
             "Value": {
                 "id": "f91a15b4-8a30-48d2-b2ee-25644d1b1fa5",

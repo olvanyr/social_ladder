@@ -85,6 +85,15 @@ switch (state)
 					set_state_sprite(idle,idle_spd,0);
 				}
 				
+				if vsp > 0
+				{
+					set_state_sprite(jump_up,0,1);
+				}
+				if vsp < 0
+				{
+					set_state_sprite(jump_up,0,0);
+				}
+				
 				// get the absolute distance to the player
 				var distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 				
