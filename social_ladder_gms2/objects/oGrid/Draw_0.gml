@@ -1,4 +1,5 @@
 /*
+draw_set_font(fDial);
 if ds_exists(global.ds_grid_pathfinding,ds_type_grid)
 {
 	for(var i = 0; i < ds_grid_width(global.ds_grid_pathfinding); i++)

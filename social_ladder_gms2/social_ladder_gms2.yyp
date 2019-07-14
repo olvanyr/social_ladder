@@ -1143,6 +1143,14 @@
             }
         },
         {
+            "Key": "5d8ab3a9-1bdb-4a50-9441-404975a51f46",
+            "Value": {
+                "id": "69e3ff3a-93bd-48c0-9617-538ffc4f58f3",
+                "resourcePath": "sprites\\sAbility_cast\\sAbility_cast.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "608c804f-de55-4ce6-989d-334c9bcb3e7c",
             "Value": {
                 "id": "de70760e-1c87-43e6-a8c6-b7a75c8d90bb",

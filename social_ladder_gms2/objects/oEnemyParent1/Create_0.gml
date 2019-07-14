@@ -37,6 +37,8 @@ idle_spd = "idle animation speed";
 walk = "walk sprite";
 walk_anim_spd = "walk animation speed";
 chase_speed = "walk speed";
+chase_timer = 0;
+chase_time_remaning = 60;
 
 // knockback & stun
 knockback_sprite = "knockback sprite";

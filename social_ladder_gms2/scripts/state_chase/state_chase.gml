@@ -54,12 +54,15 @@ if(instance_exists(oPlayer))
 		//dose the player is out of view or behind a wall ?
 		if collision_line(x ,y,oPlayer.x,oPlayer.y,oWall,0,0) || (distance_to_object(oPlayer) > fov)
 		{
-			if self.object_index == oMimic
+			if chase_timer <= 0
 			{
-				state = "hide";
-			}else state = "idle";
-			exit;
-		}
+				if self.object_index == oMimic
+				{
+					state = "hide";
+				}else state = "idle";
+				exit;
+			}
+		}else chase_timer = chase_time_remaning;
 	
 		if fly != 1 // does the enemy fly
 		{

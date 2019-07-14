@@ -54,6 +54,7 @@ global.enemy_list =
 [
 	oFist,
 	oSword,
+	oSwordII,
 	oRunner,
 	oRunnerII,
 	oMimic,

@@ -22,7 +22,7 @@ if place_meeting(x,y,oWall)
 	}
 }
 
-
+chase_timer = manage_timer(chase_timer);
 
 switch (state)
 {
