@@ -1,4 +1,4 @@
-show_debug_message("jelly state : " + string(state));
+//show_debug_message("jelly state : " + string(state));
 
 switch state 
 {
@@ -13,7 +13,7 @@ switch state
 		var dir = point_direction(x, y, oPlayer.x, oPlayer.y - ybuffer);
 		image_angle = dir;
 		
-		if timer mod 100 == 0
+		if timer mod accuracy == 0
 		{
 			player_x = oPlayer.x;
 			player_y = oPlayer.y;		
@@ -26,6 +26,8 @@ switch state
 			once1 = false;
 				
 			hp = (max_hp/4)*3;
+			
+			accuracy = 50;
 				
 			state = "speak";
 				
@@ -46,6 +48,8 @@ switch state
 			hp = (max_hp/4)*1;
 				
 			state = "speak";
+			
+			accuracy = 10;
 				
 			if instance_exists(oPlayer)
 			{
@@ -66,9 +70,12 @@ switch state
 		{
 			if timer mod 10 == 0
 			{
-				with instance_create_layer(x,y - 50,"Effects",oMaggie_projectile)
+				repeat 7
 				{
-					creator = other;
+					with instance_create_layer(x,y,"Effects",oJelly_trace)
+					{
+						creator = other;
+					}
 				}
 			}
 		}
@@ -80,18 +87,18 @@ switch state
 				image_xscale = 1;
 			}else image_xscale = -1;
 			var dir = point_direction(x, y, player_x, player_y - ybuffer);
-			var acceleration = 0.25;
+			var acceleration = 0.1;
 			motion_add(dir, acceleration);
 			var max_speed = 1;
 			if (speed > max_speed) speed = max_speed; 
 		}else state = "idle";	
 	break;
 	case "death":
-		death_state(sJelly);
+		death_state(die);
 	break;
 	
 	case "dead":
-		dead_state(sJelly);
+		dead_state(die);
 		if instance_exists(oDoor)
 		{
 			oDoor.door_status = "open"

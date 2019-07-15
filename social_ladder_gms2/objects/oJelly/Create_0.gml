@@ -10,12 +10,15 @@ if instance_exists(oCamera)
 chassing_time = 100;
 casting_time = 100;
 charge_time = 40;
+
+accuracy = 100;
+
 timer = 0;
 
 fov = 160;
 
 //health
-hp = 10;
+hp = 80;
 max_hp = hp;
 
 //XP
@@ -56,7 +59,7 @@ player_y = 0;
 charge_speed = 4;
 
 // die
-die =  sMaggie_die;
+die =  sJelly_die;
 
 #endregion
 #region text

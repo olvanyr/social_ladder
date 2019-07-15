@@ -42,14 +42,14 @@ if (instance_exists(follow))
 		x = xTo;
 		y = yTo;
 	}
+	
+	x = clamp(x,follow.x - 100 , follow.x + 100);
+	y = clamp(y,follow.y - 80 , follow.y + 80);
 }
 
 //update object position
 x += (xTo - x ) / smooth_value;
 y += (yTo - y) / smooth_value;
-
-x = clamp(x,follow.x - 100 , follow.x + 100);
-y = clamp(y,follow.y - 80 , follow.y + 80);
 
 
 //Keep camera centre inside room
