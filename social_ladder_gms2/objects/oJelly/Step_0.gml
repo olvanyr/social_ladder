@@ -19,7 +19,8 @@ switch state
 			player_y = oPlayer.y;		
 		}		
 		
-			
+		
+		
 		if hp <= (max_hp/4)*3 && once1
 		{
 				
@@ -28,6 +29,7 @@ switch state
 			hp = (max_hp/4)*3;
 			
 			accuracy = 50;
+			chase_speed = 1.5;
 				
 			state = "speak";
 				
@@ -50,7 +52,8 @@ switch state
 			state = "speak";
 			
 			accuracy = 10;
-				
+			chase_speed = 2;
+							
 			if instance_exists(oPlayer)
 			{
 				oPlayer.state = "wait";
