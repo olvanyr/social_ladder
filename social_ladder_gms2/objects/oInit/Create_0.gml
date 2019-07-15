@@ -65,7 +65,8 @@ global.enemy_list =
 	oScratcher,
 	oDistance,
 	oSpider,
-	oMaggie
+	oMaggie,
+	oJelly
 ]
 
 

@@ -495,6 +495,14 @@
             }
         },
         {
+            "Key": "210c8d0c-ad40-4035-93de-61c663c99f35",
+            "Value": {
+                "id": "79c784a8-38ae-4167-8270-939a32b9b44d",
+                "resourcePath": "objects\\oJelly_part\\oJelly_part.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "217a1aaf-9023-4d45-af3b-da14f7487694",
             "Value": {
                 "id": "4a128160-d9f1-4f88-a05e-407299bcbac0",

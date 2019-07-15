@@ -2,6 +2,7 @@
 /// @arg xSpeed
 /// @arg ySpeed
 
+
 if self == oPlayer
 {
 	mask_index = sPlayer_mask;

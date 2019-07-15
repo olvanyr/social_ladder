@@ -87,10 +87,11 @@ switch state
 		}else state = "idle";	
 	break;
 	case "death":
-		death_state(sFlying_die);
+		death_state(sJelly);
 	break;
+	
 	case "dead":
-		dead_state(sFlying_die);
+		dead_state(sJelly);
 		if instance_exists(oDoor)
 		{
 			oDoor.door_status = "open"
@@ -98,7 +99,7 @@ switch state
 	break;
 	
 	case "knockback":
-		knockback_state(sFlying_move, "stunt");
+		knockback_state(sJelly, "stunt");
 		alarm[1] = stun_time;
 	break;
 	#region Charge
@@ -118,7 +119,7 @@ switch state
 			text_boss("idle");
 		break;
 	#endregion
-		#region cast
+	#region cast
 		case "cast":
 			set_state_sprite(shot,shot_anim_spd,0);
 		
