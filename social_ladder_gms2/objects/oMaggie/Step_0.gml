@@ -82,7 +82,6 @@ switch (state)
 					{
 						creator = other;
 					}
-					
 				}
 			}else state = "idle";
 		break;

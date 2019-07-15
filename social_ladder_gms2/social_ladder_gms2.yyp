@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "152073e3-038f-41a2-a9b9-2e7cacd23b79",
+            "Value": {
+                "id": "041b58b8-72bd-4d18-974a-8e268a413605",
+                "resourcePath": "sprites\\sJelly_mask\\sJelly_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "156c80da-368c-4b9e-8b13-df50422a5693",
             "Value": {
                 "id": "fd1e206c-fdb6-4768-b53c-911f8c1fe3f9",
@@ -1279,6 +1287,14 @@
             }
         },
         {
+            "Key": "697ab67e-0da5-49f7-b129-6153124d54f8",
+            "Value": {
+                "id": "c90dd1fa-0dd6-4392-b728-2abd125911f5",
+                "resourcePath": "views\\697ab67e-0da5-49f7-b129-6153124d54f8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "69d6fc84-c4f5-43bf-85ec-5121e3315c4d",
             "Value": {
                 "id": "9402caea-6741-4242-9950-bbce8d716633",
@@ -1548,6 +1564,14 @@
                 "id": "c35ed3a8-4bd6-464e-88f9-2da3c1643408",
                 "resourcePath": "objects\\oLava\\oLava.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7e507f03-d191-490d-8bd9-717b13ec8229",
+            "Value": {
+                "id": "13218e44-2396-411e-a09a-ee7a2a0d6011",
+                "resourcePath": "sprites\\sJelly\\sJelly.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1983,6 +2007,14 @@
             }
         },
         {
+            "Key": "a8beded4-0982-4425-9542-9f18ebf94698",
+            "Value": {
+                "id": "1f6b704b-05c7-4542-9aef-92f94e7a997d",
+                "resourcePath": "rooms\\rJelly\\rJelly.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "f22c0692-28ed-41e8-be21-2c2109e04553",
@@ -2356,6 +2388,14 @@
                 "id": "167c226d-663e-4df2-a9de-5a5ce55b3b0e",
                 "resourcePath": "sprites\\sDust1\\sDust1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c3c31653-eca0-4a63-bf2a-5cbd2b49e900",
+            "Value": {
+                "id": "1ed5316b-b935-4b19-aa29-80019b257fee",
+                "resourcePath": "objects\\oJelly\\oJelly.yy",
+                "resourceType": "GMObject"
             }
         },
         {

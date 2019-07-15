@@ -25,6 +25,6 @@ switch state
 	break;
 	case "knockback":
 		knockback_state(sFlying_move, "stunt");
-		alarm[1] = stunt_time;
+		alarm[1] = stun_time;
 	break;
 }

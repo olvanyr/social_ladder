@@ -10,7 +10,7 @@ speed = 0;
 state = "idle";
 fov = 150;
 ybuffer = sprite_get_height(sPlayer_mask);
-stunt_time = 20;
+stun_time = 20;
 experience = 1;
 
 // save and load

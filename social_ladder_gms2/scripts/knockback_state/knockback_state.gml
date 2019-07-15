@@ -7,7 +7,10 @@ var _next_state = argument1;
 var _knockback_friction = 0.4;
 
 set_state_sprite(_knockback_spirte, 0,0);
-if object_index != oFlying image_xscale = -sign(knockback_speed);
+if object_index != oFlying && object_index != oJelly
+{
+	image_xscale = -sign(knockback_speed);
+}
 
 move_and_collide(knockback_speed,0);
 
