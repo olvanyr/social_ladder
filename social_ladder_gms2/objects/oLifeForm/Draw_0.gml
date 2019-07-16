@@ -25,4 +25,13 @@ if flash > 0
 	gpu_set_blendmode(bm_normal);
 }
 
+if flash == 0
+{
+	// Flash shader value for white
+	red = 255;
+	green = 255;
+	blue = 255;
+
+}
+
 

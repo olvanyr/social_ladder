@@ -1,24 +1,44 @@
 //show_debug_message("jelly state : " + string(state));
 
+
+//every time timer hit the accuracy multiple, the dir in witch jemmy go is update
+if timer mod accuracy == 0
+{
+	player_x = oPlayer.x;
+	player_y = oPlayer.y;		
+	dir = point_direction(x, y, player_x, player_y - ybuffer);
+}	
+
+//orientation of the sprite
+var angle = point_direction(x, y, oPlayer.x, oPlayer.y - ybuffer);
+image_angle = angle;
+		
+		
 switch state 
 {
 	case "idle" : 
 		set_state_sprite(idle,idle_spd,0);
-		state = choose("chase","chase");
+		state = choose("chase","chase","charge");
+		
+		if last_state == "charge" && state == "charge"
+		{
+			state = "chase";
+		}
+		last_state = state;
+		
+		if state == "charge"
+		{
+			// Flash shader value
+			flash = 1;
+			red = 158;
+			green = 0;
+			blue = 0;
+
+		}
 		
 		trace = irandom(3);
 		timer = 0;
-		speed = 0;
-		
-		var dir = point_direction(x, y, oPlayer.x, oPlayer.y - ybuffer);
-		image_angle = dir;
-		
-		if timer mod accuracy == 0
-		{
-			player_x = oPlayer.x;
-			player_y = oPlayer.y;		
-		}		
-		
+	
 		
 		
 		if hp <= (max_hp/4)*3 && once1
@@ -89,8 +109,7 @@ switch state
 			{
 				image_xscale = 1;
 			}else image_xscale = -1;
-			var dir = point_direction(x, y, player_x, player_y - ybuffer);
-			var acceleration = 0.1;
+			var acceleration = 0.25;
 			motion_add(dir, acceleration);
 			var max_speed = 1;
 			if (speed > max_speed) speed = max_speed; 
@@ -114,19 +133,33 @@ switch state
 	break;
 	#region Charge
 		case "charge":
-			if timer <= charge_time
+		
+			last_state = state;
+		
+			if timer < charge_time && timer > wait_time
 			{
-				var dir = point_direction(x, y, player_x, player_y - ybuffer);
-				var acceleration = 0.4;
+				if x - oPlayer.x > 0 
+				{
+					image_xscale = 1;
+				}else image_xscale = -1;
+				var acceleration = 0.25;
 				motion_add(dir, acceleration);
-				//move_and_collide(lengthdir_x(charge_speed,dir),lengthdir_y(charge_speed,dir));
-			}else state = "idle";
+				var max_speed = 3;
+				if (speed > max_speed) speed = max_speed; 
+			}
+			if timer > charge_time && timer > wait_time
+			{
+				state = "idle";
+			} 
 		break;
 	#endregion
 	#region speak
 		case "speak":
+			timer = 0;
+			speed = 0;
 			set_state_sprite(idle,idle_spd,0);
-			text_boss("idle");
+			text_boss("stunt");
+			alarm[1] = stun_time * 3;
 		break;
 	#endregion
 	#region cast

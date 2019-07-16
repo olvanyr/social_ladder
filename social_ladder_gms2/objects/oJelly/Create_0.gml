@@ -9,7 +9,11 @@ if instance_exists(oCamera)
 // chase
 chassing_time = 100;
 casting_time = 100;
-charge_time = 40;
+charge_time = 70;
+wait_time = 10;
+dir = 0;
+
+last_state = noone;
 
 accuracy = 100;
 
