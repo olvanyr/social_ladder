@@ -15,6 +15,7 @@ draw_sprite(sprite,0,half_width,half_height);
 
 draw_set_alpha(1);
 
+if instance_exists(oPlayer) oPlayer.state = "wait";
 
 if alpha >= 1
 {
@@ -23,6 +24,7 @@ if alpha >= 1
 		showcase = false;
 		ability = noone;
 		alpha = 0;
+		oPlayer.state = "move";
 	}
 }
 

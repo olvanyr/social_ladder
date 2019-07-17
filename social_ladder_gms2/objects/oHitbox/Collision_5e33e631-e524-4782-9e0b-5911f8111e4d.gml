@@ -1,4 +1,4 @@
-if creator == noone || creator == other || ds_list_find_index(hit_objects, other) != -1 || other.state == "death" || other.state == "roll" || other.state == "dead"
+if creator == noone || creator == other || ds_list_find_index(hit_objects, other) != -1 || other.state == "death" || other.state == "roll" || other.state == "dead" || other.state == "wait"
 {
 	exit;
 }

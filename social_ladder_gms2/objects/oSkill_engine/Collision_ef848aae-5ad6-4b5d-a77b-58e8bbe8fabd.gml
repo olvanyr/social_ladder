@@ -4,5 +4,5 @@ if other.input.use && new_ability
 	global.save[? string(ability)] = variable_global_get(ability);
 	new_ability = false;
 	showcase = true;
-	//save_map();
+	save_map();
 }
