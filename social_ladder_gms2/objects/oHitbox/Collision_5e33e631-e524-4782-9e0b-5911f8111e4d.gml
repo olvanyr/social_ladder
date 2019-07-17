@@ -3,6 +3,7 @@ if creator == noone || creator == other || ds_list_find_index(hit_objects, other
 	exit;
 }
 
+
 if is_enemy(creator.object_index) && is_enemy(other.object_index) exit;
 
 if instance_exists(oPlayer)
@@ -22,13 +23,13 @@ if instance_exists(oPlayer)
 		//audio_play_sound();
 		if knockback != 0
 		{
-			if other.object_index != oLegs && other.object_index != oMaggie
+			if other.object_index != oLegs && other.object_index != oMaggie && other.object_index != oJelly && other.object_index != oDeer
 			{
 				other.state = "knockback";
 			}
 		}
 	}
-
+	
 	if creator.object_index == oPlayer
 	{
 		repeat (10)
@@ -65,3 +66,4 @@ if instance_exists(oPlayer)
 ds_list_add(hit_objects, other);
 other.knockback_speed = knockback * image_xscale;
 
+//show_debug_message("other.object_index : " + string(other.object_index));

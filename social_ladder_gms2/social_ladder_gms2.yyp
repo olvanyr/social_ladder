@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "0515cba2-0051-404e-b5d0-5380e1d69137",
+            "Value": {
+                "id": "7dfee755-7eec-4df4-9124-6851a0160d07",
+                "resourcePath": "sprites\\sDeer_caster\\sDeer_caster.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "054b40c0-9764-4863-ac50-80644663e9cd",
             "Value": {
                 "id": "2e57f42c-6749-41d4-9113-158f7f219429",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "17ba7062-295e-40e6-9a9e-fc1b88ff18c5",
+            "Value": {
+                "id": "c0eb9414-fdef-4639-b754-5f62cd578caa",
+                "resourcePath": "rooms\\rDeer\\rDeer.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "17fc63d8-7145-4c93-8495-37d91cb33533",
             "Value": {
                 "id": "9548f81f-4434-4708-8a90-710b1970ff89",
@@ -579,6 +595,14 @@
             "Value": {
                 "id": "33a07d39-7632-4535-bbbd-5b96875d822f",
                 "resourcePath": "sprites\\sMaggie_idle\\sMaggie_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2825d040-e35b-49e2-857d-681179d0423a",
+            "Value": {
+                "id": "c5376ed4-9e37-4cc2-972f-d0e40159fc0c",
+                "resourcePath": "sprites\\sDeer_ondulation\\sDeer_ondulation.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1167,6 +1191,14 @@
             }
         },
         {
+            "Key": "5fdebb69-dc91-4619-a57e-3563c555760c",
+            "Value": {
+                "id": "debe29be-c4b4-44a8-a9ea-0aa5b1115547",
+                "resourcePath": "sprites\\sDeer_die\\sDeer_die.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "608c804f-de55-4ce6-989d-334c9bcb3e7c",
             "Value": {
                 "id": "de70760e-1c87-43e6-a8c6-b7a75c8d90bb",
@@ -1615,11 +1647,27 @@
             }
         },
         {
+            "Key": "7fce5467-5ac0-4404-a24b-f50d551c64c1",
+            "Value": {
+                "id": "ec63d5a4-dd8d-44de-9b7b-5a45491ee5df",
+                "resourcePath": "sprites\\sDeer_cast\\sDeer_cast.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "80bfaff0-c1ef-46bd-b022-0693050ab304",
             "Value": {
                 "id": "a7317067-f7be-4740-a1f2-2c2b13f4dc7e",
                 "resourcePath": "sprites\\sPlayer_attack2_mask\\sPlayer_attack2_mask.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "818e8265-3adf-4cb2-b4ee-71997f8a5249",
+            "Value": {
+                "id": "f37d7f68-4ea8-4cee-b547-83780bc3e5ff",
+                "resourcePath": "views\\818e8265-3adf-4cb2-b4ee-71997f8a5249.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1820,6 +1868,14 @@
                 "id": "a9872466-8110-4c6c-a868-f10ab974eb0d",
                 "resourcePath": "sprites\\sSlug_attack1_mask\\sSlug_attack1_mask.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "92c3c8c4-482b-46cb-9f7d-4e6078d9db21",
+            "Value": {
+                "id": "fc82748e-ff0c-48d3-803b-03fe59be6034",
+                "resourcePath": "objects\\oDeer_caster\\oDeer_caster.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2319,6 +2375,14 @@
             }
         },
         {
+            "Key": "b9fc85c9-1df2-4800-875c-8e89fc0b0ebf",
+            "Value": {
+                "id": "d5f92572-6d83-4cb8-a25e-1647702bd3fc",
+                "resourcePath": "sprites\\sDeer_walk\\sDeer_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bade89a8-50be-4a35-bada-bc306a5cc75e",
             "Value": {
                 "id": "97b6d131-7c58-4aa0-94a7-57547608732d",
@@ -2347,6 +2411,14 @@
             "Value": {
                 "id": "40763c60-ab98-4350-96b2-f06ef35a8a08",
                 "resourcePath": "sprites\\sRunnerII_walk\\sRunnerII_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bf66d174-5c9f-4ecd-a8ba-9dba912da873",
+            "Value": {
+                "id": "7ab91a82-65db-49a7-9352-08c809ec4025",
+                "resourcePath": "sprites\\sDeer_idle\\sDeer_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2639,6 +2711,14 @@
             }
         },
         {
+            "Key": "d9fa44d1-0061-46a3-b4dd-744f05272f17",
+            "Value": {
+                "id": "f134f282-d47c-4b7e-94db-89c3ece61a2f",
+                "resourcePath": "objects\\oDeer\\oDeer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "da58cac0-0975-425b-81b9-f6bb384c829a",
             "Value": {
                 "id": "c3af206e-dd4b-4b85-8dc7-2e722f5212ea",
@@ -2807,6 +2887,14 @@
             }
         },
         {
+            "Key": "eb6ff1b5-e32c-41fd-baaf-a0f5b0acea2c",
+            "Value": {
+                "id": "da5237e7-01a3-4522-9077-c5e87260ecac",
+                "resourcePath": "sprites\\sDeer_mask\\sDeer_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eb9a6be2-2068-49d8-bd54-f355aa30a7c8",
             "Value": {
                 "id": "1b7076c1-eafe-4446-b651-9abb4bc48bfa",
@@ -2836,6 +2924,14 @@
                 "id": "42042428-16e7-4fa2-8e87-f8ff04da88c0",
                 "resourcePath": "views\\eca006d1-2718-43ba-a289-53faa3daf683.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ed7b3033-bfe7-4aef-9b51-58b3b7d242e1",
+            "Value": {
+                "id": "3701542f-33e6-40b9-aaeb-ff6ddca8f080",
+                "resourcePath": "sprites\\sDeer_caster_destroy\\sDeer_caster_destroy.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

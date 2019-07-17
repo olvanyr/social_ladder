@@ -6,7 +6,7 @@ draw_set_font(font);
 
 
 display_set_gui_size(global.ideal_width,global.ideal_height);
-var halph_w = (display_get_gui_width() + oPlayer.x - oMaggie.x)/2;
+var halph_w = (display_get_gui_width() + oPlayer.x - x)/2;
 var halph_h = display_get_gui_height()/2;
 
 

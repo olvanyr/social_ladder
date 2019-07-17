@@ -1,4 +1,4 @@
-//show_debug_message(state);
+show_debug_message(state);
 
 switch (state)
 {

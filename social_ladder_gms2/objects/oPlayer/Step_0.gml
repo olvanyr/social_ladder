@@ -27,7 +27,9 @@
 #endregion
 
 
-show_debug_message("player state : " + string(state));
+//show_debug_message("player state : " + string(state));
+
+
 //set new hp 
 health_bar_width = max_health_bar_width * (((hp * global.difficulty)/(max_hp * global.difficulty)));
 
