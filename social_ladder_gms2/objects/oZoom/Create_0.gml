@@ -5,7 +5,7 @@ ds_map_add(room_status, room_get_name(room0),4);
 ds_map_add(room_status, room_get_name(room1),4);
 ds_map_add(room_status, room_get_name(rMaggie),3);
 ds_map_add(room_status, room_get_name(rJelly),3);
-ds_map_add(room_status, room_get_name(rDeer),4);
+ds_map_add(room_status, room_get_name(rDeer),3);
 
 purcent = 0;
 

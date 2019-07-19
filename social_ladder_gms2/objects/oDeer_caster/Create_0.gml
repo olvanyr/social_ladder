@@ -12,7 +12,7 @@ height = ystart - random_range(10,20);
 //actual cast
 timer = 0;
 
-casting_time = 100;
+casting_time = 200;
 
 //draw
 fade = false;

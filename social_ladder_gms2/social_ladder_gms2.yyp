@@ -2674,7 +2674,7 @@
             "Key": "cfb3eb2a-fc8f-4d2c-8c95-eafb5258c0fd",
             "Value": {
                 "id": "0295e2d3-a206-4975-a566-330f5250dd1e",
-                "resourcePath": "sprites\\sMaggie_projectile_loop\\sMaggie_projectile_loop.yy",
+                "resourcePath": "sprites\\sDeer_projectile_loop\\sDeer_projectile_loop.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2871,6 +2871,14 @@
             }
         },
         {
+            "Key": "e4ad20b7-26d2-4c67-ae60-915d03389e13",
+            "Value": {
+                "id": "bc0ab815-87f5-4a64-bf5e-cb730aa6fb68",
+                "resourcePath": "sprites\\sDeer_ondulation_mask\\sDeer_ondulation_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e4f29dc2-da31-4861-b2e6-316e058c34a5",
             "Value": {
                 "id": "2da30f1b-aadd-490d-bc01-de802b69c6ae",
@@ -3044,6 +3052,14 @@
                 "id": "212e8ef8-250d-4505-b150-ce77b07d652f",
                 "resourcePath": "views\\f507e627-1d11-4036-8e40-1730fa418c8b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f57db91f-9301-4af5-927e-31ac481430cd",
+            "Value": {
+                "id": "414d5bd5-319d-49e5-b455-c7830c2656c0",
+                "resourcePath": "sprites\\sDeer_ondulation_loop\\sDeer_ondulation_loop.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

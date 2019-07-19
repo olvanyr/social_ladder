@@ -2,7 +2,7 @@
     "id": "cfb3eb2a-fc8f-4d2c-8c95-eafb5258c0fd",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sMaggie_projectile_loop",
+    "name": "sDeer_projectile_loop",
     "For3D": false,
     "HTile": false,
     "VTile": false,

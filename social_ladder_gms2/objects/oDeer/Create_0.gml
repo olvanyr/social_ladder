@@ -67,6 +67,13 @@ shot = sDeer_cast;
 shot_anim_spd = 0.5;
 shot_frame = 9;
 
+// attack 1
+attack1 = sDeer_ondulation;
+attack1_anim_spd = 0.4;
+attack1_frame = 4;
+attack1_mask = sDeer_ondulation_mask;
+attack1_damage = 10;
+
 #endregion
 #region text
 

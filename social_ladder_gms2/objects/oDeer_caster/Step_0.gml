@@ -27,9 +27,9 @@ if y >= height
 		if timer <= casting_time
 		{
 			
-			if timer mod 40 = 0
+			if timer mod 50 = 0
 			{
-				with instance_create_layer(x,y - 50,"Effects",oMaggie_projectile)
+				with instance_create_layer(x,y - 50,"Effects",oDeer_projectile)
 				{
 					creator = other.creator;
 				}
@@ -45,7 +45,7 @@ if fade
 
 if alpha < 0 instance_destroy()
 
-repeat(7)
+repeat(4)
 {
 	with (instance_create_layer(x,y - 55,"Effects",oGround_effect))
 	{
