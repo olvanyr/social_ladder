@@ -775,6 +775,14 @@
             }
         },
         {
+            "Key": "3b6b6ff9-5934-4805-97dc-c28eeb67ded7",
+            "Value": {
+                "id": "399e2e8f-ea67-49bc-8eed-bbc3d8a8e05e",
+                "resourcePath": "sprites\\sMaggie_projectile_loop1\\sMaggie_projectile_loop1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3b769975-bc4a-4921-a09e-377d2753e234",
             "Value": {
                 "id": "6cc07958-0cfb-47ff-8556-bcd9bea00d01",
@@ -1004,6 +1012,14 @@
                 "id": "c5a2663f-77bb-41a1-b12f-027a26522317",
                 "resourcePath": "sprites\\sRunner_idle\\sRunner_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4e81b38f-740d-45bf-99dc-0c21eeb38a8d",
+            "Value": {
+                "id": "dc5f9d70-e737-47cc-baed-ba7523b0eadc",
+                "resourcePath": "objects\\oDeer_projectile\\oDeer_projectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2655,6 +2671,14 @@
             }
         },
         {
+            "Key": "cfb3eb2a-fc8f-4d2c-8c95-eafb5258c0fd",
+            "Value": {
+                "id": "0295e2d3-a206-4975-a566-330f5250dd1e",
+                "resourcePath": "sprites\\sMaggie_projectile_loop\\sMaggie_projectile_loop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cfde271a-121f-46aa-8b29-ddfcad4c3879",
             "Value": {
                 "id": "84d68a25-2d96-498e-9786-d7e1ef633955",
@@ -3124,6 +3148,14 @@
                 "id": "97a2d809-4aab-4f4a-90f6-00a254d56f9c",
                 "resourcePath": "views\\fe90c8f8-659e-4930-8e0f-4641c053d3ed.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "feccf47d-ffe7-4fb9-948b-bed270c59dc2",
+            "Value": {
+                "id": "b65a46fc-9c5e-4154-b450-b6df515675cb",
+                "resourcePath": "sprites\\sMaggie_projectile_hitspark\\sMaggie_projectile_hitspark.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
