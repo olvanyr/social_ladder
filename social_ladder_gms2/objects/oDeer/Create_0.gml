@@ -53,7 +53,7 @@ chase_speed = 1;
 
 // knockback & stun
 knockback_sprite = sDeer_idle;
-stun_time = 0;
+stun_time = 20;
 knockback = 4;
 knockback_speed = 0;
 

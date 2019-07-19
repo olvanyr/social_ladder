@@ -7,7 +7,7 @@ if instance_exists(oPlayer)
 
 image_angle = dir;
 
-spd = random_range(2,4);
+spd = 2.5;
 hsp = lengthdir_x(spd,dir);
 vsp = lengthdir_y(spd,dir);
 

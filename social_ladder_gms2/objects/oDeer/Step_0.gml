@@ -8,19 +8,18 @@ switch (state)
 			{
 				if(distance_to_object(oPlayer) < fov) 
 				{
-					state = choose("chase","ondulation");
+					state = choose("chase","ondulation","cast");
 					timer = 0;
 				}
 			}
 			
 			//show_debug_message("Deer state : " + string(state));
 			
-			/*
-			if instance_exists(oDeer_caster) && state == "cast"
+			
+			if instance_exists(oDeer_ondulation)
 			{
 				state = choose("chase","cast");
 			}
-			*/
 				
 			image_xscale = - sign(oPlayer.x - x);
 			
@@ -100,6 +99,7 @@ switch (state)
 		case "speak":
 			set_state_sprite(idle,idle_spd,0);
 			text_boss("idle");
+			alarm[1] = stun_time * 3;
 		break;
 	#endregion
 	#region Death
@@ -120,10 +120,13 @@ switch (state)
 		case "ondulation":
 			// a normal firstt attack
 				set_state_sprite(attack1,attack1_anim_spd,0);
+				
 				if animation_hit_frame(attack1_frame)
 				{
-					//audio_play_sound(aMiss,3,0);
-					create_hitbox(x, y, self, attack1_mask, 3, 2, attack1_damage, image_xscale);
+					with instance_create_layer(x,y,"Walls",oDeer_ondulation)
+					{
+						creator = other;
+					}
 				}
 				
 				if animation_end()

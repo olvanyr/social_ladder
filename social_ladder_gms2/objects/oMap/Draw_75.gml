@@ -19,9 +19,10 @@ switch tab
 						var sprite = string("sMap_red_") + string(room_id);
 					}
 					
+					sprite = asset_get_index(sprite);
+					
 					if sprite_exists(sprite)
 					{
-						sprite = asset_get_index(sprite);
 						draw_sprite(sprite,0,0,0); 
 						//show_debug_message(string(sprite));
 					}

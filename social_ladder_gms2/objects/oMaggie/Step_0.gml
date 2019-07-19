@@ -90,6 +90,7 @@ switch (state)
 		case "speak":
 			set_state_sprite(idle,idle_spd,0);
 			text_boss("idle");
+			alarm[1] = stun_time * 3;
 		break;
 	#endregion
 	#region Death
