@@ -1,5 +1,5 @@
 
-if state == "death" || state == "roll" || state == "dead" exit;
+if state == "death" || state == "roll" || state == "dead" || state = "speak" ||state = "stun" exit;
 
 if self.object_index == oScratcher
 {

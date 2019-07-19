@@ -1,4 +1,12 @@
-show_debug_message(state);
+if hp <= (max_hp/4)*3 && once1
+{
+	hp = (max_hp/4)*3;
+}
+
+if hp <= (max_hp/4)*1 && once2
+{			
+	hp = (max_hp/4)*1;
+}
 
 switch (state)
 {
@@ -89,7 +97,7 @@ switch (state)
 	#region speak
 		case "speak":
 			set_state_sprite(idle,idle_spd,0);
-			text_boss("idle");
+			text_boss("stun");
 			alarm[1] = stun_time * 3;
 		break;
 	#endregion

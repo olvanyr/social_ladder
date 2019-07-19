@@ -12,7 +12,16 @@ if timer mod accuracy == 0
 //orientation of the sprite
 var angle = point_direction(x, y, oPlayer.x, oPlayer.y - ybuffer);
 image_angle = angle;
-		
+
+if hp <= (max_hp/4)*3 && once1
+{
+	hp = (max_hp/4)*3;
+}
+
+if hp <= (max_hp/4)*1 && once2
+{			
+	hp = (max_hp/4)*1;
+}
 		
 switch state 
 {
@@ -158,7 +167,7 @@ switch state
 			timer = 0;
 			speed = 0;
 			set_state_sprite(idle,idle_spd,0);
-			text_boss("stunt");
+			text_boss("stun");
 			alarm[1] = stun_time * 3;
 		break;
 	#endregion
