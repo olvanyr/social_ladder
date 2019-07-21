@@ -1999,6 +1999,14 @@
             }
         },
         {
+            "Key": "95ea0502-d83e-4c3a-b98e-2cb85d83436b",
+            "Value": {
+                "id": "d433e4fc-f8d6-4fe2-9d78-5c004e8832f1",
+                "resourcePath": "sprites\\sSquare_idle2\\sSquare_idle2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "966d3f7c-bf84-45e7-983f-d58044cee367",
             "Value": {
                 "id": "93fdbd30-73fb-4a3c-a7e9-6ce5ee49f514",

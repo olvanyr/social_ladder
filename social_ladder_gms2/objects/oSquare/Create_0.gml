@@ -46,6 +46,7 @@ form = "normal"; //use to store the current form of square
 
 // idle
 idle = sSquare_idle;
+idle2 = sSquare_idle2;
 idle_spd = 0.1;
 set_state_sprite(idle,idle_spd,0);
 // walk
@@ -69,14 +70,16 @@ shot = sSquare_rotate_end_projectile;
 shot_anim_spd = 0.5;
 shot_frame = 9;
 
-// attack 1
-/*
-attack1 = sSquare_ondulation;
-attack1_anim_spd = 0.4;
-attack1_frame = 4;
-attack1_mask = sSquare_ondulation_mask;
-attack1_damage = 10;
-*/
+// attack_pierces
+
+attack_pierces = sSquare_attack_pierces;
+attack_pierces_anim_spd = 0.4;
+pierces_spd = 3;
+left_border = 511;
+right_border = 800;
+dir = 1;
+
+
 
 //decomposing
 decomposing = sSquare_decomposing;

@@ -15,24 +15,25 @@ switch (state)
 {
 	#region idle
 		case "idle":
-		
-		
-			if timer > 180
-			{
+		dir = choose(-1,1);
 				if form == "square"
 				{
-					set_state_sprite(decomposing,0,image_number);
-					state = choose("fly","recomposing");
-					timer = 0;
+					set_state_sprite(idle2,0,0);
+					if timer > 180
+					{
+						state = choose("attack_pierces","recomposing");
+						timer = 0;
+					}
 				}
 				if form == "normal"
 				{
 					set_state_sprite(idle,idle_spd,0);
-			
-					state = choose("chase","decomposing");
-					timer = 0;
+					if timer > 180
+					{
+						state = choose("decomposing");
+						timer = 0;
+					}
 				}
-			}
 			
 				
 			//image_xscale = - sign(oPlayer.x - x);
@@ -97,23 +98,6 @@ switch (state)
 			
 		break;
 	#endregion
-	#region cast
-		case "cast":
-			set_state_sprite(shot,shot_anim_spd,0);
-			if animation_hit_frame(shot_frame)
-			{
-				with(instance_create_layer(x, y, "Effects", oDeer_caster))
-				{
-					creator = other;
-					image_xscale = other.image_xscale;
-				}
-			}
-			if animation_end()
-			{
-				state = "idle";
-			}
-		break;
-	#endregion
 	#region speak
 		case "speak":
 			set_state_sprite(idle,idle_spd,0);
@@ -157,6 +141,36 @@ switch (state)
 					state = "idle";
 					form = "normal";
 				}
+		break;
+	#endregion
+		#region attack pierces
+		case "attack_pierces":
+			set_state_sprite(attack_pierces,attack_pierces_anim_spd,0);
+
+			
+			image_xscale = dir;
+			if animation_hit_frame(3)
+			{
+				
+				image_speed = 0
+			}
+			/* have to check this
+			while x < left && dir == -1
+			{
+				x += dir * pierces_spd;
+			}
+			
+			while x < left && dir == -1
+			{
+				x += dir * pierces_spd;
+			}
+			*/
+			if animation_end()
+			{
+				timer = 0;
+				state = "idle";
+			}
+			
 		break;
 	#endregion
 }
