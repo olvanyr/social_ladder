@@ -35,24 +35,26 @@ experience = 1;
 fly = "irandom(3) if 1 yes, other no";
 
 //mask
-mask = sDeer_mask;
+mask = sSquare_mask;
 
 
 #region state
 
+
 state = "idle";
+form = "normal"; //use to store the current form of square
 
 // idle
-idle = sDeer_idle;
+idle = sSquare_idle;
 idle_spd = 0.1;
-
+set_state_sprite(idle,idle_spd,0);
 // walk
-walk = sDeer_walk;
-walk_anim_spd = 0.8;
-chase_speed = 1;
+walk = sSquare_walk;
+walk_anim_spd = 0.5;
+chase_speed = 0.8;
 
 // knockback & stun
-knockback_sprite = sDeer_idle;
+knockback_sprite = sSquare_idle;
 stun_time = 20;
 knockback = 4;
 knockback_speed = 0;
@@ -60,20 +62,26 @@ knockback_speed = 0;
 contact_damage = 4;
 
 // die
-die =  sDeer_die;
+die =  sSquare_die;
 
-// shot for distance
-shot = sDeer_cast;
+// shot
+shot = sSquare_rotate_end_projectile;
 shot_anim_spd = 0.5;
 shot_frame = 9;
 
 // attack 1
-attack1 = sDeer_ondulation;
+/*
+attack1 = sSquare_ondulation;
 attack1_anim_spd = 0.4;
 attack1_frame = 4;
-attack1_mask = sDeer_ondulation_mask;
+attack1_mask = sSquare_ondulation_mask;
 attack1_damage = 10;
+*/
 
+//decomposing
+decomposing = sSquare_decomposing;
+recomposing = sSquare_recomposing;
+decomposing_anim_spd = 0.5;
 #endregion
 #region text
 

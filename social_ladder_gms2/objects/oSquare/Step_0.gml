@@ -9,31 +9,34 @@ if hp <= (max_hp/4)*1 && once2
 	hp = (max_hp/4)*1;
 }
 
-show_debug_message("deer state : " + string(state));
+show_debug_message("Square state : " + string(state));
 
 switch (state)
 {
 	#region idle
 		case "idle":
-			set_state_sprite(idle,idle_spd,0);
-			if !collision_line(x,y,oPlayer.x,oPlayer.y,oWall,0,0)
+		
+		
+			if timer > 180
 			{
-				if(distance_to_object(oPlayer) < fov) 
+				if form == "square"
 				{
-					if !instance_exists(oDeer_ondulation)
-					{
-						if instance_number(oDeer_caster) >= 2
-						{
-							state = choose("chase","ondulation");
-						}else state = choose("chase","ondulation","cast");
-					}
-					
+					set_state_sprite(decomposing,0,image_number);
+					state = choose("fly","recomposing");
+					timer = 0;
+				}
+				if form == "normal"
+				{
+					set_state_sprite(idle,idle_spd,0);
+			
+					state = choose("chase","decomposing");
 					timer = 0;
 				}
 			}
-				
-			image_xscale = - sign(oPlayer.x - x);
 			
+				
+			//image_xscale = - sign(oPlayer.x - x);
+			#region speak init
 			if hp <= (max_hp/4)*3 && once1
 			{
 				
@@ -70,6 +73,7 @@ switch (state)
 				lines[2] = "text 2 ligne 3";
 				lines[3] = "ligne 4";
 			}
+			#endregion
 		break;
 	#endregion
 	#region Chase
@@ -85,7 +89,11 @@ switch (state)
 				}
 				var direction_facing = image_xscale;
 				move_and_collide(direction_facing * chase_speed,0);
-			}else state = "idle";
+			}else 
+			{
+				state = "idle";
+				timer = 0;
+			}
 			
 		break;
 	#endregion
@@ -127,22 +135,27 @@ switch (state)
 			dead_state(die);
 		break;
 	#endregion
-	#region ondulation
-		case "ondulation":
+	#region decomposing
+		case "decomposing":
 			// a normal firstt attack
-				set_state_sprite(attack1,attack1_anim_spd,0);
-				
-				if animation_hit_frame(attack1_frame)
-				{
-					with instance_create_layer(x,y,"Walls",oDeer_ondulation)
-					{
-						creator = other;
-					}
-				}
+				set_state_sprite(decomposing,decomposing_anim_spd,0);
 				
 				if animation_end()
 				{
 					image_speed = 0;
+					state = "idle";
+					form = "square";
+				}
+		break;
+		case "recomposing":
+			// a normal firstt attack
+				set_state_sprite(recomposing,decomposing_anim_spd,0);
+				
+				if animation_end()
+				{
+					image_speed = 0;
+					state = "idle";
+					form = "normal";
 				}
 		break;
 	#endregion
@@ -150,19 +163,3 @@ switch (state)
 
 
 timer ++;
-
-// is the enemy on ground ?
-if vsp != 0 grounded = false;
-
-//Aplly gravity
-
-vsp += gravity_speed;
-
-//Re apply fractions
-vsp += vsp_fraction;
-
-//Store and Remove fractions
-vsp_fraction = vsp - (floor(abs(vsp)) * sign(vsp));
-vsp -= vsp_fraction;
-
-move_and_collide(0,vsp);

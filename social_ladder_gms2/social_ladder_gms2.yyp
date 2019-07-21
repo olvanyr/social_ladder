@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "066a805b-c93b-4bd1-8fa5-e32191fddee6",
+            "Value": {
+                "id": "ca759a66-48e7-49c3-8e52-2be0b26d6b8e",
+                "resourcePath": "sprites\\sSquare_recomposing\\sSquare_recomposing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "072efa3c-09c2-4b92-b1dd-f1f98cb82dec",
             "Value": {
                 "id": "e4e49b30-7a50-45e0-8923-82eb7be96171",

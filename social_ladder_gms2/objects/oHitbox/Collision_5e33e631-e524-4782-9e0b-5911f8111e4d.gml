@@ -23,7 +23,7 @@ if instance_exists(oPlayer)
 		//audio_play_sound();
 		if knockback != 0
 		{
-			if other.object_index != oLegs && other.object_index != oMaggie && other.object_index != oJelly && other.object_index != oDeer
+			if other.object_index != oLegs && other.object_index != oMaggie && other.object_index != oJelly && other.object_index != oDeer && other.object_index != oSquare
 			{
 				other.state = "knockback";
 			}

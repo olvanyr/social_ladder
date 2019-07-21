@@ -67,7 +67,8 @@ global.enemy_list =
 	oSpider,
 	oMaggie,
 	oJelly,
-	oDeer
+	oDeer,
+	oSquare
 ]
 
 

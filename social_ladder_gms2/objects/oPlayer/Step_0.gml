@@ -225,13 +225,14 @@ switch state
 				if jump_timer >=0 || jump_counter == 1
 				{
 					vsp = jump_speed;
-					//the second jump is lower than the first
-					var modified_jump_speed = jump_speed * 0.75;
-					if jump_counter == 1 vsp = modified_jump_speed;
 					
 					if global.double_jump
 					{
-							jump_counter++;
+						//the second jump is lower than the first
+						var modified_jump_speed = jump_speed * 0.75;
+						if jump_counter == 1 vsp = modified_jump_speed;
+						
+						jump_counter++;
 					}else jump_counter += 2;
 
 					if !grounded && side_wall && global.wall_jump
@@ -492,13 +493,15 @@ hit = false;
 //Aplly gravity
 vsp += gravity_speed;
 
+if vsp > 0
+{
+	//Re apply fractions
+	vsp += vsp_fraction;
 
-//Re apply fractions
-vsp += vsp_fraction;
-
-//Store and Remove fractions
-vsp_fraction = frac(vsp);
-vsp -= vsp_fraction;
+	//Store and Remove fractions
+	vsp_fraction = frac(vsp);
+	vsp -= vsp_fraction;
+}
 
 
 move_and_collide(0,vsp);
