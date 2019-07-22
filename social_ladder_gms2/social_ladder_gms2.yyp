@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "17489a16-fc14-4838-94de-020e8da6d274",
+            "Value": {
+                "id": "3568b0c0-0354-4606-8966-385009ac5e13",
+                "resourcePath": "sprites\\sSquare_up\\sSquare_up.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "17ba7062-295e-40e6-9a9e-fc1b88ff18c5",
             "Value": {
                 "id": "c0eb9414-fdef-4639-b754-5f62cd578caa",
@@ -647,6 +655,14 @@
             }
         },
         {
+            "Key": "28849180-75cf-447e-bfbd-ede5818d9552",
+            "Value": {
+                "id": "ad567457-cb47-4b4a-9ddd-fe73cc3ce270",
+                "resourcePath": "sprites\\sSquare_diamonding\\sSquare_diamonding.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2921eb71-c0bb-4ae4-a5b5-32c88db538b8",
             "Value": {
                 "id": "06d1b722-1bd1-4d97-bd4c-d0741c66094f",
@@ -778,7 +794,7 @@
             "Key": "38357578-dfb1-4829-8a21-ea909269aa21",
             "Value": {
                 "id": "c906eef6-9ddb-4556-a1db-37185040735c",
-                "resourcePath": "sprites\\sSquare_attack_push\\sSquare_attack_push.yy",
+                "resourcePath": "sprites\\sSquare_charge\\sSquare_charge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2727,6 +2743,14 @@
             }
         },
         {
+            "Key": "c7ab8db4-15e8-4eea-95ff-dc258037ed3a",
+            "Value": {
+                "id": "a056ca01-c139-452c-9a19-ea9aa07a7ef0",
+                "resourcePath": "sprites\\sSquare_down\\sSquare_down.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c895bf50-173a-46bd-80f2-e380cc951342",
             "Value": {
                 "id": "8273ee6d-5e9f-48b7-870d-56c18f2b7997",
@@ -3268,6 +3292,14 @@
                 "id": "2cb7ac89-32d4-4e0d-8dae-149bff7a21e1",
                 "resourcePath": "views\\f85d23fc-0b53-4166-b415-5a20970f1de5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f8c19fa9-85cb-4aac-a5d4-f369e4c51e98",
+            "Value": {
+                "id": "a277c230-ceea-4121-9dec-564ac65d7827",
+                "resourcePath": "sprites\\sSquare_idle3\\sSquare_idle3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

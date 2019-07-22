@@ -47,7 +47,10 @@ form = "normal"; //use to store the current form of square
 // idle
 idle = sSquare_idle;
 idle2 = sSquare_idle2;
+idle3 = sSquare_idle3;
 idle_spd = 0.1;
+
+idle_wait_time = 180;
 set_state_sprite(idle,idle_spd,0);
 // walk
 walk = sSquare_walk;
@@ -79,12 +82,28 @@ left_border = 511;
 right_border = 800;
 dir = 1;
 
+position = "middle"; // use to track the postion of squarre left right middle
 
+//squaring
+squaring = sSquare_squaring;
+diamonding = sSquare_diamonding;
+squaring_anim_spd = 0.2;
 
 //decomposing
 decomposing = sSquare_decomposing;
 recomposing = sSquare_recomposing;
 decomposing_anim_spd = 0.5;
+
+//up
+up = sSquare_up;
+down = sSquare_down;
+up_anim_speed = 0.3;
+up_spd = 1;
+up_down = noone; //stor if th square goes up or down
+
+lvl = 0;
+lvl_height = 64;
+lvl_ground = 447;
 #endregion
 #region text
 

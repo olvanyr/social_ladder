@@ -15,25 +15,68 @@ switch (state)
 {
 	#region idle
 		case "idle":
-		dir = choose(-1,1);
-				if form == "square"
+			dir = sign(oPlayer.x - x);;
+			
+			if form == "diamond"
+			{
+				set_state_sprite(idle2,0,0);
+				if timer > idle_wait_time
 				{
-					set_state_sprite(idle2,0,0);
-					if timer > 180
-					{
-						state = choose("attack_pierces","recomposing");
-						timer = 0;
-					}
+					//state = choose("attack_pierces","recomposing","squaring","attack_pierces_middle");
+					state = choose("attack_pierces","attack_pierces_middle");
+					timer = 0;
 				}
-				if form == "normal"
+			}
+			
+			if form == "normal"
+			{
+				set_state_sprite(idle,idle_spd,0);
+				if timer > idle_wait_time
 				{
-					set_state_sprite(idle,idle_spd,0);
-					if timer > 180
-					{
-						state = choose("decomposing");
-						timer = 0;
-					}
+					state = choose("decomposing");
+					timer = 0;
 				}
+			}
+			
+			if form == "square"
+			{
+				set_state_sprite(idle3,idle_spd,0);
+				if timer > idle_wait_time
+				{
+					//state = choose("squaring","up");
+					state = choose("up");
+					timer = 0;
+				}
+			}
+			if position == "middle" && state = "attack_pierces_middle"
+			{
+				state = "attack_pierces"
+			}
+			if position == "left" || position == "right"
+			{
+				if state = "attack_pierces"
+				{
+					state = "attack_pierces_middle"
+				}
+			}
+			
+			if !place_meeting(x,y+1,oWall)
+			{
+				if state == "recomposing"
+				{
+					state = "idle";
+				}
+			}
+			
+			if place_meeting(x,y+1,oWall)
+			{
+				if state = "up"
+				{
+					show_debug_message("state was up but wall");
+					state = "idle";
+					timer = idle_wait_time;
+				}
+			}
 			
 				
 			//image_xscale = - sign(oPlayer.x - x);
@@ -128,7 +171,7 @@ switch (state)
 				{
 					image_speed = 0;
 					state = "idle";
-					form = "square";
+					form = "diamond";
 				}
 		break;
 		case "recomposing":
@@ -143,33 +186,171 @@ switch (state)
 				}
 		break;
 	#endregion
-		#region attack pierces
+	#region Squaring
+		case "squaring":
+			// a normal firstt attack
+			if form = "diamond"
+			{
+				set_state_sprite(squaring,squaring_anim_spd,0);
+				
+				if animation_end()
+				{
+					image_speed = 0;
+					state = "idle";
+					form = "square";
+				}
+			}
+			if form = "square"
+			{
+				set_state_sprite(diamonding,squaring_anim_spd,0);
+				
+				if animation_end()
+				{
+					image_speed = 0;
+					state = "idle";
+					form = "diamond";
+				}
+			}
+		break;
+	#endregion
+	#region attack pierces
 		case "attack_pierces":
 			set_state_sprite(attack_pierces,attack_pierces_anim_spd,0);
-
-			
+					
 			image_xscale = dir;
+			
 			if animation_hit_frame(3)
 			{
 				
 				image_speed = 0
 			}
-			/* have to check this
-			while x < left && dir == -1
+			
+			if dir == -1 
 			{
-				x += dir * pierces_spd;
+				if x <= left_border
+				{
+					image_speed = attack_pierces_anim_spd;
+					dir = -1;
+					position = "left";
+				}else x += dir * pierces_spd;
 			}
 			
-			while x < left && dir == -1
+			if dir == 1
 			{
-				x += dir * pierces_spd;
+				if x >= right_border
+				{
+					image_speed = attack_pierces_anim_spd;
+					dir = 1;
+					position = "right";
+				}else x += dir * pierces_spd;
 			}
-			*/
+			
 			if animation_end()
 			{
 				timer = 0;
 				state = "idle";
 			}
+			
+		break;
+	#endregion
+	#region attack pierces middle
+		case "attack_pierces_middle":
+			set_state_sprite(attack_pierces,attack_pierces_anim_spd,0);
+
+			image_xscale = dir;
+			
+			if animation_hit_frame(3)
+			{
+				
+				image_speed = 0
+			}
+			
+			if dir == -1 
+			{
+				if x <= left_border + ((right_border - left_border) / 2)
+				{
+					image_speed = attack_pierces_anim_spd;
+					dir = -1;
+					position = "middle";
+				}else x += dir * pierces_spd;
+			}
+			
+			if dir == 1
+			{
+				if x >= left_border + ((right_border - left_border) / 2)
+				{
+					image_speed = attack_pierces_anim_spd;
+					dir = 1;
+					position = "middle";
+				}else x += dir * pierces_spd;
+			}
+			
+			if animation_end()
+			{
+				timer = 0;
+				state = "idle";
+			}
+			
+		break;
+	#endregion
+	#region up/down
+		case "up":
+		
+		
+		if lvl == 1
+		{
+			if up_down == noone
+			{
+				up_down = "up";
+			}
+		}
+		
+		if lvl == 2 || lvl == 3
+		{
+			if up_down == noone
+			{
+				up_down = choose("up","down");
+			}
+		}
+		
+		if lvl == 4
+		{
+			if up_down == noone
+			{
+				up_down = "down";
+			}
+		}
+		
+		if up_down = "up"
+		{
+			set_state_sprite(up,up_anim_speed,0);
+			
+			if y >= lvl_ground - ((lvl + 1)*lvl_height)
+			{
+				y -= up_spd;
+			}else 
+			{
+				state = "idle";
+				lvl ++;
+				up_down = noone;
+			}
+		}
+		
+
+		if up_down = "down"
+		{
+			set_state_sprite(down,up_anim_speed,0);
+			
+			if y <= lvl_ground - ((lvl - 1)*lvl_height)
+			{
+				y += up_spd;
+			}else 
+			{
+				state = "idle";
+				lvl --;
+				up_down = noone;
+			}
+		}
 			
 		break;
 	#endregion
