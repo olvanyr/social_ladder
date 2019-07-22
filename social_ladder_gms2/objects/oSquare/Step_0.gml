@@ -22,8 +22,8 @@ switch (state)
 				set_state_sprite(idle2,0,0);
 				if timer > idle_wait_time
 				{
-					//state = choose("attack_pierces","recomposing","squaring","attack_pierces_middle");
-					state = choose("attack_pierces","attack_pierces_middle");
+					state = choose("attack_pierces","attack_pierces","decomposing","squaring","attack_pierces_middle");
+					//state = choose("attack_pierces","attack_pierces_middle");
 					timer = 0;
 				}
 			}
@@ -33,7 +33,7 @@ switch (state)
 				set_state_sprite(idle,idle_spd,0);
 				if timer > idle_wait_time
 				{
-					state = choose("decomposing");
+					state = choose("decomposing","chase");
 					timer = 0;
 				}
 			}
@@ -43,8 +43,8 @@ switch (state)
 				set_state_sprite(idle3,idle_spd,0);
 				if timer > idle_wait_time
 				{
-					//state = choose("squaring","up");
-					state = choose("up");
+					state = choose("squaring","up","up");
+					//state = choose("up");
 					timer = 0;
 				}
 			}
@@ -56,7 +56,7 @@ switch (state)
 			{
 				if state = "attack_pierces"
 				{
-					state = "attack_pierces_middle"
+					state = choose("attack_pierces_middle","attack_pierces")
 				}
 			}
 			
@@ -65,6 +65,7 @@ switch (state)
 				if state == "recomposing"
 				{
 					state = "idle";
+					timer = idle_wait_time;
 				}
 			}
 			
@@ -78,6 +79,13 @@ switch (state)
 				}
 			}
 			
+			if last_state == state
+			{
+				state = "idle";
+				timer = idle_wait_time;
+			}
+			
+			last_state = state;
 				
 			//image_xscale = - sign(oPlayer.x - x);
 			#region speak init
@@ -143,6 +151,22 @@ switch (state)
 	#endregion
 	#region speak
 		case "speak":
+		
+			var idle_sprite = idle;
+			
+			if form == "normal"
+			{
+				idle_sprite = sSquare_idle;
+			}
+			if form == "square"
+			{
+				idle_sprite = sSquare_idle3;
+			}
+			if form == "diamond"
+			{
+				idle_sprite = sSquare_idle2;
+			}
+			
 			set_state_sprite(idle,idle_spd,0);
 			text_boss("stun");
 			alarm[1] = stun_time * 3;
@@ -164,7 +188,9 @@ switch (state)
 	#endregion
 	#region decomposing
 		case "decomposing":
-			// a normal firstt attack
+		
+			if form = "normal"
+			{
 				set_state_sprite(decomposing,decomposing_anim_spd,0);
 				
 				if animation_end()
@@ -173,9 +199,9 @@ switch (state)
 					state = "idle";
 					form = "diamond";
 				}
-		break;
-		case "recomposing":
-			// a normal firstt attack
+			}
+			if form = "diamond"
+			{
 				set_state_sprite(recomposing,decomposing_anim_spd,0);
 				
 				if animation_end()
@@ -184,6 +210,7 @@ switch (state)
 					state = "idle";
 					form = "normal";
 				}
+			}
 		break;
 	#endregion
 	#region Squaring
@@ -297,7 +324,7 @@ switch (state)
 		case "up":
 		
 		
-		if lvl == 1
+		if lvl == 0
 		{
 			if up_down == noone
 			{
@@ -305,7 +332,7 @@ switch (state)
 			}
 		}
 		
-		if lvl == 2 || lvl == 3
+		if lvl == 1 || lvl == 2
 		{
 			if up_down == noone
 			{
@@ -313,19 +340,19 @@ switch (state)
 			}
 		}
 		
-		if lvl == 4
+		if lvl == 3
 		{
 			if up_down == noone
 			{
 				up_down = "down";
 			}
 		}
-		
+		show_debug_message("square up_down : " + string(up_down));
 		if up_down = "up"
 		{
 			set_state_sprite(up,up_anim_speed,0);
 			
-			if y >= lvl_ground - ((lvl + 1)*lvl_height)
+			if y > lvl_ground - ((lvl + 1)*lvl_height)
 			{
 				y -= up_spd;
 			}else 
@@ -341,7 +368,7 @@ switch (state)
 		{
 			set_state_sprite(down,up_anim_speed,0);
 			
-			if y <= lvl_ground - ((lvl - 1)*lvl_height)
+			if y < lvl_ground - ((lvl - 1)*lvl_height)
 			{
 				y += up_spd;
 			}else 
@@ -351,7 +378,6 @@ switch (state)
 				up_down = noone;
 			}
 		}
-			
 		break;
 	#endregion
 }

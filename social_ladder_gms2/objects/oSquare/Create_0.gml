@@ -42,6 +42,7 @@ mask = sSquare_mask;
 
 
 state = "idle";
+last_state = "noone";
 form = "normal"; //use to store the current form of square
 
 // idle
@@ -50,7 +51,7 @@ idle2 = sSquare_idle2;
 idle3 = sSquare_idle3;
 idle_spd = 0.1;
 
-idle_wait_time = 180;
+idle_wait_time = 120;
 set_state_sprite(idle,idle_spd,0);
 // walk
 walk = sSquare_walk;
