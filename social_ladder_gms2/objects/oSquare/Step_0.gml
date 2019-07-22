@@ -60,16 +60,16 @@ switch (state)
 				}
 			}
 			
-			if !place_meeting(x,y+1,oWall)
+			if position == "left" || position == "right"
 			{
-				if state == "recomposing"
+				if state == "decomposing"
 				{
 					state = "idle";
 					timer = idle_wait_time;
 				}
 			}
 			
-			if place_meeting(x,y+1,oWall)
+			if place_meeting(x,y+5,oWall)
 			{
 				if state = "up"
 				{
@@ -79,10 +79,11 @@ switch (state)
 				}
 			}
 			
-			if last_state == state
+			if last_state == state && state != "idle"
 			{
 				state = "idle";
 				timer = idle_wait_time;
+				exit;
 			}
 			
 			last_state = state;
@@ -167,7 +168,7 @@ switch (state)
 				idle_sprite = sSquare_idle2;
 			}
 			
-			set_state_sprite(idle,idle_spd,0);
+			set_state_sprite(idle_sprite,idle_spd,0);
 			text_boss("stun");
 			alarm[1] = stun_time * 3;
 		break;

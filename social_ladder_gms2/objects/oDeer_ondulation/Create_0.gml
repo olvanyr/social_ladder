@@ -10,3 +10,4 @@ attack_time = 100;
 once = true;
 
 alpha = 1;
+
