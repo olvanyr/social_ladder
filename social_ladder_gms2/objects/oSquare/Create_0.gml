@@ -11,7 +11,7 @@ chassing_time = 250;
 casting_time = 100;
 timer = 0;
 
-fov = 160;
+fov = 60;
 
 //view trigger
 					//fov = "field of view";
@@ -47,8 +47,8 @@ form = "normal"; //use to store the current form of square
 
 // idle
 idle = sSquare_idle;
-idle2 = sSquare_idle2;
-idle3 = sSquare_idle3;
+idle_diamond = sSquare_idle_diamond;
+idle_square = sSquare_idle_square;
 idle_spd = 0.1;
 
 idle_wait_time = 120;
@@ -85,10 +85,23 @@ dir = 1;
 
 position = "middle"; // use to track the postion of squarre left right middle
 
+// attack_charge
+
+attack_charge = sSquare_charge;
+attack_charge_anim_spd = 0.4;
+charge_spd = 5;
+
+//attack rotate
+attack1 = sSquare_rotate;
+attack1_anim_spd = 0.5;
+attack1_frame = 5;
+attack1_mask = sSquare_rotate_mask;
+attack1_damage = 7;
+
 //squaring
 squaring = sSquare_squaring;
 diamonding = sSquare_diamonding;
-squaring_anim_spd = 0.2;
+squaring_anim_spd = 0.5;
 
 //decomposing
 decomposing = sSquare_decomposing;

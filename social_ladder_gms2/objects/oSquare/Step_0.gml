@@ -1,4 +1,6 @@
 
+if !instance_exists(oPlayer) exit;
+
 if hp <= (max_hp/4)*3 && once1
 {
 	hp = (max_hp/4)*3;
@@ -10,23 +12,13 @@ if hp <= (max_hp/4)*1 && once2
 }
 
 show_debug_message("Square state : " + string(state));
+show_debug_message("Square form : " + string(form));
 
 switch (state)
 {
 	#region idle
 		case "idle":
 			dir = sign(oPlayer.x - x);;
-			
-			if form == "diamond"
-			{
-				set_state_sprite(idle2,0,0);
-				if timer > idle_wait_time
-				{
-					state = choose("attack_pierces","attack_pierces","decomposing","squaring","attack_pierces_middle");
-					//state = choose("attack_pierces","attack_pierces_middle");
-					timer = 0;
-				}
-			}
 			
 			if form == "normal"
 			{
@@ -38,25 +30,53 @@ switch (state)
 				}
 			}
 			
-			if form == "square"
+			if form == "diamond"
 			{
-				set_state_sprite(idle3,idle_spd,0);
+				set_state_sprite(idle_diamond,0,0);
+				
 				if timer > idle_wait_time
 				{
-					state = choose("squaring","up","up");
+					//state = choose("attack_pierces","attack_pierces","decomposing","squaring","attack_pierces_middle");
+					state = choose("attack_pierces","attack_pierces_middle");
+					timer = 0;
+					
+					if distance_to_object(oPlayer) < fov
+					{
+						state = choose(state,"attack_rotate");
+					}
+				}
+			}
+			
+			if form == "square"
+			{
+				set_state_sprite(idle_square,idle_spd,0);
+				if timer > idle_wait_time
+				{
+					state = choose("squaring","up","up","attack_charge_middle","attack_charge",);
 					//state = choose("up");
 					timer = 0;
 				}
 			}
+			
 			if position == "middle" && state = "attack_pierces_middle"
 			{
 				state = "attack_pierces"
 			}
+			
+			if position == "middle" && state = "attack_charge_middle"
+			{
+				state = "attack_charge"
+			}
+			
 			if position == "left" || position == "right"
 			{
 				if state = "attack_pierces"
 				{
 					state = choose("attack_pierces_middle","attack_pierces")
+				}
+				if state = "attack_charge"
+				{
+					state = choose("attack_charge_middle","attack_charge")
 				}
 			}
 			
@@ -79,16 +99,13 @@ switch (state)
 				}
 			}
 			
-			if last_state == state && state != "idle"
+			if last_state == state
 			{
 				state = "idle";
 				timer = idle_wait_time;
-				exit;
 			}
-			
-			last_state = state;
+			if state != "idle" last_state = state;
 				
-			//image_xscale = - sign(oPlayer.x - x);
 			#region speak init
 			if hp <= (max_hp/4)*3 && once1
 			{
@@ -161,11 +178,11 @@ switch (state)
 			}
 			if form == "square"
 			{
-				idle_sprite = sSquare_idle3;
+				idle_sprite = sSquare_idle_square;
 			}
 			if form == "diamond"
 			{
-				idle_sprite = sSquare_idle2;
+				idle_sprite = sSquare_idle_diamond;
 			}
 			
 			set_state_sprite(idle_sprite,idle_spd,0);
@@ -321,10 +338,83 @@ switch (state)
 			
 		break;
 	#endregion
+	#region attack charge
+		case "attack_charge":
+			set_state_sprite(attack_charge,attack_charge_anim_spd,0);
+					
+			image_xscale = dir;
+			
+			if animation_hit_frame(3)
+			{
+				
+				image_speed = 0
+			}
+			
+			if dir == -1 
+			{
+				if x <= left_border
+				{
+					image_speed = attack_charge_anim_spd;
+					dir = -1;
+					position = "left";
+					timer = 0;
+					state = "idle";
+				}else x += dir * charge_spd;
+			}
+			
+			if dir == 1
+			{
+				if x >= right_border
+				{
+					image_speed = attack_charge_anim_spd;
+					dir = 1;
+					position = "right";
+					timer = 0;
+					state = "idle";
+				}else x += dir * charge_spd;
+			}
+			
+		break;
+	#endregion
+	#region attack charge middle
+		case "attack_charge_middle":
+			set_state_sprite(attack_charge,attack_charge_anim_spd,0);
+
+			image_xscale = dir;
+			
+			if animation_hit_frame(3)
+			{
+				
+				image_speed = 0
+			}
+			
+			if dir == -1 
+			{
+				if x <= left_border + ((right_border - left_border) / 2)
+				{
+					image_speed = attack_charge_anim_spd;
+					dir = -1;
+					position = "middle";
+					timer = 0;
+					state = "idle";
+				}else x += dir * charge_spd;
+			}
+			
+			if dir == 1
+			{
+				if x >= left_border + ((right_border - left_border) / 2)
+				{
+					image_speed = attack_charge_anim_spd;
+					dir = 1;
+					position = "middle";
+					timer = 0;
+					state = "idle";
+				}else x += dir * charge_spd;
+			}
+		break;
+	#endregion
 	#region up/down
 		case "up":
-		
-		
 		if lvl == 0
 		{
 			if up_down == noone
@@ -378,6 +468,22 @@ switch (state)
 				lvl --;
 				up_down = noone;
 			}
+		}
+		break;
+	#endregion
+	#region attack rotate
+		case "attack_rotate":
+		set_state_sprite(attack1,attack1_anim_spd,0);
+		if animation_hit_frame(attack1_frame)
+		{
+			//audio_play_sound(aMiss,3,0);
+			create_hitbox(x, y, self, attack1_mask, 3, 2, attack1_damage, image_xscale);
+		}
+		
+		if animation_end()
+		{
+			state = "idle";
+			timer = 0;
 		}
 		break;
 	#endregion

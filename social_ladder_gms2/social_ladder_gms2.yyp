@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "1ffe95d9-74f2-4dd3-b4d8-af10c2b84662",
+            "Value": {
+                "id": "572f34df-1051-4a22-83a9-b6ae4d17d929",
+                "resourcePath": "sprites\\sSquare_rotate_mask\\sSquare_rotate_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2032ae3d-f43a-49a1-9705-119f91cdf7c8",
             "Value": {
                 "id": "b8d19040-3380-4c20-abe2-ca5dc40dd8e0",
@@ -2018,7 +2026,7 @@
             "Key": "95ea0502-d83e-4c3a-b98e-2cb85d83436b",
             "Value": {
                 "id": "d433e4fc-f8d6-4fe2-9d78-5c004e8832f1",
-                "resourcePath": "sprites\\sSquare_idle2\\sSquare_idle2.yy",
+                "resourcePath": "sprites\\sSquare_idle_diamond\\sSquare_idle_diamond.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3298,7 +3306,7 @@
             "Key": "f8c19fa9-85cb-4aac-a5d4-f369e4c51e98",
             "Value": {
                 "id": "a277c230-ceea-4121-9dec-564ac65d7827",
-                "resourcePath": "sprites\\sSquare_idle3\\sSquare_idle3.yy",
+                "resourcePath": "sprites\\sSquare_idle_square\\sSquare_idle_square.yy",
                 "resourceType": "GMSprite"
             }
         },

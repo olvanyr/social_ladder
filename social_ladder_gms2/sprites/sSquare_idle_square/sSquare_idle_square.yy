@@ -2,7 +2,7 @@
     "id": "f8c19fa9-85cb-4aac-a5d4-f369e4c51e98",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sSquare_idle3",
+    "name": "sSquare_idle_square",
     "For3D": false,
     "HTile": false,
     "VTile": false,
