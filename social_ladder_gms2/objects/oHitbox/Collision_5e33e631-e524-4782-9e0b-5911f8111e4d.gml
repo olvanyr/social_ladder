@@ -62,7 +62,8 @@ if other.state != "roll"
 
 ds_list_add(hit_objects, other);
 
-other.knockback_speed = knockback * sign(oPlayer.x - x);
-//other.knockback_speed = knockback * image_xscale; befor I change it
+
+//other.knockback_speed = knockback * sign(oPlayer.x - x);
+other.knockback_speed = knockback * image_xscale; //befor I change it
 
 //show_debug_message("other.object_index : " + string(other.object_index));

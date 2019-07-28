@@ -1,4 +1,7 @@
+
+draw_set_alpha(1);
 event_inherited();
+
 
 
 if state == "death" || state == "dead" exit;
