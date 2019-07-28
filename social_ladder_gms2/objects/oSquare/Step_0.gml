@@ -52,8 +52,8 @@ switch (state)
 				set_state_sprite(idle_square,idle_spd,0);
 				if timer > idle_wait_time
 				{
-					state = choose("squaring","up","up","attack_charge_middle","attack_charge",);
-					//state = choose("up");
+					//state = choose("squaring","up","up","attack_charge_middle","attack_charge",);
+					state = choose("squaring");
 					timer = 0;
 				}
 			}
@@ -478,6 +478,38 @@ switch (state)
 		{
 			//audio_play_sound(aMiss,3,0);
 			create_hitbox(x, y, self, attack1_mask, 3, 2, attack1_damage, image_xscale);
+		}
+		
+		if animation_end()
+		{
+			state = choose("rotate_end","rotate_projectile");
+			timer = 0;
+		}
+		break;
+	#endregion
+	#region rotate end
+		case "rotate_end":
+		set_state_sprite(rotate_end,rotate_end_anim_spd,0);
+		
+		if animation_end()
+		{
+			state = "idle";
+			timer = 0;
+		}
+		break;
+	#endregion
+	#region rotate prokjectile
+		case "rotate_projectile":
+		set_state_sprite(rotate_projectile,rotate_end_anim_spd,0);
+		dir = sign(oPlayer.x - x);;
+		if animation_hit_frame(rotate_projectile_frame)
+		{
+			//audio_play_sound(aMiss,3,0);
+			with instance_create_layer(x,y,"Effects",oSquare_projectile)
+			{
+				dir = other.dir;
+				contact_damage = other.rotate_projectile_damage;
+			}
 		}
 		
 		if animation_end()

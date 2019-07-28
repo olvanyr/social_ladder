@@ -36,6 +36,7 @@ if timer > attack_time
 if timer > attack_time * 1.5
 {
 	alpha -= 0.05;
+	image_alpha = alpha;
 }
 if alpha <= 0
 {

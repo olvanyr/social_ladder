@@ -98,6 +98,13 @@ attack1_frame = 5;
 attack1_mask = sSquare_rotate_mask;
 attack1_damage = 7;
 
+rotate_end = sSquare_rotate_end;
+rotate_projectile = sSquare_rotate_end_projectile;
+rotate_projectile_frame = 2;
+rotate_projectile_damage = 7;
+
+rotate_end_anim_spd = 0.4;
+
 //squaring
 squaring = sSquare_squaring;
 diamonding = sSquare_diamonding;

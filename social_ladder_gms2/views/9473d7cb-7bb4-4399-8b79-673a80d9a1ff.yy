@@ -21,7 +21,8 @@
         "f8c19fa9-85cb-4aac-a5d4-f369e4c51e98",
         "270dee29-0635-4f4e-9cc3-8fbc25385511",
         "6a5c0942-ed12-4b59-afd2-7444c745b09c",
-        "cf5d44c2-9a23-47d9-b7a1-54867a9551f8"
+        "cf5d44c2-9a23-47d9-b7a1-54867a9551f8",
+        "faa2c7d2-9ff8-46f3-a835-f34005fc4ce0"
     ],
     "filterType": "GMSprite",
     "folderName": "Square",
