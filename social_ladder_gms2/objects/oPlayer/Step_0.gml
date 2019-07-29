@@ -220,7 +220,7 @@ switch state
 				}
 			}
 			
-			if input.jump
+			if input.jump 
 			{
 				if jump_timer >=0 || jump_counter == 1
 				{

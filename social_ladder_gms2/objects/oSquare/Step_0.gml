@@ -502,6 +502,7 @@ switch (state)
 		case "rotate_projectile":
 		set_state_sprite(rotate_projectile,rotate_end_anim_spd,0);
 		dir = sign(oPlayer.x - x);;
+		image_xscale = dir;
 		if animation_hit_frame(rotate_projectile_frame)
 		{
 			//audio_play_sound(aMiss,3,0);
@@ -510,6 +511,7 @@ switch (state)
 				dir = other.dir;
 				contact_damage = other.rotate_projectile_damage;
 			}
+			
 		}
 		
 		if animation_end()

@@ -100,7 +100,7 @@ attack1_damage = 7;
 
 rotate_end = sSquare_rotate_end;
 rotate_projectile = sSquare_rotate_end_projectile;
-rotate_projectile_frame = 2;
+rotate_projectile_frame = 1;
 rotate_projectile_damage = 7;
 
 rotate_end_anim_spd = 0.4;
