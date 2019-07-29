@@ -423,14 +423,6 @@
             }
         },
         {
-            "Key": "1915dec4-2469-477b-b544-482e2a40d1f5",
-            "Value": {
-                "id": "eb9cb706-2a3e-4fd2-9670-3a35fd9a295f",
-                "resourcePath": "sprites\\sDown_old\\sDown_old.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "1a4786d2-f020-4257-96f0-bca142e53c7f",
             "Value": {
                 "id": "de29224f-0b4c-4b2d-8cf1-6cc4af9f3cd8",
@@ -1972,14 +1964,6 @@
                 "id": "c0ade1b3-9ddc-4dd1-be8b-06bd33ebf1db",
                 "resourcePath": "objects\\oEnnemy\\oEnnemy.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "9047a2b2-b700-4e8f-8a09-e9923c918da1",
-            "Value": {
-                "id": "eaa521f3-66a9-4786-84ed-ba195969d173",
-                "resourcePath": "sprites\\sDown\\sDown.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
