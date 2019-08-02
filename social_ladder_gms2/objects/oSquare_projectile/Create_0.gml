@@ -6,4 +6,7 @@ mask = sprite_index;
 
 contact_damage = noone;
 
-image_xscale = dir;
+dir = sign(oPlayer.x - x);
+image_xscale = sign(dir);
+
+show_debug_message("projectile dir : " + string(dir))

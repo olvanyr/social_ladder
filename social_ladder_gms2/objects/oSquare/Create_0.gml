@@ -11,7 +11,7 @@ chassing_time = 250;
 casting_time = 100;
 timer = 0;
 
-fov = 60;
+fov = 150;
 
 //view trigger
 					//fov = "field of view";
@@ -41,7 +41,7 @@ mask = sSquare_mask;
 #region state
 
 
-state = "idle";
+state = "start";
 last_state = "noone";
 form = "normal"; //use to store the current form of square
 
@@ -51,7 +51,7 @@ idle_diamond = sSquare_idle_diamond;
 idle_square = sSquare_idle_square;
 idle_spd = 0.1;
 
-idle_wait_time = 120;
+idle_wait_time = 60;
 set_state_sprite(idle,idle_spd,0);
 // walk
 walk = sSquare_walk;
@@ -108,7 +108,7 @@ rotate_end_anim_spd = 0.4;
 //squaring
 squaring = sSquare_squaring;
 diamonding = sSquare_diamonding;
-squaring_anim_spd = 0.5;
+squaring_anim_spd = 0.8;
 
 //decomposing
 decomposing = sSquare_decomposing;
@@ -118,8 +118,8 @@ decomposing_anim_spd = 0.5;
 //up
 up = sSquare_up;
 down = sSquare_down;
-up_anim_speed = 0.3;
-up_spd = 1;
+up_anim_speed = 0.7;
+up_spd = 2;
 up_down = noone; //stor if th square goes up or down
 
 lvl = 0;

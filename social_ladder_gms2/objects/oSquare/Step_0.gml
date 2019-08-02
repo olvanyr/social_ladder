@@ -11,11 +11,24 @@ if hp <= (max_hp/4)*1 && once2
 	hp = (max_hp/4)*1;
 }
 
-show_debug_message("Square state : " + string(state));
-show_debug_message("Square form : " + string(form));
+//show_debug_message("Square state : " + string(state));
+//show_debug_message("Square form : " + string(form));
 
 switch (state)
 {
+	#region Start
+		case "start":
+		
+			set_state_sprite(idle,idle_spd,0);
+			
+			if distance_to_object(oPlayer) <= fov
+			{
+				state = "idle";
+				timer = 0;
+			}
+			
+		break;
+	#endregion
 	#region idle
 		case "idle":
 			dir = sign(oPlayer.x - x);;
@@ -36,8 +49,8 @@ switch (state)
 				
 				if timer > idle_wait_time
 				{
-					//state = choose("attack_pierces","attack_pierces","decomposing","squaring","attack_pierces_middle");
-					state = choose("attack_pierces","attack_pierces_middle");
+					state = choose("attack_pierces","attack_pierces","decomposing","squaring","attack_pierces_middle");
+					//state = choose("attack_pierces","attack_pierces_middle");
 					timer = 0;
 					
 					if distance_to_object(oPlayer) < fov
@@ -52,8 +65,8 @@ switch (state)
 				set_state_sprite(idle_square,idle_spd,0);
 				if timer > idle_wait_time
 				{
-					//state = choose("squaring","up","up","attack_charge_middle","attack_charge",);
-					state = choose("squaring");
+					state = choose("squaring","up","up","attack_charge_middle","attack_charge",);
+					//state = choose("squaring");
 					timer = 0;
 				}
 			}
@@ -423,7 +436,7 @@ switch (state)
 			}
 		}
 		
-		if lvl == 1 || lvl == 2
+		if lvl == 1 //|| lvl == 2
 		{
 			if up_down == noone
 			{
@@ -431,7 +444,7 @@ switch (state)
 			}
 		}
 		
-		if lvl == 3
+		if lvl == 2
 		{
 			if up_down == noone
 			{
@@ -498,10 +511,10 @@ switch (state)
 		}
 		break;
 	#endregion
-	#region rotate prokjectile
+	#region rotate projectile
 		case "rotate_projectile":
 		set_state_sprite(rotate_projectile,rotate_end_anim_spd,0);
-		dir = sign(oPlayer.x - x);;
+		dir = sign(oPlayer.x - x);
 		image_xscale = dir;
 		if animation_hit_frame(rotate_projectile_frame)
 		{
