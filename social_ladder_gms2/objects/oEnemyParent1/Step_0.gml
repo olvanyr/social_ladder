@@ -1,4 +1,4 @@
-if self.object_index == oFist || self.object_index == oSword || self.object_index == oSwordII
+if self.object_index == oFist || self.object_index == oSword || self.object_index == oSwordII || self.object_index == oSkeleton
 {
 	roll_cooldown = manage_timer(roll_cooldown);
 }
@@ -57,7 +57,7 @@ switch (state)
 				state = "chase";
 			}
 			
-			if self.object_index == oFist || self.object_index == oSword || self.object_index == oSwordII || self.object_index == oScratcher || self.object_index == oSlug || self.object_index == oDistance || self.object_index == oLegs
+			if self.object_index == oFist || self.object_index == oSword || self.object_index == oSwordII || self.object_index == oScratcher || self.object_index == oSlug || self.object_index == oDistance || self.object_index == oLegs || self.object_index == oSkeleton
 			{
 				// a normal firstt attack
 				set_state_sprite(attack1,attack1_anim_spd,0);

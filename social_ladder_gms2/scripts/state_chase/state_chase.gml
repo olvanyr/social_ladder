@@ -3,7 +3,7 @@ if(instance_exists(oPlayer))
 	// get the absolute distance to the player
 	var distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
 	
-	if self.object_index == oSwordII
+	if self.object_index == oSwordII || self.object_index == oSkeleton
 	{
 		// Follow the path if path exists
 		if path_exists(path_building)
@@ -109,7 +109,7 @@ if(instance_exists(oPlayer))
 	}
 	
 	// if you have the ability to roll, sometime instead or attacking your roll
-	if self.object_index == oSword || self.object_index == oFist
+	if self.object_index == oSword || self.object_index == oSwordII || self.object_index == oFist || self.object_index == oSkeleton
 	{
 		if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
 		{
