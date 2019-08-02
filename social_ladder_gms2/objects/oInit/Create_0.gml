@@ -68,7 +68,19 @@ global.enemy_list =
 	oMaggie,
 	oJelly,
 	oDeer,
-	oSquare
+	oSquare,
+	oSkeleton
+]
+
+global.knockbackable = 
+[
+
+	oLegs,
+	oMaggie,
+	oJelly,
+	oDeer,
+	oSquare,
+	oSkeleton
 ]
 
 

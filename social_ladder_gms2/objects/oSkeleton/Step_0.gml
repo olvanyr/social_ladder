@@ -1,5 +1,5 @@
 
-roll_cooldown = manage_timer(roll_cooldown);
+//roll_cooldown = manage_timer(roll_cooldown);
 
 
 if place_meeting(x,y,oWall)
@@ -96,15 +96,16 @@ switch (state)
 				}
 	
 				// if the player is close enought hit him
-				if distance_to_player <= attack_range
+				if distance_to_player <= attack_range && oPlayer.y > y - 10 && oPlayer.y < y + 10 
 				{
 					state = "attack";
 				}
-	
+				
+				/*
 				if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
 				{
 					state = "roll";
-				}
+				}*/
 			}
 
 
@@ -128,12 +129,15 @@ switch (state)
 			}else attack_dash += attack_dash_acceleration;
 			
 			attack_dash = clamp(attack_dash,0,attack_dash_max_speed);
-						
-			move_and_collide(attack_dash,0);
+			
+			var dir  = image_xscale;
+			move_and_collide(attack_dash * dir,0);
 			
 			if animation_end()
 			{
-				state = "chase";
+				alarm[1] = 30;
+				state = "wait";
+				image_speed = 0;
 			}	
 		break;
 	#endregion

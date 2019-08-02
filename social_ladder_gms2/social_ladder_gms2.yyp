@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "210ab2e5-34b2-427b-a396-edcb89aa41d8",
+            "Value": {
+                "id": "3ec5fd2f-19fb-4441-b0d5-7947f2f444a5",
+                "resourcePath": "scripts\\is_knockbackable\\is_knockbackable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "217a1aaf-9023-4d45-af3b-da14f7487694",
             "Value": {
                 "id": "4a128160-d9f1-4f88-a05e-407299bcbac0",
@@ -3583,6 +3591,7 @@
         "6c624892-b504-41db-bd30-cf04c0320d49",
         "677112d3-ae30-429f-84aa-3e1d49793246",
         "6e234d30-908d-4829-b333-90dc3d65ca6f",
+        "210ab2e5-34b2-427b-a396-edcb89aa41d8",
         "3686e456-ee60-49fd-a80c-dd8cb91fea23",
         "56211719-18d2-48fb-aaf2-8125b9a108db",
         "978416af-7dde-4a48-8199-2a3519e92b6e",
