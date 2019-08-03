@@ -60,17 +60,19 @@ attack1_anim_spd = 0.7;
 attack1_frame = 1;
 attack1_mask = sSkeleton_attack_one_mask;
 attack1_damage = 3;
+attack1_knockback = 6;
 
 attack2 = sSkeleton_attack_two; // not needed if the first animation had two attack
 attack2_anim_spd = 0.7; // not needed if the first animation had two attack
-attack2_frame = 2;
+attack2_frame = 3;
 attack2_mask = sSkeleton_attack_two_mask;
 attack2_damage = 5;
+attack2_knockback = 6;
 
 // roll
 
 roll = "roll sprite";
-roll_cooldown = "cooldawn of the roll";
+roll_cooldown = 0;
 roll_speed = "speed of the roll";
 
 // shot for distance
@@ -82,6 +84,32 @@ shot_frame = "frame where to spawn the hitbox";
 jump_up = sSkeleton_dawn_up;
 jump_down = sSkeleton_dawn_up;
 
+#endregion
+#region text
+
+ybuffer = 10;
+line = "";
+line_part = "";
+
+c_text = c_black;
+font = fMaggie;
+
+text_buffer = 20;
+
+letters_count = 0;
+letter_speed = 0.5;
+time_bettween_line = 150;
+next_line = 0;
+
+timer = 0;
+
+once1 = true;
+once2 = true;
+
+lines[0] = "I here to free you";
+lines[1] = "The outside world is very hostile";
+lines[2] = "But it is yours now";
+lines[3] = "you will have to kill\nall of this creature";
 #endregion
 #region pathfinding
 pathfinding_timer = 0;
@@ -95,7 +123,8 @@ path_building = noone;
 hsp = 0;
 
 move_spd = 1.7;
-jump_spd = -8;
+jump_spd = -7;
+jump_spd_max = jump_spd;
 
 move = 0;
 

@@ -5,6 +5,10 @@ if(instance_exists(oPlayer))
 	
 	if self.object_index == oSwordII || self.object_index == oSkeleton
 	{
+		if !grounded 
+		{
+			jump_spd = 0;
+		}else jump_spd = jump_spd_max;
 		// Follow the path if path exists
 		if path_exists(path_building)
 		{

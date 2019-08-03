@@ -11,7 +11,7 @@ if action == 0
     hsp = move_spd * path_direction ;
     action = 1;
     }
-     else {
+    else {
             /// Check if the next point is horizontal jump / jump over a void.
             if path_get_point_y(argument0, path_point) == path_get_point_y(argument0, path_point+1) && path_get_point_x(argument0, path_point) + 2*oGrid.cell_width*path_direction == path_get_point_x(argument0, path_point+1)
             {

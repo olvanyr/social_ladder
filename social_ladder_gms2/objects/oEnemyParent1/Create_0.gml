@@ -112,6 +112,7 @@ if self.object_index == oSwordII
 
 	move_spd = 1.7;
 	jump_spd = -8;
+	jump_spd_max = jump_spd;
 
 	move = 0;
 

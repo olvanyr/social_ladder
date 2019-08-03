@@ -1,26 +1,21 @@
 
-//roll_cooldown = manage_timer(roll_cooldown);
+if !instance_exists(oPlayer) exit;
 
-
-if place_meeting(x,y,oWall)
+if hp <= (max_hp/4)*3 && once1
 {
-	if !place_meeting(x + 1,y,oWall)
-	{
-		x += 1
-	}
-	if !place_meeting(x - 1,y,oWall)
-	{
-		x -= 1
-	}
-}
-if place_meeting(x,y,oWall)
-{
-	if !place_meeting(x,y - 1,oWall)
-	{
-		y -= 1
-	}
+	hp = (max_hp/4)*3;
 }
 
+if hp <= (max_hp/4)*1 && once2
+{			
+	hp = (max_hp/4)*1;
+}
+
+
+show_debug_message("Square state : " + string(state));
+
+
+roll_cooldown = manage_timer(roll_cooldown);
 chase_timer = manage_timer(chase_timer);
 
 switch (state)
@@ -41,6 +36,11 @@ switch (state)
 	#region Chase
 		case "chase":
 			set_state_sprite(walk,walk_anim_spd,0);
+			
+			if !grounded 
+			{
+				jump_spd = 0;
+			}else jump_spd = jump_spd_max;
 			
 			if(instance_exists(oPlayer))
 			{
@@ -98,7 +98,7 @@ switch (state)
 				// if the player is close enought hit him
 				if distance_to_player <= attack_range && oPlayer.y > y - 10 && oPlayer.y < y + 10 
 				{
-					state = "attack";
+					state = "attack1";
 				}
 				
 				/*
@@ -107,12 +107,12 @@ switch (state)
 					state = "roll";
 				}*/
 			}
-
+			last_state = state;
 
 		break;
 	#endregion
-	#region Attack
-		case "attack":			
+	#region Attack 1
+		case "attack1":			
 			// a normal firstt attack
 			set_state_sprite(attack1,attack1_anim_spd,0);
 
@@ -120,7 +120,37 @@ switch (state)
 			if animation_hit_frame(attack1_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				create_hitbox(x + (image_xscale * 10), y, self, attack1_mask, 3, 20, attack1_damage, image_xscale);
+				create_hitbox(x + (image_xscale * 10), y, self, attack1_mask, attack1_knockback, 20, attack1_damage, image_xscale);
+			}
+			
+			if image_index >= image_number / 2
+			{
+				attack_dash -= attack_dash_acceleration;
+			}else attack_dash += attack_dash_acceleration;
+			
+			attack_dash = clamp(attack_dash,0,attack_dash_max_speed);
+			
+			var dir  = image_xscale;
+			move_and_collide(attack_dash * dir,0);
+			
+			if animation_end()
+			{
+				state = choose("attack2","chase");
+				image_speed = 0;
+				last_state = state;
+			}	
+		break;
+	#endregion
+	#region Attack 2
+		case "attack2":			
+			// a normal firstt attack
+			set_state_sprite(attack2,attack2_anim_spd,0);
+
+			
+			if animation_hit_frame(attack2_frame)
+			{
+				//audio_play_sound(aMiss,3,0);
+				create_hitbox(x + (image_xscale * 10), y, self, attack2_mask, attack2_knockback, 20, attack2_damage, image_xscale);
 			}
 			
 			if image_index >= image_number / 2
@@ -138,6 +168,7 @@ switch (state)
 				alarm[1] = 20;
 				state = "wait";
 				image_speed = 0;
+				last_state = state;
 			}	
 		break;
 	#endregion
@@ -186,6 +217,29 @@ switch (state)
 			{
 				state = "chase";
 			}	
+		break;
+	#endregion
+	#region speak
+		case "speak":
+		
+			var idle_sprite = idle;
+			
+			if form == "normal"
+			{
+				idle_sprite = sSquare_idle;
+			}
+			if form == "square"
+			{
+				idle_sprite = sSquare_idle_square;
+			}
+			if form == "diamond"
+			{
+				idle_sprite = sSquare_idle_diamond;
+			}
+			
+			set_state_sprite(idle_sprite,idle_spd,0);
+			text_boss("stun");
+			alarm[1] = stun_time * 3;
 		break;
 	#endregion
 }
