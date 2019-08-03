@@ -23,7 +23,7 @@ if other.state != "roll" && (other.state != "death" || other.state == "dead")
 	//audio_play_sound();
 	if knockback != 0
 	{
-		if is_knockbackable(other)
+		if is_knockbackable(other) || other.object_index == oPlayer
 		{
 			other.state = "knockback";
 		}

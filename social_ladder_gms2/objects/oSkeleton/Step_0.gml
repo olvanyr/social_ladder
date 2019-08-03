@@ -120,7 +120,7 @@ switch (state)
 			if animation_hit_frame(attack1_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				create_hitbox(x, y, self, attack1_mask, 3, 2, attack1_damage, image_xscale);
+				create_hitbox(x + (image_xscale * 10), y, self, attack1_mask, 3, 20, attack1_damage, image_xscale);
 			}
 			
 			if image_index >= image_number / 2
@@ -135,7 +135,7 @@ switch (state)
 			
 			if animation_end()
 			{
-				alarm[1] = 30;
+				alarm[1] = 20;
 				state = "wait";
 				image_speed = 0;
 			}	
