@@ -12,7 +12,8 @@ if hp <= (max_hp/4)*1 && once2
 }
 
 
-show_debug_message("Square state : " + string(state));
+//show_debug_message("Skeleton state : " + string(state));
+show_debug_message("Skeleton timer : " + string(timer));
 
 
 roll_cooldown = manage_timer(roll_cooldown);
@@ -94,20 +95,63 @@ switch (state)
 						set_state_sprite(jump_up,0,0);
 					}				
 				}
-	
-				// if the player is close enought hit him
-				if distance_to_player <= attack_range && oPlayer.y > y - 10 && oPlayer.y < y + 10 
+				if timer > timer_idle
 				{
-					state = "attack1";
-				}
+					// if the player is close enought hit him
+					if distance_to_player <= attack_range && oPlayer.y > y - 10 && oPlayer.y < y + 10 
+					{
+						state = "attack1";
+						timer = 0;
+					}
 				
 				
-				if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
-				{
-					state = "roll";
+					if distance_to_player <= attack_range + 5 && irandom(20) == 1 && roll_cooldown <= 0
+					{
+						state = "roll";
+						timer = 0;
+					}
 				}
+			}	
+			
+			#region speak init
+			if hp <= (max_hp/4)*3 && once1
+			{
+				
+				once1 = false;
+				
+				hp = (max_hp/4)*3;
+				
+				state = "speak";
+				
+				if instance_exists(oPlayer)
+				{
+					oPlayer.state = "wait";
+				}				
+				lines[0] = "text 1 ligne 1";
+				lines[1] = "text 1 ligne 2";
+				lines[2] = "text 1 ligne 3";
 			}
-			last_state = state;
+			
+			if hp <= (max_hp/4)*1 && once2
+			{
+				
+				once2 = false;
+				
+				hp = (max_hp/4)*1;
+				
+				state = "speak";
+				
+				if instance_exists(oPlayer)
+				{
+					oPlayer.state = "wait";
+				}				
+				lines[0] = "text 2 ligne 1";
+				lines[1] = "text 2 ligne 2";
+				lines[2] = "text 2 ligne 3";
+				lines[3] = "ligne 4";
+			}
+			#endregion
+			
 
 		break;
 	#endregion
@@ -120,7 +164,7 @@ switch (state)
 			if animation_hit_frame(attack1_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				create_hitbox(x + (image_xscale * 10), y, self, attack1_mask, attack1_knockback, 20, attack1_damage, image_xscale);
+				create_hitbox(x + (image_xscale * 5), y, self, attack1_mask, attack1_knockback, 20, attack1_damage, image_xscale);
 			}
 			
 			if image_index >= image_number / 2
@@ -135,10 +179,15 @@ switch (state)
 			
 			if animation_end()
 			{
-				state = choose("attack2","chase");
+				
 				image_speed = 0;
-				last_state = state;
 			}	
+			
+			if timer > attack1_timer
+			{
+				state = choose("attack2","chase");
+				timer = 0;
+			}
 		break;
 	#endregion
 	#region Attack 2
@@ -150,7 +199,7 @@ switch (state)
 			if animation_hit_frame(attack2_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				create_hitbox(x + (image_xscale * 10), y, self, attack2_mask, attack2_knockback, 20, attack2_damage, image_xscale);
+				create_hitbox(x + (image_xscale * 5), y, self, attack2_mask, attack2_knockback, 20, attack2_damage, image_xscale);
 			}
 			
 			if image_index >= image_number / 2
@@ -165,11 +214,46 @@ switch (state)
 			
 			if animation_end()
 			{
-				alarm[1] = 20;
-				state = "wait";
 				image_speed = 0;
-				last_state = state;
 			}	
+			if timer > attack2_timer
+			{
+				state = choose("attack3","chase");
+				timer = 0;
+			}
+		break;
+	#endregion
+	#region Attack 3
+		case "attack3":			
+			// a normal firstt attack
+			set_state_sprite(attack3,attack3_anim_spd,0);
+
+			
+			if animation_hit_frame(attack3_frame)
+			{
+				//audio_play_sound(aMiss,3,0);
+				create_hitbox(x + (image_xscale * 5), y, self, attack3_mask, attack3_knockback, 20, attack3_damage, image_xscale);
+			}
+			
+			if image_index >= image_number / 2
+			{
+				attack_dash -= attack_dash_acceleration;
+			}else attack_dash += attack_dash_acceleration;
+			
+			attack_dash = clamp(attack_dash,0,attack_dash_max_speed);
+			
+			var dir  = image_xscale;
+			move_and_collide(attack_dash * dir,0);
+			
+			if animation_end()
+			{
+				image_speed = 0;
+			}
+			if timer > attack3_timer
+			{
+				state = choose("chase");
+				timer = 0;
+			}
 		break;
 	#endregion
 	#region Knockback
@@ -198,6 +282,7 @@ switch (state)
 		case "roll":
 			set_state_sprite(roll,roll_anim_speed,0);
 			roll_state("chase");
+			timer = 0;
 		break;
 	#endregion
 	#region shot
@@ -222,21 +307,7 @@ switch (state)
 	#region speak
 		case "speak":
 		
-			var idle_sprite = idle;
-			
-			if form == "normal"
-			{
-				idle_sprite = sSquare_idle;
-			}
-			if form == "square"
-			{
-				idle_sprite = sSquare_idle_square;
-			}
-			if form == "diamond"
-			{
-				idle_sprite = sSquare_idle_diamond;
-			}
-			
+			var idle_sprite = idle;			
 			set_state_sprite(idle_sprite,idle_spd,0);
 			text_boss("stun");
 			alarm[1] = stun_time * 3;
@@ -265,3 +336,5 @@ if vsp > 0
 }
 
 move_and_collide(0,vsp);
+
+timer ++;

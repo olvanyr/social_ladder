@@ -4,9 +4,10 @@ event_inherited();
 fov = 200;
 attack_range = 60;
 attack_distance_range = 80;
+accuracy = 100;
 
 //health
-hp = 200;
+hp = 60;
 max_hp = hp;
 
 //colision variables
@@ -30,6 +31,7 @@ state = "idle";
 // idle
 idle = sSkeleton_idle;
 idle_spd = 0.2;
+timer_idle = 100;
 
 // walk
 walk = sSkeleton_run;
@@ -61,6 +63,7 @@ attack1_frame = 1;
 attack1_mask = sSkeleton_attack_one_mask;
 attack1_damage = 3;
 attack1_knockback = 6;
+attack1_timer = 70;
 
 attack2 = sSkeleton_attack_two; // not needed if the first animation had two attack
 attack2_anim_spd = 0.7; // not needed if the first animation had two attack
@@ -68,6 +71,15 @@ attack2_frame = 3;
 attack2_mask = sSkeleton_attack_two_mask;
 attack2_damage = 5;
 attack2_knockback = 6;
+attack2_timer = 70;
+
+attack3 = sSkeleton_attack_three; // not needed if the first animation had two attack
+attack3_anim_spd = 0.7; // not needed if the first animation had two attack
+attack3_frame = 4;
+attack3_mask = sSkeleton_attack_three_mask;
+attack3_damage = 7;
+attack3_knockback = 6;
+attack3_timer = 70;
 
 // roll
 
