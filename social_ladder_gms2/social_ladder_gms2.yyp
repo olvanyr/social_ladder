@@ -3351,6 +3351,14 @@
             }
         },
         {
+            "Key": "edb77c28-2b4d-4b66-9a8a-f96add93536a",
+            "Value": {
+                "id": "b6c5666e-72a8-4413-a790-1e5da2403443",
+                "resourcePath": "sprites\\sSkeleton_roll\\sSkeleton_roll.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ee1e5f8a-fae9-4f3d-bdb2-4407ed41bc5e",
             "Value": {
                 "id": "97436ef6-e1ff-4022-8ef8-57a6d1eb8e10",

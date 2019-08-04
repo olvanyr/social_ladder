@@ -71,9 +71,10 @@ attack2_knockback = 6;
 
 // roll
 
-roll = "roll sprite";
+roll = sSkeleton_roll;
 roll_cooldown = 0;
-roll_speed = "speed of the roll";
+roll_anim_speed = 0.8;
+roll_speed = 3;
 
 // shot for distance
 shot = "sprite of shot";

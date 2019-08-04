@@ -101,11 +101,11 @@ switch (state)
 					state = "attack1";
 				}
 				
-				/*
+				
 				if distance_to_player <= attack_range + 5 && irandom(4) == 1 && roll_cooldown <= 0
 				{
 					state = "roll";
-				}*/
+				}
 			}
 			last_state = state;
 
@@ -196,7 +196,7 @@ switch (state)
 	#endregion
 	#region Roll
 		case "roll":
-			set_state_sprite(roll,0.2,0);
+			set_state_sprite(roll,roll_anim_speed,0);
 			roll_state("chase");
 		break;
 	#endregion
