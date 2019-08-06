@@ -294,6 +294,7 @@ switch (state)
 	#region shoot
 		case "shot":
 			set_state_sprite(shot,shot_anim_spd,0);
+			image_xscale = sign(oPlayer.x - x);;
 			
 			if animation_hit_frame(shot_frame)
 			{

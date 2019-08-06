@@ -903,6 +903,14 @@
             }
         },
         {
+            "Key": "3a13291f-3017-4541-81a0-ad9005972e9d",
+            "Value": {
+                "id": "03b3a6fc-dd84-4da0-b831-5969567cfba5",
+                "resourcePath": "sprites\\door_shade2_s\\door_shade2_s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3a211f7b-8438-4548-a35a-c6109cfc7b8e",
             "Value": {
                 "id": "3ff7d385-ec19-47f2-bc56-f41918a2a9ee",
@@ -2067,6 +2075,14 @@
             "Value": {
                 "id": "f0ca20e9-573f-41ec-83ea-f51d2a6b40c1",
                 "resourcePath": "sprites\\sWrath_attack2\\sWrath_attack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8f74af75-21bb-476e-b57e-21193446eaf8",
+            "Value": {
+                "id": "8177b72c-0286-41e6-9b6b-8b9f2d6c26b6",
+                "resourcePath": "sprites\\door_shade\\door_shade.yy",
                 "resourceType": "GMSprite"
             }
         },

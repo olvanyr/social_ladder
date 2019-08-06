@@ -13,10 +13,9 @@ enum save_room
 {
 	seen,
 	enemy
-	
 }
 
-enum priority
+enum priority //for audio purpose
 {
 	very_low,
 	low,
