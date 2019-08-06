@@ -80,7 +80,7 @@ global.knockbackable =
 	oJelly,
 	oDeer,
 	oSquare,
-	oSkeleton,
+	//oSkeleton,
 	oPlayer
 ]
 

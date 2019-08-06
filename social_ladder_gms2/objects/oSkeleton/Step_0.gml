@@ -110,6 +110,12 @@ switch (state)
 						state = "roll";
 						timer = 0;
 					}
+					
+					if distance_to_player >= attack_range + 50 && irandom(20) == 1 && roll_cooldown <= 0
+					{
+						state = "shot";
+						timer = 0;
+					}
 				}
 			}	
 			
@@ -285,23 +291,24 @@ switch (state)
 			timer = 0;
 		break;
 	#endregion
-	#region shot
+	#region shoot
 		case "shot":
 			set_state_sprite(shot,shot_anim_spd,0);
 			
 			if animation_hit_frame(shot_frame)
 			{
 				//audio_play_sound(aMiss,3,0);
-				with instance_create_layer(x + (sign(image_xscale)* -9),y - 36,"Effects", oProjectile)
+				with instance_create_layer(x + (sign(image_xscale)* 9),y - 15,"Effects", oSkeleton_projectile)
 				{
 					creator = other;
 				}
 			}
 			
-			if animation_end()
+			if timer > shot_timer
 			{
-				state = "chase";
-			}	
+				state = choose("chase");
+				timer = 0;
+			}
 		break;
 	#endregion
 	#region speak

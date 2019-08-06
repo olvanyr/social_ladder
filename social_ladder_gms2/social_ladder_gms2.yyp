@@ -1866,7 +1866,7 @@
             "Key": "7ff0ab26-552f-49ef-85ff-6042b9bc690e",
             "Value": {
                 "id": "10579c5d-551d-4702-91fe-f810129dec54",
-                "resourcePath": "sprites\\sSkeleton_projectile_hit\\sSkeleton_projectile_hit.yy",
+                "resourcePath": "sprites\\sSkeleton_projectile_hispark\\sSkeleton_projectile_hispark.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2340,6 +2340,14 @@
                 "id": "9917c12d-e65f-45c5-8047-73ebcb8c0445",
                 "resourcePath": "views\\a7e7b7b8-7e4d-491e-928c-41e2f77bf7ac.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a80bdbfb-3ba5-4ce2-85e1-75558a834a3a",
+            "Value": {
+                "id": "534ede49-a66b-4008-854b-cbdbab994007",
+                "resourcePath": "objects\\oSkeleton_projectile\\oSkeleton_projectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {

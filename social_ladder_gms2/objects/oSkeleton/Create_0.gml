@@ -89,9 +89,10 @@ roll_anim_speed = 0.8;
 roll_speed = 3;
 
 // shot for distance
-shot = "sprite of shot";
-shot_anim_spd = "speed of the animation";
-shot_frame = "frame where to spawn the hitbox";
+shot = sSkeleton_fire;
+shot_anim_spd = 0.4;
+shot_frame = 5;
+shot_timer = 100;
 
 //jump
 jump_up = sSkeleton_dawn_up;
