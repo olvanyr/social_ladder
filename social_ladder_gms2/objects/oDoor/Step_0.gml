@@ -14,3 +14,9 @@ if door_status == "closed"
 	}
 	
 }
+
+if door_status == "open"
+{
+	var door_number = array_length_1d(global.door);
+	global.door[door_number] = id;
+}

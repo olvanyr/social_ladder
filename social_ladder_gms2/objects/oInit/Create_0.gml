@@ -38,7 +38,6 @@ global.slot = 1;
 global.start_room = room0;
 global.start_x = 224;
 global.start_y = 255;
-global.key[0] = "key_door1";
 
 //load audio group
 if !audio_group_is_loaded(audiogroup_sound)
@@ -103,9 +102,11 @@ global.new_music = 0;
 	global.wall_jump = false;
 	global.double_jump = false;
 	global.cast = false;
-	global.key1 = true;
 
 
 // addaptative difficulty
 global.difficulty = 1;
 
+//array used to keep dore open
+global.door[0] = noone;
+global.key[0] = "key_door1";
