@@ -15,7 +15,7 @@ fov = 150;
 
 //view trigger
 					//fov = "field of view";
-attack_range = "distance where self start attacking";
+attack_range = 60;
 attack_distance_range = "distance witch self shot";
 
 //health
@@ -35,31 +35,24 @@ experience = 1;
 fly = "irandom(3) if 1 yes, other no";
 
 //mask
-mask = sSquare_mask;
+mask = sHorn_mask;
 
 
 #region state
 
 
 state = "start";
-last_state = "noone";
-form = "normal"; //use to store the current form of square
+form = "visible";
 
 // idle
-idle = sSquare_idle;
-idle_diamond = sSquare_idle_diamond;
-idle_square = sSquare_idle_square;
+idle = sHorn_idle;
 idle_spd = 0.1;
 
 idle_wait_time = 60;
 set_state_sprite(idle,idle_spd,0);
-// walk
-walk = sSquare_walk;
-walk_anim_spd = 0.5;
-chase_speed = 0.8;
 
 // knockback & stun
-knockback_sprite = sSquare_idle;
+knockback_sprite = sHorn_idle;
 stun_time = 20;
 knockback = 4;
 knockback_speed = 0;
@@ -67,64 +60,21 @@ knockback_speed = 0;
 contact_damage = 4;
 
 // die
-die =  sSquare_die;
-
-// shot
-shot = sSquare_rotate_end_projectile;
-shot_anim_spd = 0.5;
-shot_frame = 9;
-
-// attack_pierces
-
-attack_pierces = sSquare_attack_pierces;
-attack_pierces_anim_spd = 0.4;
-pierces_spd = 3;
-left_border = 511;
-right_border = 800;
-dir = 1;
-
-position = "middle"; // use to track the postion of squarre left right middle
-
-// attack_charge
-
-attack_charge = sSquare_charge;
-attack_charge_anim_spd = 0.4;
-charge_spd = 5;
+die =  sHorn_die;
 
 //attack rotate
-attack1 = sSquare_rotate;
+attack1 = sHorn_attack;
 attack1_anim_spd = 0.5;
-attack1_frame = 5;
-attack1_mask = sSquare_rotate_mask;
+attack1_frame = 6;
+attack1_mask = sHorn_attack1_mask;
 attack1_damage = 7;
+attack1_knockback = 6;
 
-rotate_end = sSquare_rotate_end;
-rotate_projectile = sSquare_rotate_end_projectile;
-rotate_projectile_frame = 1;
-rotate_projectile_damage = 7;
+//trnsformation
+disparition = sHorn_disparition;
+apparition = sHorn_apparition;
+apparition_anim_spd = 0.5;
 
-rotate_end_anim_spd = 0.4;
-
-//squaring
-squaring = sSquare_squaring;
-diamonding = sSquare_diamonding;
-squaring_anim_spd = 0.8;
-
-//decomposing
-decomposing = sSquare_decomposing;
-recomposing = sSquare_recomposing;
-decomposing_anim_spd = 0.5;
-
-//up
-up = sSquare_up;
-down = sSquare_down;
-up_anim_speed = 0.7;
-up_spd = 2;
-up_down = noone; //stor if th square goes up or down
-
-lvl = 0;
-lvl_height = 64;
-lvl_ground = 447;
 #endregion
 #region text
 

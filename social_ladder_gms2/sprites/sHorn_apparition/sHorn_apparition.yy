@@ -2,7 +2,7 @@
     "id": "1ec9fd73-9fa0-4f7e-93cf-2851b8ca982a",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sHorn_aparition",
+    "name": "sHorn_apparition",
     "For3D": false,
     "HTile": false,
     "VTile": false,
