@@ -15,7 +15,7 @@ fov = 150;
 
 //view trigger
 					//fov = "field of view";
-attack_range = 60;
+attack_range = 20;
 attack_distance_range = "distance witch self shot";
 
 //health
@@ -70,10 +70,10 @@ attack1_mask = sHorn_attack1_mask;
 attack1_damage = 7;
 attack1_knockback = 6;
 
-//trnsformation
+//transformation
 disparition = sHorn_disparition;
 apparition = sHorn_apparition;
-apparition_anim_spd = 0.5;
+apparition_anim_spd = 0.3;
 
 #endregion
 #region text
