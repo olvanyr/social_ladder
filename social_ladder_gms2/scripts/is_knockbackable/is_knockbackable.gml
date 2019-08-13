@@ -8,7 +8,7 @@ var array = global.knockbackable;
 var length = array_length_1d(array);
 for (var i = 0; i < length; i++)
 {
-	if object == array[i]
+	if object.object_index == array[i]
 	{
 		return true;
 	}

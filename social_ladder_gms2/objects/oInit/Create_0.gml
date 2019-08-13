@@ -72,14 +72,20 @@ global.enemy_list =
 
 global.knockbackable = 
 [
-
+	oPlayer,
+	oFist,
+	oSword,
+	oSwordII,
+	oRunner,
+	oRunnerII,
+	oMimic,
+	oSlug,
+	oWrath,
 	oLegs,
-	oMaggie,
-	oJelly,
-	oDeer,
-	oSquare,
-	//oSkeleton,
-	oPlayer
+	oFlying,
+	oScratcher,
+	oDistance,
+	oSpider
 ]
 
 
