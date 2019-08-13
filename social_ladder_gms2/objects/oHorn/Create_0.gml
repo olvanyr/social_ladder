@@ -42,6 +42,7 @@ mask = sHorn_mask;
 
 
 state = "start";
+last_state = "start";
 form = "visible";
 
 // idle
