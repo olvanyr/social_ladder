@@ -11,7 +11,7 @@ if hp <= (max_hp/4)*1 && once2
 	hp = (max_hp/4)*1;
 }
 
-show_debug_message("Horn state : " + string(state));
+//show_debug_message("Horn state : " + string(state));
 //show_debug_message("Square form : " + string(form));
 
 switch (state)
@@ -33,41 +33,36 @@ switch (state)
 		case "idle":
 			dir = sign(oPlayer.x - x);;
 			
-			if(instance_exists(oPlayer))
+			if last_state != "wait" 
 			{
-				// get the absolute distance to the player
-				var distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
+				state = "wait"
+				alarm[1] = idle_wait_time;
 				
-				if timer > idle_wait_time
+			}else
+			{
+				if(instance_exists(oPlayer))
 				{
-					if form == "invisible"
+					// get the absolute distance to the player
+					var distance_to_player = point_distance(x, y, oPlayer.x, oPlayer.y);
+				
+					if timer > idle_wait_time
 					{
-						set_state_sprite(disparition,0,image_number - 1);
-						x = choose(520,580);
-						switch (x)
-						{
-							case 520 : //this is an exemple
-								y = 447;
-							break;
-							case 580 : //this is an exemple
-								y = 447;
-							break
-						}
-					}
-					state = choose("transform");
-					timer = 0;
+						state = choose("transform");
+						timer = 0;
 					
-					if form == "visible"
-					{
-						set_state_sprite(idle,idle_spd,0);
-						if distance_to_player <= attack_range && oPlayer.y > y - 10 && oPlayer.y < y + 10 
+						if form == "visible"
 						{
-							state = "attack1";
-							timer = 0;
+							set_state_sprite(idle,idle_spd,0);
+							if distance_to_player <= attack_range && oPlayer.y > y - 10 && oPlayer.y < y + 10 
+							{
+								state = "attack1";
+								timer = 0;
+							}
 						}
 					}
 				}
 			}
+			last_state = state;
 				
 			#region speak init
 			if hp <= (max_hp/4)*3 && once1
@@ -159,8 +154,25 @@ switch (state)
 					state = "idle";
 					form = "invisible";
 					timer = 0;
+					var _x = choose(520,580);
+					while _x == x 
+					{
+						_x = choose(520,580);
+					}
+					
+					x = _x;
+					switch (x)
+					{
+						case 520 : //this is an exemple
+							y = 447;
+						break;
+						case 580 : //this is an exemple
+							y = 447;
+						break
+					}
 				}
 			}
+			
 			if form = "invisible"
 			{
 				set_state_sprite(apparition,apparition_anim_spd,0);
