@@ -215,14 +215,6 @@
             }
         },
         {
-            "Key": "0b18af0d-bbf4-4982-94e2-f509fb4ba224",
-            "Value": {
-                "id": "6affaa47-450b-40cd-9d0d-3b58fbb6d128",
-                "resourcePath": "sprites\\sAbility_wall_jump\\sAbility_wall_jump.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "0b6cd15a-c7bb-4f5d-8215-08d3568ac59e",
             "Value": {
                 "id": "8e15b604-fad6-4247-b30f-6503f4ae4da2",
@@ -524,14 +516,6 @@
                 "id": "567caf7f-d66c-462f-9b7e-b872f7189c58",
                 "resourcePath": "views\\1de4f6bd-5587-4b1f-8d6b-8c38788754a9.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "1e5583f7-4124-43e6-adf8-98a27c59e8a3",
-            "Value": {
-                "id": "c9d775e1-ee5a-45a0-8606-b343deab1f3a",
-                "resourcePath": "sprites\\sAbility_double_jump\\sAbility_double_jump.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1219,6 +1203,14 @@
             "Value": {
                 "id": "7191c30c-466a-4616-9996-d198e296c52d",
                 "resourcePath": "sprites\\sFist_attack1_mask\\sFist_attack1_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "51df75e4-216b-417e-8139-e8ffcdb95d0c",
+            "Value": {
+                "id": "05f6e207-ce13-4f56-b808-b4902f8de696",
+                "resourcePath": "sprites\\sAbility_double_jump\\sAbility_double_jump.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3043,6 +3035,14 @@
             "Value": {
                 "id": "660255c5-92e8-4c60-af67-c881cc6faeb5",
                 "resourcePath": "sprites\\sFist_mask\\sFist_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c9ab5479-9487-4390-814c-e72cb7559fda",
+            "Value": {
+                "id": "76a103da-05dd-46fb-9738-71fc36be9363",
+                "resourcePath": "sprites\\sAbility_wall_jump\\sAbility_wall_jump.yy",
                 "resourceType": "GMSprite"
             }
         },
