@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "15cb80b5-7efd-42d5-822e-6f79ab87213b",
+            "Value": {
+                "id": "fa596d4f-0bb0-4cd6-91e8-1333d2f7151c",
+                "resourcePath": "sprites\\sAbility_cast\\sAbility_cast.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "16b91696-ce8f-4cda-820a-9420ae34857b",
             "Value": {
                 "id": "0d29bebc-be23-43e0-aa6d-1d177aa2dbd2",
@@ -1399,14 +1407,6 @@
             }
         },
         {
-            "Key": "5d8ab3a9-1bdb-4a50-9441-404975a51f46",
-            "Value": {
-                "id": "69e3ff3a-93bd-48c0-9617-538ffc4f58f3",
-                "resourcePath": "sprites\\sAbility_cast\\sAbility_cast.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "5fdebb69-dc91-4619-a57e-3563c555760c",
             "Value": {
                 "id": "debe29be-c4b4-44a8-a9ea-0aa5b1115547",
@@ -2354,7 +2354,7 @@
             "Key": "9e5367e3-1eb9-419a-8277-09f6acd27ecc",
             "Value": {
                 "id": "82b05f8f-342d-4a6b-8058-c556af1b549a",
-                "resourcePath": "sprites\\sHorn_beam_mask\\sHorn_beam_mask.yy",
+                "resourcePath": "sprites\\sHorn_beam_mask_h\\sHorn_beam_mask_h.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2855,6 +2855,14 @@
             }
         },
         {
+            "Key": "beb2f4f4-d1a1-4cca-8702-252a82b8fc03",
+            "Value": {
+                "id": "97b9387c-96a7-4f27-8853-2e7425129a65",
+                "resourcePath": "sprites\\sHorn_beam_mask_v\\sHorn_beam_mask_v.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bf66d174-5c9f-4ecd-a8ba-9dba912da873",
             "Value": {
                 "id": "7ab91a82-65db-49a7-9352-08c809ec4025",
@@ -3215,6 +3223,14 @@
             }
         },
         {
+            "Key": "d734f19f-3bd1-4946-8212-c42fb0bba359",
+            "Value": {
+                "id": "2d6de1e5-a5a1-4a04-985d-5dfb555bfb81",
+                "resourcePath": "objects\\oBeam\\oBeam.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d79a3e75-9dff-4409-b61d-1bfbfea21c68",
             "Value": {
                 "id": "930ed757-d838-4508-a905-3555bd416558",
@@ -3347,6 +3363,14 @@
             "Value": {
                 "id": "89ce2409-d74d-426d-a5d2-e67119175e1c",
                 "resourcePath": "sprites\\sLab_destroy\\sLab_destroy.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e34c0e38-15a1-4705-94ad-a5d12e04aa5e",
+            "Value": {
+                "id": "e7280fea-38ee-4b67-92ee-bdb440200cd2",
+                "resourcePath": "sprites\\sHorn_beam\\sHorn_beam.yy",
                 "resourceType": "GMSprite"
             }
         },
