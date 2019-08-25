@@ -8,6 +8,7 @@ if hp <= (max_hp/4)*3 && once1
 
 if hp <= (max_hp/4)*1 && once2
 {			
+	intensity = 20;
 	hp = (max_hp/4)*1;
 }
 
@@ -154,20 +155,20 @@ switch (state)
 					state = "idle";
 					form = "invisible";
 					timer = 0;
-					var _x = choose(520,580);
+					var _x = choose(150,200);
 					while _x == x 
 					{
-						_x = choose(520,580);
+						_x = choose(150,200);
 					}
 					
 					x = _x;
 					switch (x)
 					{
 						case 520 : //this is an exemple
-							y = 447;
+							y = 319;
 						break;
-						case 580 : //this is an exemple
-							y = 447;
+						case 580 : //this is an exemplesss
+							y = 319;
 						break
 					}
 				}
@@ -215,5 +216,89 @@ switch (state)
 	#endregion
 }
 
+if state != "start" && state != "speak"
+{
+	switch beam_state
+	{
+		case "state_1" :
+		{
+			if timer_beam > 200
+			{
+				if orientation = noone 
+				{
+					orientation = choose("h","v");
+				}
+	
+				if timer_beam mod 20 == 0 && orientation != noone
+				{
+					if orientation = "h"
+					{
+						beam_x = 336;
+						beam_y += 40;
+					}
+					if orientation = "v"
+					{
+						beam_x += 40;
+						beam_y = 192;
+					}
+					with instance_create_layer(beam_x,beam_y,"Effects",oBeam)
+					{
+						orientation = other.orientation;
+						creator = other;
+					}
+				}
+	
+				if beam_x > 540 || beam_y > 350
+				{
+					orientation = noone;
+					beam_x = 0;
+					beam_y = 0;
+				}
+			}
+			if timer_beam > 600
+			{
+				beam_state = choose("state_1","state_2");
+				timer_beam = 0;
+			}
+		}break;
+		case "state_2" :
+		{
+			
+			if timer_beam > 200
+			{
+				if timer_beam mod intensity == 0
+				{
+					orientation = choose("h","v");
+				
+					if orientation = "h"
+					{
+						beam_x = 336;
+						beam_y = random_range(150,320); //those number have been mesured
+					}
+					if orientation = "v"
+					{
+						beam_x = random_range(140,397);
+						beam_y = 192;
+					}
+					with instance_create_layer(beam_x,beam_y,"Effects",oBeam)
+					{
+						orientation = other.orientation;
+						creator = other;
+					}
+				}
+			}
+			if timer_beam > 600
+			{
+				beam_state = choose("state_1","state_2");
+				timer_beam = 0;
+				orientation = noone;
+			}
+		}break;
+	}
+}
+
 
 timer ++;
+timer_beam ++;
+
+//show_debug_message("orintation_beam" + string(orientation));

@@ -1,4 +1,9 @@
 
+if instance_exists(oFix)
+{
+	follow = oFix;
+}else follow = oPlayer;
+
 //update camera
 var view_w_half = view_w * 0.5;
 var view_h_half = view_h * 0.5;

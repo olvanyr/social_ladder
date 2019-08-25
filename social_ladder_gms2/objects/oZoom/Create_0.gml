@@ -8,6 +8,7 @@ ds_map_add(room_status, room_get_name(rJelly),3);
 ds_map_add(room_status, room_get_name(rDeer),3);
 ds_map_add(room_status, room_get_name(rSquare),3);
 ds_map_add(room_status, room_get_name(rSkeleton),3);
+ds_map_add(room_status, room_get_name(rHorn),3);
 
 purcent = 0;
 

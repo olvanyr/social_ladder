@@ -38,6 +38,18 @@ fly = "irandom(3) if 1 yes, other no";
 mask = sHorn_mask;
 
 
+//beam
+beam_state = "state_1";
+timer_beam = 0;
+beam_counter = 0;
+beam_direction = noone;
+orientation = noone;
+beam_x = 10;
+beam_y = 10;
+
+	//beam stae 2 
+	intensity = 50;
+
 #region state
 
 

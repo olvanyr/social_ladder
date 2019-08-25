@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0302207f-7c02-48e8-a578-17b72bc247ba",
+            "Value": {
+                "id": "d20f6867-ff3f-4207-92f6-34e3d18c225c",
+                "resourcePath": "objects\\oFix\\oFix.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0302489b-6c74-43ae-87b4-8c35d06cd768",
             "Value": {
                 "id": "5f35788b-12d0-4ab2-92c4-00e624e868b2",
