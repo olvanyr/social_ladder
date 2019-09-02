@@ -107,23 +107,7 @@ switch (state)
 	#endregion
 	#region speak
 		case "speak":
-		
-			var idle_sprite = idle;
-			
-			if form == "normal"
-			{
-				idle_sprite = sSquare_idle;
-			}
-			if form == "square"
-			{
-				idle_sprite = sSquare_idle_square;
-			}
-			if form == "diamond"
-			{
-				idle_sprite = sSquare_idle_diamond;
-			}
-			
-			set_state_sprite(idle_sprite,idle_spd,0);
+			set_state_sprite(idle,idle_spd,0);
 			text_boss("stun");
 			alarm[1] = stun_time * 3;
 		break;
