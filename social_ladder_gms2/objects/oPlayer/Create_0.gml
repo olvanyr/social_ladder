@@ -40,6 +40,8 @@ wall_jump_timer_max = 15;
 jump_direction = 0;
 roll_speed = 2.5;
 
+platform = false;
+
 
 //Collision mask related variable
 half_mask_width = sprite_get_width(sPlayer_mask)/2;

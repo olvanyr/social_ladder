@@ -193,6 +193,8 @@ switch state
 			
 			if !grounded
 			{
+				platform = false;
+				
 				if vsp > 0
 				{
 					set_state_sprite(sPlayer_fall,0.2,0);
@@ -221,27 +223,33 @@ switch state
 			
 			if input.jump 
 			{
-				if jump_timer >=0 || jump_counter == 1
+				if input.down && place_meeting(x,y+1,oPlatform) && grounded
 				{
-					vsp = jump_speed;
-					
-					if global.double_jump
+					platform = true;
+				}else
+				{
+					if jump_timer >=0 || jump_counter == 1
 					{
-						//the second jump is lower than the first
-						var modified_jump_speed = jump_speed * 0.75;
-						if jump_counter == 1 vsp = modified_jump_speed;
+						vsp = jump_speed;
+					
+						if global.double_jump
+						{
+							//the second jump is lower than the first
+							var modified_jump_speed = jump_speed * 0.75;
+							if jump_counter == 1 vsp = modified_jump_speed;
 						
-						jump_counter++;
-					}else jump_counter += 2;
+							jump_counter++;
+						}else jump_counter += 2;
 
-					if !grounded && side_wall && global.wall_jump
-					{
+						if !grounded && side_wall && global.wall_jump
+						{
 						
-						wall_jump_timer = wall_jump_timer_max;
-						jump_direction = -image_xscale;
-					}
+							wall_jump_timer = wall_jump_timer_max;
+							jump_direction = -image_xscale;
+						}
 					
-					grounded = false;
+						grounded = false;
+					}
 				}
 			}
 			
