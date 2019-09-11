@@ -27,7 +27,7 @@ roll_cooldown_max = 30;
 cast_cooldown = 0;
 
 //jump related variable
-jump_speed = -6;
+jump_speed = -5.5;
 cut_jump_speed = -0.6;
 jump_timer = 0;
 jump_timer_max = 4;
@@ -40,7 +40,7 @@ wall_jump_timer_max = 15;
 jump_direction = 0;
 roll_speed = 2.5;
 
-platform = false;
+platform = false; //use to aware the one way platform that we whant to go down
 
 
 //Collision mask related variable

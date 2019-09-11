@@ -1,0 +1,1 @@
+text = "down plus hit while jumping";

@@ -1,3 +1,5 @@
+
+
 spd = 4;
 letters = 0;
 text = "";
@@ -9,3 +11,4 @@ border = 10;
 radius = 0;
 xpos = 0;
 ypos = 0;
+creator = noone;

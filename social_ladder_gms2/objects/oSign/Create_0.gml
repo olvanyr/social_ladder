@@ -1,3 +1,5 @@
 text = "";
 
-radius = 32;
+radius = 64;
+once = true;
+textbox = noone;

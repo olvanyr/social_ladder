@@ -61,7 +61,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "678f91be-a4ab-4c9d-b52a-67135f3799f1",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "3",
+            "varName": "healthpack",
+            "varType": 0
+        }
+    ],
     "solid": false,
     "spriteId": "3f4b183e-0dd4-48d3-a8c2-272297b5d5bf",
     "visible": true

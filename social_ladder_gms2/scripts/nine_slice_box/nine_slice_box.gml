@@ -6,10 +6,10 @@
 /// @arg y2
 
 var _size = sprite_get_width(argument0) / 3;
-var _x1 = argument1;
-var _y1 = argument2;
-var _x2 = argument3;
-var _y2 = argument4;
+var _x1 = round(argument1);
+var _y1 = round(argument2);
+var _x2 = round(argument3);
+var _y2 = round(argument4);
 
 var _w = _x2 - _x1;
 var _h = _y2 - _y1;

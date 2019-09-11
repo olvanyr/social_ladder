@@ -1,0 +1,1 @@
+text = "use the right joystick to look around";

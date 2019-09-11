@@ -11,7 +11,7 @@ w = string_width(text_current);
 
 if instance_exists(oPlayer)
 {
-	if(letters >= length) && !point_in_circle(oPlayer.x,oPlayer.y,oSign.x,oSign.y, radius + 30)
+	if(letters >= length) && !point_in_circle(oPlayer.x,oPlayer.y,other.x,other.y, radius)
 	{
 		instance_destroy();
 		with(oCamera) follow = oPlayer;
