@@ -1,5 +1,5 @@
 event_inherited();
-
+hp = 1;
 
 //Init somme variable
 image_speed = 0.4;

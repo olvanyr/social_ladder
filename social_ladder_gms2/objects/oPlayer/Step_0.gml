@@ -467,28 +467,28 @@ switch state
 			{
 				gamepad_set_vibration(0, 0, 0);
 				
-				if room = rLab
+				with instance_create_layer(0,0,"Effects", oTransition)
 				{
-					with instance_create_layer(0,0,"Effects", oTransition)
-					{
-						next_room = room;
-						x_next = 250;
-						y_next = 431;
-						hp = oPlayer.max_hp;
-						global.new_music = mRoom0;
-					}
-				
-				}else
-				{
-					with instance_create_layer(0,0,"Effects", oTransition)
-					{
-						next_room = global.start_room;
-						x_next = global.start_x;
-						y_next = global.start_y;
-						hp = oPlayer.max_hp;
-						global.new_music = mRoom0;
-					}
+					next_room = global.start_room;
+					x_next = global.start_x;
+					y_next = global.start_y;
+					hp = oPlayer.max_hp;
+					global.new_music = mRoom0;
 				}
+			}
+		break;
+	#endregion
+	#region wake_up
+		case "wake_up":
+			set_state_sprite(sPlayer_wake_up,0,0);
+			
+			if input.jump || input.left || input.right || input.attack
+			{
+				image_speed = 0.3;
+			}
+			if animation_end()
+			{
+				state = "move";
 			}
 		break;
 	#endregion

@@ -12,7 +12,10 @@ if instance_exists(oPlayer)
 		oPlayer.y = y_next;
 		oCamera.x = x_next;
 		oCamera.y = y_next;
-		oPlayer.state = "move";
+		if oPlayer.state == "death"
+		{
+			oPlayer.state = "wake_up"
+		}else oPlayer.state = "move";
 		oPlayer.hp = hp;
 		
 	}
