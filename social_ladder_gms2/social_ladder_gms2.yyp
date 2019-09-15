@@ -2023,6 +2023,14 @@
             }
         },
         {
+            "Key": "83749f56-8f64-4147-bef7-3ac661dc170c",
+            "Value": {
+                "id": "b49f9a32-c6d5-4359-994f-06629e3528f9",
+                "resourcePath": "views\\83749f56-8f64-4147-bef7-3ac661dc170c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "837e9478-cb79-4a35-b6b7-137b992a3700",
             "Value": {
                 "id": "804695b6-8a8d-4055-a902-d3cc4dfae103",
@@ -2371,6 +2379,14 @@
             "Value": {
                 "id": "233bd1b0-c5c4-4d10-b621-13469c7e0cf4",
                 "resourcePath": "sprites\\sSword_die\\sSword_die.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "98b49119-ec2f-4048-ab80-694e71f66432",
+            "Value": {
+                "id": "94f18eb0-213c-4acd-bb87-17b92348b9be",
+                "resourcePath": "sprites\\srLab_respawn\\srLab_respawn.yy",
                 "resourceType": "GMSprite"
             }
         },
