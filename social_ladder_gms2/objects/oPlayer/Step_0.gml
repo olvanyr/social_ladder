@@ -442,6 +442,7 @@ switch state
 	#region wait
 		case "wait":
 			set_state_sprite(sPlayer_idle,0.2,0);
+			vsp = 0;
 		break;
 	#endregion
 	#region heal
@@ -497,6 +498,8 @@ switch state
 
 hit = false;
 
+
+
 //Aplly gravity
 vsp += gravity_speed;
 
@@ -510,5 +513,4 @@ if vsp > 0
 	vsp -= vsp_fraction;
 }
 
-
-move_and_collide(0,vsp);
+	move_and_collide(0,vsp);
