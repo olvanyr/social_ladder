@@ -93,7 +93,7 @@ if(instance_exists(oPlayer))
 		// if you have the ability to shot
 		if self.object_index == oDistance
 		{
-			if distance_to_player <= attack_distance_range && distance_to_player >= attack_distance_range - 10
+			if distance_to_player <= attack_distance_range && distance_to_player >= attack_distance_range - 50
 			{
 				state = "shot";
 			}
