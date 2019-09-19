@@ -22,7 +22,12 @@
         "011b4cdd-e5ab-4a32-bdee-fc2f57e3799b",
         "2e4fe235-32aa-49be-8784-483d4ad6dc5a",
         "51d2e65a-db93-4c5c-90f7-f6621abada9c",
-        "43cdf081-6148-4f7e-9c76-d599ab60d710"
+        "43cdf081-6148-4f7e-9c76-d599ab60d710",
+        "3cb50515-6ae4-4f21-a63d-0a87133353ca",
+        "f929606d-8901-46f9-95cb-e1d45ff30c46",
+        "1971d46b-2a25-44cf-9e16-1cf1614be908",
+        "fd6f6808-0830-4c87-8f86-87c087997511",
+        "ab4de87a-6fe9-4ab2-bd47-bcaf53d30907"
     ],
     "filterType": "GMSprite",
     "folderName": "lab",

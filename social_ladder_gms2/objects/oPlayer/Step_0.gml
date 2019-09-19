@@ -513,4 +513,4 @@ if vsp > 0
 	vsp -= vsp_fraction;
 }
 
-	move_and_collide(0,vsp);
+move_and_collide(0,vsp);

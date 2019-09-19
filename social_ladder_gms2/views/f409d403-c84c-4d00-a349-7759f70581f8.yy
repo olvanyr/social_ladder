@@ -15,7 +15,12 @@
         "98890c6e-162c-4ea1-8632-ed962f5c378b",
         "1951fce6-7973-428b-aa11-10e95bd69890",
         "e332616d-6052-47b4-b7ce-0c984fbca135",
-        "709e0c90-f1a0-4940-8758-98bed88f28e8"
+        "709e0c90-f1a0-4940-8758-98bed88f28e8",
+        "592b232a-acbb-40ad-b8a9-1ecf5d856f1b",
+        "e5c50cf4-c4b3-44fb-87e0-70b9744eb688",
+        "219ffda0-195e-45af-b57c-6d2630632aa8",
+        "e3ddbf39-9fb6-4397-8d3c-b355dacce9b4",
+        "8fcacb30-22d1-4255-a34f-266286f9a97e"
     ],
     "filterType": "GMRoom",
     "folderName": "LAB I",

@@ -35,7 +35,7 @@ global.slot = 1;
 #endregion
 
 global.start_room = rLab_respawn;
-global.start_x = 671;
+global.start_x = 592;
 global.start_y = 511;
 
 //load audio group
