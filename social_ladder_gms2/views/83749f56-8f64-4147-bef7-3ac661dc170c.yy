@@ -27,7 +27,8 @@
         "f929606d-8901-46f9-95cb-e1d45ff30c46",
         "1971d46b-2a25-44cf-9e16-1cf1614be908",
         "fd6f6808-0830-4c87-8f86-87c087997511",
-        "ab4de87a-6fe9-4ab2-bd47-bcaf53d30907"
+        "ab4de87a-6fe9-4ab2-bd47-bcaf53d30907",
+        "02ff06d3-e54c-4df1-8f74-0f3d316b646d"
     ],
     "filterType": "GMSprite",
     "folderName": "lab",

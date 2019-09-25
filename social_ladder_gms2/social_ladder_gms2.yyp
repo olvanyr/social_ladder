@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "02ff06d3-e54c-4df1-8f74-0f3d316b646d",
+            "Value": {
+                "id": "711396cb-ebc6-463e-9547-bf9718a6220d",
+                "resourcePath": "sprites\\srLab_shortcut1\\srLab_shortcut1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0302207f-7c02-48e8-a578-17b72bc247ba",
             "Value": {
                 "id": "d20f6867-ff3f-4207-92f6-34e3d18c225c",
