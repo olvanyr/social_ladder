@@ -114,4 +114,4 @@ global.difficulty = 1;
 
 //array used to keep dore open
 global.door[0] = noone;
-global.key[0] = "key_door1";
+global.key[0] = "";
