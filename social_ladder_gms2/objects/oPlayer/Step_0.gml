@@ -268,7 +268,7 @@ switch state
 
 			healthpack = min(healthpack,3);
 
-			if input.use_healthpack && healthpack > 0 && hp != max_hp
+			if input.use_healthpack && healthpack > 0 && hp != max_hp && !input.suicide_left
 			{
 				state = "heal";
 			}
@@ -298,7 +298,32 @@ switch state
 			{
 				state = "cast";
 			}
-	
+			if input.suicide_left && input.suicide_right
+			{
+				suicide_timer ++;
+				if suicide_zoom < 0.2 
+				{
+					suicide_zoom += 0.002;
+				}
+				if instance_exists(oCamera)
+				{
+					oCamera.view_w = oCamera.view_w * (1-suicide_zoom);
+					oCamera.view_h = oCamera.view_h * (1-suicide_zoom);
+				}
+				gamepad_set_vibration(0, 0.5, 0.5);
+				instance_create_layer(x,y,"Effects",oSuicide_particle);
+				
+				if suicide_timer = 120
+				{
+					gamepad_set_vibration(0, 0.75, 0.75);
+					state = "suicide";
+				}
+			}else 
+			{	
+				suicide_timer = 0;
+				suicide_zoom = 0;
+				gamepad_set_vibration(0, 0, 0);
+			}
 		break;
 	#endregion
 	#region Roll
@@ -490,6 +515,26 @@ switch state
 			if animation_end()
 			{
 				state = "move";
+			}
+		break;
+	#endregion
+	#region suicide
+		case "suicide":
+			set_state_sprite(sPlayer_down,0.3,0);
+			//audio_play_sound(aMiss,3,0);
+			hp = 0.01;
+			if animation_end()
+			{
+				image_speed = 0;
+				gamepad_set_vibration(0, 0, 0);
+				with instance_create_layer(0,0,"Effects", oTransition)
+				{
+					next_room = global.start_room;
+					x_next = global.start_x;
+					y_next = global.start_y;
+					hp = oPlayer.max_hp;
+					global.new_music = mRoom0;
+				}
 			}
 		break;
 	#endregion

@@ -1327,6 +1327,14 @@
             }
         },
         {
+            "Key": "4c6ba95a-b151-4346-9151-f2e31de1074e",
+            "Value": {
+                "id": "4041c3ee-a826-40df-8038-ced51b368fd4",
+                "resourcePath": "sprites\\sPlayer_down\\sPlayer_down.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ce5e0c0-c0a7-44fd-8bae-e287cb8f327c",
             "Value": {
                 "id": "c5a2663f-77bb-41a1-b12f-027a26522317",
@@ -3228,6 +3236,14 @@
                 "id": "7ab91a82-65db-49a7-9352-08c809ec4025",
                 "resourcePath": "sprites\\sDeer_idle\\sDeer_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bfb04b42-1f37-43e3-9baf-86a6ee2970dc",
+            "Value": {
+                "id": "32623e11-e21f-4b96-80b8-6efdab6021d5",
+                "resourcePath": "objects\\oSuicide_particle\\oSuicide_particle.yy",
+                "resourceType": "GMObject"
             }
         },
         {

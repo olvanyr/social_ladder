@@ -1,18 +1,28 @@
 {
-    "id": "0302207f-7c02-48e8-a578-17b72bc247ba",
+    "id": "bfb04b42-1f37-43e3-9baf-86a6ee2970dc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oFix",
+    "name": "oSuicide_particle",
     "eventList": [
         {
-            "id": "022d5e92-dbce-48c0-92db-f06e7cb59929",
+            "id": "4518b8b3-9db1-445a-a632-50d3afbeef32",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "0302207f-7c02-48e8-a578-17b72bc247ba"
+            "m_owner": "bfb04b42-1f37-43e3-9baf-86a6ee2970dc"
+        },
+        {
+            "id": "f96bde4a-ce08-438c-b88c-107414f35a77",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "bfb04b42-1f37-43e3-9baf-86a6ee2970dc"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "c320dac2-70b7-415a-9c8f-aa846fda6d3f",
     "visible": true
 }

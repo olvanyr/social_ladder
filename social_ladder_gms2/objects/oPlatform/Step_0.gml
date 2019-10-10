@@ -6,7 +6,7 @@ if (instance_exists(oPlayer))
 	}else mask_index = sPlatform;
 	
 	
-	
+	last_down_input = oPlayer.input.down;
 }
 
-last_down_input = oPlayer.input.down;
+

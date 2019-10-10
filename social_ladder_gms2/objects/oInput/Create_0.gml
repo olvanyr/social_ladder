@@ -13,6 +13,10 @@ roll = keyboard_check_pressed(vk_space);
 attack = keyboard_check_pressed(ord("V"));
 use = keyboard_check_pressed(ord("N"));
 use_healthpack = keyboard_check_pressed(ord("L"));
+
+suicide_left = keyboard_check(ord("N"));
+suicide_right = keyboard_check(ord("L"));
+
 cast = keyboard_check_pressed(ord("I"));
 //jump
 jump = keyboard_check_pressed(vk_up);

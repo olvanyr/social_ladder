@@ -14,7 +14,7 @@ if instance_exists(oPlayer)
 		oCamera.y = y_next;
 		oCamera.follow = oPlayer;
 		
-		if oPlayer.state == "death"
+		if oPlayer.state == "death" || oPlayer.state = "suicide"
 		{
 			oPlayer.state = "wake_up"
 		}else oPlayer.state = "move";

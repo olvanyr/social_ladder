@@ -15,6 +15,10 @@ roll = keyboard_check_pressed(vk_space);
 attack = keyboard_check_pressed(ord("V"));
 use = keyboard_check_pressed(ord("N"));
 use_healthpack = keyboard_check_pressed(ord("L"));
+
+suicide_left = keyboard_check(ord("N"));
+suicide_right = keyboard_check(ord("L"));
+
 cast = keyboard_check_pressed(ord("I"));
 //jump
 jump = keyboard_check_pressed(vk_up);
@@ -83,6 +87,11 @@ if gamepad_button_check_pressed(0,gp_face2) roll = 1;
 if gamepad_button_check_pressed(0,gp_face3) attack = 1;
 if gamepad_button_check_pressed(0,gp_shoulderl) use = 1;
 if gamepad_button_check_pressed(0,gp_shoulderr) use_healthpack = 1;
+
+if gamepad_button_check(0,gp_shoulderl) suicide_left = 1;
+if gamepad_button_check(0,gp_shoulderr) suicide_right = 1;
+
+
 if gamepad_button_check_pressed(0,gp_face4) cast = 1;
 //jump
 if gamepad_button_check_pressed(0,gp_face1) jump = 1;
