@@ -3447,6 +3447,14 @@
             }
         },
         {
+            "Key": "cbcbb6d9-8af6-462f-a993-d78a99f0e070",
+            "Value": {
+                "id": "6a5f622a-97ba-4c20-bbac-8fab5a28682c",
+                "resourcePath": "sprites\\sMap_rLab_tuto1\\sMap_rLab_tuto1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cbeeb248-b6d9-4681-aed4-b5261d40693e",
             "Value": {
                 "id": "612e8a51-e460-4603-9079-077c8814e355",
