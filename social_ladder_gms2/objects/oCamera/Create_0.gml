@@ -21,3 +21,7 @@ shake_length = 0;
 shake_magnitude = 0;
 shake_remain = 0;
 buff = 32;
+
+//paralax
+last_room = 0;
+paralax_y = 0;

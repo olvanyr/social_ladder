@@ -72,3 +72,28 @@ if instance_exists(oFix)
 {
 	follow = oFix;
 }else if follow == oFix follow = oPlayer;
+
+
+
+
+//paralax
+
+if last_room != room
+{
+		last_room = room;
+		paralax_y = oPlayer.y - 150;
+}
+
+
+if(layer_exists("Paralax_front"))
+{
+		layer_x("Paralax_front",x * 0.2);
+		//layer_y("Paralax_front",paralax_y - (y * 0.9));
+		layer_y("Paralax_front",paralax_y + (y * 0.1));
+}
+if(layer_exists("Paralax_back"))
+{
+		layer_x("Paralax_back",x * 0.05);
+		//layer_y("Paralax_front",paralax_y - (y * 0.9));
+		layer_y("Paralax_back",paralax_y + ((y * 0.1) - 50));
+}
