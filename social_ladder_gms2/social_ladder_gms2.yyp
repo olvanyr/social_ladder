@@ -1047,6 +1047,14 @@
             }
         },
         {
+            "Key": "3a0457b7-2bfb-456f-aec3-a4d3c9f1b032",
+            "Value": {
+                "id": "4afed1ea-13f3-4444-8408-baa9bd3a83d8",
+                "resourcePath": "rooms\\rLab_d\\rLab_d.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "3a13291f-3017-4541-81a0-ad9005972e9d",
             "Value": {
                 "id": "03b3a6fc-dd84-4da0-b831-5969567cfba5",
@@ -1300,6 +1308,14 @@
                 "id": "8475d121-5ad5-4bcb-8df8-7540ae46d280",
                 "resourcePath": "sprites\\sScratcher_walk\\sScratcher_walk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "48472b42-d6e9-4c0d-8059-016e7590460a",
+            "Value": {
+                "id": "7f6a4801-0769-44ea-8fc4-82ee3e8c49b3",
+                "resourcePath": "rooms\\rLab_d1\\rLab_d1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -3924,6 +3940,14 @@
                 "id": "ea182e3d-00e1-49e0-b59c-a3814dbb5e62",
                 "resourcePath": "sprites\\sScientist_tranformation\\sScientist_tranformation.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "eaea70d7-a3b4-4d0b-8cf8-c54487ad6f92",
+            "Value": {
+                "id": "00920259-99c9-4a29-b60c-ec2444f0ded2",
+                "resourcePath": "rooms\\rLab_d2\\rLab_d2.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
