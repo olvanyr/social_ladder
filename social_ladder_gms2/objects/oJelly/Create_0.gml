@@ -22,7 +22,8 @@ timer = 0;
 fov = 160;
 
 //health
-hp = 250;
+hp = 25;
+//hp = 250;
 max_hp = hp;
 
 //XP

@@ -18,7 +18,7 @@ if instance_exists(oPlayer)
 		{
 			oPlayer.state = "wake_up"
 		}else oPlayer.state = "move";
-		oPlayer.hp = hp;		
+		oPlayer.hp = hp;	
 	}
 	draw_set_alpha(1);
 	
