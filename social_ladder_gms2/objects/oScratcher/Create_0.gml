@@ -36,7 +36,7 @@ mask = sScratcher_mask;
 state = "idle";
 
 // idle
-idle = sScientist_idle;
+idle = sScratcher_idle;
 idle_spd = 0.2;
 
 // walk
