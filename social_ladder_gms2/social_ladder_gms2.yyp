@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "0d5e142b-1654-4026-a38a-89dcc869c5af",
+            "Value": {
+                "id": "406cc226-b389-4e3b-a74f-c327f4a7083d",
+                "resourcePath": "sprites\\srLab_b3\\srLab_b3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0d9320b7-ed26-4b14-9330-790bf105b4d9",
             "Value": {
                 "id": "3ae4543b-7db8-474b-bb64-091ac7bcf68c",
@@ -1379,6 +1387,14 @@
             "Value": {
                 "id": "c5a2663f-77bb-41a1-b12f-027a26522317",
                 "resourcePath": "sprites\\sRunner_idle\\sRunner_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4dd66d32-3e13-4c73-9e2a-e4ea74f413b5",
+            "Value": {
+                "id": "3f67ced9-4700-4cbe-8c82-c68d0aa1201f",
+                "resourcePath": "sprites\\srLab_b2\\srLab_b2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3404,6 +3420,14 @@
                 "id": "1ed5316b-b935-4b19-aa29-80019b257fee",
                 "resourcePath": "objects\\oJelly\\oJelly.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c3fbfbf4-9815-4fb1-b98b-1aac9bf0dea6",
+            "Value": {
+                "id": "ada86514-2cbb-44ac-beb4-57d0b2e5c850",
+                "resourcePath": "sprites\\srLab_b4\\srLab_b4.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
