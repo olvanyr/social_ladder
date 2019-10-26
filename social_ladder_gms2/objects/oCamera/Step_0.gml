@@ -77,15 +77,15 @@ if instance_exists(oFix)
 
 
 //paralax
-
-if last_room != room
-{
-		last_room = room;
-		paralax_y = oPlayer.y - 150;
-}
-
 if instance_exists(oPlayer)
 {
+	if last_room != room
+	{
+			last_room = room;
+			paralax_y = oPlayer.y - 150;
+	}
+
+
 	if(layer_exists("Paralax_front"))
 	{
 			layer_x("Paralax_front",x * 0.2);
