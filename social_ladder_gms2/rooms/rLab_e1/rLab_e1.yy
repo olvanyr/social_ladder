@@ -148,7 +148,7 @@
             "name": "front",
             "id": "65fa7a53-8d14-44aa-9786-d2947c6793f4",
             "assets": [
-
+{"__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat","name": "graphic_66ADF238","id": "ad559ff0-ca07-4693-abb2-5936e130e195","animationFPS": 15,"animationSpeedType": "0","colour": { "Value": 4294967295 },"frameIndex": 0,"ignore": false,"inheritItemSettings": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRSpriteGraphic","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","spriteId": "87dbd4b0-d28c-4276-889a-6bebb2b44968","userdefined_animFPS": false,"x": 224,"y": 0}
             ],
             "depth": 100,
             "grid_x": 32,
