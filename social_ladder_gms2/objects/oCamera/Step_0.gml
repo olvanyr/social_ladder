@@ -84,18 +84,27 @@ if instance_exists(oPlayer)
 			last_room = room;
 			paralax_y = oPlayer.y - 150;
 	}
-
+	
+	
+	 gap_max = 45;
+	 gap_min = 5;
+	 
+	 gap = lerp(gap_min, gap_max,(y / room_height));
 
 	if(layer_exists("Paralax_front"))
 	{
 			layer_x("Paralax_front",x * 0.2);
 			//layer_y("Paralax_front",paralax_y - (y * 0.9));
-			layer_y("Paralax_front",paralax_y + (y * 0.1));
+			//layer_y("Paralax_front",paralax_y + (y * 0.1));
+			//layer_y("Paralax_front",y - 10 -(y*0.2));
+			layer_y("Paralax_front",y - gap);
 	}
 	if(layer_exists("Paralax_back"))
 	{
 			layer_x("Paralax_back",x * 0.05);
 			//layer_y("Paralax_front",paralax_y - (y * 0.9));
-			layer_y("Paralax_back",paralax_y + ((y * 0.1) - 50));
+			//layer_y("Paralax_back",paralax_y + ((y * 0.1) - 50));
+			//layer_y("Paralax_back",y - 35 -(y*0.1));
+			layer_y("Paralax_back",y - gap*2);
 	}
 }
