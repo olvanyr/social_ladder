@@ -95,6 +95,9 @@ shot_frame = "frame where to spawn the hitbox";
 jump_up = "sprite use to look like jump up";
 jump_down = "sprite use to look like jump down";
 
+//for the grass animation 
+walk_speed = chase_speed;
+
 #endregion
 #region pathfinding
 

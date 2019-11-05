@@ -253,3 +253,5 @@ if vsp > 0
 }
 
 move_and_collide(0,vsp);
+
+walk_speed = chase_speed;

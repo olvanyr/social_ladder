@@ -1,4 +1,3 @@
-/// @desc
 
 var c1 = color1;
 var c2 = color2;

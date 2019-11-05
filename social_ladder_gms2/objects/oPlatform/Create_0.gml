@@ -10,6 +10,9 @@ last_down_input = 0;
 
 with instance_create_layer(x,y,"Enemy_walls",oEnemy_wall)
 {
+	
+	sprite_index = sPlatform;
 	image_xscale = other.image_xscale;
 	image_yscale = other.image_yscale;
 }
+

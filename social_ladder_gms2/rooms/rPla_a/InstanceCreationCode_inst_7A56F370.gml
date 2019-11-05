@@ -1,1 +1,0 @@
-key = "last_boss_beaten";
