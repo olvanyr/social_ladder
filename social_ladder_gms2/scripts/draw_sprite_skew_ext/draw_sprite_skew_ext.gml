@@ -12,7 +12,6 @@ var tint = argument7;
 var alpha = argument8;
 var hskew = argument9;
 var vskew = argument10;
-
 // Calculate dommon operation
 
 var spr_tex = sprite_get_texture(sprite, index);
