@@ -1,4 +1,6 @@
-sprite_index = -1;
+
+//use to make the platform have a hitbox at the end of creat, so we can put grass on it
+once = false;
 
 
 max_timer = 180;
@@ -15,4 +17,3 @@ with instance_create_layer(x,y,"Enemy_walls",oEnemy_wall)
 	image_xscale = other.image_xscale;
 	image_yscale = other.image_yscale;
 }
-

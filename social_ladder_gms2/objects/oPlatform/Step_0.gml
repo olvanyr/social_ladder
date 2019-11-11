@@ -1,3 +1,11 @@
+
+if once = false
+{
+	once = true;
+	sprite_index = -1;
+}
+
+
 if (instance_exists(oPlayer))
 {	
 	if round(oPlayer.y) >= y || (oPlayer.platform && oPlayer.vsp == 0)

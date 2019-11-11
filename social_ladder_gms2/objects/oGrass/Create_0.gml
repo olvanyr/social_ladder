@@ -2,16 +2,11 @@
 
 distance_to_bottom = 0;
 distance_to_top = 0;
+distance_to_top_platform = 0;
 
 dir = 0;
 
-position = "front";
-
-
-
 back_color = make_colour_hsv(22, 17, 17);
-
-
 
 rng = irandom_range(1,5);
 if rng == 5
@@ -23,17 +18,20 @@ if rng == 5
 	image_blend = c_black;
 }
 
-
-while !place_meeting(x,y + other.distance_to_bottom, oWall)
+while !place_meeting(x,y + other.distance_to_bottom, oWall) && other.distance_to_bottom < 1000
 {
 	other.distance_to_bottom++;
 }
-while !place_meeting(x,y - other.distance_to_top, oWall)
+while !place_meeting(x,y - other.distance_to_top, oWall) && other.distance_to_top < 1000
 {
 	other.distance_to_top++;
 }
+while !place_meeting(x,y - other.distance_to_top_platform, oPlatform) && other.distance_to_top_platform < 1000
+{
+	other.distance_to_top_platform++;
+}
 
-if distance_to_bottom <= distance_to_top 
+if distance_to_bottom <= distance_to_top && distance_to_bottom <= distance_to_top_platform
 {
 	dir = 270;
 	image_yscale = 1;
@@ -43,6 +41,7 @@ if distance_to_bottom <= distance_to_top
 	image_yscale = -1;
 }
 move_contact_solid(dir, -1);
+
 
 image_speed = 0;
 
@@ -61,10 +60,16 @@ grass[1] = sGrass01;
 
 rng = irandom_range(1,array_length_1d(grass)-1);
 
+
+
 sprite_index = grass[rng];
 
 
 xskew = 0;
 xset = 0;
+/*
+show_debug_message("distance to bottom : " + string(distance_to_bottom));
+show_debug_message("distance to top : " + string(distance_to_top));
+show_debug_message("distance to top platform : " + string(distance_to_top_platform));
 
 
