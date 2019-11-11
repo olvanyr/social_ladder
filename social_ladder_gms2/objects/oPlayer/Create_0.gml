@@ -85,7 +85,3 @@ death_counter = 0; //use to count the number of death until the timer hit someth
 death_memory = 0;
 death_timer = 0; //use to saw for how long the player is not dead
 
-
-
-
-
