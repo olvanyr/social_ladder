@@ -23,7 +23,10 @@
 	{
 		instance_create_layer(x,y,"Instances", oZoom)
 	}
-	
+	if !instance_exists(oWarp)
+	{
+		instance_create_layer(x,y,"Instances", oWarp)
+	}
 #endregion
 
 //show_debug_message("player state : " + string(state));

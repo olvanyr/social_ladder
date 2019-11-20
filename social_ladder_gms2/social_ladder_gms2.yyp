@@ -1743,6 +1743,14 @@
             }
         },
         {
+            "Key": "5e2abe3c-0e95-4c6b-b5e1-5d4b742629f5",
+            "Value": {
+                "id": "124dee53-9eb9-4609-ae66-4c3c2e816332",
+                "resourcePath": "scripts\\mouse_detection_gui\\mouse_detection_gui.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5fdebb69-dc91-4619-a57e-3563c555760c",
             "Value": {
                 "id": "debe29be-c4b4-44a8-a9ea-0aa5b1115547",
@@ -3439,6 +3447,14 @@
             }
         },
         {
+            "Key": "be381422-1186-4833-a393-a4c79961e9d7",
+            "Value": {
+                "id": "eaf8d6bd-3202-4307-81e6-f57f40be6423",
+                "resourcePath": "objects\\oWarp\\oWarp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "be506f36-e84b-4012-a941-4e3a02187802",
             "Value": {
                 "id": "82bd8594-17c4-4a05-abed-d444df7ff47b",
@@ -4620,7 +4636,8 @@
         "4a7d0754-7edf-4ac1-9af3-b1083ec5e980",
         "1f838108-75a3-4adf-9af6-436e338560ac",
         "0a3a8ba9-9d71-42c2-94b6-84da2d912ac2",
-        "2b4829f1-41d0-41f3-8a98-ada9191d9953"
+        "2b4829f1-41d0-41f3-8a98-ada9191d9953",
+        "5e2abe3c-0e95-4c6b-b5e1-5d4b742629f5"
     ],
     "tutorial": ""
 }
