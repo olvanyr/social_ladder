@@ -14,3 +14,9 @@ if timer <= 0
 {
 	sprite_animation(sDown,0,0.05,x,y);
 }
+
+
+draw_sprite_ext(sPlatform_black,0,x,y,image_xscale,image_yscale,0,0,1);
+
+
+

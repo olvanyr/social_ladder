@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oWall",
     "eventList": [
-        
+        {
+            "id": "51750337-038c-46b0-b458-a0e8e7b38bc0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "dbd8dc20-8f76-4361-a4c5-756a4c7e1620"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -33,8 +42,22 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
+            "value": "True",
             "varName": "visible",
+            "varType": 3
+        },
+        {
+            "id": "9506c6c0-439a-486c-9564-baffd241f9e9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "show",
             "varType": 3
         }
     ],
