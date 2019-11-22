@@ -15,4 +15,5 @@ if x mod width != 0 || y mod height != 0
 	//tille size
 	width = other.width;
 	height = other.height;
+	show = other.show;
 }	

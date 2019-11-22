@@ -21,10 +21,10 @@ if !right && !left && top && !bottom state =						"3side_top";
 if !right && !left && !top && bottom state =						"3side_bottom";
 #endregion
 #region 2side_1corner
-if right && !left && top && !bottom && !bottom_left state =																	"2side_1corner_top_right";
-if !right && left && top && !bottom && !bottom_right state  =																"2side_1corner_top_left";
-if right && !left && !top && bottom && !top_left state =																	"2side_1corner_bottom_right";
-if !right && left && !top && bottom && !top_right state =																	"2side_1corner_bottom_left";
+if right && !left && top && !bottom  state =																	"2side_1corner_top_right";
+if !right && left && top && !bottom state  =																"2side_1corner_top_left";
+if right && !left && !top && bottom state =																	"2side_1corner_bottom_right";
+if !right && left && !top && bottom  state =																	"2side_1corner_bottom_left";
 #endregion
 #region 2side
 if right && !left && top && !bottom && top_right state =																	"2side_top_right";
@@ -126,27 +126,27 @@ switch (state)
 	case "1side_1corner_right":
 		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner");
 		auto_tile_random_sprite();
-		image_angle = 180;
-		x += width;
-		y += height;
-	break;
-	case "1side_1corner_left":
-		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner");
-		auto_tile_random_sprite();
-		
-	break;
-	case "1side_1corner_top":
-		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner");
-		auto_tile_random_sprite();
 		image_angle = 270;
 		x += width;
 		//y += height;
 	break;
-	case "1side_1corner_bottom":
+	case "1side_1corner_left":
 		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner");
 		auto_tile_random_sprite();
 		image_angle = 90;
 		//x += width;
+		y += height;
+	break;
+	case "1side_1corner_top":
+		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner");
+		auto_tile_random_sprite();
+		
+	break;
+	case "1side_1corner_bottom":
+		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner");
+		auto_tile_random_sprite();
+		image_angle = 180;
+		x += width;
 		y += height;
 	break;
 #endregion
@@ -154,27 +154,27 @@ switch (state)
 	case "1side_1corner_mirror_right":
 		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner_mirror");
 		auto_tile_random_sprite();
-		image_angle = 180;
-		x += width;
-		y += height;
-	break;
-	case "1side_1corner_mirror_left":
-		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner_mirror");
-		auto_tile_random_sprite();
-		
-	break;
-	case "1side_1corner_mirror_top":
-		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner_mirror");
-		auto_tile_random_sprite();
 		image_angle = 270;
 		x += width;
 		//y += height;
 	break;
-	case "1side_1corner_mirror_bottom":
+	case "1side_1corner_mirror_left":
 		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner_mirror");
 		auto_tile_random_sprite();
 		image_angle = 90;
 		//x += width;
+		y += height;
+	break;
+	case "1side_1corner_mirror_top":
+		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner_mirror");
+		auto_tile_random_sprite();
+		
+	break;
+	case "1side_1corner_mirror_bottom":
+		sprite_index = asset_get_index("sTille_" + string(zone) + "_1side_1corner_mirror");
+		auto_tile_random_sprite();
+		image_angle = 180;
+		x += width;
 		y += height;
 	break;
 #endregion
@@ -306,6 +306,7 @@ switch (state)
 	case "4side":
 		sprite_index = asset_get_index("sTille_" + string(zone) + "_4side");
 		auto_tile_random_sprite();
+		
 	break;
 #endregion
 #region 3corner
@@ -418,7 +419,7 @@ switch (state)
 #endregion
 }
 
-/*
+
 if show
 {
 	show_debug_message("++++++++++++++++++++++++++++++++++++++++++");
