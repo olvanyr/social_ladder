@@ -34,10 +34,14 @@ global.musicvolume = 1;
 global.slot = 1;
 #endregion
 
+global.start_room = rLab_mob_test;
+global.start_x = 143;
+global.start_y = 607;
+/*
 global.start_room = rLab_respawn;
 global.start_x = 592;
 global.start_y = 511;
-
+*/
 //load audio group
 if !audio_group_is_loaded(audiogroup_sound)
 {
@@ -88,8 +92,8 @@ global.knockbackable =
 	oRunnerII,
 	oMimic,
 	oSlug,
-	oWrath,
-	oLegs,
+	//oWrath,
+	//oLegs,
 	oFlying,
 	oScratcher,
 	oDistance,

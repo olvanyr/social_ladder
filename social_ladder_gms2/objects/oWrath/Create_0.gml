@@ -40,7 +40,7 @@ chase_speed = 1.5;
 
 // knockback & stun
 knockback_sprite = sWrath_knockback;
-stun_time = 20;
+stun_time = 1;
 knockback = 4;
 knockback_speed = 0;
 

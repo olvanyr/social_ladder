@@ -4327,6 +4327,14 @@
             }
         },
         {
+            "Key": "defe2d28-fe26-447f-8295-6289bb5b66f5",
+            "Value": {
+                "id": "bc47468e-a21e-4b73-81ec-f57f65ac2776",
+                "resourcePath": "rooms\\rLab_mob_test\\rLab_mob_test.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "dfde58da-b562-4888-81fd-ed5dc66ffe97",
             "Value": {
                 "id": "b5b6b03f-2867-4199-9fc5-f267d27b6d8a",
