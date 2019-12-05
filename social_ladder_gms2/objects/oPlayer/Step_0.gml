@@ -29,7 +29,9 @@
 	}
 #endregion
 
+
 //show_debug_message("player state : " + string(state));
+
 
 
 //set new hp 

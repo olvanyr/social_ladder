@@ -1,3 +1,15 @@
+if new_music == noone
+{
+	var splits = split_string(room_get_name(next_room),"_");
+	zone = splits[0];
+	
+	if object_exists(asset_get_index("m" + string(zone)))
+	{
+		new_music = asset_get_index("m" + string(zone));
+	}else new_music = s1;
+}
+
+
 if oInput.use
 {
 	oPlayer.state = "wait";

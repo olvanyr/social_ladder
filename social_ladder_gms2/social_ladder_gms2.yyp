@@ -3975,6 +3975,14 @@
             }
         },
         {
+            "Key": "caec60ec-015d-4350-a5b6-3d40197351ec",
+            "Value": {
+                "id": "90a06e82-152a-4d6b-b159-8c2f2bc881e8",
+                "resourcePath": "sounds\\mrLab\\mrLab.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "cb4d1087-c085-4ac2-a077-808a5e7ba596",
             "Value": {
                 "id": "18d8bf56-3106-470e-b645-ef9a7fec8afe",
