@@ -13,6 +13,8 @@ if new_music == noone
 if oInput.use
 {
 	oPlayer.state = "wait";
+	oPlayer.vsp = 0;
+	oPlayer.vsp_fraction = 0;
 	with instance_create_layer(0,0,"Effects", oTransition)
 	{
 		next_room = other.next_room;

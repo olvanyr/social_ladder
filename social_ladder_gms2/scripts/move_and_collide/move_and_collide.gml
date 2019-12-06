@@ -42,6 +42,7 @@ if place_meeting(x, y + _yspeed, wall)
 	}
 	_yspeed = 0;
 	vsp = 0;
+	vsp_fraction = 0;
 }
 y += _yspeed;
 
