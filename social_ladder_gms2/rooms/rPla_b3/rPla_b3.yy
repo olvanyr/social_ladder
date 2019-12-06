@@ -8,8 +8,6 @@
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
         "950a07db-81ca-4d2e-9849-ebe9d8f470eb",
-        "4614ae5c-4b55-496e-b82b-a05b48f319b2",
-        "7dad6be6-6d0b-44ea-9bd0-1dba9f9b55ad",
         "6f1db84d-a7c3-48d7-a536-171b2188ec95",
         "5c1fd233-efe0-404c-a13c-3e7381bcf4ac",
         "774ae8ae-b727-4653-9e7f-3adef9f3bad7",
@@ -854,7 +852,9 @@
         "b501b7d0-d025-4239-bd79-1ae6b95187ba",
         "3b2a5141-074d-4bc8-9243-58e117391822",
         "3cb53fa2-1c68-4658-bdfc-57cbd0082913",
-        "c4c89d9f-e751-4c32-8594-fe7d54bf1925"
+        "c4c89d9f-e751-4c32-8594-fe7d54bf1925",
+        "4614ae5c-4b55-496e-b82b-a05b48f319b2",
+        "7dad6be6-6d0b-44ea-9bd0-1dba9f9b55ad"
     ],
     "IsDnD": false,
     "layers": [
@@ -885,36 +885,10 @@
             "visible": true
         },
         {
-            "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Front",
-            "id": "5ce4a813-065c-45d7-9daa-dd0b2fdfa471",
-            "assets": [
-
-            ],
-            "depth": 100,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRAssetLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Effects",
             "id": "f557151f-3420-40dd-95b4-b307936919de",
-            "depth": 200,
+            "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1038,7 +1012,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Enemies",
             "id": "e35740d1-fe23-4321-989f-7786e61e232f",
-            "depth": 300,
+            "depth": 200,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1071,7 +1045,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Player",
             "id": "679dcc47-c572-42a3-ad1a-747a0767f1c9",
-            "depth": 400,
+            "depth": 300,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1097,7 +1071,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Walls",
             "id": "56c66505-0056-48b4-b5fe-e03abd492a12",
-            "depth": 500,
+            "depth": 400,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1858,7 +1832,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
-            "depth": 600,
+            "depth": 500,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1893,7 +1867,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
-            "depth": 700,
+            "depth": 600,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1922,36 +1896,10 @@
             "y": 0
         },
         {
-            "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "back",
-            "id": "a4dd98fa-3ba6-475c-b63c-f784fb09f319",
-            "assets": [
-
-            ],
-            "depth": 800,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRAssetLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Background",
             "id": "cf839b54-ac65-40df-891f-8c445fbbc6ac",
-            "depth": 900,
+            "depth": 700,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -1980,7 +1928,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294927740 },
-            "depth": 1000,
+            "depth": 800,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -2012,7 +1960,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Enemy_walls",
             "id": "a4cd3905-e64a-494c-ad12-11c2a08381b5",
-            "depth": 1100,
+            "depth": 900,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,

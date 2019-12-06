@@ -1,4 +1,4 @@
-key = "key_door1";
+key = "door1";
 
 boss = noone;
 

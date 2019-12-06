@@ -1,1 +1,1 @@
-key = "key_factory";
+key = "factory";
