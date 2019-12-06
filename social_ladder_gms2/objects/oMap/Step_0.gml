@@ -90,7 +90,7 @@ if tab == pause_tab.settings
 				if(hinput != 0){
 					//audio
 				
-					ds_[# 3, menu_option[page]] += hinpssssssssssssssssssssut;
+					ds_[# 3, menu_option[page]] += hinput;
 					ds_[# 3, menu_option[page]] = clamp(ds_[# 3, menu_option[page]], 0, array_length_1d(ds_[# 4, menu_option[page]])-1);
 				}
 			break;
