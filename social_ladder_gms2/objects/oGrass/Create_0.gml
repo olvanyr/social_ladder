@@ -10,10 +10,22 @@ back_color = make_colour_hsv(22, 17, 17);
 rng = irandom_range(1,5);
 if rng == 5
 {
-	layer = layer_get_id("Enemies");
+	if !layer_exists("Grass_back")
+	{
+		layer_create(depth_layer.grass_back,"Grass_back");
+	}
+	layer = layer_get_id("Grass_back");
+	
 	image_blend = back_color;
 }else
 {
+	if !layer_exists("Effects")
+	{
+		layer_create(depth_layer.effects,"Effects");
+	}
+	layer_depth(layer_get_id("Effects"), depth_layer.effects);
+	layer = layer_get_id("Effects");
+	
 	image_blend = c_black;
 }
 

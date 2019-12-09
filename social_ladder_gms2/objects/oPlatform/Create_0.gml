@@ -1,3 +1,12 @@
+if !layer_exists("Walls")
+{
+	layer_create(depth_layer.walls,"Walls");
+}else 
+{
+	layer_depth(layer_get_id("walls"),depth_layer.walls)
+}
+
+layer = layer_get_id("Walls");
 
 //use to make the platform have a hitbox at the end of creat, so we can put grass on it
 once = false;

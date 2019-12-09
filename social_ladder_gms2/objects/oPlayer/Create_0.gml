@@ -1,5 +1,12 @@
 event_inherited();
 
+
+if !layer_exists("Player")
+{
+	layer_create(depth_layer.player,"Player");
+}
+
+
 //Init somme variable
 image_speed = 0.4;
 state = "move";

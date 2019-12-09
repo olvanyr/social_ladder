@@ -1,5 +1,11 @@
 event_inherited();
 
+if !layer_exists("Enemies")
+{
+	layer_create(depth_layer.enemies,"Enemies");
+}
+layer = layer_get_id("Enemies");
+
 //view trigger
 fov = "field of view";
 attack_range = "distance where self start attacking";

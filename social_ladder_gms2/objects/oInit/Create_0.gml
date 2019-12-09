@@ -24,6 +24,24 @@ enum priority //for audio purpose
 	realy_high
 }
 
+enum depth_layer //forlayer depth
+{
+	effects=-1000,
+	tiles=-900,
+	walls=-800,
+	enemies=-200,
+	ground_effects=-100,
+	player=0,
+	lifepack=500,
+	grass_back=600,
+	lava=700,
+	paralax_front=750, //don't know ho to change theme automaticaly, so this one is fixted
+	paralax_back=800,//don't know ho to change theme automaticaly, so this one is fixted
+	background=850,
+	enemy_walls=1000
+
+}
+
 #region // Menu manager
 
 global.fullscreen = true;

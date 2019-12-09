@@ -1,3 +1,12 @@
+if !layer_exists("Enemies")
+{
+	layer_create(depth_layer.enemies,"Enemies");
+}
+
+layer = layer_get_id("Enemies");
+
+
+
 key = "door1";
 
 boss = noone;

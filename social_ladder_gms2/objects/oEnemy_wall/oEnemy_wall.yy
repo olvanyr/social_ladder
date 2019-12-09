@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oEnemy_wall",
     "eventList": [
-        
+        {
+            "id": "70248c82-cc72-4070-bebb-22b5148afeef",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "a8a0cdba-9608-4b36-8ccf-23d3429a531d"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
