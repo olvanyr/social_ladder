@@ -55,7 +55,7 @@ image_speed = 0;
 
 var splits = split_string(string(room_get_name(room)),"_");
 
-if splits[0] == "rLab" || splits[0] == "rPla"
+if splits[0] == "rLab" || splits[0] == "rPla" || splits[0] == "rDz"
 {
 	grass[12] = sGrass12;
 	grass[11] = sGrass11;

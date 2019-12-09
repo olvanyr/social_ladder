@@ -6,6 +6,8 @@ if !layer_exists("Player")
 	layer_create(depth_layer.player,"Player");
 }
 
+layer = layer_get_id("Player");
+
 
 //Init somme variable
 image_speed = 0.4;

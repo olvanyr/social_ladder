@@ -30,6 +30,7 @@ enum depth_layer //forlayer depth
 	tiles=-900,
 	walls=-800,
 	enemies=-200,
+	doors=-150,
 	ground_effects=-100,
 	player=0,
 	lifepack=500,
