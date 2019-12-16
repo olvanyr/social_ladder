@@ -27,6 +27,7 @@ enum priority //for audio purpose
 enum depth_layer //forlayer depth
 {
 	effects=-1000,
+	front = -950,
 	tiles=-900,
 	walls=-800,
 	enemies=-200,

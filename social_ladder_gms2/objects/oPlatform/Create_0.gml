@@ -15,6 +15,8 @@ once = false;
 max_timer = 180;
 timer = max_timer;
 
+pop_up = noone;
+
 image_counter = 0;
 
 last_down_input = 0;

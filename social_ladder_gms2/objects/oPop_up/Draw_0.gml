@@ -1,0 +1,1 @@
+sprite_animation(sprite,y_buffer,anim_speed,_x,_y);

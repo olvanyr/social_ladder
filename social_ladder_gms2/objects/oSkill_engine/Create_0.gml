@@ -11,6 +11,7 @@ image_counter = 0;
 
 counter_pulsse = 0;
 counter_use = 0;
+pop_up = noone;
 
 // use to showcase the new ability
 alpha = 0;

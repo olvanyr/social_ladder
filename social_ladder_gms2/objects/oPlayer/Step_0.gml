@@ -28,11 +28,14 @@
 		instance_create_layer(x,y,"Instances", oWarp)
 	}
 	
-layer_depth(layer_get_id("Paralax_front"), depth_layer.paralax_front);
 	
-layer_depth(layer_get_id("Paralax_back"), depth_layer.paralax_back);
+	layer_depth(layer_get_id("Front"), depth_layer.front);
 
-layer_depth(layer_get_id("Background"), depth_layer.background);
+	layer_depth(layer_get_id("Paralax_front"), depth_layer.paralax_front);
+	
+	layer_depth(layer_get_id("Paralax_back"), depth_layer.paralax_back);
+
+	layer_depth(layer_get_id("Background"), depth_layer.background);
 
 	
 	
