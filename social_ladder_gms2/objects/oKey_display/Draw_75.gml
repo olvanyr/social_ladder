@@ -9,6 +9,9 @@ var width_frac = frac(width/s_width) / max_key_x;
 var j = 0;
 var _y = 0;
 
+
+draw_rectangle_color(-100,-100,gui_width + 100, gui_height + 100,c_background,c_background,c_background,c_background,false);
+
 for (var i = 0; i < array_length_1d(key);i++)
 {
 	//show_debug_message("key = " + string(key[i]));

@@ -1,5 +1,8 @@
 key = global.key;
 
+c_background = c_gray;
+
+
 x_buffer = 10;
 y_buffer = x_buffer;
 

@@ -3,6 +3,7 @@ if !instance_exists(oInput)
 	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
 
+
 // saw if there is still alive enemies
 var death_count = 0;
 with all
@@ -29,6 +30,12 @@ if is_gamepad_active != gamepad_is_connected(0) && gamepad_is_connected(0) == fa
 	pause = true;
 }
 is_gamepad_active = gamepad_is_connected(0);
+
+//Destroy the hey diplay object if not pausing
+if (tab != pause_tab.key || !pause) && instance_exists(oKey_display)
+{
+	instance_destroy(oKey_display);
+}
 
 
 //make pause
@@ -157,8 +164,11 @@ if tab == pause_tab.settings
 	#region Key_display
 if tab  == pause_tab.key
 {
-	instance_create_layer(x,y,"Instances",oKey_display);
-}else instance_destroy(oKey_display);
+	if !instance_exists(oKey_display)
+	{
+		instance_create_layer(x,y,"Instances",oKey_display);
+	}
+}
 	#endregion
 
 
