@@ -150,3 +150,12 @@ global.difficulty = 1;
 //array used to keep dore open
 global.door[0] = noone;
 global.key[0] = "";
+global.key[1] = "door1";
+global.key[2] = "door1";
+global.key[3] = "door1";
+global.key[4] = "door1";
+global.key[5] = "door1";
+global.key[6] = "door1";
+global.key[7] = "door1";
+global.key[8] = "door1";
+global.key[9] = "door1";

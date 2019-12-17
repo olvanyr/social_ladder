@@ -10,6 +10,7 @@ is_gamepad_active = gamepad_is_connected(0);
 enum pause_tab
 {
 	map,
+	key,
 	settings,
 	height
 }

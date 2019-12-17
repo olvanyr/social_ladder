@@ -6,7 +6,8 @@
     "children": [
         "dd142309-d74a-4a7e-b9d9-7463b833f317",
         "0302207f-7c02-48e8-a578-17b72bc247ba",
-        "966d3f7c-bf84-45e7-983f-d58044cee367"
+        "966d3f7c-bf84-45e7-983f-d58044cee367",
+        "ab65d540-63cc-4b0f-bfbd-e4e3b91a0531"
     ],
     "filterType": "GMObject",
     "folderName": "View",

@@ -463,6 +463,14 @@
             }
         },
         {
+            "Key": "125f2166-6b90-416f-8123-ed532e2f2426",
+            "Value": {
+                "id": "564b452f-1279-4897-90ee-c9817a94670c",
+                "resourcePath": "views\\125f2166-6b90-416f-8123-ed532e2f2426.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "130e0e07-7954-40f7-bbe5-9adeb79dd5ea",
             "Value": {
                 "id": "3700bbff-84b0-451d-8e9c-6f7f131ea576",
@@ -4063,6 +4071,14 @@
             }
         },
         {
+            "Key": "c67a8b28-d17c-40eb-ab21-9aa31f664113",
+            "Value": {
+                "id": "59ad318c-f10d-4188-a261-7b269649af35",
+                "resourcePath": "views\\c67a8b28-d17c-40eb-ab21-9aa31f664113.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c68ea606-e5b6-45a5-9529-9bff4d44ed66",
             "Value": {
                 "id": "14fdb797-be64-433e-ae4e-4005fe170c43",
@@ -5068,6 +5084,14 @@
                 "id": "ce7adbf8-9fb4-46e9-a750-6d88af74fd6f",
                 "resourcePath": "sprites\\sScratcher_knockback\\sScratcher_knockback.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fb600a28-3624-4159-b76c-a900ac6b9912",
+            "Value": {
+                "id": "cdf6ea00-5dfc-4741-8bc4-132014bd9bcf",
+                "resourcePath": "views\\fb600a28-3624-4159-b76c-a900ac6b9912.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

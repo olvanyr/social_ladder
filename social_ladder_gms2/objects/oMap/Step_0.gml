@@ -154,6 +154,12 @@ if tab == pause_tab.settings
 	
 	}
 }
+	#region Key_display
+if tab  == pause_tab.key
+{
+	instance_create_layer(x,y,"Instances",oKey_display);
+}else instance_destroy(oKey_display);
+	#endregion
 
 
 #region save setting

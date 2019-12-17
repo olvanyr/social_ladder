@@ -3,8 +3,9 @@ if !pause exit;
 
 switch tab
 {
+	#region Map
 	case pause_tab.map:
-		#region Map
+		
 			//draw map page
 			for ( var i = 0; i < room_last + 1; i++)
 			{
@@ -28,12 +29,13 @@ switch tab
 					}
 				}
 			}
-		#endregion
+		
 	break;
+	#endregion
 
-
+	#region Settings
 	case pause_tab.settings:
-		#region Pause menu
+		
 		//draw setting page
 		global.view_width	= camera_get_view_width(view_camera[0]) * 4;
 		global.view_height	= camera_get_view_height(view_camera[0]) * 4;
@@ -141,6 +143,6 @@ switch tab
 			yy++;
 		}
 		#endregion
-#endregion
 	break;
+#endregion
 }
