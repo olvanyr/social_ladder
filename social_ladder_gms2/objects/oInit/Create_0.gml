@@ -41,7 +41,6 @@ enum depth_layer //forlayer depth
 	paralax_back=800,//don't know ho to change theme automaticaly, so this one is fixted
 	background=850,
 	enemy_walls=1000
-
 }
 
 #region // Menu manager

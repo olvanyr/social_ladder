@@ -37,15 +37,18 @@ if input.start && !inputting
 	pause = !pause;
 }
 
+
 instance_activate_object(oPlayer);
 instance_activate_layer("Enemies");
 instance_activate_layer("Effects");
+instance_activate_layer("Walls");
 
 if !pause exit;
 
 instance_deactivate_object(oPlayer);
 instance_deactivate_layer("Enemies");
 instance_deactivate_layer("Effects");
+instance_deactivate_layer("Walls");
 
 if input.back && (!inputting)
 {
