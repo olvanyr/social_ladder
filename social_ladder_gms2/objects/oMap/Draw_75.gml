@@ -1,11 +1,23 @@
 
 if !pause exit;
 
+var gwidth = global.view_width, gheight = global.view_height;
+
 switch tab
 {
 	#region Map
 	case pause_tab.map:
-		
+			
+			
+			
+			draw_rectangle_color(-100,-100,gwidth + 100, gheight + 100,c_background,c_background,c_background,c_background,false);
+
+			
+			h_move += (input.right_cam - input.left_cam) * move_speed;
+			v_move += (input.down_cam - input.up_cam) * move_speed;
+			
+			if v_move < 0 v_move = 0;
+			if h_move < 0 h_move = 0;
 			//draw map page
 			for ( var i = 0; i < room_last + 1; i++)
 			{
@@ -22,9 +34,12 @@ switch tab
 					
 					sprite = asset_get_index(sprite);
 					
+					var color = c_white;
+					if room_id == room_get_name(room) color = c_gray;
+					
 					if sprite_exists(sprite)
 					{
-						draw_sprite(sprite,0,0,0); 
+						draw_sprite_ext(sprite,0,0 + h_move,0 + v_move,1,1,0,color,1);
 						//show_debug_message(string(sprite));
 					}
 				}
@@ -42,17 +57,13 @@ switch tab
 
 		display_set_gui_size(global.view_width, global.view_height);
 
-		var gwidth = global.view_width, gheight = global.view_height;
-
-
 		var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_); // I actualy just need the current grid that y draw
 		var y_buffer = 50, x_buffer = 16; //how far away the element are from each other or from the divide line
 		var start_y = (gheight/2) - ((((ds_height-1)/2)*y_buffer)), start_x = gwidth/2; // where I start to draw the text, so it is half the amout of space that I need from the center
 		var ltx = start_x - x_buffer, lty, c, xo; //left text exposition ltx
 
 		//Draw Pause Menu "Back"
-		var c = c_gray;
-		draw_rectangle_color(-10,-10,gwidth, gheight, c,c,c,c, false);
+		draw_rectangle_color(-10,-10,gwidth, gheight, c_background,c_background,c_background,c_background, false);
 
 		#region Draw elements on Left Side
 		draw_set_font(fMenu);

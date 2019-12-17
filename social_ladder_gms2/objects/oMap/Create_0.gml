@@ -4,6 +4,11 @@ inputting_sound = aInputting_menu;
 pause = false;
 tab = 0;
 save_setting = false;
+move_speed = 2;
+h_move = 0;
+v_move = 0;
+
+c_background = c_gray;
 
 is_gamepad_active = gamepad_is_connected(0);
 
