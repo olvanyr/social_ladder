@@ -2,6 +2,7 @@ if !layer_exists("Effects")
 {
 	layer_create(depth_layer.effects,"Effects");
 }
+
 layer_depth(layer_get_id("Effects"), depth_layer.effects);
 layer = layer_get_id("Effects");
 

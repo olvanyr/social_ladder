@@ -5,10 +5,10 @@ if ds_map_exists(global.save, "room") && global.save[? "room"] != rLab
 {
 	room_goto(global.start_room);
 	instance_create_layer(global.start_x, global.start_y, "Player", oPlayer);
-	global.current_music = mRoom0;
+	global.current_music = global.first_music;
 	
 }else 
 {
 	room_goto(rCutscenes);
-	global.current_music = m_Enter___;
+	global.current_music = global.cutscenes_music;
 }

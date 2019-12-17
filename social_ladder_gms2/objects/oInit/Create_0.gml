@@ -130,6 +130,9 @@ global.play_time = 0;
 global.date = 0;
 
 //music variable
+global.first_music = mRoom0;
+global.cutscenes_music = m_Enter___;
+
 global.current_music = 0;
 global.new_music = 0;
 
