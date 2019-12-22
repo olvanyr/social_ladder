@@ -147,6 +147,9 @@ global.new_music = 0;
 // addaptative difficulty
 global.difficulty = 1;
 
+// keep track of the gamepad or keyboard
+global.control = "keyboard";
+
 //array used to keep dore open
 global.door[0] = noone;
 global.key[0] = "";
@@ -158,4 +161,4 @@ global.key[5] = "door1";
 global.key[6] = "door1";
 global.key[7] = "door1";
 global.key[8] = "door1";
-global.key[9] = "door1";
+global.key[9] = "factory";

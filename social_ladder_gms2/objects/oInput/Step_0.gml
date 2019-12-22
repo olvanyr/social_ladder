@@ -8,3 +8,26 @@ keyboard_set_map(ord("J"), ord("V"));
 keyboard_set_map(ord("K"), vk_space);
 
 get_input();
+
+
+//track if the gamepad or the keyboard is curently used
+if gamepad_is_connected(0)
+{
+	for (var i = 0; i < 20; i++)
+	{
+		if gamepad_button_check_pressed(0,i)
+		{
+			global.control = "gamepad";
+		}
+	}
+	
+}
+
+
+if keyboard_check_pressed(vk_anykey)
+{
+	global.control = "keyboard";
+}
+
+
+show_debug_message("control : " + string(global.control));

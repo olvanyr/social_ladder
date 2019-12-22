@@ -19,7 +19,7 @@ timer = manage_timer(timer);
 
 if timer <= 0
 {
-	if !instance_exists(pop_up)
+	if !instance_exists(pop_up) && !instance_exists(oPop_up)
 	{
 		pop_up = instance_create_layer(x,y,"Effects",oPop_up);
 		with pop_up
