@@ -162,3 +162,16 @@ global.key[6] = "door1";
 global.key[7] = "door1";
 global.key[8] = "door1";
 global.key[9] = "factory";
+
+// menu 
+global.key_left					= ord("Q");
+global.key_right				= ord("D");
+global.key_up					= ord("Z");
+global.key_down					= ord("S");
+global.key_jump					= ord("Z");
+global.key_attack				= ord("V");
+global.key_slide				= vk_space;
+global.key_cast					= ord("I");
+global.key_use					= ord("N");
+global.key_use_healthpack		= ord("L");
+global.key_pause				= ord("P");

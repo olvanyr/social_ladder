@@ -131,6 +131,23 @@ yy = 0; repeat(ds_height){
 
 		break;
 		
+		case menu_element.input:
+			var current_val = ds_[# 3, yy];
+			switch(current_val){
+				case vk_up:		current_val = "UP KEY"; break;
+				case vk_left:	current_val = "LEFT KEY"; break;
+				case vk_right:	current_val = "RIGHT KEY"; break;
+				case vk_down:	current_val = "DOWN KEY"; break;
+				case vk_space:	current_val = "SPACE"; break;
+				case vk_escape:	current_val = "ESCAPE"; break;
+				case vk_enter:	current_val = "ENTER"; break;
+				default:		current_val = chr(current_val); 
+			}
+			c = c_white;
+			if(inputting and yy == menu_option[page]){ c = c_yellow; }
+			draw_text_color(rtx, rty, current_val, c,c,c,c, 1);
+		break;
+		
 		case menu_element.slots:
 			
 			c = c_black;

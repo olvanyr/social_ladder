@@ -1,40 +1,54 @@
 ///@description check the input
 
 //move
-right = keyboard_check(vk_right);
-left = keyboard_check(vk_left);
-down = keyboard_check(vk_down);
-up = keyboard_check(vk_up);
+right = keyboard_check(global.key_right);
+left = keyboard_check(global.key_left);
+down = keyboard_check(global.key_down);
+up = keyboard_check(global.key_up);
 //cam
 up_cam = keyboard_check(vk_numpad8);
 down_cam = keyboard_check(vk_numpad2);
 right_cam = keyboard_check(vk_numpad6);
 left_cam = keyboard_check(vk_numpad4);
 //action
-roll = keyboard_check_pressed(vk_space);
-attack = keyboard_check_pressed(ord("V"));
-use = keyboard_check_pressed(ord("N"));
-use_healthpack = keyboard_check_pressed(ord("L"));
+roll = keyboard_check_pressed(global.key_slide);
+attack = keyboard_check_pressed(global.key_attack);
+use = keyboard_check_pressed(global.key_use);
+use_healthpack = keyboard_check_pressed(global.key_use_healthpack);
 
-suicide_left = keyboard_check(ord("N"));
-suicide_right = keyboard_check(ord("L"));
+suicide_left = keyboard_check(global.key_use);
+suicide_right = keyboard_check(global.key_use_healthpack);
 
-cast = keyboard_check_pressed(ord("I"));
+cast = keyboard_check_pressed(global.key_cast);
 //jump
-jump = keyboard_check_pressed(vk_up);
-jump_released = keyboard_check_released(vk_up);
+jump = keyboard_check_pressed(global.key_up);
+if keyboard_check_pressed(global.key_jump) jump = 1;
+jump_released = keyboard_check_released(global.key_up);
+if keyboard_check_released(global.key_jump) jump_released = 1;
+
 //menu
 enter = keyboard_check_pressed(vk_enter);
 back = keyboard_check_pressed(vk_escape);
-menu_right = keyboard_check_pressed(vk_right);
-menu_left = keyboard_check_pressed(vk_left);
-menu_down = keyboard_check_pressed(vk_down);
-menu_up = keyboard_check_pressed(vk_up);
-erase = keyboard_check_pressed(ord("V"));
-back = keyboard_check_pressed(vk_escape);
-start = keyboard_check_pressed(ord("P"));
+menu_right = keyboard_check_pressed(global.key_right);
+menu_left = keyboard_check_pressed(global.key_left);
+menu_down = keyboard_check_pressed(global.key_down);
+menu_up = keyboard_check_pressed(global.key_up);
+erase = keyboard_check(global.key_attack);
+start = keyboard_check_pressed(global.key_pause);
 next_tab = keyboard_check_pressed(ord("E"));
 previous_tab = keyboard_check_pressed(ord("A"));
+
+//control hard code
+if keyboard_check(vk_right) right = 1;
+if keyboard_check(vk_left) left = 1;
+if keyboard_check(vk_down) down = 1;
+if keyboard_check_pressed(vk_up) up = 1;
+if keyboard_check_pressed(vk_up) jump = 1;
+//menu hard code
+if keyboard_check_pressed(vk_right) menu_right = 1;
+if keyboard_check_pressed(vk_left) menu_left = 1;
+if keyboard_check_pressed(vk_down) menu_down = 1;
+if keyboard_check_pressed(vk_up) menu_up = 1;
 
 //gamepad
 if (abs(gamepad_axis_value(0,gp_axislv)) > 0.5)

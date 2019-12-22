@@ -65,6 +65,19 @@ if(inputting){
 			}
 		break;
 		
+		case menu_element.input:
+		if(any_pressed == 0)
+		{
+			var kk = keyboard_lastkey;
+			if(kk != vk_enter){
+				if(kk != ds_[# 3, menu_option[page]]) //audio
+				ds_[# 3, menu_option[page]] = kk;
+				variable_global_set(ds_[# 2, menu_option[page]], kk);
+			}
+		}
+		
+		break;
+		
 		case menu_element.slots:
 			
 			variable_global_set(ds_[# 3, menu_option[page]], ds_[# 4, menu_option[page]]);
