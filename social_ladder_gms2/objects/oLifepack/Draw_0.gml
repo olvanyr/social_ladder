@@ -2,25 +2,29 @@ draw_self();
 
 if instance_exists(oPlayer)
 {
-	if draw && healthpack != 0
+	if oPlayer.grounded
 	{
-		if !instance_exists(pop_up)
+		if draw && healthpack != 0
 		{
-			pop_up = instance_create_layer(x,y,"Effects",oPop_up);
-			with pop_up
+			if !instance_exists(pop_up)
 			{
-				//sprite_animation(sDown,0,0.05,x,y);
-				sprite = sUse;
-				y_buffer = 0;
-				anim_speed = 0.05;
-				_x = oPlayer.x;
-				_y = oPlayer.y;
+				pop_up = instance_create_layer(x,y,"Effects",oPop_up);
+				with pop_up
+				{
+					sprite = sUse;
+					letter = global.key_use;
+					anim_speed = 0.05;
+					_x = oPlayer.x;
+					_y = oPlayer.y - 60;
+					letter_x = oPlayer.x;
+					letter_y = oPlayer.y - 60;
+				}
 			}
 		}
-	}
-	if !draw
-	{
-		instance_destroy(pop_up);
+		if !draw
+		{
+			instance_destroy(pop_up);
+		}
 	}
 }
 

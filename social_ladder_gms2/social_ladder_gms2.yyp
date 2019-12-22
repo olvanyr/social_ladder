@@ -1207,6 +1207,14 @@
             }
         },
         {
+            "Key": "36d40055-b53e-4154-988d-fe033bdf1eeb",
+            "Value": {
+                "id": "742d33fc-02af-482d-9563-0c5b5fa33a1b",
+                "resourcePath": "fonts\\fPop_up\\fPop_up.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "3797ad4c-5517-400e-b603-38636e2d24f6",
             "Value": {
                 "id": "2bdaa9bc-1f9c-4876-8dcc-b8949246ca0d",
@@ -4087,6 +4095,14 @@
             }
         },
         {
+            "Key": "c63e20d8-8663-49b6-8a47-44ae8731885c",
+            "Value": {
+                "id": "d6dec18a-31d4-4736-bbd4-fbd2cc0f5238",
+                "resourcePath": "sprites\\sKey\\sKey.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c64f0f95-cf5b-4961-aebd-509706609a7d",
             "Value": {
                 "id": "5084d1ef-fabf-430b-b244-218a65598eea",
@@ -4268,6 +4284,14 @@
                 "id": "d0110477-2765-41f5-a66a-2b17964ea37c",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "ccf53067-9945-472f-a79e-e643deb1ee5d",
+            "Value": {
+                "id": "5810f55f-d16e-4bdc-8c7e-cd6a17dded5e",
+                "resourcePath": "sprites\\sDown_keyboard\\sDown_keyboard.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

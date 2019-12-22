@@ -26,10 +26,12 @@ if timer <= 0
 		{
 			//sprite_animation(sDown,0,0.05,x,y);
 			sprite = sDown;
-			y_buffer = 0;
+			letter = global.key_jump;
 			anim_speed = 0.05;
-			_x = other.x;
-			_y = other.y;
+			_x = oPlayer.x + 5;
+			_y = oPlayer.y - 55;
+			letter_x = oPlayer.x - 5;
+			letter_y = oPlayer.y - 55;
 		}
 	}
 	

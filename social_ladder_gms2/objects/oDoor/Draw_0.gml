@@ -47,10 +47,12 @@ if instance_exists(oPlayer)
 				with pop_up1
 				{
 					sprite = sUse;
-					y_buffer = -(dir * 40);
+					letter = global.key_use;
 					anim_speed = 0.05;
-					_x = other.x;
-					_y = other.y;
+					_x = other.x -(dir * 40);
+					_y = other.y - 70;
+					letter_x = other.x -(dir * 40);
+					letter_y = other.y - 70;
 				}
 			}
 			
@@ -63,9 +65,8 @@ if instance_exists(oPlayer)
 					with pop_up2
 					{
 						sprite = other.key_sprite;
-						y_buffer = -(dir * 40);
 						anim_speed = 0;
-						_x = other.x;
+						_x = other.x-(dir * 40);
 						_y = other.y - 80;
 					}
 				}
@@ -77,9 +78,8 @@ if instance_exists(oPlayer)
 				with pop_up0
 				{
 					sprite = sKey_back;
-					y_buffer = -(dir * 40);
 					anim_speed = 0.05;
-					_x = other.x;
+					_x = other.x-(dir * 40);
 					_y = other.y - 70;
 				}
 			}
