@@ -1,5 +1,7 @@
 /// @description  init the global var of the game
 
+random_set_seed(10);
+
 // add an enum to save the variable
 enum save
 {
@@ -26,21 +28,22 @@ enum priority //for audio purpose
 
 enum depth_layer //forlayer depth
 {
-	effects=-1000,
-	front = -950,
-	tiles=-900,
-	walls=-800,
-	enemies=-200,
-	doors=-150,
-	ground_effects=-100,
-	player=0,
-	lifepack=500,
-	grass_back=600,
-	lava=700,
-	paralax_front=750, //don't know ho to change theme automaticaly, so this one is fixted
-	paralax_back=800,//don't know ho to change theme automaticaly, so this one is fixted
-	background=850,
-	enemy_walls=1000
+	effects			=-1000,
+	front			=-950,
+	tiles			=-900,
+	walls			=-800,
+	enemies			=-200,
+	doors			=-150,
+	ground_effects	=-100,
+	player			=0,
+	lifepack		=500,
+	grass_back		=600,
+	lava			=700,
+	paralax_front	=750, //don't know ho to change theme automaticaly, so this one is fixted
+	paralax_back	=800,//don't know ho to change theme automaticaly, so this one is fixted
+	back			=830,
+	background		=900,
+	enemy_walls		=2000
 }
 
 #region // Menu manager

@@ -223,7 +223,7 @@
         },
         {
             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "front",
+            "name": "Front",
             "id": "41dc5ab9-e88e-40c5-8fae-6c5ed0b591f3",
             "assets": [
 {"__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat","name": "graphic_54352474","id": "4eb69e55-fa59-42c7-a823-986f3b8c287b","animationFPS": 15,"animationSpeedType": "0","colour": { "Value": 4294967295 },"frameIndex": 0,"ignore": false,"inheritItemSettings": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRSpriteGraphic","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","spriteId": "3cb50515-6ae4-4f21-a63d-0a87133353ca","userdefined_animFPS": false,"x": 16,"y": 16}
@@ -334,7 +334,7 @@
         },
         {
             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "back",
+            "name": "Back",
             "id": "b469550b-af97-44f6-957f-457ee61cd351",
             "assets": [
 

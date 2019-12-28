@@ -28,16 +28,12 @@
 		instance_create_layer(x,y,"Instances", oWarp)
 	}
 	
-	
-	layer_depth(layer_get_id("Front"), depth_layer.front);
+	//check if the layer are at the corecte position and if not move theme
+	set_layer_depth("Front",depth_layer.front);
+	set_layer_depth("Back",depth_layer.back);
+	set_layer_depth("Paralax_back",depth_layer.paralax_back);
+	set_layer_depth("Background",depth_layer.background);
 
-	layer_depth(layer_get_id("Paralax_front"), depth_layer.paralax_front);
-	
-	layer_depth(layer_get_id("Paralax_back"), depth_layer.paralax_back);
-
-	layer_depth(layer_get_id("Background"), depth_layer.background);
-
-	
 	
 #endregion
 
