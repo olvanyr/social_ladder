@@ -27,4 +27,4 @@ if keyboard_check_pressed(vk_anykey)
 }
 
 
-show_debug_message("control : " + string(global.control));
+//show_debug_message("control : " + string(global.control));

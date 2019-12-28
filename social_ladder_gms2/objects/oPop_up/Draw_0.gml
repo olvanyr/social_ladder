@@ -4,7 +4,7 @@ if global.control == "keyboard"
 	if letter != ""
 	{
 	var current_sprite = sprite;
-	show_debug_message("asset index : " + string (sprite_get_name(sprite) + "_keyboard"));
+	//show_debug_message("asset index : " + string (sprite_get_name(sprite) + "_keyboard"));
 	if sprite_exists((asset_get_index( sprite_get_name(sprite) + "_keyboard")))
 	{
 		current_sprite = asset_get_index(sprite_get_name(sprite) + "_keyboard")
