@@ -1,6 +1,11 @@
 
 if !pause exit;
 
+global.view_width	= camera_get_view_width(view_camera[0]) * 4;
+global.view_height	= camera_get_view_height(view_camera[0]) * 4;
+
+display_set_gui_size(global.view_width, global.view_height);
+
 var gwidth = global.view_width, gheight = global.view_height;
 
 switch tab
@@ -8,10 +13,18 @@ switch tab
 	#region Map
 	case pause_tab.map:
 			
+			//draw setting page
+			global.view_width	= camera_get_view_width(view_camera[0]);
+			global.view_height	= camera_get_view_height(view_camera[0]);
+			
+			show_debug_message( "global.width " + string(global.view_width));
+			show_debug_message( "global.height " + string(global.view_height));
+			display_set_gui_size(global.view_width, global.view_height);
+
+			var gwidth = global.view_width, gheight = global.view_height;
 			
 			
 			draw_rectangle_color(-100,-100,gwidth + 100, gheight + 100,c_background,c_background,c_background,c_background,false);
-
 			
 			h_move += (input.right_cam - input.left_cam) * move_speed;
 			v_move += (input.down_cam - input.up_cam) * move_speed;
@@ -52,10 +65,6 @@ switch tab
 	case pause_tab.settings:
 		
 		//draw setting page
-		global.view_width	= camera_get_view_width(view_camera[0]) * 4;
-		global.view_height	= camera_get_view_height(view_camera[0]) * 4;
-
-		display_set_gui_size(global.view_width, global.view_height);
 
 		var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_); // I actualy just need the current grid that y draw
 		var y_buffer = 50, x_buffer = 16; //how far away the element are from each other or from the divide line
