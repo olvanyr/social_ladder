@@ -23,6 +23,7 @@ if rng == 5
 	{
 		layer_create(depth_layer.grass_back,"Grass_back");
 	}
+	layer_depth(layer_get_id("Grass_back"), depth_layer.grass_back);
 	layer = layer_get_id("Grass_back");
 	
 	image_blend = back_color;

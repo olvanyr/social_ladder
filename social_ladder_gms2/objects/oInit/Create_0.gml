@@ -37,7 +37,7 @@ enum depth_layer //forlayer depth
 	ground_effects	=-100,
 	player			=0,
 	lifepack		=500,
-	grass_back		=600,
+	grass_back		=550,
 	lava			=700,
 	paralax_front	=750, //don't know ho to change theme automaticaly, so this one is fixted
 	paralax_back	=800,//don't know ho to change theme automaticaly, so this one is fixted
