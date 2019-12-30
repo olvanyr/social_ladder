@@ -13,8 +13,17 @@ if instance_exists(oPlayer)
 		room_goto(next_room);
 		oPlayer.x = x_next;
 		oPlayer.y = y_next;
-		oCamera.x = x_next;
-		oCamera.y = y_next;
+		oPlayer.grounded = true;
+		oPlayer.alarm[0] = 0;
+		with oPlayer
+		{
+			//move_contact_solid(270, -1);
+			grounded = true;
+		}
+		
+		oCamera.x = x_next + oCamera.x_buffer;
+		oCamera.y = y_next - oCamera.y_buffer;
+
 		oCamera.follow = oPlayer;
 		
 		if oPlayer.state == "death" || oPlayer.state = "suicide"

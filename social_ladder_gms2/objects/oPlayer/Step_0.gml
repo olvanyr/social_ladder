@@ -32,6 +32,7 @@
 	set_layer_depth("Front",depth_layer.front);
 	set_layer_depth("Back",depth_layer.back);
 	set_layer_depth("Paralax_back",depth_layer.paralax_back);
+	set_layer_depth("Paralax_front",depth_layer.paralax_front);
 	set_layer_depth("Background",depth_layer.background);
 
 	
