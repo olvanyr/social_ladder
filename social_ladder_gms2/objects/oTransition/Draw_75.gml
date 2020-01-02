@@ -21,10 +21,12 @@ if instance_exists(oPlayer)
 			grounded = true;
 		}
 		
-		oCamera.x = x_next + oCamera.x_buffer;
-		oCamera.y = y_next - oCamera.y_buffer;
-
-		oCamera.follow = oPlayer;
+		if instance_exists(oCamera)
+		{
+			oCamera.x = x_next + oCamera.x_buffer;
+			oCamera.y = y_next - oCamera.y_buffer;
+			oCamera.follow = oPlayer;
+		}
 		
 		if oPlayer.state == "death" || oPlayer.state = "suicide"
 		{

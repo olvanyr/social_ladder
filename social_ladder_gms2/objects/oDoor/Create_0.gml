@@ -2,8 +2,15 @@ if !layer_exists("Enemies")
 {
 	layer_create(depth_layer.enemies,"Enemies");
 }
-
+set_layer_depth("Enemies",depth_layer.enemies);
 layer = layer_get_id("Enemies");
+
+if !layer_exists("Effects")
+{
+	layer_create(depth_layer.effects,"Effects");
+}
+set_layer_depth("Effects",depth_layer.effects);
+layer = layer_get_id("Effects");
 
 
 
