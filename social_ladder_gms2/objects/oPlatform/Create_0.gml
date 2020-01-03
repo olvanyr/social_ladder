@@ -8,6 +8,11 @@ if !layer_exists("Walls")
 
 layer = layer_get_id("Walls");
 
+if !layer_exists("Effects")
+{
+	layer_create(depth_layer.effects,"Effects");
+}
+
 //use to make the platform have a hitbox at the end of creat, so we can put grass on it
 once = false;
 
