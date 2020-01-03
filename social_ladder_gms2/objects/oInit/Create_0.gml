@@ -42,6 +42,7 @@ enum depth_layer //forlayer depth
 	paralax_front	=750, //don't know ho to change theme automaticaly, so this one is fixted
 	paralax_back	=800,//don't know ho to change theme automaticaly, so this one is fixted
 	back			=830,
+	gradiant		=850,
 	background		=900,
 	enemy_walls		=2000
 }

@@ -2,7 +2,7 @@
     "id": "ad65da55-da46-4f9f-a6a9-08bb1fb7349b",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oBackground",
+    "name": "oGradiant",
     "eventList": [
         {
             "id": "e89711e8-d1c3-476b-ad45-62b5992c50de",
@@ -12,6 +12,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
+            "m_owner": "ad65da55-da46-4f9f-a6a9-08bb1fb7349b"
+        },
+        {
+            "id": "4ab0fa32-a6ac-4339-a5cb-8e162bf22f74",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
             "m_owner": "ad65da55-da46-4f9f-a6a9-08bb1fb7349b"
         }
     ],

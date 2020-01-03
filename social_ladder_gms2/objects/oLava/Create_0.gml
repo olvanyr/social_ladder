@@ -10,6 +10,5 @@ if !layer_exists("Effects")
 	layer_create(depth_layer.effects,"Effects");
 }
 set_layer_depth("Effects",depth_layer.effects);
-layer = layer_get_id("Effects");
 
 timer = 0;
