@@ -3095,6 +3095,14 @@
             }
         },
         {
+            "Key": "8ed4de10-a2d4-4e7e-be6e-e8f4f7139ed7",
+            "Value": {
+                "id": "487a06fd-f8d6-454b-b84e-c989ac556338",
+                "resourcePath": "sprites\\sDoor_boss_filling\\sDoor_boss_filling.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8f74af75-21bb-476e-b57e-21193446eaf8",
             "Value": {
                 "id": "8177b72c-0286-41e6-9b6b-8b9f2d6c26b6",
@@ -3180,6 +3188,14 @@
                 "id": "fc82748e-ff0c-48d3-803b-03fe59be6034",
                 "resourcePath": "objects\\oDeer_caster\\oDeer_caster.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9396f6d4-7f01-46fc-b040-0a6f8aa2e573",
+            "Value": {
+                "id": "18143734-7051-418b-a288-e46a40fc96d7",
+                "resourcePath": "sprites\\sDoor_boss\\sDoor_boss.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3900,6 +3916,14 @@
                 "id": "5473b06f-b4a1-4981-9388-7ad78495e728",
                 "resourcePath": "sprites\\sPlayer_attack1_mask\\sPlayer_attack1_mask.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b6fe69a8-3fd8-44d4-b8c8-1a96d1b02acf",
+            "Value": {
+                "id": "868ef18d-a1e8-4612-a81e-f8cfc5dc56bc",
+                "resourcePath": "objects\\oBoss_door\\oBoss_door.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -1,16 +1,17 @@
-if !layer_exists("Enemies")
-{
-	layer_create(depth_layer.enemies,"Enemies");
-}
-set_layer_depth("Enemies",depth_layer.enemies);
-layer = layer_get_id("Enemies");
-
 if !layer_exists("Effects")
 {
 	layer_create(depth_layer.effects,"Effects");
 }
 set_layer_depth("Effects",depth_layer.effects);
-layer = layer_get_id("Effects");
+
+
+if !layer_exists("Door")
+{
+	layer_create(depth_layer.door,"Door");
+}
+set_layer_depth("Door",depth_layer.door);
+layer = layer_get_id("Door");
+
 
 
 
@@ -24,6 +25,7 @@ door_sprite = sDoor1
 sprite_index = noone;
 
 animation_frame = 0;
+anim_speed = 0.5;
 
 door_status = "closed";
 

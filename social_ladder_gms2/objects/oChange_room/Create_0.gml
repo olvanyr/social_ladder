@@ -1,6 +1,6 @@
-if !layer_exists("Doors")
+if !layer_exists("Walls")
 {
-	layer_create(depth_layer.doors,"Doors");
+	layer_create(depth_layer.walls,"Walls");
 }
 
-layer = layer_get_id("Doors");
+layer = layer_get_id("Walls");

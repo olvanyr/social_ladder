@@ -5,7 +5,7 @@ if door_status == "closed"
 	mask_index = door_sprite;
 }else
 {
-	animation_frame += 0.5;
+	animation_frame += anim_speed;
 	if animation_frame >= sprite_get_number(door_sprite)
 	{	
 		animation_frame = sprite_get_number(door_sprite)-1;
