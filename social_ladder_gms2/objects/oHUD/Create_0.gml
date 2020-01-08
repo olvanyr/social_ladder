@@ -8,8 +8,8 @@ if !instance_exists(oPlayer) exit;
 draw_hp = oPlayer.hp;
 
 //HUD 
-x_buffer = 10;
-y_buffer = 10;
+x_buffer = 5;
+y_buffer = 5;
 
 hp_x = x_buffer + (3); 
 hp_y = y_buffer + (2); 
