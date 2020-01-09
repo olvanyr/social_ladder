@@ -51,7 +51,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "3fd29027-df60-4441-9f5e-1e1d515e984b",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "door1",
+            "varName": "key",
+            "varType": 2
+        }
+    ],
     "solid": false,
     "spriteId": "26bcfebd-cc2c-46d0-87d2-b7c858ada705",
     "visible": true

@@ -1,3 +1,10 @@
+if !layer_exists("Door")
+{
+	layer_create(depth_layer.door,"Door");
+}
+set_layer_depth("Door",depth_layer.door);
+layer = layer_get_id("Door");
+
 input = noone;
 
 new_ability = false;

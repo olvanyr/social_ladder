@@ -8,8 +8,6 @@ layer = layer_get_id("Effects");
 
 
 
-key = "door1";
-
 sprite_index = asset_get_index("sKey_" + string(key));
 
 

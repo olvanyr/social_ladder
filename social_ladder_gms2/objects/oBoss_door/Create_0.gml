@@ -12,7 +12,6 @@ if !layer_exists("Door")
 set_layer_depth("Door",depth_layer.door);
 layer = layer_get_id("Door");
 
-needed_xp = 10;
 player_xp = 0;
 xp_count = 0;
 image_speed = 0;
