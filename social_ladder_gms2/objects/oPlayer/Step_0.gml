@@ -312,6 +312,8 @@ switch state
 			{
 				state = "cast";
 			}
+			
+			//suicide
 			if input.suicide_left && input.suicide_right
 			{
 				suicide_timer ++;

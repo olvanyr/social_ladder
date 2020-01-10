@@ -50,7 +50,7 @@ if place_meeting(x, y - 1, oWall)
 
 repeat(3)
 {
-	with (instance_create_layer(x,y,"Effects",oGround_effect))
+	with (instance_create_layer(x,y,layer,oGround_effect))
 	{
 	}
 }

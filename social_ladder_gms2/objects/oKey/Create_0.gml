@@ -18,3 +18,6 @@ for (var i = 0; i < array_length_1d(global.key); i++)
 		instance_destroy();
 	}
 }
+
+picked = false;
+once = false;

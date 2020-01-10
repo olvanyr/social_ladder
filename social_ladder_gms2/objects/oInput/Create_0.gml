@@ -28,8 +28,8 @@ menu_right = keyboard_check_pressed(global.key_right);
 menu_left = keyboard_check_pressed(global.key_left);
 menu_down = keyboard_check_pressed(global.key_down);
 menu_up = keyboard_check_pressed(global.key_up);
-erase = keyboard_check(global.key_attack);
-start = keyboard_check(ord("P"));
+erase = keyboard_check_pressed(global.key_attack);
+start = keyboard_check_pressed(ord("P"));
 next_tab = keyboard_check(ord("E"));
 previous_tab = keyboard_check(ord("A"));
 
