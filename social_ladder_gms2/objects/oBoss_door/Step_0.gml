@@ -54,6 +54,7 @@ if global.experience >= needed_xp && image_index == image_number - 1
 		
 	}
 	instance_destroy(self);
+	
 }
 /*
 show_debug_message("xp_count / visual_factor : " + string(xp_count/visual_factor));
