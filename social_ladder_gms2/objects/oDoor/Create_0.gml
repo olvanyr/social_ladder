@@ -13,14 +13,9 @@ set_layer_depth("Door",depth_layer.door);
 layer = layer_get_id("Door");
 
 
-
-
-key = "";
 key_sprite = noone;
 
 boss = noone;
-
-door_sprite = sDoor1
 
 sprite_index = noone;
 

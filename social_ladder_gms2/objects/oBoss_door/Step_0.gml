@@ -45,6 +45,9 @@ if global.experience < needed_xp && image_index == image_number - 1
 //if the door is full, destroy the object, and create an actual door
 if global.experience >= needed_xp && image_index == image_number - 1 
 {
+	var door_number = array_length_1d(global.door);
+	global.door[door_number] = id;
+	
 	with instance_create_layer(x,y,"Door",oDoor)
 	{
 		door_sprite = sDoor_boss;

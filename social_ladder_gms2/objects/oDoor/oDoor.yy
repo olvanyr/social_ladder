@@ -51,7 +51,36 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "f3fa7a20-6ac4-4e49-945e-ad62fde61ad3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "sDoor1",
+            "varName": "door_sprite",
+            "varType": 5
+        },
+        {
+            "id": "322db3e9-30a4-4425-8c5c-0690080c2107",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "",
+            "varName": "key",
+            "varType": 2
+        }
+    ],
     "solid": true,
     "spriteId": "9f7da3c9-d85e-4f39-84e1-2d948437b913",
     "visible": true
