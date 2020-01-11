@@ -12,6 +12,9 @@ var _y = 0;
 
 draw_rectangle_color(-100,-100,gui_width + 100, gui_height + 100,c_background,c_background,c_background,c_background,false);
 
+draw_set_font(fMenu);
+draw_text_color((gui_width - string_width(text)) /2, 7,text,c_black,c_black,c_black,c_black,1);
+
 for (var i = 0; i < array_length_1d(key);i++)
 {
 	//show_debug_message("key = " + string(key[i]));
@@ -22,7 +25,7 @@ for (var i = 0; i < array_length_1d(key);i++)
 	
 	if sprite_exists(key_sprite)
 	{
-		draw_sprite(key_sprite,0,x_buffer + width_frac + (j*s_width),y_buffer + (_y*s_height));
+		draw_sprite(key_sprite,0,x_buffer + width_frac + (j*s_width),y_buffer*2 + (_y*s_height));
 	}
 	j ++;
 }

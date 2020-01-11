@@ -19,6 +19,7 @@ if page = menu_page.start
 {
 	var swidth = sprite_get_width(sMenu_start_background);
 	var sheight = sprite_get_height(sMenu_start_background);
+	
 	draw_sprite_ext(sMenu_start_background,0,gwidth/2 - swidth - 150,gheight/2 - sheight - 180,2.5,2.5,0,c_white,1);
 }
 //draw_sprite_ext(sBackround,0,0,0,global.view_width/sprite_get_width(sBackgroundMenu),global.view_height/sprite_get_height(sBackgroundMenu),0,c_white,1);

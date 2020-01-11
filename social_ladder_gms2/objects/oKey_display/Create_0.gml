@@ -1,5 +1,7 @@
 key = global.key;
 
+text = "key";
+
 c_background = c_gray;
 
 
