@@ -24,8 +24,7 @@ if x mod width != 0 || y mod height != 0
 	if !layer_exists("Tiles")
 	{
 		layer_create(depth_layer.tiles,"Tiles");
-	}
-	
+	}	
 	
 	with instance_create_layer(x,y,"Tiles",oTile)
 	{
