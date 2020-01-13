@@ -11,7 +11,7 @@ new_ability = false;
 ability = noone;
 showcase = false;
 
-total_experience = 100;
+global.total_experience = 100;
 
 //use to animate srite
 image_counter = 0;

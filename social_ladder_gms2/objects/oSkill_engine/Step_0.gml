@@ -1,6 +1,6 @@
 //select the corect image for the miasma tree
 var image_miasma_tree = sprite_get_number(sMiasma_tree);
-var _experience = global.experience / total_experience;
+var _experience = global.experience / global.total_experience;
 
 image = round(image_miasma_tree * _experience);
 

@@ -1,25 +1,12 @@
 
 if !pause exit;
 
-global.view_width	= camera_get_view_width(view_camera[0]) * 4;
-global.view_height	= camera_get_view_height(view_camera[0]) * 4;
 
-display_set_gui_size(global.view_width, global.view_height);
-
-var gwidth = global.view_width, gheight = global.view_height;
 
 switch tab
 {
 	#region Map
 	case pause_tab.map:
-			
-			//draw setting page
-			global.view_width	= camera_get_view_width(view_camera[0]);
-			global.view_height	= camera_get_view_height(view_camera[0]);
-			
-			show_debug_message( "global.width " + string(global.view_width));
-			show_debug_message( "global.height " + string(global.view_height));
-			display_set_gui_size(global.view_width, global.view_height);
 
 			var gwidth = global.view_width, gheight = global.view_height;
 			
@@ -60,10 +47,23 @@ switch tab
 		
 	break;
 	#endregion
+	#region key
+	case pause_tab.key:
+
+		
+	break;
+	#endregion
+
 
 	#region Settings
 	case pause_tab.settings:
-		
+		global.view_width	= camera_get_view_width(view_camera[0]) * 4;
+		global.view_height	= camera_get_view_height(view_camera[0]) * 4;
+
+
+		display_set_gui_size(global.view_width, global.view_height);
+
+		var gwidth = global.view_width, gheight = global.view_height;
 		//draw setting page
 
 		var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_); // I actualy just need the current grid that y draw
