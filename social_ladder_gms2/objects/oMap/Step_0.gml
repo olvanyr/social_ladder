@@ -31,13 +31,6 @@ if is_gamepad_active != gamepad_is_connected(0) && gamepad_is_connected(0) == fa
 }
 is_gamepad_active = gamepad_is_connected(0);
 
-//Destroy the hey diplay object if not pausing
-if (tab != pause_tab.key || !pause) && instance_exists(oKey_display)
-{
-	instance_destroy(oKey_display);
-}
-
-
 //make pause
 if input.start && !inputting
 {
@@ -89,7 +82,6 @@ var ds_ = menu_pages[page], ds_height = ds_grid_height(ds_);
 	
 
 //if tab == pause_tab.settings show_debug_message("settings"); else show_debug_message("map")
-
 if tab == pause_tab.settings
 {
 	if(inputting ){
@@ -161,16 +153,6 @@ if tab == pause_tab.settings
 	
 	}
 }
-	#region Key_display
-if tab  == pause_tab.key
-{
-	if !instance_exists(oKey_display)
-	{
-		instance_create_layer(x,y,"Instances",oKey_display);
-	}
-}
-	#endregion
-
 
 #region save setting
 

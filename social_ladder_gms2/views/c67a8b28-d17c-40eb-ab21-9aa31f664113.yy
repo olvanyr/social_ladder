@@ -5,7 +5,6 @@
     "name": "c67a8b28-d17c-40eb-ab21-9aa31f664113",
     "children": [
         "574896fc-307d-4bd1-8061-dd2535b7a907",
-        "5da763fb-dad1-4891-aa29-6b621ae78fad",
         "b9c44a72-decc-444a-9de3-c99bbf96ec7b"
     ],
     "filterType": "GMObject",

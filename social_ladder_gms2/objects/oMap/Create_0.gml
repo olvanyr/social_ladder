@@ -1,3 +1,21 @@
+//display key var
+key = global.key;
+
+key_text = "-key-";
+
+c_background = c_gray;
+
+
+x_buffer_key = 10;
+y_buffer_key = x_buffer_key;
+
+s_height = sprite_get_height(sKey_door1) + (2*x_buffer_key);
+s_width = sprite_get_width(sKey_door1) + (2*y_buffer_key);
+gui_height = display_get_gui_height();
+gui_width = display_get_gui_width();
+
+
+
 // some constante
 down_up_sound = aDown_up_menu;
 inputting_sound = aInputting_menu;
