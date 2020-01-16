@@ -4,6 +4,25 @@ if !instance_exists(oInput)
 	input = instance_create_layer(0,0,"Instances",oInput)
 }else input = oInput;
 
+//track if the gamepad or the keyboard is curently used
+if gamepad_is_connected(0)
+{
+	for (var i = 0; i < 20; i++)
+	{
+		if gamepad_button_check_pressed(0,i)
+		{
+			global.control = "gamepad";
+		}
+	}
+	
+}
+
+
+if keyboard_check_pressed(vk_anykey)
+{
+	global.control = "keyboard";
+}
+
 //make a simple way to go back
 if(input.back) && toggle = false
 {

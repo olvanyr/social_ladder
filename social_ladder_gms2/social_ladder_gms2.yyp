@@ -751,14 +751,6 @@
             }
         },
         {
-            "Key": "1f20d6cd-0887-4bff-b394-c1244b2f7e43",
-            "Value": {
-                "id": "8b086c43-14ee-465d-8513-403866a32439",
-                "resourcePath": "sprites\\sKey_door11\\sKey_door11.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "1f387238-c839-4888-8fc6-b38a4939a254",
             "Value": {
                 "id": "4f473191-2d94-4610-b0f9-1d9af452f2c5",
@@ -2439,6 +2431,14 @@
             }
         },
         {
+            "Key": "760f741b-3930-4351-a5bd-5135aa85352c",
+            "Value": {
+                "id": "6c641f33-ab88-4f32-bad8-e66e0c02b50f",
+                "resourcePath": "sprites\\sMenu_button_erase_keyboard\\sMenu_button_erase_keyboard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "765d7d7b-1e8b-4977-ad1c-34c81c1e9f3d",
             "Value": {
                 "id": "4b8899fa-9618-45dc-b132-e03e8ec3281e",
@@ -2451,14 +2451,6 @@
             "Value": {
                 "id": "afdb53a0-6f64-4ef1-a6b5-f01d08cc4b87",
                 "resourcePath": "sprites\\sLegs_idle\\sLegs_idle.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "782a623e-6f47-4cdd-b193-6f0e85e810e5",
-            "Value": {
-                "id": "fb62f639-d23d-4ae7-b9f3-963917a1675a",
-                "resourcePath": "sprites\\sRoom1\\sRoom1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3772,6 +3764,14 @@
                 "id": "868ef18d-a1e8-4612-a81e-f8cfc5dc56bc",
                 "resourcePath": "objects\\oBoss_door\\oBoss_door.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b75e975a-ccc4-41ea-a844-a53cbb977fb0",
+            "Value": {
+                "id": "0e9233f5-9381-42f6-bc8d-13e9dfe8a831",
+                "resourcePath": "sprites\\sMenu_start_keyboard\\sMenu_start_keyboard.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

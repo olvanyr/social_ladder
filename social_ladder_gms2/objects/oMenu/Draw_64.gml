@@ -53,7 +53,10 @@ var yy = 0; repeat(ds_height)
 #region draw other element
 if page != menu_page.start && page != menu_page.slots
 {
-	draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
+	if global.control == "keyboard"
+	{
+		draw_sprite_ext(sMenu_button_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
+	}else draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
 
 	//Draw Dividing Line
 	c = c_black;
@@ -62,7 +65,11 @@ if page != menu_page.start && page != menu_page.slots
 
 if page == menu_page.slots
 {
-	draw_sprite_ext(sMenu_button_erase,0,gwidth,gheight,2,2,0,c_white,1);
+	if global.control == "keyboard"
+	{
+		draw_sprite_ext(sMenu_button_erase_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
+	}else draw_sprite_ext(sMenu_button_erase,0,gwidth,gheight,2,2,0,c_white,1);
+	
 }
 
 // draw image on the control page
@@ -74,11 +81,15 @@ if page == menu_page.controls
 //draw the presse start things
 if page == menu_page.start
 {
-	draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
+	if global.control == "keyboard"
+	{
+		draw_sprite_ext(sMenu_start_keyboard,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
+	}else draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
 }
 
 if toggle == true
 {
+	
 	draw_sprite_ext(sErase,0,gwidth/2,gheight/2,2,2,0,c_white,1);
 }
 #endregion
