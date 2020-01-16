@@ -3031,6 +3031,14 @@
             }
         },
         {
+            "Key": "91c8c4aa-23d5-4052-a303-2edca7a7f4b8",
+            "Value": {
+                "id": "37da2957-64f9-40fb-93e4-7707bf9146e2",
+                "resourcePath": "sprites\\splashscreen\\splashscreen.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "92c3c8c4-482b-46cb-9f7d-4e6078d9db21",
             "Value": {
                 "id": "fc82748e-ff0c-48d3-803b-03fe59be6034",
@@ -4347,6 +4355,14 @@
             "Value": {
                 "id": "b7c244a6-ff6a-495c-bb15-86a609238fe1",
                 "resourcePath": "sprites\\sSquare_rotate_end\\sSquare_rotate_end.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cfac69e8-8a5d-47f1-b77e-a1d3e9491bb0",
+            "Value": {
+                "id": "9384d656-7971-4487-bfbb-3f89f164afe5",
+                "resourcePath": "sprites\\sMenu_button_keyboard\\sMenu_button_keyboard.yy",
                 "resourceType": "GMSprite"
             }
         },

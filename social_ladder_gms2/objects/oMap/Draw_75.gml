@@ -126,8 +126,6 @@ if pause
 			//Draw Pause Menu "Back"
 			draw_rectangle_color(-10,-10,gwidth, gheight, c_background,c_background,c_background,c_background, false);
 			
-			display_tab_button();
-			
 			#region Draw elements on Left Side
 			draw_set_font(fMenu);
 			draw_set_valign(fa_middle);
@@ -149,9 +147,13 @@ if pause
 			}
 			#endregion
 			#region draw other element
-
-			draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
-
+			
+			display_tab_button();
+			
+			if global.control == "keyboard"
+			{
+				draw_sprite_ext(sMenu_button_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
+			}else draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
 			//Draw Dividing Line
 			c = c_black;
 			draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
@@ -169,66 +171,71 @@ if pause
 			var rtx = start_x + x_buffer, rty;
 
 			yy = 0; repeat(ds_height){
-				rty = start_y + (yy*y_buffer);
-	
-				switch(ds_[# 1, yy]){
-					case menu_element.shift:
-						var current_val = ds_[# 3, yy];
-						var current_val_words = ds_[# 4, yy];
-						var left_shift = "<< ";
-						var right_shift = " >>";
-						c = c_black;
-			
-						if(current_val == 0) left_shift = "";
-						if(current_val == array_length_1d(ds_[# 4, yy])-1) right_shift = "";
-			
-						if(inputting and yy == menu_option[page]){ c = c_yellow; }
-						draw_text_color(rtx, rty, left_shift + current_val_words[current_val] + right_shift, c,c,c,c, 1); 
-
-					break;
-		
-					case menu_element.slider:
-						c = c_black;
-						var len = 64;
-						var current_val =(ds_[# 4, yy]);
-						draw_line_width(rtx, rty, rtx + len, rty, 2);
-			
-						if(inputting and yy == menu_option[page]){ c = c_yellow; }
-						draw_circle_color(rtx + (current_val * len), rty, 4, c,c, false);
-						draw_text_color(rtx + (len*1.2), rty, string( floor(current_val*100) )+"%", c,c,c,c, 1);
-			
-
-					break;
-		
-					case menu_element.toggle:
-						c = c_black;
-						var current_val = ds_[# 3, yy];
-						var c1, c2;
-						if(inputting and yy == menu_option[page]){ c = c_aqua; }
-			
-						if(current_val == 0){ c1 = c; c2 = c_dkgray; }
-						else				{ c1 = c_dkgray; c2 = c; }
-			
-						draw_text_color(rtx, rty, "ON", c1,c1,c1,c1, 1);
-						draw_text_color(rtx + 64, rty, "OFF", c2,c2,c2,c2, 1);
-					break;
+			rty = start_y + (yy*y_buffer);
 				
-					case menu_element.input:
-						var current_val = ds_[# 3, yy];
-						switch(current_val){
-							case vk_up:		current_val = "UP KEY"; break;
-							case vk_left:	current_val = "LEFT KEY"; break;
-							case vk_right:	current_val = "RIGHT KEY"; break;
-							case vk_down:	current_val = "DOWN KEY"; break;
-							case vk_space:	current_val = "SPACE"; break;
-							case vk_escape:	current_val = "ESCAPE"; break;
-							case vk_enter:	current_val = "ENTER"; break;
-							default:		current_val = chr(current_val); 
-						}
-						c = c_white;
-						if(inputting and yy == menu_option[page]){ c = c_yellow; }
-						draw_text_color(rtx, rty, current_val, c,c,c,c, 1);
-					break;
+			draw_set_font(fMenu);
+			draw_set_valign(fa_middle);
+			draw_set_halign(fa_left);
+	
+			switch(ds_[# 1, yy]){
+				case menu_element.shift:
+					var current_val = ds_[# 3, yy];
+					var current_val_words = ds_[# 4, yy];
+					var left_shift = "<< ";
+					var right_shift = " >>";
+					c = c_black;
+			
+					if(current_val == 0) left_shift = "";
+					if(current_val == array_length_1d(ds_[# 4, yy])-1) right_shift = "";
+			
+					if(inputting and yy == menu_option[page]){ c = c_yellow; }
+					draw_text_color(rtx, rty, left_shift + current_val_words[current_val] + right_shift, c,c,c,c, 1); 
+
+				break;
+		
+				case menu_element.slider:
+					c = c_black;
+					var len = 64;
+					var current_val =(ds_[# 4, yy]);
+					draw_line_width(rtx, rty, rtx + len, rty, 2);
+			
+					if(inputting and yy == menu_option[page]){ c = c_yellow; }
+					draw_circle_color(rtx + (current_val * len), rty, 4, c,c, false);
+					draw_text_color(rtx + (len*1.2), rty, string( floor(current_val*100) )+"%", c,c,c,c, 1);
+			
+
+				break;
+		
+				case menu_element.toggle:
+					c = c_black;
+					var current_val = ds_[# 3, yy];
+					var c1, c2;
+					if(inputting and yy == menu_option[page]){ c = c_aqua; }
+			
+					if(current_val == 0){ c1 = c; c2 = c_dkgray; }
+					else				{ c1 = c_dkgray; c2 = c; }
+						
+						
+					draw_text_color(rtx, rty, "ON", c1,c1,c1,c1, 1);
+					draw_text_color(rtx + 64, rty, "OFF", c2,c2,c2,c2, 1);
+				break;
+				
+				case menu_element.input:
+					var current_val = ds_[# 3, yy];
+					switch(current_val){
+						case vk_up:		current_val = "UP KEY"; break;
+						case vk_left:	current_val = "LEFT KEY"; break;
+						case vk_right:	current_val = "RIGHT KEY"; break;
+						case vk_down:	current_val = "DOWN KEY"; break;
+						case vk_space:	current_val = "SPACE"; break;
+						case vk_escape:	current_val = "ESCAPE"; break;
+						case vk_enter:	current_val = "ENTER"; break;
+						default:		current_val = chr(current_val); 
+					}
+					c = c_white;
+					if(inputting and yy == menu_option[page]){ c = c_yellow; }
+					draw_text_color(rtx, rty, current_val, c,c,c,c, 1);
+				break;
 				}
 	
 				yy++;
