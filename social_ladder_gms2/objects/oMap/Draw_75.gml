@@ -12,12 +12,7 @@ if pause
 			
 				draw_rectangle_color(-100,-100,gwidth + 100, gheight + 100,c_background,c_background,c_background,c_background,false);
 				//draw change tab instruction
-				if global.control == "keyboard"
-				{
-					draw_sprite_ext(sMenu_tab_left,0,0,0,0.5,0.5,0,c_white,1);
-					draw_sprite_ext(sMenu_tab_right,0,gwidth - 0.5,0,0.5,0.5,0,c_white,1);
-				}
-				
+				display_tab_button();
 				
 				h_move += (input.right_cam - input.left_cam) * move_speed;
 				v_move += (input.down_cam - input.up_cam) * move_speed;
@@ -73,11 +68,8 @@ if pause
 
 			draw_rectangle_color(-100,-100,gui_width + 100, gui_height + 100,c_background,c_background,c_background,c_background,false);
 			
-			if global.control == "keyboard"
-			{
-				draw_sprite_ext(sMenu_tab_left,0,0,0,0.5,0.5,0,c_white,1);
-				draw_sprite_ext(sMenu_tab_right,0,gui_width,0,0.5,0.5,0,c_white,1);
-			}
+			//draw change tab instruction
+			display_tab_button();
 			
 			draw_set_font(fMenu);
 			draw_set_valign(fa_middle);
@@ -134,11 +126,7 @@ if pause
 			//Draw Pause Menu "Back"
 			draw_rectangle_color(-10,-10,gwidth, gheight, c_background,c_background,c_background,c_background, false);
 			
-			if global.control == "keyboard"
-			{
-				draw_sprite_ext(sMenu_tab_left,0,0,0,2,2,0,c_white,1);
-				draw_sprite_ext(sMenu_tab_right,0,gwidth,0,2,2,0,c_white,1);
-			}
+			display_tab_button();
 			
 			#region Draw elements on Left Side
 			draw_set_font(fMenu);
