@@ -3191,6 +3191,14 @@
             }
         },
         {
+            "Key": "99783be8-90bd-4cc8-9688-a65f140b870f",
+            "Value": {
+                "id": "bb38a650-abdd-4089-8a48-94a83a991085",
+                "resourcePath": "sprites\\sKey_dzlab\\sKey_dzlab.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "998af54e-ebbb-4aed-992a-10b21875c3aa",
             "Value": {
                 "id": "7ef04239-5ca6-4e15-8dc6-6eb93c56505f",
