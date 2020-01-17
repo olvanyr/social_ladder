@@ -2479,6 +2479,14 @@
             }
         },
         {
+            "Key": "7a15d8af-c05e-4c26-86f1-e1701500b096",
+            "Value": {
+                "id": "f3c217d6-c35c-4876-8bfa-fd85ef2d428b",
+                "resourcePath": "sprites\\sErase\\sErase.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7a276bea-8a9e-4a42-b525-17c5b354a4bf",
             "Value": {
                 "id": "1c1036a6-1890-4603-9a0f-22547511ce64",
@@ -4031,14 +4039,6 @@
             }
         },
         {
-            "Key": "c2c511a3-1ed0-4a45-a9d2-0d40a0de0f97",
-            "Value": {
-                "id": "1f00fc5c-7fea-4fe5-b668-dbbce7f122ba",
-                "resourcePath": "sprites\\sErase\\sErase.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "c320dac2-70b7-415a-9c8f-aa846fda6d3f",
             "Value": {
                 "id": "167c226d-663e-4df2-a9de-5a5ce55b3b0e",
@@ -4411,6 +4411,14 @@
             "Value": {
                 "id": "715f4c0e-92c8-43f5-adeb-a5746bd3a556",
                 "resourcePath": "sprites\\sMap_rLab_tuto3\\sMap_rLab_tuto3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d2e53d68-3d27-40fa-b18e-cd02689371ce",
+            "Value": {
+                "id": "87a39a6a-adfe-4edd-83b4-f8d7fbb0f45f",
+                "resourcePath": "sprites\\sSign\\sSign.yy",
                 "resourceType": "GMSprite"
             }
         },

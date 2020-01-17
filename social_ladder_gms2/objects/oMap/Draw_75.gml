@@ -36,7 +36,7 @@ if pause
 						sprite = asset_get_index(sprite);
 					
 						var color = c_white;
-						if room_id == room_get_name(room) color = c_gray;
+						if room_id == room_get_name(room) color = c_yellow;
 					
 						if sprite_exists(sprite)
 						{
