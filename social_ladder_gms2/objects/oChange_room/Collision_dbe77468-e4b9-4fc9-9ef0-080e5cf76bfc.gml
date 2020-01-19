@@ -12,19 +12,22 @@ if new_music == noone
 
 if oInput.use
 {
-	oPlayer.state = "wait";
-	oPlayer.vsp = 0;
-	oPlayer.vsp_fraction = 0;
-	if !layer_exists("Effects")
+	if next_room != noone
 	{
-		layer_create(depth_layer.effects,"Effects");
-	}
-	with instance_create_layer(0,0,"Effects", oTransition)
-	{
-		next_room = other.next_room;
-		x_next = other.x_next;
-		y_next = other.y_next;
-		global.new_music = other.new_music;
+		oPlayer.state = "wait";
+		oPlayer.vsp = 0;
+		oPlayer.vsp_fraction = 0;
+		if !layer_exists("Effects")
+		{
+			layer_create(depth_layer.effects,"Effects");
+		}
+		with instance_create_layer(0,0,"Effects", oTransition)
+		{
+			next_room = other.next_room;
+			x_next = other.x_next;
+			y_next = other.y_next;
+			global.new_music = other.new_music;
+		}
 	}
 }
 

@@ -1959,6 +1959,14 @@
             }
         },
         {
+            "Key": "60a489df-c7c1-4637-82a7-c20448444ccd",
+            "Value": {
+                "id": "3ddefba3-34c9-4903-aee9-0e32beafb81d",
+                "resourcePath": "rooms\\rPla_c\\rPla_c.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "60bfd0fe-bf26-424b-88c8-ff021d94c4fd",
             "Value": {
                 "id": "e68127a2-10bf-45da-848f-0007fb844858",
