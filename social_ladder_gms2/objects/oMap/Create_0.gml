@@ -96,4 +96,4 @@ repeat(array_len)
 
 inputting = false;
 
-
+any_pressed = 0;
