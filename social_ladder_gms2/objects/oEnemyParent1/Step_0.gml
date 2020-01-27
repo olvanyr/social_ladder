@@ -57,7 +57,7 @@ switch (state)
 				state = "chase";
 			}
 			
-			if self.object_index == oFist || self.object_index == oSword || self.object_index == oSwordII || self.object_index == oScratcher || self.object_index == oSlug || self.object_index == oDistance || self.object_index == oLegs || self.object_index == oSkeleton
+			if self.object_index == oFist || self.object_index == oSword || self.object_index == oSwordII || self.object_index == oScratcher || self.object_index == oSlug || self.object_index == oSlugII || self.object_index == oDistance || self.object_index == oLegs || self.object_index == oSkeleton
 			{
 				// a normal firstt attack
 				set_state_sprite(attack1,attack1_anim_spd,0);
@@ -79,7 +79,7 @@ switch (state)
 				
 				if animation_end()
 				{
-					if self.object_index == oSlug
+					if self.object_index == oSlug || self.object_index == oSlugII
 					{
 						state = "stun";
 						alarm[1] = stun_time;

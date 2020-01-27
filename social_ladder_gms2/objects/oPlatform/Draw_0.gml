@@ -26,7 +26,7 @@ if timer <= 0
 		{
 			//sprite_animation(sDown,0,0.05,x,y);
 			sprite = sDown;
-			letter = global.key_down;
+			letter = global.key_jump;
 			anim_speed = 0.05;
 			_x = oPlayer.x + 5;
 			_y = oPlayer.y - 55;

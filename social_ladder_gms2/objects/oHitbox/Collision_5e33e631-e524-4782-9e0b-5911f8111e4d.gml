@@ -33,14 +33,17 @@ if creator.object_index == oPlayer
 }
 	
 
-if other.object_index == oPlayer && other.invincibility > 0
+if other.object_index == oPlayer 
 {
-	// We hit the player
-	screenshake(8,6);
-	gamepad_set_vibration(0, 1, 1);
-	other.alarm[1] = 6;
-	other.invincibility = 30 * global.difficulty;
-}else
+	if other.invincibility < 0
+	{
+		// We hit the player
+		screenshake(8,6);
+		gamepad_set_vibration(0, 1, 1);
+		other.alarm[1] = 6;
+		other.invincibility = 30 * global.difficulty;
+	}
+}else if other.object_index != oPlayer
 {
 	//We hit an enemy
 	other.alarm[0] = 60;

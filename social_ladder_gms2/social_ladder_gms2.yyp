@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "032f0d36-85ef-4d6e-a926-d31df061bd6d",
+            "Value": {
+                "id": "a12bf2d1-774e-4ddf-a055-d5a3be4bfb7f",
+                "resourcePath": "views\\032f0d36-85ef-4d6e-a926-d31df061bd6d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "041714d5-2a4b-40fc-b8d6-eee81e27baf1",
             "Value": {
                 "id": "f76e327c-c47c-4b3c-b5b0-9b3558d95109",
@@ -1223,6 +1231,14 @@
             }
         },
         {
+            "Key": "39080322-866e-4f05-b93f-7c65ecf22868",
+            "Value": {
+                "id": "424de306-0fbe-4726-a7a6-8803159b6242",
+                "resourcePath": "sprites\\sSlug2_walk\\sSlug2_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "391d94c1-cad6-4a11-abcb-fcffaa8f168f",
             "Value": {
                 "id": "52d7e6bc-1dce-41e6-992a-6ad05d3fe71c",
@@ -2159,6 +2175,14 @@
             }
         },
         {
+            "Key": "696930f6-0f52-4748-940f-e37c9252083a",
+            "Value": {
+                "id": "a1cba16d-58f4-4efb-9b69-e70a1e162b50",
+                "resourcePath": "sprites\\sSlug2_die\\sSlug2_die.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "697ab67e-0da5-49f7-b129-6153124d54f8",
             "Value": {
                 "id": "c90dd1fa-0dd6-4392-b728-2abd125911f5",
@@ -2588,6 +2612,14 @@
                 "id": "cd649511-76fd-4c2c-bc6c-65b458342420",
                 "resourcePath": "views\\7d76d8b0-3289-4ec0-a987-281d63b5fe67.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7d7a875d-2db3-4e23-ba53-3c28ee808c6c",
+            "Value": {
+                "id": "c2b92a6e-0f52-4761-b72f-12bbf0c7508f",
+                "resourcePath": "objects\\oSlugII\\oSlugII.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3239,6 +3271,14 @@
             }
         },
         {
+            "Key": "9b29f162-8850-4dee-a4e4-e579647916fd",
+            "Value": {
+                "id": "06379e93-28eb-4095-804d-d60575711aba",
+                "resourcePath": "sprites\\sSlug2_attack1\\sSlug2_attack1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9b671a34-b6ed-4675-8abb-45977daae0cc",
             "Value": {
                 "id": "6a6d300c-82d6-4503-930d-694a487974ec",
@@ -3711,6 +3751,14 @@
             }
         },
         {
+            "Key": "b393c8a7-6ca4-4f86-aa16-222b2ad24b37",
+            "Value": {
+                "id": "a1590850-1d97-44fc-a3f8-6860e4f6b7e0",
+                "resourcePath": "sprites\\sSlug2_idle\\sSlug2_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b3e145e6-22ea-4e81-b3f5-e232e528d25c",
             "Value": {
                 "id": "7c65cb06-d7a8-4619-81df-b05f4676623b",
@@ -4111,6 +4159,14 @@
             }
         },
         {
+            "Key": "c5d8b2b7-28a7-4eca-9da1-0597b196b3f6",
+            "Value": {
+                "id": "980e5370-2c55-4820-8549-b42caa56cd56",
+                "resourcePath": "sprites\\sSlug2_attack2\\sSlug2_attack2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c62975ae-8047-4526-86ff-a1e813d6a063",
             "Value": {
                 "id": "611027f7-3a75-480f-b38f-96cb9dd3e3bf",
@@ -4299,6 +4355,14 @@
             "Value": {
                 "id": "5810f55f-d16e-4bdc-8c7e-cd6a17dded5e",
                 "resourcePath": "sprites\\sDown_keyboard\\sDown_keyboard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cd2e7ac4-6782-4041-8304-2f1962aa0817",
+            "Value": {
+                "id": "6a446ca2-0361-4e0c-a5f5-062f141a9f29",
+                "resourcePath": "sprites\\sSlug2_knockback\\sSlug2_knockback.yy",
                 "resourceType": "GMSprite"
             }
         },
