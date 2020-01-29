@@ -1,9 +1,9 @@
 {
-    "id": "caec60ec-015d-4350-a5b6-3d40197351ec",
+    "id": "1a2ff5ce-19d8-4347-b425-91e5b37d6419",
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "mrLab",
-    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
+    "audioGroupGuid": "166959d7-048c-489c-9b30-6e20dcb81863",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

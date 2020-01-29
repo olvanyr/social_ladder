@@ -12,7 +12,7 @@ if new_music == noone
 
 if oInput.use
 {
-	if next_room != noone
+	if next_room != noone && room_exists(next_room)
 	{
 		oPlayer.state = "wait";
 		oPlayer.vsp = 0;

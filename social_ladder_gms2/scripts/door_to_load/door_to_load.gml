@@ -40,6 +40,20 @@ if global.save[? "dzlab"] == true
 	}
 	if door_exists == false global.key[array_length] = "dzlab";
 }
+
+if global.save[? "forest"] == true
+{
+	var array_length = array_length_1d(global.key);
+	var door_exists = false;
+	for (var i = 0; i < array_length; i++)
+	{
+		if global.key[i] == "forest"
+		{
+			door_exists = true;
+		}
+	}
+	if door_exists == false global.key[array_length] = "forest";
+}
 /*
 if global.save[? "factory"] == true
 {
