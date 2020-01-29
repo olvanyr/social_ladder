@@ -1583,6 +1583,14 @@
             }
         },
         {
+            "Key": "441a8f5e-fe0a-48e6-94e2-452824bf5be8",
+            "Value": {
+                "id": "eb181271-36ab-4123-a027-80ed2b8e6c94",
+                "resourcePath": "rooms\\rFor_a1\\rFor_a1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "45b6a19c-8835-4f51-a306-f484f2c65128",
             "Value": {
                 "id": "46ff3be2-e96f-4be2-b2e4-b0cb25d13baa",
@@ -1996,6 +2004,14 @@
                 "id": "124dee53-9eb9-4609-ae66-4c3c2e816332",
                 "resourcePath": "scripts\\mouse_detection_gui\\mouse_detection_gui.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5f0e6844-15f3-4fe4-bf8d-6724ccab3fbf",
+            "Value": {
+                "id": "66f156bc-3e6d-4284-a4b6-5e4242040931",
+                "resourcePath": "rooms\\rFor_b1\\rFor_b1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
