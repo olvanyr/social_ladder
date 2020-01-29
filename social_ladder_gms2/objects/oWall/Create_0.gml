@@ -10,7 +10,6 @@ layer = layer_get_id("Walls");
 width = 32;
 height = width;
 
-
 //check if coord is not on the grid
 if x mod width != 0 || y mod height != 0
 {

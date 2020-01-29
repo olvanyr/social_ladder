@@ -1,5 +1,9 @@
 event_inherited();
-
+if !layer_exists("Jelly")
+{
+	layer_create(depth_layer.jelly,"Jelly");
+}
+layer = layer_get_id("Jelly");
 //dependencises
 if instance_exists(oCamera)
 {
