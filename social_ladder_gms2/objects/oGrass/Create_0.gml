@@ -67,49 +67,12 @@ image_speed = 0;
 
 if splits[0] == "rLab" || splits[0] == "rPla" || splits[0] == "rDz"
 {
-	grass[12] = sGrass12;
-	grass[11] = sGrass11;
-	grass[10] = sGrass10;
-	grass[9] = sGrass09;
-	grass[8] = sGrass08;
-	grass[7] = sGrass07;
-	grass[6] = sGrass06;
-	grass[5] = sGrass05;
-	grass[4] = sGrass04;
-	grass[3] = sGrass03;
-	grass[2] = sGrass02;
-	grass[1] = sGrass01;
+	grass = global.grass;
 }
 
 if splits[0] == "rFor"
 {
-	grass[27] = sGrass_foreste_16;
-	grass[26] = sGrass_foreste_15;
-	grass[25] = sGrass_foreste_14;
-	grass[24] = sGrass_foreste_13;
-	grass[23] = sGrass_foreste_12;
-	grass[22] = sGrass_foreste_11;
-	grass[21] = sGrass_foreste_10;
-	grass[20] = sGrass_foreste_09;
-	grass[19] = sGrass_foreste_08;
-	grass[18] = sGrass_foreste_07;
-	grass[17] = sGrass_foreste_06;
-	grass[16] = sGrass_foreste_05;
-	grass[15] = sGrass_foreste_03;
-	grass[14] = sGrass_foreste_02;
-	grass[13] = sGrass_foreste_01;
-	grass[12] = sGrass12;
-	grass[11] = sGrass11;
-	grass[10] = sGrass10;
-	grass[9] = sGrass09;
-	grass[8] = sGrass08;
-	grass[7] = sGrass07;
-	grass[6] = sGrass06;
-	grass[5] = sGrass05;
-	grass[4] = sGrass04;
-	grass[3] = sGrass03;
-	grass[2] = sGrass02;
-	grass[1] = sGrass01;
+	grass = global.forest_grass;
 }
 
 rng = irandom_range(1,array_length_1d(grass)-1);

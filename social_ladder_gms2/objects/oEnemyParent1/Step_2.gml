@@ -11,7 +11,7 @@ if once = true && state == "dead"
 	if instance_exists(oPlayer) && global.save[? save_state] != "dead"
 	{
 		global.experience += experience;
-		repeat (experience)
+		repeat (experience * 5)
 		{
 			instance_create_layer(x + random_range(-4,4), y + random_range(-4,4), "Effects", oExperience);
 		}

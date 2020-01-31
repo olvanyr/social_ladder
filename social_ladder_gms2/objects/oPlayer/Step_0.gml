@@ -445,14 +445,7 @@ switch state
 	#region wait
 		case "wait":
 			set_state_sprite(sPlayer_idle,0.2,0);
-			for(var i = 0; i < array_length_1d(global.boss_list); i ++)
-			{
-				if instance_exists(global.boss_list[i])
-				{
-					vsp = 0;
-					vsp_fraction = 0;
-				}
-			}
+
 			
 		break;
 	#endregion
