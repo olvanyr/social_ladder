@@ -9,7 +9,11 @@ if(instance_exists(oPlayer))
 				if self.object_index == oMimic
 				{
 					state = "show";
-				}else state = "chase";
+				}else 
+				{
+					state = "chase";
+					audio_play_sound_at(sndEnemy_test1,x,y,0,100, 300, 1, false, 3);
+				}
 			}
 		}
 	}

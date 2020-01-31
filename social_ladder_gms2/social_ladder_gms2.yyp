@@ -2855,6 +2855,14 @@
             }
         },
         {
+            "Key": "84bef382-d766-4d8f-ab41-79bf10462db5",
+            "Value": {
+                "id": "4c1d4eff-ad8d-4a4a-ab97-61b6c1c9bd65",
+                "resourcePath": "sounds\\sndEnemy_test1\\sndEnemy_test1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "84c977a8-0ab6-41ac-aed2-b686f0575911",
             "Value": {
                 "id": "c6941459-8d78-446b-bf6a-e3bdbd3f284c",
