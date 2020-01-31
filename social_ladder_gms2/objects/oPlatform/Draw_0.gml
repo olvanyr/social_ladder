@@ -37,8 +37,12 @@ if timer <= 0
 	
 }
 
+if global.zone == "rDz"
+{
+	draw_sprite_ext(sPlatform_red,0,x,y,image_xscale,image_yscale,0,c_white,1);
+}else
+{
+	draw_sprite_ext(sPlatform_black,0,x,y,image_xscale,image_yscale,0,0,1);
+}
 
-draw_sprite_ext(sPlatform_black,0,x,y,image_xscale,image_yscale,0,0,1);
-
-
-
+show_debug_message("global.zone : " + string(global.zone));

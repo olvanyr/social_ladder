@@ -1,5 +1,4 @@
-var splits = split_string(string(room_get_name(room)),"_");
-zone = splits[0];
+zone = global.zone;
 
 //collision
 right =			place_meeting(x+1,y,oTile);
