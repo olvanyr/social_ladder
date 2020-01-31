@@ -8,7 +8,8 @@
         "26bcfebd-cc2c-46d0-87d2-b7c858ada705",
         "6151f7e2-c0d6-43be-8961-40dc19027614",
         "99783be8-90bd-4cc8-9688-a65f140b870f",
-        "00c97418-0aa2-4713-bcbf-4ed024fb40e4"
+        "00c97418-0aa2-4713-bcbf-4ed024fb40e4",
+        "c7b9911d-a18b-448f-8a40-5e484c9eec90"
     ],
     "filterType": "GMSprite",
     "folderName": "key",

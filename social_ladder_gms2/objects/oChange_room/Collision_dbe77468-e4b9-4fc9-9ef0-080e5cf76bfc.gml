@@ -1,17 +1,21 @@
-if new_music == noone
+
+timer ++;
+alarm[0] = 2;
+
+if timer == transition_time
 {
-	var splits = split_string(room_get_name(next_room),"_");
-	zone = splits[0];
-	
-	if object_exists(asset_get_index("m" + string(zone)))
+	if new_music == noone
 	{
-		new_music = asset_get_index("m" + string(zone));
-	}else new_music = s1;
-}
+		var splits = split_string(room_get_name(next_room),"_");
+		zone = splits[0];
+	
+		if object_exists(asset_get_index("m" + string(zone)))
+		{
+			new_music = asset_get_index("m" + string(zone));
+		}else new_music = s1;
+	}
 
 
-if oInput.use
-{
 	if next_room != noone && room_exists(next_room)
 	{
 		oPlayer.state = "wait";

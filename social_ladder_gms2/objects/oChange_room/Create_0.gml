@@ -9,3 +9,7 @@ if room_get_name(room) == rLab
 {
 	layer = "Effects";
 }
+
+timer = 0;
+
+transition_time = 20;

@@ -4391,6 +4391,14 @@
             }
         },
         {
+            "Key": "c7b9911d-a18b-448f-8a40-5e484c9eec90",
+            "Value": {
+                "id": "41a82160-58a5-4668-ba8f-cdc441e9434e",
+                "resourcePath": "sprites\\sKey_shortcut_lab\\sKey_shortcut_lab.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c895bf50-173a-46bd-80f2-e380cc951342",
             "Value": {
                 "id": "8273ee6d-5e9f-48b7-870d-56c18f2b7997",
