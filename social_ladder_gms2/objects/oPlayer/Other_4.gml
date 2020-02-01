@@ -29,10 +29,11 @@ if room != rLab{
 	{
 		instance_create_layer(x,y,"Instances", oZoom)
 	}
+	/*
 	if !instance_exists(oWarp)
 	{
 		instance_create_layer(x,y,"Instances", oWarp)
-	}
+	}*/
 	
 	//check if the layer are at the corecte position and if not move theme
 	set_layer_depth("Front",depth_layer.front);

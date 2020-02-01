@@ -167,6 +167,15 @@ if tab == pause_tab.settings
 	}
 }
 
+// look if an ability can be "purshase" 
+if global.experience >= global.xp_wall_jump && global.wall_jump == false || global.experience >= global.xp_double_jump && global.double_jump == false || global.experience >= global.xp_cast && global.cast == false
+{
+	new_ability = true;
+}else new_ability = false;
+
+
+
+
 #region save setting
 
 if(save_setting)
@@ -176,3 +185,4 @@ if(save_setting)
 
 }
 #endregion
+

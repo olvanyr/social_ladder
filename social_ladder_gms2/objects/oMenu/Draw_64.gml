@@ -50,49 +50,6 @@ var yy = 0; repeat(ds_height)
 	yy++;
 }
 #endregion
-#region draw other element
-if page != menu_page.start && page != menu_page.slots
-{
-	if global.control == "keyboard"
-	{
-		draw_sprite_ext(sMenu_button_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
-	}else draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
-
-	//Draw Dividing Line
-	c = c_black;
-	draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
-}
-
-if page == menu_page.slots
-{
-	if global.control == "keyboard"
-	{
-		draw_sprite_ext(sMenu_button_erase_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
-	}else draw_sprite_ext(sMenu_button_erase,0,gwidth,gheight,2,2,0,c_white,1);
-	
-}
-
-// draw image on the control page
-if page == menu_page.controls
-{
-	draw_sprite_ext(sGamepad,-1,gwidth/2,gheight/2,2,2,0,c_white,1);
-}
-
-//draw the presse start things
-if page == menu_page.start
-{
-	if global.control == "keyboard"
-	{
-		draw_sprite_ext(sMenu_start_keyboard,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
-	}else draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
-}
-
-if toggle == true
-{
-	
-	draw_sprite_ext(sErase,0,gwidth/2,gheight/2,2,2,0,c_white,1);
-}
-#endregion
 #region Draw Options on Right Side
 draw_set_halign(fa_left);
 var rtx = start_x + x_buffer, rty;
@@ -198,5 +155,48 @@ yy = 0; repeat(ds_height){
 	}
 	
 	yy++;
+}
+#endregion
+#region draw other element
+if page != menu_page.start && page != menu_page.slots
+{
+	if global.control == "keyboard"
+	{
+		draw_sprite_ext(sMenu_button_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
+	}else draw_sprite_ext(sMenu_button,0,gwidth,gheight,2,2,0,c_white,1);
+
+	//Draw Dividing Line
+	c = c_black;
+	draw_rectangle_color(start_x, start_y - y_buffer, start_x + 2, lty + y_buffer,c,c,c,c,false);
+}
+
+if page == menu_page.slots
+{
+	if global.control == "keyboard"
+	{
+		draw_sprite_ext(sMenu_button_erase_keyboard,0,gwidth,gheight,2,2,0,c_white,1);
+	}else draw_sprite_ext(sMenu_button_erase,0,gwidth,gheight,2,2,0,c_white,1);
+	
+}
+
+// draw image on the control page
+if page == menu_page.controls
+{
+	draw_sprite_ext(sGamepad,-1,gwidth/2,gheight/2,2,2,0,c_white,1);
+}
+
+//draw the presse start things
+if page == menu_page.start
+{
+	if global.control == "keyboard"
+	{
+		draw_sprite_ext(sMenu_start_keyboard,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
+	}else draw_sprite_ext(sMenu_start,-1,gwidth/2,gheight/2 + 300,2,2,0,c_white,1);
+}
+
+if toggle == true
+{
+	
+	draw_sprite_ext(sErase,0,gwidth/2,gheight/2,2,2,0,c_white,1);
 }
 #endregion

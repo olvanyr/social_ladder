@@ -16,9 +16,7 @@ if pause
 				
 				h_move += (input.right_cam - input.left_cam) * move_speed;
 				v_move += (input.down_cam - input.up_cam) * move_speed;
-			
-				if v_move < 0 v_move = 0;
-				if h_move < 0 h_move = 0;
+				
 				//draw map page
 				for ( var i = 0; i < room_last + 1; i++)
 				{
@@ -30,20 +28,32 @@ if pause
 							var sprite = string("sMap_") + string(room_id);
 						}else
 						{
-							var sprite = string("sMap_red_") + string(room_id);
+							var sprite = string("sMap_") + string(room_id) + string("_red");
 						}
 					
 						sprite = asset_get_index(sprite);
 					
 						var color = c_white;
-						if room_id == room_get_name(room) color = c_yellow;
+						
 					
 						if sprite_exists(sprite)
 						{
+							if room_id == room_get_name(room)
+							{
+								draw_sprite_outline(sprite,0,0,0,0.5,c_black);
+							}
 							draw_sprite_ext(sprite,0,0 + h_move,0 + v_move,1,1,0,color,1);
 							//show_debug_message(string(sprite));
+							
 						}
+						
 					}
+				}
+				
+				if new_ability == true
+				{
+					sprite_animation(sMap_respawn_flash,0.5,0 + h_move,0 + v_move);
+			
 				}
 		
 		break;

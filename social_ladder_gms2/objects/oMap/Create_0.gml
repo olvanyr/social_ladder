@@ -5,6 +5,8 @@ key_text = "-key-";
 
 c_background = c_gray;
 
+new_ability = false;
+image_counter = 0;
 
 x_buffer_key = 10;
 y_buffer_key = x_buffer_key;

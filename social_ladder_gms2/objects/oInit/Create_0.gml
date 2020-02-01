@@ -136,16 +136,21 @@ global.play_time = 0;
 global.date = 0;
 
 //music variable
-global.first_music = mRoom0;
+global.first_music = mrLab;
 global.cutscenes_music = m_Enter___;
 
 global.current_music = 0;
 global.new_music = 0;
 
 //experience var 
+	global.total_experience = 100;
 	global.experience = 0;
-
-	// spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!
+	
+	// xp needed for trhe skill
+	global.xp_wall_jump = 2;
+	global.xp_double_jump = 4;
+	global.xp_cast = 6;
+// spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!
 	global.wall_jump = false;
 	global.double_jump = false;
 	global.cast = false;
