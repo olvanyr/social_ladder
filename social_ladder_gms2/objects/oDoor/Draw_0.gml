@@ -57,7 +57,7 @@ if instance_exists(oPlayer)
 			}
 			
 			key_sprite = asset_get_index("sKey_"+ string(key));
-			show_debug_message("key_sprite : " + "sKey_"+ string(key));
+			//show_debug_message("key_sprite : " + "sKey_"+ string(key));
 			if sprite_exists(key_sprite)
 			{
 				if !instance_exists(pop_up2)
