@@ -13,6 +13,9 @@ if global.control == "keyboard"
 	}
 	
 	sprite_animation(sKey,anim_speed,letter_x,letter_y);
+	draw_set_color(c_white);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
 	draw_set_font(fPop_up);
 	draw_text_color(letter_x - (string_width(chr(letter))/2),letter_y,chr(letter),c,c,c,c,1);
 	}

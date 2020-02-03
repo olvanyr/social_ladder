@@ -40,7 +40,7 @@ if pause
 						{
 							if room_id == room_get_name(room)
 							{
-								draw_sprite_outline(sprite,0,0,0,0.5,c_black);
+								draw_sprite_outline(sprite,0,0 + h_move,0 + v_move,0.5,c_black);
 							}
 							draw_sprite_ext(sprite,0,0 + h_move,0 + v_move,1,1,0,color,1);
 							//show_debug_message(string(sprite));

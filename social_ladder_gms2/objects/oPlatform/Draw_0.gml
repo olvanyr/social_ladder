@@ -45,4 +45,4 @@ if global.zone == "rDz"
 	draw_sprite_ext(sPlatform_black,0,x,y,image_xscale,image_yscale,0,0,1);
 }
 
-show_debug_message("global.zone : " + string(global.zone));
+//show_debug_message("global.zone : " + string(global.zone));
