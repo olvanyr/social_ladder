@@ -147,7 +147,7 @@ global.new_music = 0;
 	global.experience = 0;
 	
 	// xp needed for trhe skill
-	global.xp_wall_jump = 79;
+	global.xp_wall_jump = 1;
 	global.xp_double_jump = 100;
 	global.xp_cast = 105;
 // spec variable!!!! !!!!! !!!!! actualy wall jump Have to be unlock befor double jump !!!!!!!

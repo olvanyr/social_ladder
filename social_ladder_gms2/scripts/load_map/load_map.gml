@@ -27,4 +27,16 @@ if file_exists(slot)
 	file_text_close(file);
 
 	load_instances(json);
-}else global.date = 0;
+}else 
+{
+	global.date = 0;
+	global.experience = 0;
+	global.play_time = 0;
+	
+	global.double_jump = 0;
+	global.wall_jump = 0;
+	global.cast = 0;
+	
+	global.key = noone;
+
+}

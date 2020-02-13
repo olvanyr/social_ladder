@@ -1,3 +1,6 @@
+global.key = noone;
+global.key[0] = "";
+
 if global.save[? "door1"] == true
 {
 	var array_length = array_length_1d(global.key);
