@@ -19,7 +19,7 @@ grounded = false;
 experience = 1;
 
 //dose you fly away ? 
-fly = irandom(3);
+fly = irandom(9);
 
 //mask
 mask = sRunner_mask;
