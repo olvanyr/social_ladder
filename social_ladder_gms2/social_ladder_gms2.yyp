@@ -3319,6 +3319,14 @@
             }
         },
         {
+            "Key": "871f5683-b2f3-4e7d-aa9c-bed8d85c1073",
+            "Value": {
+                "id": "f775e399-7647-4e7c-acc5-9e76fbbbfc50",
+                "resourcePath": "sprites\\splashscreen\\splashscreen.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "87b7bd5f-4199-4bca-8c00-52dc235f0afd",
             "Value": {
                 "id": "02a56783-0f88-4834-9a57-35e5cc8a164f",
@@ -3547,14 +3555,6 @@
             "Value": {
                 "id": "2f979041-3f3b-46c2-9111-49065e89ffc6",
                 "resourcePath": "sprites\\sGrass_foreste_11\\sGrass_foreste_11.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "91c8c4aa-23d5-4052-a303-2edca7a7f4b8",
-            "Value": {
-                "id": "37da2957-64f9-40fb-93e4-7707bf9146e2",
-                "resourcePath": "sprites\\splashscreen\\splashscreen.yy",
                 "resourceType": "GMSprite"
             }
         },
