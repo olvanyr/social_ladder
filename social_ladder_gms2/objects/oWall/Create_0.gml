@@ -1,3 +1,8 @@
+sprite_x = x;
+sprite_y = y;
+sprite_image_angle = 0;
+tile_sprite_index = sWall;
+
 if !layer_exists("Walls")
 {
 	layer_create(depth_layer.walls,"Walls");
@@ -23,14 +28,21 @@ if x mod width != 0 || y mod height != 0
 	if !layer_exists("Tiles")
 	{
 		layer_create(depth_layer.tiles,"Tiles");
-	}	
-	
+	}
+
 	with instance_create_layer(x,y,"Tiles",oTile)
 	{
+		creator = other.id;
 		//tille size
 		width = other.width;
 		height = other.height;
 		show = other.show;
-	}	
+	}
 }
+
+//collision
+right =			place_meeting(x+1,y,oWall);
+left =			place_meeting(x-1,y,oWall);
+top =			place_meeting(x,y-1,oWall);
+bottom =		place_meeting(x,y+1,oWall);
 

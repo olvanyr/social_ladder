@@ -418,7 +418,11 @@ switch (state)
 #endregion
 }
 
-
+var sprite = layer_sprite_create("Tiles",x,y,sprite_index);
+layer_sprite_angle(sprite,image_angle);
+layer_sprite_speed(sprite,image_speed);
+layer_sprite_index(sprite,image_index);
+alarm[1] = 1;
 if show
 {
 	show_debug_message("++++++++++++++++++++++++++++++++++++++++++");
